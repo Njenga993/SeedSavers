@@ -44,7 +44,7 @@ const Hero = () => {
             }}
           >
             <h1 className="main-title">
-              <span className="title-line">Seed Savers Kenya</span>
+              <span className="title-line">Seed Savers Network Kenya</span>
               <span className="highlight-text">
                 My Seed, My Food, My Future
                 <motion.span

@@ -1,6 +1,7 @@
 /* src/styles/navbar.css */
 :root {
   --s-primary: #235835;
+  --s-secndary: #2A4D14;
   --s-secondary: #c3f2c3;
   --s-dark: #2a2a2a;
   --s-light: #ffffff;
@@ -84,7 +85,7 @@
 
 /* Main Navigation */
 .s-main-nav {
-  background-color: var(--s-primary);
+  background-color: #2A4D14;
   padding: 0.8rem 0;
   position: relative;
   transition: var(--s-transition);

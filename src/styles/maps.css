@@ -1,0 +1,143 @@
+/* MAP SECTION */
+.map-section {
+  padding: 3rem 1rem;
+  background-color: #f0fdf4;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.map-section::before {
+  content: '';
+  position: absolute;
+  top: -50px;
+  left: -50px;
+  width: 200px;
+  height: 200px;
+  background: rgba(35, 88, 53, 0.05);
+  border-radius: 50%;
+  filter: blur(40px);
+}
+
+.map-section::after {
+  content: '';
+  position: absolute;
+  bottom: -50px;
+  right: -50px;
+  width: 250px;
+  height: 250px;
+  background: rgba(232, 181, 77, 0.05);
+  border-radius: 50%;
+  filter: blur(40px);
+}
+
+.map-heading {
+  font-size: clamp(1.6rem, 4vw, 2.2rem);
+  margin-bottom: 1.5rem;
+  color: #235835;
+  line-height: 1.3;
+  font-weight: 700;
+  position: relative;
+  z-index: 1;
+}
+
+.map-description {
+  color: #444;
+  font-size: clamp(0.95rem, 2vw, 1.1rem);
+  max-width: 700px;
+  margin: 0 auto 2.5rem;
+  line-height: 1.7;
+  padding: 0 1rem;
+  position: relative;
+  z-index: 1;
+}
+
+.map-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  aspect-ratio: 16 / 9;
+  position: relative;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  z-index: 1;
+}
+
+.map-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive iframe inside container */
+.map-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  border-radius: 12px;
+}
+
+/* Map controls overlay (optional) */
+.map-overlay {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  z-index: 2;
+  background: white;
+  padding: 0.5rem;
+  border-radius: 6px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Animation classes */
+.map-animate {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease-out;
+}
+
+.map-animate.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive Breakpoints */
+@media (min-width: 640px) {
+  .map-section {
+    padding: 4rem 1.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .map-heading {
+    margin-bottom: 2rem;
+  }
+  
+  .map-description {
+    margin-bottom: 3rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .map-section {
+    padding: 5rem 2rem;
+  }
+  
+  .map-container {
+    border-radius: 16px;
+  }
+  
+  .map-container iframe {
+    border-radius: 16px;
+  }
+}
+
+/* Small screens adjustments */
+@media (max-width: 400px) {
+  .map-container {
+    aspect-ratio: 4 / 3;
+  }
+}
