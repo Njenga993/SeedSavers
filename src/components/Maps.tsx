@@ -1,4 +1,4 @@
-import React from 'react';
+
 import '../styles/maps.css';
 const Maps = () => {
   return (
