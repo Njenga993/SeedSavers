@@ -85,7 +85,7 @@
 
 /* Main Navigation */
 .s-main-nav {
-  background-color: #2A4D14;
+  background-color: #2F4B26;
   padding: 0.8rem 0;
   position: relative;
   transition: var(--s-transition);
@@ -96,7 +96,7 @@
 }
 
 .s-logo-box img {
-  height: 50px;
+  height: 90px;
   transition: var(--s-transition);
 }
 

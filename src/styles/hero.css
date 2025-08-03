@@ -131,21 +131,21 @@
   font-size: clamp(2rem, 5vw, 3.5rem);
   line-height: 1.2;
   margin-bottom: 1.5rem;
-  color: #2A4D14
+  color: #2F4B26;
 }
 
 .hero-text h2 {
   font-size: clamp(1.2rem, 2.5vw, 1.8rem);
   font-weight: 500;
   margin-bottom: 1.5rem;
-  color: #2A4D14;
+  color: #2F4B26;
 }
 
 .hero-text p {
   font-size: clamp(1rem, 1.2vw, 1.2rem);
   line-height: 1.7;
   margin-bottom: 2.5rem;
-  color: #2A4D14;
+  color: #2F4B26;
   opacity: 0.9;
 }
 
@@ -170,7 +170,7 @@
 }
 
 .btn-primary:hover {
-  background-color: #2A4D14;
+  background-color: #2F4B26;
   color: white;
   transform: translateY(-3px);
   box-shadow: 0 8px 15px rgba(212, 175, 55, 0.3);
@@ -185,7 +185,7 @@
 }
 
 .feature-card {
-  background-color: #2A4D14;
+  background-color: #2F4B26;
   border-radius: 12px;
   padding: 2rem;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);

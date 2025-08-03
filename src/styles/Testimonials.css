@@ -1,0 +1,69 @@
+.testimonial-section {
+  width: 97.5%;
+  padding: 5rem 1rem;
+  background-color: #f9f9f9;
+  color: #235835;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.testimonial-container {
+  max-width: 800px;
+  text-align: center;
+  position: relative;
+}
+
+.quote-icon {
+  font-size: 2rem;
+  color: #b5d3b9;
+  margin-bottom: 1rem;
+}
+
+.testimonial-quote {
+  font-size: 1.3rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.testimonial-author {
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-bottom: 0.25rem;
+}
+
+.testimonial-role {
+  font-size: 0.95rem;
+  color: #4b4b4b;
+  margin-bottom: 2rem;
+}
+
+.testimonial-arrows {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.testimonial-arrows button {
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  color: #235835;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.testimonial-arrows button:hover {
+  color: #1a3d26;
+}
+
+@media (max-width: 600px) {
+  .testimonial-quote {
+    font-size: 1.1rem;
+  }
+
+  .testimonial-arrows {
+    gap: 1rem;
+  }
+}
