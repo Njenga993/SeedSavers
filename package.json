@@ -1,6 +1,6 @@
 {
+  "homepage": "https://github.com/Njenga993/SeedSavers",
   "name": "seedsavers",
-  "homepage": "https://njenga993.github.io/SeedSavers",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -10,6 +10,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "npm run build",
+    "start": "vite",
     "deploy": "gh-pages -d dist"
 
   },
