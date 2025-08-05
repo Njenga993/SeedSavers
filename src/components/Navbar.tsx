@@ -102,20 +102,11 @@ const Navbar = () => {
     { path: '/', label: 'Home' },
     { 
       path: '/about', 
-      label: 'Who We Are',
-      dropdown: [
-        { path: '/about/Mission', label: 'Our Mission' },
-        { path: '/about/strategies', label: 'Our Strategies' },
-      ]
+      label: 'Our Work',
     },
     { 
-      path: '/our-work', 
-      label: 'Our Work',
-      dropdown: [
-        { path: '/our-work/conservation', label: 'Seed Conservation' },
-        { path: '/our-work/education', label: 'Education Programs' },
-        { path: '/our-work/community', label: 'Community Projects' }
-      ]
+      path: '/news-events', 
+      label: 'News & Events',
     },
     { 
       path: '/resources', 
@@ -126,6 +117,7 @@ const Navbar = () => {
         { path: '/resources/research', label: 'Research' }
       ]
     },
+     { path: '/blog', label: 'Blogs' },
     { path: '/contact', label: 'Contact' }
   ];
 

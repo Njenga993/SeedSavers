@@ -1,50 +1,18 @@
-/* src/styles/contact.css */
-/* Reset and Base Styles */
-*,
-*::before,
-*::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html {
-  width: 100%;
-  overflow-x: hidden;
-}
-
-body {
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-  font-family: 'Open Sans', sans-serif;
-  line-height: 1.6;
-  color: #333333;
-  background-color: #f8f9f6;
-}
-
-/* Variables */
-:root {
+/* Contact Page Styles */
+.contact-page {
   --gold-accent: #d4af37;
   --jungle-green: #235835;
   --faded-jungle: rgba(35, 88, 53, 0.8);
   --muted-green: #e8f5e9;
   --text-dark: #333333;
   --section-padding: 6rem;
-}
 
-/* Layout Containers */
-.container {
-  width: 100%;
-  max-width: 1200px;
+  width: 100vw;
   margin: 0 auto;
-  padding: 0 2rem;
-}
-
-.contact-page {
-  width: 100%;
   overflow-x: hidden;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--text-dark);
+  line-height: 1.6;
 }
 
 /* Hero Section */
@@ -54,15 +22,15 @@ body {
   min-height: 50vh;
   display: flex;
   align-items: center;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
-              url('../assets/contact-hero.jpg') no-repeat center center/cover;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url('../assets/Spectacular.jpg') no-repeat center center/cover;
   color: white;
   text-align: center;
   padding: 4rem 0;
   margin-bottom: var(--section-padding);
 }
 
-.hero-overlay {
+.c-hero-content {
   width: 100%;
   max-width: 800px;
   margin: 0 auto;
@@ -76,7 +44,7 @@ body {
   margin-bottom: 1.5rem;
 }
 
-.hero-subtitle {
+.c-hero-subtitle {
   font-size: clamp(1.1rem, 2vw, 1.5rem);
   margin-bottom: 2rem;
   font-weight: 400;
@@ -92,14 +60,16 @@ body {
 .contact-grid {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 3rem;
   margin-bottom: var(--section-padding);
+  padding: 0 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 /* Form Section */
 .contact-form-section {
-  width: 100%;
   background-color: white;
   padding: 2.5rem;
   border-radius: 12px;
@@ -107,13 +77,11 @@ body {
 }
 
 .contact-form {
-  width: 100%;
   display: grid;
   gap: 1.5rem;
 }
 
 .form-group {
-  width: 100%;
   margin-bottom: 1rem;
 }
 
@@ -174,32 +142,25 @@ body {
 
 /* Contact Info Section */
 .contact-info-section {
-  width: 100%;
   background-color: var(--muted-green);
   padding: 2.5rem;
   border-radius: 12px;
 }
 
 .contact-methods {
-  width: 100%;
   display: grid;
   gap: 2rem;
 }
 
 .contact-method {
-  width: 100%;
   display: flex;
   gap: 1.5rem;
 }
 
-.method-icon {
+.method-icon-container {
   font-size: 1.5rem;
   color: var(--gold-accent);
   margin-top: 0.3rem;
-}
-
-.method-content {
-  width: 100%;
 }
 
 .method-content h3 {
@@ -220,7 +181,6 @@ body {
 }
 
 .office-image-container {
-  width: 100%;
   margin-top: 2.5rem;
   border-radius: 8px;
   overflow: hidden;
@@ -236,11 +196,12 @@ body {
 /* Regional Offices */
 .regional-offices {
   width: 100%;
-  margin: var(--section-padding) 0;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem var(--section-padding);
 }
 
 .office-grid {
-  width: 100%;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
@@ -248,7 +209,6 @@ body {
 }
 
 .office-card {
-  width: 100%;
   background: white;
   padding: 2rem;
   border-radius: 8px;
@@ -276,12 +236,13 @@ body {
 
 /* Map Section */
 .map-section {
-  width: 100%;
-  margin: var(--section-padding) 0;
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem var(--section-padding);
 }
 
 .contact-map {
-  width: 100%;
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
@@ -290,13 +251,12 @@ body {
 
 .contact-map iframe {
   width: 100%;
-  height: 400px;
+  height: 450px;
   border: 0;
 }
 
 /* Donation CTA */
 .donation-cta {
-  width: 100%;
   background: linear-gradient(135deg, var(--jungle-green) 0%, #1a5c2f 100%);
   color: white;
   padding: var(--section-padding) 0;
@@ -304,7 +264,6 @@ body {
 }
 
 .donation-content {
-  width: 100%;
   max-width: 800px;
   margin: 0 auto;
   padding: 0 2rem;
@@ -333,7 +292,6 @@ body {
 }
 
 .cta-buttons {
-  width: 100%;
   display: flex;
   justify-content: center;
   gap: 1.5rem;
@@ -348,7 +306,7 @@ body {
   text-decoration: none;
   border-radius: 50px;
   font-weight: 600;
-  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition: all 0.4s ease;
   border: 2px solid var(--gold-accent);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
@@ -366,104 +324,41 @@ body {
 
 /* Responsive Design */
 @media (max-width: 992px) {
-  :root {
+  .contact-page {
     --section-padding: 4rem;
   }
 }
 
 @media (max-width: 768px) {
-  :root {
-    --section-padding: 3rem;
-  }
-  
   .contact-hero {
     min-height: 400px;
+    padding: 3rem 0;
   }
-  
-  .contact-grid {
-    grid-template-columns: 1fr;
-  }
-  
-  .office-grid {
-    grid-template-columns: 1fr;
-  }
-}
 
-@media (max-width: 576px) {
-  .contact-hero {
-    min-height: 350px;
-    padding: 4rem 1rem;
-  }
-  
-  .contact-form-section,
-  .contact-info-section {
-    padding: 1.5rem;
-  }
-  
   .cta-buttons {
     flex-direction: column;
     align-items: center;
   }
-  
+
   .cta-button,
   .cta-button.secondary {
     width: 100%;
     max-width: 250px;
   }
-  
-  .office-card {
-    padding: 1.5rem;
-  }
-  
-  .office-details p {
-    font-size: 0.9rem;
-  }
-  
-  .office-image {
-    max-height: 200px;
-  }
-  
-  .donation-cta h2 {
-    font-size: 1.5rem;
-  }
-  
-  .donation-cta p {
-    font-size: 0.9rem;
-  }
-  
-  .donation-icon {
-    font-size: 2.5rem;
-  }
 }
 
-@media (max-width: 400px) {
-  :root {
-    --section-padding: 2.5rem;
+@media (max-width: 576px) {
+  .contact-page {
+    --section-padding: 3rem;
   }
-  
-  .contact-hero h1 {
-    font-size: 1.8rem;
+
+  .contact-grid,
+  .office-grid {
+    grid-template-columns: 1fr;
   }
-  
-  .hero-subtitle {
-    font-size: 1rem;
-  }
-  
-  .form-group input,
-  .form-group select,
-  .form-group textarea {
-    padding: 0.8rem;
-  }
-  
-  .method-icon {
-    font-size: 1.2rem;
-  }
-  
-  .method-content h3 {
-    font-size: 1.1rem;
-  }
-  
-  .method-details p {
-    font-size: 0.9rem;
+
+  .contact-form-section,
+  .contact-info-section {
+    padding: 1.5rem;
   }
 }

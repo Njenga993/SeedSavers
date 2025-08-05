@@ -1,74 +1,65 @@
-import { useState } from 'react';
-import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaClock, FaDonate } from 'react-icons/fa';
-import contactHeroImage from '../assets/Spectacular.jpg';
-import officeImage from '../assets/Spectacular.jpg';
-import '../styles/contact.css';
+import React from 'react';
+import { FaMapMarkerAlt, FaPhone, FaEnvelope, FaClock } from 'react-icons/fa';
+import '../styles/Contact.css';
+import SpectacularImage from '../assets/Spectacular.jpg';
 
-const Contact = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: 'general',
-    message: ''
-  });
+type ContactMethod = {
+  icon: React.ReactNode;
+  title: string;
+  details: string[];
+  description?: string;
+};
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
-  };
+type OfficeLocation = {
+  name: string;
+  address: string;
+  phone: string;
+  email: string;
+  hours: string;
+};
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Form submission logic here
-    alert(`Thank you, ${formData.name}! Your message has been submitted.`);
-    setFormData({ name: '', email: '', subject: 'general', message: '' });
-  };
-
-  const contactMethods = [
+const ContactPage: React.FC = () => {
+  const contactMethods: ContactMethod[] = [
     {
-      icon: <FaPhone className="contact-icon" />,
-      title: 'Phone',
+      icon: <FaMapMarkerAlt className="method-icon" />,
+      title: 'Our Headquarters',
+      details: ['123 Seed Street', 'Nairobi, Kenya'],
+      description: 'Main administrative office'
+    },
+    {
+      icon: <FaPhone className="method-icon" />,
+      title: 'Call Us',
       details: ['+254 712 345 678', '+254 734 567 890'],
-      description: 'Available Monday-Friday, 8am-5pm EAT'
+      description: 'Monday-Friday, 8am-5pm EAT'
     },
     {
-      icon: <FaEnvelope className="contact-icon" />,
-      title: 'Email',
-      details: ['info@seedsaverskenya.org', 'support@seedsaverskenya.org'],
-      description: 'We respond within 24-48 hours'
-    },
-    {
-      icon: <FaMapMarkerAlt className="contact-icon" />,
-      title: 'Headquarters',
-      details: ['Seed Savers Centre', 'Nakuru, Kenya'],
-      description: 'Open to visitors by appointment'
-    },
-    {
-      icon: <FaClock className="contact-icon" />,
-      title: 'Working Hours',
-      details: ['Monday-Friday: 8am - 5pm', 'Saturday: 9am - 2pm'],
-      description: 'Closed on public holidays'
+      icon: <FaEnvelope className="method-icon" />,
+      title: 'Email Us',
+      details: ['info@seedsavers.org', 'support@seedsavers.org']
     }
   ];
 
-  const regionalOffices = [
+  const regionalOffices: OfficeLocation[] = [
     {
-      region: 'Western Kenya',
-      address: 'Kisumu Office, Mamboleo Road',
+      name: 'Nakuru Regional Office',
+      address: '456 Conservation Road, Nakuru',
+      phone: '+254 701 234 567',
+      email: 'nakuru@seedsavers.org',
+      hours: 'Mon-Fri: 8:30am-4:30pm'
+    },
+    {
+      name: 'Kisumu Field Office',
+      address: '789 Lakeview Drive, Kisumu',
       phone: '+254 723 456 789',
-      email: 'western@seedsaverskenya.org'
+      email: 'kisumu@seedsavers.org',
+      hours: 'Mon-Fri: 9:00am-3:00pm'
     },
     {
-      region: 'Central Kenya',
-      address: 'Nyeri Office, Kimathi Street',
-      phone: '+254 724 567 890',
-      email: 'central@seedsaverskenya.org'
-    },
-    {
-      region: 'Coastal Kenya',
-      address: 'Mombasa Office, Nkrumah Road',
-      phone: '+254 725 678 901',
-      email: 'coastal@seedsaverskenya.org'
+      name: 'Coastal Outreach Center',
+      address: '321 Mangrove Lane, Mombasa',
+      phone: '+254 732 345 678',
+      email: 'coast@seedsavers.org',
+      hours: 'Tue-Sat: 8:00am-2:00pm'
     }
   ];
 
@@ -76,85 +67,63 @@ const Contact = () => {
     <div className="contact-page">
       {/* Hero Section */}
       <section className="contact-hero">
-        <div className="hero-overlay">
-          <h1>Get In Touch</h1>
-          <p className="hero-subtitle">Connect with us to learn more about seed conservation and sustainable agriculture</p>
+        <div className="c-hero-content">
+          <h1>Get in Touch</h1>
+          <p className="c-hero-subtitle">
+            Connect with our team to learn more about our seed conservation efforts
+          </p>
         </div>
       </section>
 
-      {/* Main Content */}
+      {/* Main Contact Section */}
       <div className="contact-container">
         <div className="contact-grid">
           {/* Contact Form */}
-          <div className="contact-form-section">
-            <h2 className="section-title">Send Us a Message</h2>
-            <form onSubmit={handleSubmit} className="contact-form">
+          <section className="contact-form-section">
+            <h2>Send Us a Message</h2>
+            <form className="contact-form">
               <div className="form-group">
-                <label htmlFor="name">Full Name*</label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  required
-                />
+                <label htmlFor="name">Full Name</label>
+                <input type="text" id="name" required />
               </div>
-
+              
               <div className="form-group">
-                <label htmlFor="email">Email*</label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  required
-                />
+                <label htmlFor="email">Email Address</label>
+                <input type="email" id="email" required />
               </div>
-
+              
               <div className="form-group">
                 <label htmlFor="subject">Subject</label>
-                <select
-                  id="subject"
-                  name="subject"
-                  value={formData.subject}
-                  onChange={handleChange}
-                >
-                  <option value="general">General Inquiry</option>
-                  <option value="volunteer">Volunteer Opportunity</option>
-                  <option value="donation">Donation Question</option>
-                  <option value="partnership">Partnership Inquiry</option>
-                  <option value="media">Media Request</option>
+                <select id="subject" required>
+                  <option value="">Select a topic</option>
+                  <option value="donation">Donation Inquiry</option>
+                  <option value="partnership">Partnership Opportunity</option>
+                  <option value="volunteer">Volunteer Program</option>
+                  <option value="training">Seed School Information</option>
+                  <option value="other">Other</option>
                 </select>
               </div>
-
+              
               <div className="form-group">
-                <label htmlFor="message">Message*</label>
-                <textarea
-                  id="message"
-                  name="message"
-                  value={formData.message}
-                  onChange={handleChange}
-                  rows={6}
-                  required
-                />
+                <label htmlFor="message">Your Message</label>
+                <textarea id="message" required></textarea>
               </div>
-
+              
               <button type="submit" className="submit-btn">
                 Send Message
               </button>
             </form>
-          </div>
+          </section>
 
-          {/* Contact Info */}
-          <div className="contact-info-section">
-            <h2 className="section-title">Contact Information</h2>
-            
+          {/* Contact Information */}
+          <section className="contact-info-section">
+            <h2>Contact Information</h2>
             <div className="contact-methods">
               {contactMethods.map((method, index) => (
-                <div className="contact-method" key={index}>
-                  <div className="method-icon">{method.icon}</div>
+                <div key={index} className="contact-method">
+                  <div className="method-icon-container">
+                    {method.icon}
+                  </div>
                   <div className="method-content">
                     <h3>{method.title}</h3>
                     <div className="method-details">
@@ -162,29 +131,44 @@ const Contact = () => {
                         <p key={i}>{detail}</p>
                       ))}
                     </div>
-                    <p className="method-description">{method.description}</p>
+                    {method.description && (
+                      <p className="method-description">{method.description}</p>
+                    )}
                   </div>
                 </div>
               ))}
             </div>
 
             <div className="office-image-container">
-              <img src={officeImage} alt="Seed Savers Kenya Office" className="office-image" />
+              <img 
+                src={SpectacularImage} 
+                alt="Seed Savers Office" 
+                className="office-image"
+              />
             </div>
-          </div>
+          </section>
         </div>
 
         {/* Regional Offices */}
         <section className="regional-offices">
-          <h2 className="section-title">Our Regional Offices</h2>
+          <h2>Our Regional Offices</h2>
           <div className="office-grid">
             {regionalOffices.map((office, index) => (
-              <div className="office-card" key={index}>
-                <h3>{office.region}</h3>
+              <div key={index} className="office-card">
+                <h3>{office.name}</h3>
                 <div className="office-details">
-                  <p><FaMapMarkerAlt /> {office.address}</p>
-                  <p><FaPhone /> {office.phone}</p>
-                  <p><FaEnvelope /> {office.email}</p>
+                  <p>
+                    <FaMapMarkerAlt /> {office.address}
+                  </p>
+                  <p>
+                    <FaPhone /> {office.phone}
+                  </p>
+                  <p>
+                    <FaEnvelope /> {office.email}
+                  </p>
+                  <p>
+                    <FaClock /> {office.hours}
+                  </p>
                 </div>
               </div>
             ))}
@@ -193,39 +177,44 @@ const Contact = () => {
 
         {/* Map Section */}
         <section className="map-section">
-          <h2 className="section-title">Find Us</h2>
+          <h2>Find Us on the Map</h2>
           <div className="contact-map">
             <iframe
-              title="Seed Savers Kenya Location"
-              src="https://maps.google.com/maps?q=nakuru%2C%20kenya&t=&z=13&ie=UTF8&iwloc=&output=embed"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.854559245747!2d36.82121431475389!3d-1.2729998359806925!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f173c0a1f9de7%3A0xad2c84e1fb7aec6e!2sNairobi!5e0!3m2!1sen!2ske!4v1620000000000!5m2!1sen!2ske"
               width="100%"
-              height="400"
-              loading="lazy"
+              height="450"
               style={{ border: 0 }}
               allowFullScreen
+              loading="lazy"
+              title="Our Location on Map"
             ></iframe>
           </div>
         </section>
-      </div>
 
-      {/* Donation CTA */}
-      <section className="donation-cta">
-        <div className="container">
+        {/* Donation CTA */}
+        <section className="donation-cta">
           <div className="donation-content">
-            <FaDonate className="donation-icon" />
-            <h2>Support Our Mission</h2>
+            <div className="donation-icon">
+              <FaEnvelope />
+            </div>
+            <h2>Join Our Mailing List</h2>
             <p>
-              Your donation helps preserve indigenous seeds and supports farming communities across Kenya.
+              Stay updated with our latest projects, events, and seed conservation
+              efforts by subscribing to our newsletter.
             </p>
             <div className="cta-buttons">
-              <a href="/donate" className="cta-button">Donate Now</a>
-              <a href="/volunteer" className="cta-button secondary">Become a Volunteer</a>
+              <a href="/subscribe" className="cta-button">
+                Subscribe Now
+              </a>
+              <a href="/donate" className="cta-button secondary">
+                Make a Donation
+              </a>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
     </div>
   );
 };
 
-export default Contact;
+export default ContactPage;

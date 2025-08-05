@@ -1,6 +1,7 @@
+/* SeedSchool.css */
 .seed-school-section {
-  background-color: #f0fdf4;
   padding: 4rem 1rem;
+  background-color: #f7fdf9;
 }
 
 .seed-school-container {
@@ -10,24 +11,27 @@
   flex-wrap: wrap;
   gap: 2rem;
   align-items: center;
+  justify-content: space-between;
 }
 
 .seed-school-images {
-  flex: 1 1 400px;
+  flex: 1;
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  min-width: 300px;
 }
 
 .seed-school-images img {
   width: 100%;
-  border-radius: 15px;
+  border-radius: 10px;
   object-fit: cover;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
 }
 
 .seed-school-content {
-  flex: 1 1 400px;
-  text-align: left;
+  flex: 1;
+  min-width: 300px;
 }
 
 .seed-school-heading {
@@ -38,125 +42,155 @@
 
 .seed-school-description,
 .upcoming-school-info {
-  font-size: 1.05rem;
+  font-size: 1.1rem;
   color: #333;
+  line-height: 1.6;
   margin-bottom: 1.5rem;
 }
 
-.upcoming-school-info {
-  background: #fff9e6;
-  border-left: 4px solid #d4af37;
-  padding: 1rem;
-  border-radius: 8px;
+.upcoming-school-info strong {
+  color: #2d6a4f;
 }
 
 .seed-school-stats {
   display: flex;
   gap: 1.5rem;
-  flex-wrap: wrap;
-  margin-bottom: 1.5rem;
+  margin: 1.5rem 0;
 }
 
 .stat-box {
-  background: #ffffff;
-  border-radius: 10px;
-  padding: 1rem 1.5rem;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
-  flex: 1 1 120px;
   text-align: center;
+  background: #e8f5e9;
+  padding: 1rem;
+  border-radius: 8px;
+  flex: 1;
 }
 
 .stat-box h3 {
-  font-size: 2.5rem;
-  color: orangered;
-  margin-bottom: 0.3rem;
+  font-size: 1.5rem;
+  color: #2d6a4f;
+  margin: 0;
 }
 
 .stat-box p {
-  font-size: 1rem;
-  color: #666;
+  margin: 0;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.seed-school-contact {
+  margin: 1rem 0;
+  color: #555;
 }
 
 .seed-school-cta {
   display: inline-block;
   background-color: #d4af37;
   color: #fff;
-  padding: 0.6rem 1.3rem;
+  padding: 0.75rem 1.5rem;
   text-decoration: none;
   border-radius: 50px;
-  font-weight: bold;
-  transition: background-color 0.3s;
+  margin-top: 1rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .seed-school-cta:hover {
   background-color: #2F4B26;
 }
 
-.seed-school-contact {
-  margin-top: 1rem;
-  font-size: 0.95rem;
-  color: #444;
+/* Expanded Section Styles */
+.seed-school-expanded {
+  width: 100%;
+  background-color: #ffffff;
+  padding: 2rem 0;
+  margin-top: 2rem;
+  border-top: 1px solid #e5e7eb;
 }
 
-/* Responsive styles */
+.seed-school-expanded-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.seed-school-expanded h3 {
+  color: #2F4B26;
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.expanded-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.expanded-column h4 {
+  color: #2d6a4f;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.expanded-column ul {
+  padding-left: 1.5rem;
+}
+
+.expanded-column li {
+  margin-bottom: 0.8rem;
+  color: #374151;
+}
+
+.benefits-section {
+  background: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin: 2rem 0;
+}
+
+.benefits-section h4 {
+  color: #2d6a4f;
+  margin-bottom: 1rem;
+}
+
+.benefits-section ul {
+  padding-left: 1.5rem;
+  margin-top: 1rem;
+}
+
+.benefits-section li {
+  margin-bottom: 0.5rem;
+}
+
+.seed-school-cta.secondary {
+  background-color: #fef3c7;
+  color: #92400e;
+  border: 1px solid #facc15;
+}
+
+.seed-school-cta.secondary:hover {
+  background-color: #fde68a;
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
-  .seed-school-container {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .seed-school-content {
-    text-align: center;
-  }
-
-  .seed-school-images {
-    flex-direction: row;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-
-  .seed-school-images img {
-    width: 48%;
-  }
-
-  .stat-box h3 {
-    font-size: 2rem;
+  .expanded-grid {
+    grid-template-columns: 1fr;
   }
 
   .seed-school-heading {
     font-size: 1.8rem;
-  }
-
-  .seed-school-description,
-  .upcoming-school-info {
-    font-size: 1rem;
-  }
-
-  .seed-school-contact {
-    font-size: 0.9rem;
   }
 }
 
 @media (max-width: 480px) {
-  .seed-school-images img {
-    width: 100%;
-  }
-
-  .stat-box {
-    flex: 1 1 100%;
-    margin-bottom: 1rem;
+  .seed-school-stats {
+    flex-direction: column;
   }
 
   .seed-school-heading {
     font-size: 1.5rem;
-  }
-
-  .seed-school-description,
-  .upcoming-school-info {
-    font-size: 0.95rem;
-  }
-
-  .stat-box h3 {
-    font-size: 1.8rem;
   }
 }

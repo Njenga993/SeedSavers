@@ -1,10 +1,14 @@
 import { useState } from 'react';
 import '../styles/about.css';
-
 // Import strategy images
 import agrobiodiversityImg from '../assets/Spectacular.jpg';
 import capacityBuildingImg from '../assets/Spectacular.jpg';
 import advocacyImg from '../assets/Spectacular.jpg';
+// Import Seed School component
+import SeedSchool from '../components/SeedSchool';
+import IncubationProgram from '../components/IncubationProgram';
+import CommunitySeedBank from '../components/CommunitySeedBank';
+import Maps from '../components/Maps';
 
 const About = () => {
   const [expandedStrategy, setExpandedStrategy] = useState<number | null>(null);
@@ -191,28 +195,6 @@ const About = () => {
   };
 
 
-  const milestones = [
-    {
-      year: '2010',
-      event: 'Organization Founded',
-      description: 'Started as a community initiative in Nakuru County with 12 farmers conserving 8 seed varieties.'
-    },
-    {
-      year: '2014',
-      event: 'First Community Seed Bank',
-      description: 'Established our flagship seed bank in Eldoret preserving 43 traditional varieties.'
-    },
-    {
-      year: '2018',
-      event: 'National Recognition',
-      description: 'Awarded the Green Innovation Prize by the Ministry of Agriculture for our conservation work.'
-    },
-    {
-      year: '2022',
-      event: 'Regional Expansion',
-      description: 'Expanded operations to 8 counties with a network of 5,000+ participating farmers.'
-    }
-  ];
 
   return (
     <div className="about-page">
@@ -221,66 +203,12 @@ const About = () => {
         <div className="about-hero-overlay">
           <h1>About Seed Savers Kenya</h1>
           <p className="hero-subtitle">Preserving indigenous seeds for food sovereignty since 2010</p>
-          <a href="#our-story" className="hero-cta">Discover Our Journey</a>
         </div>
       </header>
 
       <main className="about-content">
-        {/* Mission/Vision Section */}
-        <section className="about-core">
-          <div className="container">
-            <h2 className="section-title">Our Core</h2>
-            <div className="core-tabs">
-              <button
-                className={`tab-button ${activeTab === 'mission' ? 'active' : ''}`}
-                onClick={() => setActiveTab('mission')}
-              >
-                Mission
-              </button>
-              <button
-                className={`tab-button ${activeTab === 'vision' ? 'active' : ''}`}
-                onClick={() => setActiveTab('vision')}
-              >
-                Vision
-              </button>
-            </div>
 
-            <div className="core-content">
-              {activeTab === 'mission' && (
-                <div className="tab-panel">
-                  <h3>Our Mission</h3>
-                  <p>To preserve Kenya's agricultural biodiversity by empowering communities to conserve, propagate, and utilize indigenous seeds through sustainable practices that ensure food sovereignty for future generations.</p>
-                </div>
-              )}
-              {activeTab === 'vision' && (
-                <div className="tab-panel">
-                  <h3>Our Vision</h3>
-                  <p>A Kenya where every community has control over their seed heritage, where diverse traditional crops thrive, and where sustainable agriculture forms the foundation of food security and cultural identity.</p>
-                </div>
-              )}
-            </div>
-          </div>
-        </section>
-
-        {/* Our Story Timeline */}
-        <section className="about-story" id="our-story">
-          <div className="container">
-            <h2 className="section-title">Our Story</h2>
-            <div className="timeline">
-              {milestones.map((milestone, index) => (
-                <div className="timeline-item" key={index}>
-                  <div className="timeline-year">{milestone.year}</div>
-                  <div className="timeline-content">
-                    <h3>{milestone.event}</h3>
-                    <p>{milestone.description}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Strategies Section */}
+                {/* Strategies Section */}
         <section className="about-strategies">
           <div className="container">
             <h2 className="section-title">Our Strategic Approach</h2>
@@ -360,28 +288,44 @@ const About = () => {
             </div>
           </div>
         </section>
+  
+            <SeedSchool />
+            <IncubationProgram />
+            <CommunitySeedBank />
+            <Maps />
 
-        {/* Impact Stats */}
-        <section className="about-impact">
+        {/* Mission/Vision Section */}
+        <section className="about-core">
           <div className="container">
-            <h2 className="section-title">Our Impact</h2>
-            <div className="impact-stats">
-              <div className="stat-item">
-                <div className="stat-number">200+</div>
-                <div className="stat-label">Seed Varieties Preserved</div>
-              </div>
-              <div className="stat-item">
-                <div className="stat-number">5,000+</div>
-                <div className="stat-label">Farmers Trained</div>
-              </div>
-              <div className="stat-item">
-                <div className="stat-number">47</div>
-                <div className="stat-label">Community Seed Hubs</div>
-              </div>
-              <div className="stat-item">
-                <div className="stat-number">8</div>
-                <div className="stat-label">Counties Reached</div>
-              </div>
+            <h2 className="section-title">Our Core</h2>
+            <div className="core-tabs">
+              <button
+                className={`tab-button ${activeTab === 'mission' ? 'active' : ''}`}
+                onClick={() => setActiveTab('mission')}
+              >
+                Mission
+              </button>
+              <button
+                className={`tab-button ${activeTab === 'vision' ? 'active' : ''}`}
+                onClick={() => setActiveTab('vision')}
+              >
+                Vision
+              </button>
+            </div>
+
+            <div className="core-content">
+              {activeTab === 'mission' && (
+                <div className="tab-panel">
+                  <h3>Our Mission</h3>
+                  <p>To preserve Kenya's agricultural biodiversity by empowering communities to conserve, propagate, and utilize indigenous seeds through sustainable practices that ensure food sovereignty for future generations.</p>
+                </div>
+              )}
+              {activeTab === 'vision' && (
+                <div className="tab-panel">
+                  <h3>Our Vision</h3>
+                  <p>A Kenya where every community has control over their seed heritage, where diverse traditional crops thrive, and where sustainable agriculture forms the foundation of food security and cultural identity.</p>
+                </div>
+              )}
             </div>
           </div>
         </section>

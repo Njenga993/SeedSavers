@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import "../styles/SeedSchool.css";
 import seedSchoolImg1 from "../assets/women-cultivating-crops-in-green-fields-4771650.jpg";
-import seedSchoolImg2 from "../assets/women-cultivating-crops-in-green-fields-4771650.jpg"; // Add this second image to your assets
+import seedSchoolImg2 from "../assets/women-cultivating-crops-in-green-fields-4771650.jpg";
 
 const SeedSchool: React.FC = () => {
+  const [showMore, setShowMore] = useState(false);
+
   return (
     <section className="seed-school-section">
       <div className="seed-school-container">
@@ -25,10 +27,7 @@ const SeedSchool: React.FC = () => {
           </p>
 
           <p className="upcoming-school-info">
-            <strong>Upcoming:</strong> The next Seed School kicks off this
-            September! Join us for an immersive training experience featuring
-            local facilitators, seed exchange events, and practical field
-            sessions. Registration is now open.
+            <strong>Upcoming:</strong> Our 3rd Seed Boot Camp will run from October 26 to November 7, 2025 at the Seed Savers Network Learning Center in Gilgil, Kenya.
           </p>
 
           <div className="seed-school-stats">
@@ -46,16 +45,69 @@ const SeedSchool: React.FC = () => {
             </div>
           </div>
 
-          <a href="/seed-school" className="seed-school-cta">
-            Read More
-          </a>
-
           <div className="seed-school-contact">
             <p>Email: info@seedsaverskenya.org</p>
             <p>Phone: +254 712 345 678</p>
           </div>
+
+          <button 
+            className="seed-school-cta" 
+            onClick={() => setShowMore(!showMore)}
+          >
+            {showMore ? "Show Less" : "Learn More"}
+          </button>
         </div>
       </div>
+
+      {showMore && (
+        <div className="seed-school-expanded">
+          <div className="seed-school-expanded-content">
+            <h3>3rd Seed Boot Camp Details</h3>
+            <div className="expanded-grid">
+              <div className="expanded-column">
+                <h4>Program Features</h4>
+                <ul>
+                  <li>Comprehensive training on seed security assessment</li>
+                  <li>Hands-on seed banking techniques</li>
+                  <li>Documentation and policy frameworks</li>
+                  <li>Networking with seed practitioners</li>
+                  <li>Traditional knowledge sharing</li>
+                </ul>
+              </div>
+              <div className="expanded-column">
+                <h4>Key Information</h4>
+                <ul>
+                  <li><strong>Duration:</strong> 2 weeks (October 26 - November 7, 2025)</li>
+                  <li><strong>Cost:</strong> $1,000 (includes training and accommodation)</li>
+                  <li><strong>Application Deadline:</strong> October 12, 2025</li>
+                  <li><strong>Location:</strong> Seed Savers Network Learning Center, Gilgil</li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="benefits-section">
+              <h4>Why Attend?</h4>
+              <p>
+                This intensive boot camp will equip you with practical skills to establish community seed banks, 
+                preserve indigenous seed varieties, advocate for seed sovereignty, and develop seed enterprise models.
+              </p>
+              <ul>
+                <li>Learn from leading seed conservation experts</li>
+                <li>Gain hands-on experience with seed processing and storage</li>
+                <li>Network with like-minded seed activists</li>
+                <li>Receive a certificate upon completion</li>
+              </ul>
+            </div>
+
+            <button 
+              className="seed-school-cta secondary" 
+              onClick={() => setShowMore(false)}
+            >
+              Show Less
+            </button>
+          </div>
+        </div>
+      )}
     </section>
   );
 };

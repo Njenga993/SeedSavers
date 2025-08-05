@@ -1,5 +1,5 @@
 // src/components/Hero.tsx
-import { FaArrowRight, FaLeaf, FaUsers, FaHandshake } from 'react-icons/fa';
+import { FaArrowRight, FaHandshake } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import '../styles/hero.css';
@@ -46,19 +46,7 @@ const Hero = () => {
             <h1 className="main-title">
               <span className="title-line">Seed Savers Network Kenya</span>
               <span className="highlight-text">
-                My Seed, My Food, My Future
-                <motion.span
-                  initial={{ scale: 0, rotate: -30 }}
-                  animate={{ scale: 1, rotate: 0 }}
-                  transition={{
-                    delay: 0.6,
-                    type: "spring",
-                    stiffness: 150
-                  }}
-                  className="emoji"
-                >
-                  🌍
-                </motion.span>
+                My Seeds, My Food, My Future
               </span>
             </h1>
           </motion.div>
@@ -105,29 +93,7 @@ const Hero = () => {
         </motion.div>
       </div>
 
-      {/* Feature Cards */}
-      <motion.div 
-        className="hero-features"
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 1.2, duration: 0.8 }}
-      >
-        <div className="feature-card">
-          <div className="feature-icon">
-            <FaLeaf />
-          </div>
-          <h3>Organic Advocacy</h3>
-          <p>Championing organic policies worldwide</p>
-        </div>
-
-        <div className="feature-card">
-          <div className="feature-icon">
-            <FaUsers />
-          </div>
-          <h3>Farmer-Centered</h3>
-          <p>Putting organic farmers at the heart of everything we do</p>
-        </div>
-      </motion.div>
+      
     </div>
   </div>
 </section>

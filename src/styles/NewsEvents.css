@@ -1,0 +1,509 @@
+/* NewsEvents.css */
+.news-events-page {
+  /* Variables - Scoped to news events page */
+  --gold-accent: #d4af37;
+  --jungle-green: #235835;
+  --faded-jungle: rgba(35, 88, 53, 0.8);
+  --muted-green: #e8f5e9;
+  --text-dark: #333333;
+  --section-padding: 6rem;
+
+  width: 100vw;
+  margin: 0 auto;
+  max-width: 100%;
+  overflow-x: hidden;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--text-dark);
+  line-height: 1.6;
+}
+
+/* Full-width sections with inner containers */
+.news-hero,
+.news-section,
+.newsletter-section {
+  width: 100%;
+}
+
+/* Inner content containers */
+.n-hero-content,
+.section-content,
+.newsletter-content {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Hero Section */
+.news-hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+              url('../assets/Spectacular.jpg') center/cover no-repeat;
+  color: white;
+  padding: 6rem 0;
+  text-align: center;
+}
+
+.n-hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.n-hero-content p {
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Section Styles */
+.news-section {
+  padding: var(--section-padding) 0;
+}
+
+.news-section > .section-content {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.alt-bg {
+  background-color: #f9f9f9;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.section-header h2 {
+  font-size: 2.2rem;
+  color: var(--jungle-green);
+  margin-bottom: 0.5rem;
+}
+
+.section-header p {
+  font-size: 1.1rem;
+  color: #666;
+}
+
+/* Events Grid */
+.events-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.event-card {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  display: flex;
+}
+
+.event-card:hover {
+  transform: translateY(-5px);
+}
+
+.event-date {
+  background: var(--jungle-green);
+  color: white;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 80px;
+}
+
+.date-day {
+  font-size: 2rem;
+  font-weight: bold;
+  line-height: 1;
+}
+
+.date-month {
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+.event-content {
+  padding: 1.5rem;
+  flex: 1;
+}
+
+.event-content h3 {
+  margin-top: 0;
+  color: var(--jungle-green);
+}
+
+.event-location {
+  color: #666;
+  font-size: 0.9rem;
+  margin: 0.5rem 0;
+}
+
+.event-description {
+  margin: 1rem 0;
+}
+
+.event-details {
+  display: flex;
+  justify-content: space-between;
+  margin: 1.5rem 0;
+  font-weight: bold;
+  color: var(--jungle-green);
+}
+
+.event-button {
+  background: var(--jungle-green);
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 50px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease;
+  width: 100%;
+}
+
+.event-button:hover {
+  background: #1e4a34;
+}
+
+/* Image Cards */
+.event-image img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+/* Stories Grid */
+.stories-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.story-card {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.story-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.story-content {
+  padding: 1.5rem;
+}
+
+.story-content h3 {
+  margin-top: 0;
+  color: var(--jungle-green);
+}
+
+.read-more {
+  color: var(--jungle-green);
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 1rem;
+}
+
+.read-more:hover {
+  text-decoration: underline;
+}
+
+/* Videos Section */
+.videos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.video-card {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+}
+
+.video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  height: 0;
+  overflow: hidden;
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+}
+
+.video-card h3 {
+  margin: 1rem 0 0;
+  text-align: center;
+  color: var(--jungle-green);
+}
+
+.youtube-cta {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.youtube-button {
+  display: inline-block;
+  background: #ff0000;
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.youtube-button:hover {
+  background: #cc0000;
+}
+
+/* Newsletter Section */
+.newsletter-section {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+              url('../assets/women-cultivating-crops-in-green-fields-4771650.jpg') center/cover no-repeat;
+  color: white;
+  padding: var(--section-padding) 0;
+  text-align: center;
+}
+
+.newsletter-content {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.newsletter-content h2 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+}
+
+.newsletter-content p {
+  margin-bottom: 2rem;
+}
+
+.newsletter-form {
+  display: flex;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.newsletter-form input {
+  flex: 1;
+  padding: 1rem;
+  border: none;
+  border-radius: 50px 0 0 50px;
+  font-size: 1rem;
+}
+
+.newsletter-form button {
+  background: var(--jungle-green);
+  color: white;
+  border: none;
+  padding: 0 2rem;
+  border-radius: 0 50px 50px 0;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.newsletter-form button:hover {
+  background: #1e4a34;
+}
+
+.privacy-note {
+  font-size: 0.8rem;
+  opacity: 0.8;
+  margin-top: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .news-events-page {
+    --section-padding: 4rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .news-hero {
+    padding: 4rem 0;
+  background-attachment: scroll;
+  }
+  
+  .n-hero-content h1 {
+    font-size: 2.2rem;
+  }
+  
+  .event-card {
+    flex-direction: column;
+  }
+  
+  .event-date {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1rem;
+  }
+  
+  .newsletter-form {
+    flex-direction: column;
+  }
+  
+  .newsletter-form input,
+  .newsletter-form button {
+    border-radius: 50px;
+    width: 100%;
+  }
+  
+  .newsletter-form button {
+    margin-top: 1rem;
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .news-events-page {
+    --section-padding: 3rem;
+  }
+  
+  .n-hero-content h1 {
+    font-size: 1.8rem;
+  }
+  
+  .n-hero-content p {
+    font-size: 1rem;
+  }
+  
+  .section-header h2 {
+    font-size: 1.8rem;
+  }
+  
+  .events-grid,
+  .stories-grid,
+  .videos-grid {
+    grid-template-columns: 1fr;
+  }
+    .event-card,
+    .story-card,
+    .video-card {
+    margin: 0 auto;
+    max-width: 90%;
+    }
+    .event-date {
+    padding: 1rem;
+    min-width: 60px;
+    }
+    .event-date .date-day {
+        font-size: 1.5rem;
+        }
+    .event-date .date-month {
+        font-size: 0.8rem;
+    }
+    .event-content h3 {
+        font-size: 1.2rem;
+    }
+    .event-content p {
+        font-size: 0.9rem;
+    }
+    .event-button {
+        padding: 0.8rem 1rem;
+        font-size: 0.9rem;
+    }
+    .newsletter-content h2 {
+        font-size: 1.8rem;
+    }
+    .newsletter-content p {
+        font-size: 0.9rem;
+    }
+    .newsletter-form input {
+        padding: 0.8rem;
+        font-size: 0.9rem;
+    }
+    .newsletter-form button {
+        padding: 0.8rem 1rem;
+        font-size: 0.9rem;
+    }
+
+
+
+}
+
+@media (max-width: 400px) {
+  .news-events-page {
+    --section-padding: 2.5rem;
+  }
+  
+  .n-ero-content,
+  .section-content,
+  .newsletter-content {
+    padding: 0 1.5rem;
+  }
+    .n-hero-content h1 {
+        font-size: 1.5rem;
+        margin-left: -5rem;
+    }
+    .n-hero-content p {
+        font-size: 0.9rem;
+    }
+    .section-header h2 {
+        font-size: 1.5rem;
+    }
+    .event-card {
+        flex-direction: column;
+    }
+    .event-date {
+        padding: 1rem;
+        min-width: 60px;
+    }
+    .event-date .date-day {
+        font-size: 1.5rem;
+    }
+    .event-date .date-month {
+        font-size: 0.8rem;
+    }
+    .event-content h3 {
+        font-size: 1.2rem;
+    }
+    .event-content p {
+        font-size: 0.9rem;
+    }
+    .event-button {
+        padding: 0.8rem 1rem;
+        font-size: 0.9rem;
+    }
+    .newsletter-content h2 {
+        font-size: 1.8rem;
+    }
+    .newsletter-content p {
+        font-size: 0.9rem;
+    }
+
+    .newsletter-form input {
+        padding: 0.8rem;
+        font-size: 0.9rem;
+    }
+    .newsletter-form button {
+        padding: 0.8rem 1rem;
+        font-size: 0.9rem;
+    }
+
+}
