@@ -96,7 +96,7 @@ const BlogPage: React.FC = () => {
     <div className="ssk-blog-container">
       {/* Hero Section */}
       <section className="ssk-blog-hero">
-        <div className="ssk-blog-hero-content">
+        <div className="about-hero-overlay">
           <h1 className="ssk-blog-main-title">Seed Knowledge Hub</h1>
           <p className="ssk-blog-subtitle">
             Insights, stories, and research on seed conservation and sustainable agriculture

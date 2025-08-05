@@ -67,7 +67,7 @@ const ContactPage: React.FC = () => {
     <div className="contact-page">
       {/* Hero Section */}
       <section className="contact-hero">
-        <div className="c-hero-content">
+        <div className="about-hero-overlay">
           <h1>Get in Touch</h1>
           <p className="c-hero-subtitle">
             Connect with our team to learn more about our seed conservation efforts

@@ -14,6 +14,19 @@
   margin-bottom: 1rem;
   color: var(--hero-dark);
   margin-top: 4rem;
+  align-items: center;
+}
+
+.hero-overlay {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 20px;
+  backdrop-filter: blur(5px);
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 .title-line {
@@ -70,19 +83,21 @@
   align-items: center;
   overflow: hidden;
   padding-top: 90px;
-  background-color: #f8f9f6;
+  background-color: white;
 }
 
 .hero-image {
   position: absolute;
   top: 0;
   right: 0;
-  width: 50%;
+  width: 100vw;
   height: 100%;
   background: url('../assets/Spectacular.jpg') center/cover no-repeat;
   z-index: 1;
   box-shadow: -10px 0 30px rgba(0, 0, 0, 0.1);
-  clip-path: polygon(20% 0%, 100% 0, 100% 100%, 0% 100%);
+  margin-left: 0;
+  margin-right: 0;
+  
 }
 
 .image-overlay {
@@ -92,10 +107,10 @@
   width: 100%;
   height: 100%;
   background: linear-gradient(
-    90deg,
+    0deg,
     rgba(248, 249, 246, 0.9) 0%,
     rgba(248, 249, 246, 0.6) 0%,
-    transparent 50%
+    transparent 0%
   );
 }
 
@@ -123,7 +138,7 @@
 
 .hero-text {
   flex: 1 1 500px;
-  max-width: 700px;
+  max-width: 800px;
   margin-bottom: 3rem;
 }
 
@@ -131,7 +146,7 @@
   font-size: clamp(2rem, 5vw, 3.5rem);
   line-height: 1.2;
   margin-bottom: 1.5rem;
-  color: #2F4B26;
+  color: white;
 }
 
 .hero-text h2 {
@@ -149,10 +164,12 @@
   opacity: 0.9;
 }
 
-.hero-cta {
+.h-hero-cta {
   display: flex;
   gap: 1.5rem;
   flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
 }
 
 .btn-primary {

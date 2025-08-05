@@ -44,10 +44,12 @@ const Hero = () => {
             }}
           >
             <h1 className="main-title">
-              <span className="title-line">Seed Savers Network Kenya</span>
+              <div className="hero-overlay">
+              <span className="title-line"><h1>Seed Savers Network Kenya</h1></span>
               <span className="highlight-text">
                 My Seeds, My Food, My Future
               </span>
+              </div>
             </h1>
           </motion.div>
 
@@ -66,12 +68,12 @@ const Hero = () => {
               }
             }}
           >
-            Preserving Kenya's agricultural heritage through seed conservation, education, and sustainable farming practices for future generations.
+
           </motion.h2>
 
           {/* CTA Buttons */}
           <motion.div 
-            className="hero-cta"
+            className="h-hero-cta"
             variants={{
               hidden: { opacity: 0 },
               visible: { 
@@ -91,11 +93,15 @@ const Hero = () => {
             </Link>
           </motion.div>
         </motion.div>
+        
       </div>
 
       
+  
     </div>
+    
   </div>
+  
 </section>
   );
 };
