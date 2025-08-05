@@ -104,9 +104,8 @@ const Navbar = () => {
       path: '/about', 
       label: 'Who We Are',
       dropdown: [
-        { path: '/about/mission', label: 'Our Mission' },
-        { path: '/about/team', label: 'Our Team' },
-        { path: '/about/partners', label: 'Partners' }
+        { path: '/about/Mission', label: 'Our Mission' },
+        { path: '/about/strategies', label: 'Our Strategies' },
       ]
     },
     { 

@@ -12,7 +12,6 @@
     "predeploy": "npm run build",
     "start": "vite",
     "deploy": "gh-pages -d dist"
-
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^7.0.0",
