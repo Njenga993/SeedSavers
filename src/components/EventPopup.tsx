@@ -33,9 +33,9 @@ const EventPopup: React.FC = () => {
                          👨‍🌾 Network with practitioners, share traditional knowledge, and build 
                                community seed movement strategies.
                                    </p>
-                                <p><strong>Cost:</strong> USD 1000 (includes 2 weeks’ training & accommodation)
-                               <strong>Apply by:</strong> 12<sup>th</sup> October 2025
-                               <strong>Contact:</strong> info@seedsaverskenya.org | +254 712 345 678</p>
+                                <p><strong>Cost:</strong> USD 1000 (includes 2 weeks’ training & accommodation)</p>
+                              <p> <strong>Apply by: 12<sup>th</sup></strong> October 2025</p>
+                              <p> <strong>Contact:</strong> info@seedsaverskenya.org | +254 712 345 678</p>
                               <a href="/event-registration" className="popup-cta">
                               Register Now
               </a>

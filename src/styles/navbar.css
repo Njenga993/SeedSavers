@@ -1,11 +1,9 @@
-/* src/styles/navbar.css */
-/* Add this at the top of the file */
+/* Improved Navbar CSS with Sticky Behavior */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
 :root {
-  --s-font: 'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif;
+  /* Color Variables */
   --s-primary: #235835;
-  --s-secndary: #2A4D14;
   --s-secondary: #c3f2c3;
   --s-dark: #2a2a2a;
   --s-light: #ffffff;
@@ -16,7 +14,8 @@
   --s-shadow-lg: 0 10px 25px rgba(0,0,0,0.1);
   --s-transition: all 0.3s ease;
 
-  /* New typography settings */
+  /* Typography */
+  --s-font: 'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif;
   --s-font-size-base: 16px;
   --s-font-size-small: 0.9rem;
   --s-font-size-medium: 1rem;
@@ -27,112 +26,31 @@
   --s-font-weight-bold: 700;
 }
 
-/* Apply font globally */
-body {
-  font-family: var(--s-font);
-  font-size: var(--s-font-size-base);
-  color: var(--s-text-dark);
-  font-weight: var(--s-font-weight-normal);
-}
-
-/* Top Bar */
-.s-top-bar {
-  background-color: white;
-  color: var(--s-text-dark);
-  padding: 0.5rem 0;
-  font-size: var(--s-font-size-small);
-  font-weight: var(--s-font-weight-medium);
-}
-
-.s-social-icons a,
-.s-top-links a {
-  font-size: var(--s-font-size-small);
-  font-weight: var(--s-font-weight-medium);
-}
-
-/* Main Navigation */
-.s-nav-links li a {
-  font-family: var(--s-font);
-  font-size: var(--s-font-size-medium);
-  font-weight: var(--s-font-weight-medium);
-  color: var(--s-text-light);
-}
-
-.s-nav-links li a.s-active {
-  font-weight: var(--s-font-weight-bold);
-}
-
-.s-dropdown-menu li a {
-  font-size: var(--s-font-size-medium);
-  font-weight: var(--s-font-weight-normal);
-}
-
-/* Search */
-.s-search-input {
-  font-family: var(--s-font);
-  font-size: var(--s-font-size-medium);
-}
-
-/* Mobile Sidebar */
-.s-sidebar-links li a,
-.s-mobile-dropdown-btn {
-  font-size: var(--s-font-size-medium);
-  font-weight: var(--s-font-weight-medium);
-}
-
-.s-sidebar-social a {
-  font-size: var(--s-font-size-medium);
-  font-weight: var(--s-font-weight-semibold);
-}
-
-
-:root {
-  --s-primary: #235835;
-  --s-secndary: #2A4D14;
-  --s-secondary: #c3f2c3;
-  --s-dark: #2a2a2a;
-  --s-light: #ffffff;
-  --s-text-light: #f5f5f5;
-  --s-text-dark: #333333;
-  --s-shadow-sm: 0 1px 3px rgba(0,0,0,0.12);
-  --s-shadow-md: 0 4px 6px rgba(0,0,0,0.1);
-  --s-shadow-lg: 0 10px 25px rgba(0,0,0,0.1);
-  --s-transition: all 0.3s ease;
-}
-
-/* Blur Overlay */
-.s-blur-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(5px);
-  z-index: 999;
-}
-
-/* Header Styles */
+/* Base Structure */
 .s-header {
-  position: sticky;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 1000;
   transition: var(--s-transition);
+  
 }
 
 .s-header.s-scrolled {
   background: rgba(255, 255, 255, 0.98);
   box-shadow: var(--s-shadow-lg);
+  backdrop-filter: blur(10px);
 }
 
 /* Top Bar */
 .s-top-bar {
   background-color: white;
-  color: var(--s-text-light);
+  color: var(--s-text-dark);
   padding: 0.5rem 0;
-  font-size: 0.9rem;
+  font-size: var(--s-font-size-small);
+  font-weight: var(--s-font-weight-medium);
+  transition: var(--s-transition);
 }
 
 .s-container {
@@ -142,6 +60,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 0.5rem;
 }
 
 .s-social-icons {
@@ -150,31 +69,30 @@ body {
 }
 
 .s-social-icons a {
-  color: black;
+  color: var(--s-dark);
   transition: var(--s-transition);
-  font-size: 0.9rem;
+  font-size: var(--s-font-size-small);
 }
 
 .s-social-icons a:hover {
-  color: blue;
+  color: var(--s-primary);
 }
 
 .s-top-links a {
-  color: black;
+  color: var(--s-dark);
   text-decoration: none;
   transition: var(--s-transition);
-  font-weight: 500;
+  font-weight: var(--s-font-weight-medium);
 }
 
 .s-top-links a:hover {
-  color: blue;
+  color: var(--s-primary);
 }
 
 /* Main Navigation */
 .s-main-nav {
   background-color: #2F4B26;
   padding: 0.8rem 0;
-  position: relative;
   transition: var(--s-transition);
 }
 
@@ -203,10 +121,11 @@ body {
 .s-nav-links li a {
   color: var(--s-text-light);
   text-decoration: none;
-  font-weight: 500;
-  font-size: 1rem;
+  font-weight: var(--s-font-weight-medium);
+  font-size: var(--s-font-size-medium);
   transition: var(--s-transition);
   padding: 1rem 0;
+  display: block;
 }
 
 .s-header.s-scrolled .s-nav-links li a {
@@ -215,7 +134,7 @@ body {
 
 .s-nav-links li a.s-active {
   color: var(--s-secondary);
-  font-weight: 600;
+  font-weight: var(--s-font-weight-semibold);
 }
 
 .s-nav-links li a:hover {
@@ -232,14 +151,21 @@ body {
   border-radius: 8px;
   box-shadow: var(--s-shadow-lg);
   padding: 0.5rem 0;
-  z-index: 100;
+  z-index: 1001;
   list-style: none;
+  display: none;
+}
+
+.s-nav-links li:hover .s-dropdown-menu {
+  display: block;
 }
 
 .s-dropdown-menu li a {
   color: var(--s-text-dark) !important;
   padding: 0.7rem 1.5rem;
   display: block;
+  font-size: var(--s-font-size-medium);
+  font-weight: var(--s-font-weight-normal);
 }
 
 .s-dropdown-menu li a:hover {
@@ -283,7 +209,7 @@ body {
   background: var(--s-light);
   padding: 1rem 0;
   box-shadow: var(--s-shadow-md);
-  z-index: 99;
+  z-index: 1002;
 }
 
 .s-search-form {
@@ -300,7 +226,8 @@ body {
   padding: 0.8rem 1.5rem;
   border: 2px solid var(--s-secondary);
   border-radius: 50px;
-  font-size: 1rem;
+  font-size: var(--s-font-size-medium);
+  font-family: var(--s-font);
 }
 
 .s-search-submit {
@@ -322,6 +249,17 @@ body {
 }
 
 /* Mobile Sidebar */
+.s-blur-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+  z-index: 1000; /* Lower than sidebar */
+}
+
 .s-sidebar {
   position: fixed;
   top: 0;
@@ -329,7 +267,7 @@ body {
   width: 320px;
   height: 100vh;
   background: var(--s-light);
-  z-index: 1001;
+  z-index: 1001; /* Higher than blur */
   overflow-y: auto;
 }
 
@@ -344,6 +282,8 @@ body {
   text-decoration: none;
   padding: 0.8rem 0;
   display: block;
+  font-size: var(--s-font-size-medium);
+  font-weight: var(--s-font-weight-medium);
 }
 
 .s-mobile-dropdown-btn {
@@ -357,6 +297,8 @@ body {
   text-decoration: none;
   padding: 0.8rem 0;
   cursor: pointer;
+  font-size: var(--s-font-size-medium);
+  font-weight: var(--s-font-weight-medium);
 }
 
 .s-mobile-dropdown-btn.s-open {
@@ -366,6 +308,7 @@ body {
 .s-mobile-dropdown-content {
   list-style: none;
   padding-left: 1rem;
+  overflow: hidden;
 }
 
 .s-sidebar-social {
@@ -378,25 +321,49 @@ body {
 
 .s-sidebar-social a {
   color: var(--s-primary);
+  font-size: var(--s-font-size-medium);
 }
 
-/* Responsive */
+/* Body Padding to Prevent Content Hiding */
+body {
+  padding-top: 150px; /* Adjust based on your navbar height */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+  .s-container {
+    padding: 0 1.5rem;
+  }
+}
+
 @media (max-width: 768px) {
   .s-nav-links {
     display: none;
   }
   
-  .s-hamburger {
-    display: block;
+  .s-logo-box img {
+    height: 60px;
   }
   
-  .s-logo-box img {
-    height: 45px;
+  body {
+    padding-top: 120px;
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 576px) {
   .s-sidebar {
     width: 85%;
+  }
+  
+  body {
+    padding-top: 100px;
+  }
+  
+  .s-logo-box img {
+    height: 50px;
+  }
+  
+  .s-container {
+    padding: 0 1rem;
   }
 }

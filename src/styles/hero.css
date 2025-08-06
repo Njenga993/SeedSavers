@@ -132,11 +132,13 @@
 .hero {
   position: relative;
   min-height: 100vh;
+  width: 100vw;
   display: flex;
   align-items: center;
   overflow: hidden;
   padding-top: 90px;
   background-color: white;
+  margin-left: -1rem;
 }
 
 .hero-image {
@@ -148,8 +150,6 @@
   background: url('../assets/Spectacular.jpg') center/cover no-repeat;
   z-index: 1;
   box-shadow: -10px 0 30px rgba(0, 0, 0, 0.1);
-  margin-left: 0;
-  margin-right: 0;
   
 }
 
@@ -157,7 +157,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 100vw;
   height: 100%;
   background: linear-gradient(
     0deg,
