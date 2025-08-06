@@ -96,12 +96,11 @@ const Footer = () => {
             <div className="footer-col">
               <h3 className="footer-title">Resources</h3>
               <ul className="footer-links">
-                <li><Link to="/seed-database">Seed Database</Link></li>
-                <li><Link to="/guides">Growing Guides</Link></li>
-                <li><Link to="/research">Research Papers</Link></li>
-                <li><Link to="/training">Training Materials</Link></li>
-                <li><Link to="/stories">Success Stories</Link></li>
-                <li><Link to="/faq">Full FAQ</Link></li>
+                <li><Link to="/resources">Manuals & Publications</Link></li>
+                <li><Link to="/resources">Policy Briefs</Link></li>
+                <li><Link to="/resources">Seed Exchange App</Link></li>
+                <li><Link to="/resources">Reports</Link></li>
+                <li><Link to="/resources">Descriptors</Link></li>
               </ul>
             </div>
 

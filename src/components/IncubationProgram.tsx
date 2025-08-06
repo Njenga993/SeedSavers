@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "../styles/IncubationProgram.css";
-import SpectacularImage from "../assets/Spectacular.jpg";
-import MentorshipImage from "../assets/Spectacular.jpg"; // optional
+import SpectacularImage from "../assets/nyakazi.jpg";
+import MentorshipImage from "../assets/sunny.jpg"; // optional
 
 const IncubationProgram: React.FC = () => {
   const [showMore, setShowMore] = useState(false);

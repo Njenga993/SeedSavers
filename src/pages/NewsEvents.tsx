@@ -1,6 +1,6 @@
 
 import "../styles/NewsEvents.css";
-import SpectacularImage from '../assets/Spectacular.jpg'; 
+import SpectacularImage from '../assets/n.jpg'; 
 
 const NewsEvents = () => {
   return (

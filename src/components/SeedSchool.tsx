@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "../styles/SeedSchool.css";
-import seedSchoolImg1 from "../assets/women-cultivating-crops-in-green-fields-4771650.jpg";
-import seedSchoolImg2 from "../assets/women-cultivating-crops-in-green-fields-4771650.jpg";
+import seedSchoolImg1 from "../assets/seedschool_sep.jpg";
+import seedSchoolImg2 from "../assets/seedschool.jpg";
 
 const SeedSchool: React.FC = () => {
   const [showMore, setShowMore] = useState(false);

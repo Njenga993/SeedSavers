@@ -1,7 +1,7 @@
 import React from 'react';
 import { FaMapMarkerAlt, FaPhone, FaEnvelope, FaClock } from 'react-icons/fa';
 import '../styles/Contact.css';
-import SpectacularImage from '../assets/Spectacular.jpg';
+import SpectacularImage from '../assets/main.jpeg';
 
 type ContactMethod = {
   icon: React.ReactNode;
@@ -29,37 +29,37 @@ const ContactPage: React.FC = () => {
     {
       icon: <FaPhone className="method-icon" />,
       title: 'Call Us',
-      details: ['+254 712 345 678', '+254 734 567 890'],
+      details: ['0712 451777'],
       description: 'Monday-Friday, 8am-5pm EAT'
     },
     {
       icon: <FaEnvelope className="method-icon" />,
       title: 'Email Us',
-      details: ['info@seedsavers.org', 'support@seedsavers.org']
+      details: ['info@seedsavers.org']
     }
   ];
 
   const regionalOffices: OfficeLocation[] = [
     {
-      name: 'Nakuru Regional Office',
+      name: 'Western Field Office',
       address: '456 Conservation Road, Nakuru',
       phone: '+254 701 234 567',
-      email: 'nakuru@seedsavers.org',
-      hours: 'Mon-Fri: 8:30am-4:30pm'
+      email: 'info@seedsavers.org',
+      hours: 'Mon-Fri: 8:30am-5:00pm'
     },
     {
-      name: 'Kisumu Field Office',
+      name: 'Turkana Field Office',
       address: '789 Lakeview Drive, Kisumu',
       phone: '+254 723 456 789',
-      email: 'kisumu@seedsavers.org',
-      hours: 'Mon-Fri: 9:00am-3:00pm'
+      email: 'info@seedsavers.org',
+      hours: 'Mon-Fri: 8:30am-5:00pm'
     },
     {
-      name: 'Coastal Outreach Center',
-      address: '321 Mangrove Lane, Mombasa',
+      name: 'Baringo Field Office',
+      address: '334 Marigat Main St Baringo, Kenya.',
       phone: '+254 732 345 678',
-      email: 'coast@seedsavers.org',
-      hours: 'Tue-Sat: 8:00am-2:00pm'
+      email: 'info@seedsavers.org',
+      hours: 'Mon-Fri: 8:30am-5:00pm'
     }
   ];
 
@@ -151,7 +151,7 @@ const ContactPage: React.FC = () => {
 
         {/* Regional Offices */}
         <section className="regional-offices">
-          <h2>Our Regional Offices</h2>
+          <h1>Our Regional Offices</h1>
           <div className="office-grid">
             {regionalOffices.map((office, index) => (
               <div key={index} className="office-card">
@@ -180,7 +180,7 @@ const ContactPage: React.FC = () => {
           <h2>Find Us on the Map</h2>
           <div className="contact-map">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.854559245747!2d36.82121431475389!3d-1.2729998359806925!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f173c0a1f9de7%3A0xad2c84e1fb7aec6e!2sNairobi!5e0!3m2!1sen!2ske!4v1620000000000!5m2!1sen!2ske"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.695390960483!2d36.26753727437194!3d-0.44976953528270935!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1829a149b3e5b3e5%3A0xcde1f0a37810fe6e!2sSeed%20Savers%20Network%20Training%20and%20Stay!5e0!3m2!1sen!2ske!4v1754466094580!5m2!1sen!2ske"
               width="100%"
               height="450"
               style={{ border: 0 }}

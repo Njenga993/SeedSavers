@@ -79,7 +79,7 @@
 /* Hero Section */
 .ssk-blog-hero {
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url('../assets/Spectacular.jpg') center/cover no-repeat;
+    url('../assets/happy.jpg') center/cover no-repeat;
   color: var(--ssk-white);
   padding: 8rem 2rem;
   text-align: center;

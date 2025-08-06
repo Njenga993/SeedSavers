@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import '../styles/about.css';
 // Import strategy images
-import agrobiodiversityImg from '../assets/Spectacular.jpg';
-import capacityBuildingImg from '../assets/Spectacular.jpg';
-import advocacyImg from '../assets/Spectacular.jpg';
+import agrobiodiversityImg from '../assets/holding.jpeg';
+import capacityBuildingImg from '../assets/farmer_led.jpg';
+import advocacyImg from '../assets/advocacy.jpg';
 // Import Seed School component
 import SeedSchool from '../components/SeedSchool';
 import IncubationProgram from '../components/IncubationProgram';
@@ -202,7 +202,7 @@ const About = () => {
       <header className="about-hero">
         <div className="about-hero-overlay">
           <h1>About Seed Savers Kenya</h1>
-          <p className="hero-subtitle">Preserving indigenous seeds for food sovereignty since 2010</p>
+          <p className="hero-subtitle">Preserving indigenous seeds for food sovereignty</p>
         </div>
       </header>
 
@@ -317,13 +317,13 @@ const About = () => {
               {activeTab === 'mission' && (
                 <div className="tab-panel">
                   <h3>Our Mission</h3>
-                  <p>To preserve Kenya's agricultural biodiversity by empowering communities to conserve, propagate, and utilize indigenous seeds through sustainable practices that ensure food sovereignty for future generations.</p>
+                  <p>We are on a mission to conserve agrobiodiversity by strengthening communities’ seed systems for improved seed access and enhanced food sovereignty.</p>
                 </div>
               )}
               {activeTab === 'vision' && (
                 <div className="tab-panel">
                   <h3>Our Vision</h3>
-                  <p>A Kenya where every community has control over their seed heritage, where diverse traditional crops thrive, and where sustainable agriculture forms the foundation of food security and cultural identity.</p>
+                  <p>To be a leading agent in promoting diverse seed access to farming communities in Kenya.</p>
                 </div>
               )}
             </div>
@@ -332,16 +332,7 @@ const About = () => {
       </main>
 
       {/* Call to Action */}
-      <section className="about-cta">
-        <div className="container">
-          <h2>Join Our Movement</h2>
-          <p>Whether you're a farmer, researcher, or concerned citizen, there are many ways to get involved in preserving Kenya's seed heritage.</p>
-          <div className="cta-buttons">
-            <a href="/contact" className="cta-button">Volunteer</a>
-            <a href="/contact" className="cta-button secondary">Donate</a>
-          </div>
-        </div>
-      </section>
+
     </div>
   );
 };
