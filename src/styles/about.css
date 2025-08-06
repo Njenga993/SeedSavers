@@ -2,6 +2,138 @@
 
 /* src/styles/about.css */
 
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  --gold-accent: #d4af37;
+  --jungle-green: #235835;
+  --faded-jungle: rgba(35, 88, 53, 0.8);
+  --muted-green: #e8f5e9;
+  --text-dark: #333333;
+  --section-padding: 6rem;
+
+  /* Typography System */
+  --s-font: 'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif;
+  --s-font-size-base: 16px;
+  --s-font-size-small: 0.95rem;
+  --s-font-size-medium: 1.05rem;
+  --s-font-size-large: 1.2rem;
+  --s-font-weight-normal: 400;
+  --s-font-weight-medium: 500;
+  --s-font-weight-semibold: 600;
+  --s-font-weight-bold: 700;
+}
+
+/* Base Styles */
+.about-page {
+  font-family: var(--s-font);
+  font-size: var(--s-font-size-base);
+  font-weight: var(--s-font-weight-normal);
+  color: var(--text-dark);
+  line-height: 1.6;
+  background-color: #f8f9f6;
+  overflow-x: hidden;
+}
+
+/* Typography Applications */
+.section-title,
+.about-hero h1,
+.about-cta h2,
+.timeline-content h3,
+.strategy-header h3,
+.sub-strategy-header h4,
+.team-card h3,
+.tab-button,
+.strategy-summary,
+.hero-subtitle,
+.tab-panel h3,
+.timeline-year,
+.stat-number,
+.stat-label,
+.cta-button,
+.sub-strategy-content,
+.team-bio,
+.timeline-content p,
+.tab-panel p {
+  font-family: var(--s-font);
+}
+
+.section-title {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: var(--s-font-weight-bold);
+}
+
+.section-subtitle {
+  font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+  font-weight: var(--s-font-weight-semibold);
+}
+
+.about-hero h1 {
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-weight: var(--s-font-weight-bold);
+}
+
+.hero-subtitle {
+  font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+  font-weight: var(--s-font-weight-medium);
+}
+
+.tab-button {
+  font-size: var(--s-font-size-medium);
+  font-weight: var(--s-font-weight-medium);
+}
+
+.tab-button.active {
+  font-weight: var(--s-font-weight-semibold);
+}
+
+.tab-panel h3,
+.strategy-header h3,
+.timeline-content h3 {
+  font-size: var(--s-font-size-large);
+  font-weight: var(--s-font-weight-semibold);
+}
+
+.tab-panel p,
+.timeline-content p,
+.strategy-summary,
+.sub-strategy-content,
+.team-bio {
+  font-size: var(--s-font-size-medium);
+  font-weight: var(--s-font-weight-normal);
+}
+
+.timeline-year {
+  font-weight: var(--s-font-weight-bold);
+  font-size: 1.2rem;
+}
+
+.stat-number {
+  font-weight: var(--s-font-weight-bold);
+  font-size: clamp(2rem, 5vw, 3rem);
+}
+
+.stat-label {
+  font-weight: var(--s-font-weight-medium);
+  font-size: var(--s-font-size-medium);
+}
+
+.cta-button {
+  font-weight: var(--s-font-weight-semibold);
+}
+
+.sub-strategy-header h4 {
+  font-size: 1.1rem;
+  font-weight: var(--s-font-weight-semibold);
+}
+
+.impact-note {
+  font-size: 0.95rem;
+  font-family: var(--s-font);
+}
+
+/* The rest of your original CSS remains unchanged */
+
 :root {
   --gold-accent: #d4af37;
   --jungle-green: #235835;
@@ -18,6 +150,7 @@
   background-color: #f8f9f6;
   overflow-x: hidden;
   font-family: 'Open Sans', sans-serif;
+  width: 100vw;
 }
 
 .container {
@@ -58,7 +191,7 @@
 /* Hero Section */
 .about-hero {
   position: relative;
-  min-height: 60vh;
+  min-height: 80vh;
   display: flex;
   align-items: center;
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 

@@ -1,4 +1,91 @@
 /* src/styles/navbar.css */
+/* Add this at the top of the file */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  --s-font: 'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif;
+  --s-primary: #235835;
+  --s-secndary: #2A4D14;
+  --s-secondary: #c3f2c3;
+  --s-dark: #2a2a2a;
+  --s-light: #ffffff;
+  --s-text-light: #f5f5f5;
+  --s-text-dark: #333333;
+  --s-shadow-sm: 0 1px 3px rgba(0,0,0,0.12);
+  --s-shadow-md: 0 4px 6px rgba(0,0,0,0.1);
+  --s-shadow-lg: 0 10px 25px rgba(0,0,0,0.1);
+  --s-transition: all 0.3s ease;
+
+  /* New typography settings */
+  --s-font-size-base: 16px;
+  --s-font-size-small: 0.9rem;
+  --s-font-size-medium: 1rem;
+  --s-font-size-large: 1.1rem;
+  --s-font-weight-normal: 400;
+  --s-font-weight-medium: 500;
+  --s-font-weight-semibold: 600;
+  --s-font-weight-bold: 700;
+}
+
+/* Apply font globally */
+body {
+  font-family: var(--s-font);
+  font-size: var(--s-font-size-base);
+  color: var(--s-text-dark);
+  font-weight: var(--s-font-weight-normal);
+}
+
+/* Top Bar */
+.s-top-bar {
+  background-color: white;
+  color: var(--s-text-dark);
+  padding: 0.5rem 0;
+  font-size: var(--s-font-size-small);
+  font-weight: var(--s-font-weight-medium);
+}
+
+.s-social-icons a,
+.s-top-links a {
+  font-size: var(--s-font-size-small);
+  font-weight: var(--s-font-weight-medium);
+}
+
+/* Main Navigation */
+.s-nav-links li a {
+  font-family: var(--s-font);
+  font-size: var(--s-font-size-medium);
+  font-weight: var(--s-font-weight-medium);
+  color: var(--s-text-light);
+}
+
+.s-nav-links li a.s-active {
+  font-weight: var(--s-font-weight-bold);
+}
+
+.s-dropdown-menu li a {
+  font-size: var(--s-font-size-medium);
+  font-weight: var(--s-font-weight-normal);
+}
+
+/* Search */
+.s-search-input {
+  font-family: var(--s-font);
+  font-size: var(--s-font-size-medium);
+}
+
+/* Mobile Sidebar */
+.s-sidebar-links li a,
+.s-mobile-dropdown-btn {
+  font-size: var(--s-font-size-medium);
+  font-weight: var(--s-font-weight-medium);
+}
+
+.s-sidebar-social a {
+  font-size: var(--s-font-size-medium);
+  font-weight: var(--s-font-weight-semibold);
+}
+
+
 :root {
   --s-primary: #235835;
   --s-secndary: #2A4D14;

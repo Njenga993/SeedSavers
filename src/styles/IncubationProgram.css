@@ -1,3 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  --s-font: 'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif;
+  --s-font-size-base: 16px;
+  --s-font-size-small: 0.95rem;
+  --s-font-size-medium: 1.05rem;
+  --s-font-size-large: 1.2rem;
+  --s-font-weight-normal: 400;
+  --s-font-weight-medium: 500;
+  --s-font-weight-semibold: 600;
+  --s-font-weight-bold: 700;
+}
+
+.incubation-section,
+.incubation-container,
+.incubation-text,
+.incubation-text p,
+.incubation-text ul li,
+.incubation-expanded,
+.incubation-expanded p,
+.incubation-expanded ul li,
+.contact-details,
+.contact-details p,
+.contact-details a {
+  font-family: var(--s-font);
+  font-size: var(--s-font-size-base);
+  font-weight: var(--s-font-weight-normal);
+  color: #333;
+}
+
+/* Headings */
+.incubation-text h2,
+.incubation-expanded h3,
+.incubation-expanded h4 {
+  font-family: var(--s-font);
+  font-weight: var(--s-font-weight-bold);
+  font-size: 2rem;
+  color: #065f46;
+  margin-bottom: 1rem;
+}
+
+/* CTA Buttons */
+.incubation-cta,
+.incubation-cta.secondary {
+  font-family: var(--s-font);
+  font-weight: var(--s-font-weight-semibold);
+  font-size: var(--s-font-size-medium);
+}
+
+/* List Items */
+.incubation-text ul li,
+.incubation-expanded ul li {
+  font-family: var(--s-font);
+  font-size: var(--s-font-size-medium);
+  font-weight: var(--s-font-weight-normal);
+  color: #047857;
+}
+
+/* Contact Details */
+.contact-details p,
+.contact-details a {
+  font-family: var(--s-font);
+  font-size: var(--s-font-size-small);
+  font-weight: var(--s-font-weight-medium);
+}
+
+.contact-details a:hover {
+  text-decoration: underline;
+}
+
 .incubation-section {
   background-color: #f7fdf9;
   padding: 4rem 1rem;

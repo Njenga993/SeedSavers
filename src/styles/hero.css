@@ -1,4 +1,57 @@
 /* src/styles/hero.css */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  --s-font: 'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif;
+  --s-font-size-base: 16px;
+  --s-font-size-small: 0.95rem;
+  --s-font-size-medium: 1.05rem;
+  --s-font-size-large: 1.2rem;
+  --s-font-weight-normal: 400;
+  --s-font-weight-medium: 500;
+  --s-font-weight-semibold: 600;
+  --s-font-weight-bold: 700;
+}
+
+/* Global Font Consistency for Hero Section */
+.hero,
+.hero * {
+  font-family: 'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+/* Headings */
+.hero h1,
+.hero h2,
+.hero h3,
+.main-title,
+.feature-card h3,
+.highlight-text {
+  font-family: 'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+/* Paragraphs and taglines */
+.hero p,
+.hero-text p,
+.tagline,
+.feature-card p {
+  font-size: 1rem;
+  font-weight: 400;
+  font-family: 'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif;
+}
+
+/* Buttons */
+.btn-primary {
+  font-family: 'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+
+
 :root {
   --gold-accent: #d4af37;
   --jungle-green: #235835;

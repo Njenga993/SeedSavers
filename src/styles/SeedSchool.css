@@ -1,4 +1,75 @@
 /* SeedSchool.css */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  --s-font: 'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif;
+  --s-font-size-base: 16px;
+  --s-font-size-small: 0.95rem;
+  --s-font-size-medium: 1.05rem;
+  --s-font-size-large: 1.2rem;
+  --s-font-weight-normal: 400;
+  --s-font-weight-medium: 500;
+  --s-font-weight-semibold: 600;
+  --s-font-weight-bold: 700;
+}
+
+/* Typography Consistency */
+.seed-school-section,
+.seed-school-container,
+.seed-school-content,
+.seed-school-description,
+.upcoming-school-info,
+.seed-school-contact,
+.seed-school-expanded,
+.seed-school-expanded-content,
+.expanded-column,
+.benefits-section,
+.expanded-column ul li,
+.benefits-section li {
+  font-family: var(--s-font);
+  font-size: var(--s-font-size-base);
+  font-weight: var(--s-font-weight-normal);
+  color: #333;
+}
+
+/* Headings */
+.seed-school-heading,
+.seed-school-expanded h3,
+.expanded-column h4,
+.benefits-section h4 {
+  font-family: var(--s-font);
+  font-weight: var(--s-font-weight-bold);
+  color: #2F4B26;
+}
+
+/* CTA Buttons */
+.seed-school-cta {
+  font-family: var(--s-font);
+  font-weight: var(--s-font-weight-semibold);
+  font-size: var(--s-font-size-medium);
+}
+
+.seed-school-cta.secondary {
+  font-family: var(--s-font);
+  font-weight: var(--s-font-weight-medium);
+}
+
+/* Stat Box Text */
+.stat-box h3 {
+  font-family: var(--s-font);
+  font-size: 1.5rem;
+  font-weight: var(--s-font-weight-bold);
+  color: #2d6a4f;
+}
+
+.stat-box p {
+  font-family: var(--s-font);
+  font-size: var(--s-font-size-small);
+  font-weight: var(--s-font-weight-medium);
+  color: #555;
+}
+
+
 .seed-school-section {
   padding: 4rem 1rem;
   background-color: #f7fdf9;

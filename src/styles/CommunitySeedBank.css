@@ -1,3 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  --s-font: 'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif;
+  --s-font-size-base: 16px;
+  --s-font-size-small: 0.95rem;
+  --s-font-size-medium: 1.05rem;
+  --s-font-size-large: 1.2rem;
+  --s-font-weight-normal: 400;
+  --s-font-weight-medium: 500;
+  --s-font-weight-semibold: 600;
+  --s-font-weight-bold: 700;
+}
+
+.csb-section,
+.csb-container,
+.csb-text,
+.csb-text p,
+.csb-text ul,
+.csb-text ul li,
+.csb-contact,
+.csb-more-info,
+.csb-expanded-content,
+.csb-expanded-content ul,
+.csb-table {
+  font-family: var(--s-font);
+  font-size: var(--s-font-size-base);
+  font-weight: var(--s-font-weight-normal);
+  color: #333;
+}
+
+.csb-text h2,
+.csb-more-info h3,
+.csb-expanded-content h3,
+.csb-expanded-content h4 {
+  font-family: var(--s-font);
+  font-weight: var(--s-font-weight-bold);
+  font-size: 2rem;
+  color: #065f46;
+  margin-bottom: 1rem;
+}
+
+.csb-text ul li,
+.csb-more-info ul li {
+  font-size: var(--s-font-size-medium);
+  font-weight: var(--s-font-weight-normal);
+}
+
+.csb-cta,
+.csb-cta.secondary {
+  font-family: var(--s-font);
+  font-weight: var(--s-font-weight-semibold);
+  font-size: var(--s-font-size-medium);
+}
+
+.csb-contact p,
+.csb-contact a {
+  font-family: var(--s-font);
+  font-weight: var(--s-font-weight-medium);
+  font-size: var(--s-font-size-small);
+}
+
+.csb-table th,
+.csb-table td {
+  font-family: var(--s-font);
+  font-size: var(--s-font-size-small);
+  font-weight: var(--s-font-weight-medium);
+}
+
+@media (max-width: 768px) {
+  .csb-text h2 {
+    font-size: 1.8rem;
+  }
+
+  .csb-text p,
+  .csb-text ul li {
+    font-size: var(--s-font-size-small);
+  }
+}
+
+
+
 .csb-section {
   background-color: #f7fdfb;
   padding: 4rem 1rem;

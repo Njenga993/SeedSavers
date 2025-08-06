@@ -1,4 +1,49 @@
 /* WHO WE ARE SECTION */
+/* Font Consistency: WHO WE ARE Section */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  --s-font: 'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif;
+  --s-font-size-base: 16px;
+  --s-font-size-small: 0.95rem;
+  --s-font-size-medium: 1.05rem;
+  --s-font-size-large: 1.2rem;
+  --s-font-weight-normal: 400;
+  --s-font-weight-medium: 500;
+  --s-font-weight-semibold: 600;
+  --s-font-weight-bold: 700;
+}
+
+
+.who-section,
+.who-section * {
+  font-family: 'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+.who-section h2,
+.info-card h3,
+.stat-card h3 {
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.intro-text,
+.info-card p,
+.stat-card p,
+.stat-card span {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.read-more-btn {
+  font-weight: 600;
+  font-family: 'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif;
+}
+
+
+
 .who-section {
   padding: 3rem 1rem;
   text-align: center;

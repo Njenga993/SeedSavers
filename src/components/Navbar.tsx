@@ -2,10 +2,10 @@
 import { useState, useEffect, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { 
-  FaFacebookF, 
-  FaTwitter, 
+  FaFacebookF,  
   FaInstagram, 
   FaLinkedinIn,
+  FaYoutube,
   FaBars, 
   FaTimes, 
   FaSearch,
@@ -155,8 +155,8 @@ const Navbar = () => {
               <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
                 <FaFacebookF />
               </a>
-              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
-                <FaTwitter />
+              <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="Youtube">
+                <FaYoutube />
               </a>
               <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                 <FaInstagram />
@@ -167,7 +167,7 @@ const Navbar = () => {
             </div>
             
             <div className="s-top-links">
-              <Link to="/support">Support Us</Link>
+              <Link to="/about" >Support Us</Link>
             </div>
           </div>
         </motion.div>
@@ -338,8 +338,8 @@ const Navbar = () => {
                     <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
                       <FaFacebookF />
                     </a>
-                    <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
-                      <FaTwitter />
+                    <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Youtube">
+                      <FaYoutube />
                     </a>
                     <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                       <FaInstagram />

@@ -1,4 +1,65 @@
 /* src/styles/footer.css */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  --s-font: 'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif;
+  --s-font-size-base: 16px;
+  --s-font-size-small: 0.95rem;
+  --s-font-size-medium: 1.05rem;
+  --s-font-size-large: 1.2rem;
+  --s-font-weight-normal: 400;
+  --s-font-weight-medium: 500;
+  --s-font-weight-semibold: 600;
+  --s-font-weight-bold: 700;
+}
+
+/* Typography Consistency */
+.footer,
+.footer *,
+.faq-section,
+.faq-section *,
+.footer-bottom,
+.footer-bottom * {
+  font-family: var(--s-font);
+  font-size: var(--s-font-size-base);
+  font-weight: var(--s-font-weight-normal);
+  line-height: 1.6;
+}
+
+/* Headings */
+.footer-title,
+.faq-toggle h3,
+.faq-question,
+.newsletter h4 {
+  font-size: var(--s-font-size-large);
+  font-weight: var(--s-font-weight-semibold);
+  font-family: var(--s-font);
+}
+
+/* Paragraph / Body Text */
+.footer-about,
+.footer-links a,
+.footer-contact li,
+.faq-answer,
+.footer-bottom-content,
+.newsletter-form input,
+.newsletter-form button {
+  font-size: var(--s-font-size-small);
+  font-weight: var(--s-font-weight-normal);
+}
+
+/* Strong or special labels */
+.organic-badge,
+.faq-icon,
+.footer-links a:hover,
+.footer-social a,
+.newsletter-form button,
+.faq-question {
+  font-weight: var(--s-font-weight-semibold);
+}
+
+
+
 :root {
   --primary-color: #235835;
   --secondary-color: #c3f2c3;

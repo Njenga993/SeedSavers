@@ -1,4 +1,62 @@
 /* Event Popup Styles */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  --s-font: 'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif;
+  --s-font-size-base: 16px;
+  --s-font-size-small: 0.95rem;
+  --s-font-size-medium: 1.05rem;
+  --s-font-size-large: 1.2rem;
+  --s-font-weight-normal: 400;
+  --s-font-weight-medium: 500;
+  --s-font-weight-semibold: 600;
+  --s-font-weight-bold: 700;
+}
+
+/* Typography Consistency for Event Popup */
+.event-popup-overlay,
+.event-popup-overlay * {
+  font-family: 'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+/* Headings */
+.event-popup-text h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  font-family: 'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif;
+}
+
+/* Paragraphs */
+.event-popup-text p {
+  font-size: 0.95rem;
+  font-weight: 400;
+}
+
+/* Strong & Sup */
+.event-popup-text strong,
+.event-popup-text sup {
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+/* CTA Button */
+.popup-cta {
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: 'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif;
+}
+
+/* Close Button */
+.event-popup-close {
+  font-family: 'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif;
+  font-weight: 600;
+}
+
+
+
 .event-popup-overlay {
   position: fixed;
   top: 0;
