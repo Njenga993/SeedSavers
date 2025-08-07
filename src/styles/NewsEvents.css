@@ -14,8 +14,8 @@
 }
 
 /* Font Consistency: News & Events Page */
-.news-events-page,
-.news-events-page * {
+.news-events-page
+{
   font-family: 'Inter', 'Segoe UI', Tahoma, sans-serif;
   font-weight: 400;
   line-height: 1.6;

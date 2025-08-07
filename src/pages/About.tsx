@@ -199,8 +199,8 @@ const About = () => {
   return (
     <div className="about-page">
       {/* Hero Section */}
-      <header className="about-hero">
-        <div className="about-hero-overlay">
+        <header className="resources-hero">
+        <div className="hero-overlay">
           <h1>About Seed Savers Kenya</h1>
           <p className="hero-subtitle">Preserving indigenous seeds for food sovereignty</p>
         </div>

@@ -1,5 +1,11 @@
-import React from 'react';
-import { FaMapMarkerAlt, FaPhone, FaEnvelope, FaClock } from 'react-icons/fa';
+import React, { useState } from 'react';
+import {
+  FaMapMarkerAlt,
+  FaPhone,
+  FaEnvelope,
+  FaClock,
+  FaHandHoldingHeart
+} from 'react-icons/fa';
 import '../styles/Contact.css';
 import SpectacularImage from '../assets/main.jpeg';
 
@@ -19,6 +25,12 @@ type OfficeLocation = {
 };
 
 const ContactPage: React.FC = () => {
+  const [showDonationDetails, setShowDonationDetails] = useState(false);
+
+  const toggleDonationDetails = () => {
+    setShowDonationDetails(!showDonationDetails);
+  };
+
   const contactMethods: ContactMethod[] = [
     {
       icon: <FaMapMarkerAlt className="method-icon" />,
@@ -86,12 +98,12 @@ const ContactPage: React.FC = () => {
                 <label htmlFor="name">Full Name</label>
                 <input type="text" id="name" required />
               </div>
-              
+
               <div className="form-group">
                 <label htmlFor="email">Email Address</label>
                 <input type="email" id="email" required />
               </div>
-              
+
               <div className="form-group">
                 <label htmlFor="subject">Subject</label>
                 <select id="subject" required>
@@ -103,12 +115,12 @@ const ContactPage: React.FC = () => {
                   <option value="other">Other</option>
                 </select>
               </div>
-              
+
               <div className="form-group">
                 <label htmlFor="message">Your Message</label>
                 <textarea id="message" required></textarea>
               </div>
-              
+
               <button type="submit" className="submit-btn">
                 Send Message
               </button>
@@ -140,9 +152,9 @@ const ContactPage: React.FC = () => {
             </div>
 
             <div className="office-image-container">
-              <img 
-                src={SpectacularImage} 
-                alt="Seed Savers Office" 
+              <img
+                src={SpectacularImage}
+                alt="Seed Savers Office"
                 className="office-image"
               />
             </div>
@@ -195,21 +207,32 @@ const ContactPage: React.FC = () => {
         <section className="donation-cta">
           <div className="donation-content">
             <div className="donation-icon">
-              <FaEnvelope />
+              <FaHandHoldingHeart />
             </div>
-            <h2>Join Our Mailing List</h2>
+            <h2>Support Seed Sovereignty</h2>
             <p>
-              Stay updated with our latest projects, events, and seed conservation
-              efforts by subscribing to our newsletter.
+              Your donation helps us empower farmers, conserve indigenous seeds,
+              and promote sustainable agriculture across Kenya and beyond. Every
+              contribution — big or small — makes a lasting impact.
             </p>
             <div className="cta-buttons">
-              <a href="/subscribe" className="cta-button">
-                Subscribe Now
-              </a>
-              <a href="/donate" className="cta-button secondary">
-                Make a Donation
+              <button onClick={toggleDonationDetails} className="cta-button">
+                {showDonationDetails ? 'Hide Donation Details' : 'Donate Now'}
+              </button>
+              <a href="/partnerships" className="cta-button secondary">
+                Partner With Us
               </a>
             </div>
+            {showDonationDetails && (
+              <div className="donation-details">
+                <h3>Donation Instructions</h3>
+                <p><strong>Bank Name:</strong> Seed Savers Kenya Bank</p>
+                <p><strong>Account Number:</strong> 123456789</p>
+                <p><strong>Branch:</strong> Nairobi CBD</p>
+                <p><strong>Mobile Money (M-Pesa):</strong> Paybill 123456, Acc: SEEDS</p>
+                <p><strong>Email for confirmation:</strong> donate@seedsaverskenya.org</p>
+              </div>
+            )}
           </div>
         </section>
       </div>

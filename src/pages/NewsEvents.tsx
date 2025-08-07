@@ -6,8 +6,8 @@ const NewsEvents = () => {
   return (
     <div className="news-events-page">
       {/* Hero Section */}
-      <section className="news-hero">
-        <div className="about-hero-overlay">
+       <section className="resources-hero">
+        <div className="hero-overlay">
           <h1>News & Events</h1>
           <p>Stay updated with our latest activities, programs, and success stories</p>
         </div>

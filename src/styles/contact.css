@@ -488,6 +488,7 @@ body {
   .contact-hero {
     min-height: 25vh;
     padding: 2rem 1rem;
+    margin-top: 1rem;
   }
   
   .contact-hero h1 {
