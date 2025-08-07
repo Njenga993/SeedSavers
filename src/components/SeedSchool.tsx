@@ -40,14 +40,14 @@ const SeedSchool: React.FC = () => {
               <p>Learners Trained</p>
             </div>
             <div className="stat-box">
-              <h3>15</h3>
-              <p>Counties Reached</p>
+              <h3>10+</h3>
+              <p>Countries Reached</p>
             </div>
           </div>
 
           <div className="seed-school-contact">
             <p>Email: info@seedsaverskenya.org</p>
-            <p>Phone: +254 712 345 678</p>
+            <p>Phone: +254-712-451777</p>
           </div>
 
           <button 

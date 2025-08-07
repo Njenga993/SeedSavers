@@ -79,7 +79,7 @@
 /* Hero Section */
 .news-hero {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
-              url('../assets/n.jpg') center/cover no-repeat;
+              url('../assets/happy.jpg') center/cover no-repeat;
   color: white;
   padding: 6rem 0;
   text-align: center;
@@ -325,7 +325,7 @@
 /* Newsletter Section */
 .newsletter-section {
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
-              url('../assets/women-cultivating-crops-in-green-fields-4771650.jpg') center/cover no-repeat;
+              url('../assets/winowing.jpeg') center/cover no-repeat;
   color: white;
   padding: var(--section-padding) 0;
   text-align: center;

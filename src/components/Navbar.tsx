@@ -111,11 +111,6 @@ const Navbar = () => {
     { 
       path: '/resources', 
       label: 'Resources',
-      dropdown: [
-        { path: '/resources/seed-database', label: 'Seed Database' },
-        { path: '/resources/growing-guides', label: 'Growing Guides' },
-        { path: '/resources/research', label: 'Research' }
-      ]
     },
      { path: '/blog', label: 'Blogs' },
     { path: '/contact', label: 'Contact' }

@@ -45,7 +45,7 @@ const Hero = () => {
           >
             <h1 className="main-title">
               <div className="hero-overlay">
-              <span className="title-line"><h1>Seed Savers Network Kenya</h1></span>
+              <span className="title-line"><h1>Seed Savers Network</h1></span>
               <span className="highlight-text">
                 My Seeds, My Food, My Future
               </span>

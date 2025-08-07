@@ -28,20 +28,20 @@ const IncubationProgram: React.FC = () => {
 
           <h4>Program Highlights</h4>
           <ul>
-            <li>✅ Access to collaborative co-working space in a supportive community</li>
-            <li>✅ Seed funding and financial planning support</li>
-            <li>✅ One-on-one mentorship from agroecology experts and entrepreneurs</li>
-            <li>✅ Training in business modeling, branding, and market strategy</li>
-            <li>✅ Participation in showcase events and exhibitions</li>
-            <li>✅ Linkages to local and international markets</li>
+            <li> Access to collaborative co-working space in a supportive community</li>
+            <li> Seed funding and financial planning support</li>
+            <li> One-on-one mentorship from agroecology experts and entrepreneurs</li>
+            <li> Training in business modeling, branding, and market strategy</li>
+            <li> Participation in showcase events and exhibitions</li>
+            <li> Linkages to local and international markets</li>
           </ul>
 
           <div className="contact-details">
             <p>
-              📧 Email: <a href="mailto:info@seedsaverskenya.org">info@seedsaverskenya.org</a>
+               Email: <a href="mailto:info@seedsaverskenya.org">info@seedsaverskenya.org</a>
             </p>
             <p>
-              📞 Phone: <a href="tel:+254712345678">+254 712 345 678</a>
+               Phone: <a href="tel:+254712451777">+254-712-451777</a>
             </p>
           </div>
 
@@ -71,16 +71,16 @@ const IncubationProgram: React.FC = () => {
             <h4>What We Offer</h4>
             <ul>
               <li>
-                • Tailored business development coaching for startups in agroecology and conservation.
+                 Tailored business development coaching for startups in agroecology and conservation.
               </li>
               <li>
-                • Access to demonstration farms and seed banks for practical learning.
+                 Access to demonstration farms and seed banks for practical learning.
               </li>
               <li>
-                • Workshops on intellectual property, climate adaptation, and ethical enterprise.
+                 Workshops on intellectual property, climate adaptation, and ethical enterprise.
               </li>
               <li>
-                • Networking events with investors, institutions, and agroecology champions.
+                 Networking events with investors, institutions, and agroecology champions.
               </li>
             </ul>
 

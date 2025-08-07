@@ -228,7 +228,6 @@
 }
 
 .event-popup-text h2::before {
-  content: '🌱';
   position: absolute;
   left: -0.5rem;
   top: 0;

@@ -1,7 +1,12 @@
 import React from 'react';
 import { FaCalendarAlt, FaUser,  FaArrowRight } from 'react-icons/fa';
 import { BiTime } from 'react-icons/bi';
-import SpectacularImage from '../assets/Spectacular.jpg'; 
+import SpectacularImage from '../assets/Spectacular.jpg';
+import Spectacular from '../assets/Makokha.jpg';
+import Image from '../assets/vihiga leafy.png';
+import Access from '../assets/seedaccess.jpeg';
+import Journalist from '../assets/journalists.jpeg';
+import Bio from '../assets/Bio-pesticides.jpeg';
 import '../styles/Blog.css';
 
 type BlogPost = {
@@ -19,9 +24,9 @@ type BlogPost = {
 const BlogPage: React.FC = () => {
   const featuredPost: BlogPost = {
     id: '1',
-    title: 'The Future of Indigenous Seed Preservation in Kenya',
-    excerpt: 'Exploring innovative approaches to conserving traditional seed varieties against climate change and modernization pressures.',
-    author: 'Dr. Wanjiku Mwangi',
+    title: 'Empowering Communities through Traditional Vegetables: A Success Story from Vihiga CBO',
+    excerpt: 'At the heart of Vihiga County, a powerful agricultural transformation is unfolding. Thanks to the collaborative efforts of the Seed Savers Network, Bioversity International & CIAT, FAO and ITGPRFA,',
+    author: 'Seed Savers Team',
     date: '15 June 2023',
     readTime: '8 min read',
     tags: ['Conservation', 'Research', 'Indigenous Knowledge'],
@@ -32,57 +37,57 @@ const BlogPage: React.FC = () => {
   const blogPosts: BlogPost[] = [
     {
       id: '2',
-      title: 'Community Seed Banks: Empowering Local Farmers',
-      excerpt: 'How our network of community seed banks is helping smallholder farmers preserve biodiversity and food security.',
-      author: 'James Kariuki',
+      title: 'Journalists Have a Critical Role in Safeguarding Kenya’s Food Systems',
+      excerpt: 'Agriculture, environment and climate journalists have been urged to take a keen interest in Kenya’s agriculture policies by factually reporting on its effects on the country’s food system.  Seed Savers Network (Kenya),',
+      author: 'Seed Savers Team',
       date: '2 June 2023',
       readTime: '5 min read',
       tags: ['Community', 'Empowerment'],
-      image: SpectacularImage,
+      image: Journalist,
       slug: 'community-seed-banks'
     },
     {
       id: '3',
-      title: 'Youth Engagement in Agroecology',
-      excerpt: 'Our successful pilot program training young farmers in sustainable agriculture practices.',
-      author: 'Amina Mohamed',
+      title: 'Farmers, Experts Hail Ban on Hazardous Pesticides, Call for Stronger Oversight',
+      excerpt: 'Biodiversity experts and sustainable agriculture proponents have commended the government’s prohibition on the import and use of over 50 pesticide brands, citing its potential to safeguard public health and ecological integrity. ',
+      author: 'Seed Savers Team',
       date: '22 May 2023',
       readTime: '6 min read',
       tags: ['Youth', 'Education'],
-      image: SpectacularImage,
+      image: Bio,
       slug: 'youth-agroecology'
     },
     {
       id: '4',
-      title: 'Traditional Crops With High Nutritional Value',
-      excerpt: 'Rediscovering forgotten indigenous crops that could solve modern nutrition challenges.',
-      author: 'Prof. Samuel Ndirangu',
+      title: 'Characterization and Documentation of Traditional Leafy Vegetables in Vihiga',
+      excerpt: 'Leafy green vegetables dot the display tables as small holder farmers mill around the Traditional Vegetable Fair in Emaloba, Vihiga County. Scientifically, the vegetables on display are known as..',
+      author: 'Seed Savers Team',
       date: '10 May 2023',
       readTime: '7 min read',
       tags: ['Nutrition', 'Research'],
-      image: SpectacularImage,
+      image: Image,
       slug: 'traditional-crops-nutrition'
     },
     {
       id: '5',
-      title: 'Seed Saving Techniques for Dry Regions',
-      excerpt: 'Practical methods farmers in arid areas can use to preserve their seed varieties.',
-      author: 'Fatuma Abdi',
+      title: 'Creating Seas of Change: Concepter Makokha’s Rise in Agro-Entrepreneurship.',
+      excerpt: ' In Musoli village, Luanda Sub-county, Vihiga County, Kenya, Concepter Makokha is a happy and determined woman. As a single mother of 3 children, she faced immense financial struggles after..',
+      author: 'Seed Savers Team',
       date: '28 April 2023',
       readTime: '4 min read',
       tags: ['Techniques', 'Climate Adaptation'],
-      image: SpectacularImage,
+      image: Spectacular,
       slug: 'seed-saving-dry-regions'
     },
     {
       id: '6',
-      title: 'Women Leading Seed Conservation Efforts',
-      excerpt: 'Highlighting the crucial role women play in preserving traditional agricultural knowledge.',
-      author: 'Grace Wambui',
+      title: 'Advancing Farmers’ Rights: A Commitment to Promoting Seed Access',
+      excerpt: 'Kenya has made a significant leap in advancing farmers’ rights with the introduction of the Seeds and Plant Varieties (Conservation, Access, and Benefit Sharing of Plant Genetic Resources for Food and Agriculture)',
+      author: 'Seed Savers Team',
       date: '15 April 2023',
       readTime: '5 min read',
       tags: ['Women', 'Community'],
-      image: SpectacularImage,
+      image: Access,
       slug: 'women-seed-conservation'
     }
   ];

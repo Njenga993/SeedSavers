@@ -50,7 +50,7 @@ const WhoWeAre = () => {
         </div>
         <div className="info-card">
           <h3>Our Vision</h3>
-          <h3><p>To be a leading agent in promoting diverse seed access to farming communities in Kenya.</p></h3>
+          <h3><p>To be a leading agent in promoting diverse seed access to farming communities.</p></h3>
         </div>
       </div>
 

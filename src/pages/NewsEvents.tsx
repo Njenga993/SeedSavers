@@ -1,12 +1,20 @@
-
 import "../styles/NewsEvents.css";
 import SpectacularImage from '../assets/n.jpg'; 
+import { Link } from 'react-router-dom';
+import { FaArrowRight, FaHandshake } from 'react-icons/fa';
+import Image from '../assets/seedfair.jpg';
+import Images from '../assets/cbs.jpg';
+import Img from '../assets/seedaccess.jpeg';
+import ngiri from '../assets/ngiri.jpeg';
+import Ambs from '../assets/seed-ambasadors.jpg';
+import Solar from '../assets/Solar dryer.jpeg';
+import IPS from '../assets/IPs.jpeg';
 
 const NewsEvents = () => {
   return (
     <div className="news-events-page">
       {/* Hero Section */}
-       <section className="resources-hero">
+      <section className="resources-hero">
         <div className="hero-overlay">
           <h1>News & Events</h1>
           <p>Stay updated with our latest activities, programs, and success stories</p>
@@ -19,7 +27,7 @@ const NewsEvents = () => {
           <h2>Seed School Registration</h2>
           <p>Join our upcoming training programs</p>
         </div>
-        
+
         <div className="events-grid">
           <div className="event-card">
             <div className="event-date">
@@ -37,26 +45,29 @@ const NewsEvents = () => {
                 <span>USD 1,000</span>
                 <span>Deadline: Oct 12</span>
               </div>
-              <button className="event-button">Register Now</button>
+               <Link to="/about" className="btn-primary">
+                            Learn More <FaArrowRight />
+                          </Link>
             </div>
           </div>
 
           <div className="event-card">
             <div className="event-date">
-              <span className="date-day">15</span>
-              <span className="date-month">Nov</span>
+              <span className="date-day">Open</span>
+              <span className="date-month">To All</span>
             </div>
             <div className="event-content">
-              <h3>Seed School Advanced Module</h3>
-              <p className="event-location">Online</p>
+              <h3>Incubation Program </h3>
+              <p className="event-location"> Baringo & Gilgil </p>
               <p className="event-description">
-                Specialized training for Seed School alumni focusing on community seed bank management.
+                This program is built to accelerate impact by supporting solutions that
+              enhance food and seed system resilience through innovation, collaboration,
+              and capacity building. We aim to empower emerging leaders who are
+              passionate about agroecological transformation.
               </p>
-              <div className="event-details">
-                <span>USD 300</span>
-                <span>Early bird until Oct 30</span>
-              </div>
-              <button className="event-button">Learn More</button>
+               <Link to="/about" className="btn-primary">
+              Learn More <FaHandshake />
+            </Link>
             </div>
           </div>
         </div>
@@ -68,11 +79,11 @@ const NewsEvents = () => {
           <h2>Seed Fairs</h2>
           <p>Celebrating seed diversity and community exchange</p>
         </div>
-        
+
         <div className="events-grid">
           <div className="event-card">
             <div className="event-image">
-              <img src= {SpectacularImage} alt="Seed Fair" />
+              <img src={Image} alt="Seed Fair" />
             </div>
             <div className="event-content">
               <h3>Annual Indigenous Seed Fair</h3>
@@ -82,13 +93,15 @@ const NewsEvents = () => {
                 Join farmers from across the region to exchange indigenous seeds,
                 share knowledge, and celebrate agricultural biodiversity.
               </p>
-              <button className="event-button">View Photos</button>
+              <Link to="/about" className="btn-primary">
+              Learn More <FaHandshake />
+            </Link>
             </div>
           </div>
 
           <div className="event-card">
             <div className="event-image">
-              <img src= {SpectacularImage} alt="Seed Exchange" />
+              <img src={Images} alt="Seed Exchange" />
             </div>
             <div className="event-content">
               <h3>Community Seed Exchange Program</h3>
@@ -98,7 +111,9 @@ const NewsEvents = () => {
                 Our rotating seed exchange program visits different communities
                 to facilitate local seed sharing and preservation.
               </p>
-              <button className="event-button">See Schedule</button>
+              <Link to="/about" className="btn-primary">
+              Learn More <FaHandshake />
+            </Link>
             </div>
           </div>
         </div>
@@ -110,41 +125,59 @@ const NewsEvents = () => {
           <h2>Featured Stories</h2>
           <p>Success stories from our community</p>
         </div>
-        
+
         <div className="stories-grid">
           <article className="story-card">
-            <img src= {SpectacularImage}  alt="Farmer Story" />
+            <img src={Img} alt="Court Case" />
             <div className="story-content">
-              <h3>Preserving Heritage: Mary's Seed Saving Journey</h3>
-              <p>
-                How one woman revived 12 nearly-extinct indigenous vegetable varieties
-                in her community through our seed saving program.
-              </p>
-              <a href="#" className="read-more">Read Full Story →</a>
+              <h3>Court to Rule on Farmers' Seed Sovereignty</h3>
+              <p>High Court will determine constitutionality of seed laws restricting farmer seed exchange in November.</p>
+              <a href="https://www.the-star.co.ke/counties/eastern/2025-05-21-court-to-rule-on-farmers-seed-sovereignty-case-in-november" target="_blank" rel="noopener noreferrer" className="read-more">Read Full Story →</a>
             </div>
           </article>
 
           <article className="story-card">
-            <img src= {SpectacularImage} alt="Youth Program" />
+            <img src={ngiri} alt="Policy Review" />
             <div className="story-content">
-              <h3>Youth Seed Ambassadors Program Bears Fruit</h3>
-              <p>
-                50 young farmers trained in our pilot program are now establishing
-                community seed banks across 5 counties.
-              </p>
-              <a href="#" className="read-more">Read Full Story →</a>
+              <h3>Gov't Reviewing the National Seed Policy</h3>
+              <p>The Kenyan government is re-evaluating its national seed policy to accommodate farmer-managed seed systems.</p>
+              <a href="https://www.capitalfm.co.ke/news/2025/04/govt-reviewing-the-national-seed-policy/" target="_blank" rel="noopener noreferrer" className="read-more">Read Full Story →</a>
             </div>
           </article>
 
           <article className="story-card">
-            <img src= {SpectacularImage}  alt="Research" />
+            <img src={Solar} alt="Solar Farming" />
             <div className="story-content">
-              <h3>New Research: Indigenous Seeds & Climate Resilience</h3>
-              <p>
-                Preliminary results from our 3-year study show traditional seed
-                varieties outperform commercial hybrids in drought conditions.
-              </p>
-              <a href="#" className="read-more">Read Full Story →</a>
+              <h3>Harnessing Solar: A Turning Point in Kenyan Agriculture</h3>
+              <p>How solar technology is helping farmers improve yields and preserve seed biodiversity.</p>
+              <a href="https://www.county254.news/county-initiatives-in-the-47-counties-in-kenya-and/article/1436/harnessing-the-solar-a-turning-point-in-kenyas-agriculture" target="_blank" rel="noopener noreferrer" className="read-more">Read Full Story →</a>
+            </div>
+          </article>
+
+          <article className="story-card">
+            <img src={Ambs} alt="Seed Battle" />
+            <div className="story-content">
+              <h3>Kenya's Seed Control Battle</h3>
+              <p>Smallholder farmers push for legal rights to share indigenous seeds despite corporate opposition.</p>
+              <a href="https://www.ipsnews.net/2024/02/inside-kenyas-seed-control-battle-smallholder-farmers-want-share-indigenous-seeds/" target="_blank" rel="noopener noreferrer" className="read-more">Read Full Story →</a>
+            </div>
+          </article>
+
+          <article className="story-card">
+            <img src={IPS} alt="Cape Media Video" />
+            <div className="story-content">
+              <h3>Video: Seed Justice in Kenya</h3>
+              <p>Watch this video covering grassroots efforts to defend farmer seed rights in Kenya.</p>
+              <a href="https://web.facebook.com/capemediaafrica/videos/1592780068059980" target="_blank" rel="noopener noreferrer" className="read-more">Watch Now →</a>
+            </div>
+          </article>
+
+          <article className="story-card">
+            <img src={SpectacularImage} alt="Food Crisis" />
+            <div className="story-content">
+              <h3>Food Crisis Response Depends on Farmer Seeds</h3>
+              <p>Experts say farmer-managed seed systems are key to responding to Africa's worsening food crisis.</p>
+              <a href="https://www.talkafrica.co.ke/african-food-crisis-emergency-response-success-depends-on-farmer-managed-seed-systems/" target="_blank" rel="noopener noreferrer" className="read-more">Read Full Story →</a>
             </div>
           </article>
         </div>
@@ -156,51 +189,77 @@ const NewsEvents = () => {
           <h2>Videos</h2>
           <p>Watch our work in action</p>
         </div>
-        
+
         <div className="videos-grid">
           <div className="video-card">
             <div className="video-wrapper">
               <iframe
-                src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-                title="YouTube video player"
+                src="https://www.youtube.com/embed/Exe2WyzfNTw"
+                title="Seed Training Documentary"
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
               ></iframe>
             </div>
-            <h3>Seed School 2024 Highlights</h3>
+            <h3>Seed Training Documentary</h3>
           </div>
 
           <div className="video-card">
             <div className="video-wrapper">
               <iframe
-                src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-                title="YouTube video player"
+                src="https://www.youtube.com/embed/p0uJ1QJngDQ"
+                title="Indigenous Seeds in Kenya"
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
               ></iframe>
             </div>
-            <h3>Traditional Seed Saving Techniques</h3>
+            <h3>Indigenous Seeds in Kenya</h3>
           </div>
 
           <div className="video-card">
             <div className="video-wrapper">
               <iframe
-                src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-                title="YouTube video player"
+                src="https://www.youtube.com/embed/Jep9JjmLjT8"
+                title="Farmers Speak: Seed Saving"
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
               ></iframe>
             </div>
-            <h3>Community Seed Fair 2023</h3>
+            <h3>Farmers Speak: Seed Saving</h3>
+          </div>
+
+          <div className="video-card">
+            <div className="video-wrapper">
+              <iframe
+                src="https://www.youtube.com/embed/1hhge02C4VE"
+                title="Community Seed Bank Tour"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></iframe>
+            </div>
+            <h3>Community Seed Bank Tour</h3>
+          </div>
+
+          <div className="video-card">
+            <div className="video-wrapper">
+              <iframe
+                src="https://www.youtube.com/embed/ttwJRVWSMM4"
+                title="Seed Saving in Practice"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></iframe>
+            </div>
+            <h3>Seed Saving in Practice</h3>
           </div>
         </div>
 
         <div className="youtube-cta">
           <a
-            href="https://youtube.com/seed-savers-kenya"
+            href="https://www.youtube.com/@seedsaversnetworkkenya8211"
             target="_blank"
             rel="noopener noreferrer"
             className="youtube-button"

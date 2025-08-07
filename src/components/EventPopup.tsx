@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "../styles/EventPopup.css";
+import { Link } from 'react-router-dom';
 import flyerImage from "../assets/seedschool_sep.jpg"; // Replace with your actual image
 
 const EventPopup: React.FC = () => {
@@ -25,20 +26,19 @@ const EventPopup: React.FC = () => {
           <div className="event-popup-text">
                  <h2>3rd Seed Boot Camp – October 26 to November 7, 2025</h2>
                      <p>
-                   🌱 Join our October cohort for the 3rd <strong>Seed Boot Camp</strong> at the 
+                    Join our October cohort for the 3rd <strong>Seed Boot Camp</strong> at the 
                      Seed Savers Network Learning Center, Gilgil, Kenya.
                         Learn about <strong>seed security assessment</strong>, <strong>seed banking</strong>, 
                          <strong>documentation</strong>, <strong>policy & rights</strong>, and more — 
                              all in a <strong>hands-on, farmer-led</strong> training environment.
-                         👨‍🌾 Network with practitioners, share traditional knowledge, and build 
+                          Network with practitioners, share traditional knowledge, and build 
                                community seed movement strategies.
                                    </p>
                                 <p><strong>Cost:</strong> USD 1000 (includes 2 weeks’ training & accommodation)</p>
                               <p> <strong>Apply by: 12<sup>th</sup></strong> October 2025</p>
-                              <p> <strong>Contact:</strong> info@seedsaverskenya.org | +254 712 345 678</p>
-                              <a href="/event-registration" className="popup-cta">
-                              Register Now
-              </a>
+                              <p> <strong>Contact:</strong> info@seedsaverskenya.org | +254-712-451777</p>
+
+                             <button><li><Link to="/contact">Contact Us</Link></li></button>
 
           </div>
         </div>

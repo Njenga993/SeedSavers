@@ -24,19 +24,19 @@ const CommunitySeedBank: React.FC = () => {
             protects biodiversity, and promotes agroecological farming practices.
           </p>
           <ul>
-            <li>🌾 Preserves local seed diversity</li>
-            <li>🤝 Encourages seed exchange among farmers</li>
-            <li>🌍 Enhances climate resilience and food sovereignty</li>
-            <li>📚 Supports knowledge sharing and intergenerational learning</li>
+            <li> Preserves local seed diversity</li>
+            <li> Encourages seed exchange among farmers</li>
+            <li> Enhances climate resilience and food sovereignty</li>
+            <li> Supports knowledge sharing and intergenerational learning</li>
           </ul>
 
           {/* Contact */}
           <div className="csb-contact">
             <p>
-              📧 Email: <a href="mailto:info@seedsaverskenya.org">info@seedsaverskenya.org</a>
+               Email: <a href="mailto:info@seedsaverskenya.org">info@seedsaverskenya.org</a>
             </p>
             <p>
-              📞 Phone: <a href="tel:+254712345678">+254 712 345 678</a>
+               Phone: <a href="tel:+254712451777">+254-712-451777</a>
             </p>
           </div>
 

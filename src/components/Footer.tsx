@@ -84,11 +84,11 @@ const Footer = () => {
               <h3 className="footer-title">Quick Links</h3>
               <ul className="footer-links">
                 <li><Link to="/">Home</Link></li>
-                <li><Link to="/about">About Us</Link></li>
-                <li><Link to="/our-work">Our Work</Link></li>
+                <li><Link to="/about">Our Work</Link></li>
                 <li><Link to="/blog">Blog</Link></li>
                 <li><Link to="/contact">Contact Us</Link></li>
-                <li><Link to="/support">Support Us</Link></li>
+                <li><Link to="/resources">Resources</Link></li>
+                <li><Link to="/news-events">News & Events</Link></li>
               </ul>
             </div>
 
@@ -110,11 +110,12 @@ const Footer = () => {
               <ul className="footer-contact">
                 <li>
                   <FaMapMarkerAlt />
-                  <span>123 Conservation Road, Nairobi, Kenya</span>
+                  <span>Diatomite, Off Nakuru – Nairobi Highway, Gilgil,Kenya </span>
+                  <span> P.O. BOX 334 -20116 </span>
                 </li>
                 <li>
                   <FaPhoneAlt />
-                  <span>+254 712 345 678</span>
+                  <span>+254-712-451777</span>
                 </li>
                 <li>
                   <FaEnvelope />
@@ -176,11 +177,12 @@ const Footer = () => {
       <div className="footer-bottom"> 
         <div className="container">
           <div className="footer-bottom-content">
-            <p>&copy; {new Date().getFullYear()} Seed Savers Kenya. All rights reserved.</p>
+            <p>&copy; {new Date().getFullYear()} Seed Savers Network. All rights reserved. </p>
+            <p>Powered by <Link to="https://njenga993.github.io/kspace/" target="_blank">kspace </Link> </p>
             <div className="footer-legal">
-              <Link to="/privacy">Privacy Policy</Link>
-              <Link to="/terms">Terms of Service</Link>
-              <Link to="/sitemap">Sitemap</Link>
+              <Link to="/#">Privacy Policy</Link>
+              <Link to="/#">Terms of Service</Link>
+              <Link to="/#">Sitemap</Link>
             </div>
           </div>
         </div>

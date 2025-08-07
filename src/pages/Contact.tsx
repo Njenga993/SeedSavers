@@ -7,7 +7,7 @@ import {
   FaHandHoldingHeart
 } from 'react-icons/fa';
 import '../styles/Contact.css';
-import SpectacularImage from '../assets/main.jpeg';
+import SpectacularImage from '../assets/SSN headq.jpeg';
 
 type ContactMethod = {
   icon: React.ReactNode;
@@ -35,7 +35,7 @@ const ContactPage: React.FC = () => {
     {
       icon: <FaMapMarkerAlt className="method-icon" />,
       title: 'Our Headquarters',
-      details: ['123 Seed Street', 'Nairobi, Kenya'],
+      details: ['Diatomite, Off Nakuru – Nairobi Highway,Gilgil,Kenya P.O. BOX 334 -20116 '],
       description: 'Main administrative office'
     },
     {
@@ -47,30 +47,30 @@ const ContactPage: React.FC = () => {
     {
       icon: <FaEnvelope className="method-icon" />,
       title: 'Email Us',
-      details: ['info@seedsavers.org']
+      details: ['info@seedsaverskenya.org']
     }
   ];
 
   const regionalOffices: OfficeLocation[] = [
     {
       name: 'Western Field Office',
-      address: '456 Conservation Road, Nakuru',
-      phone: '+254 701 234 567',
-      email: 'info@seedsavers.org',
+      address: 'Kakamega County',
+      phone: '+254-712-451777',
+      email: 'info@seedsaverskenya.org',
       hours: 'Mon-Fri: 8:30am-5:00pm'
     },
     {
       name: 'Turkana Field Office',
-      address: '789 Lakeview Drive, Kisumu',
-      phone: '+254 723 456 789',
-      email: 'info@seedsavers.org',
+      address: ' Turkana County, Lodwar',
+      phone: '+254-712-451777',
+      email: 'info@seedsaverskenya.org',
       hours: 'Mon-Fri: 8:30am-5:00pm'
     },
     {
       name: 'Baringo Field Office',
       address: '334 Marigat Main St Baringo, Kenya.',
-      phone: '+254 732 345 678',
-      email: 'info@seedsavers.org',
+      phone: '+254-712-451777',
+      email: 'info@seedsaverskenya.org',
       hours: 'Mon-Fri: 8:30am-5:00pm'
     }
   ];
@@ -230,7 +230,7 @@ const ContactPage: React.FC = () => {
                 <p><strong>Account Number:</strong> 123456789</p>
                 <p><strong>Branch:</strong> Nairobi CBD</p>
                 <p><strong>Mobile Money (M-Pesa):</strong> Paybill 123456, Acc: SEEDS</p>
-                <p><strong>Email for confirmation:</strong> donate@seedsaverskenya.org</p>
+                <p><strong>Email for confirmation:</strong> info@seedsaverskenya.org</p>
               </div>
             )}
           </div>

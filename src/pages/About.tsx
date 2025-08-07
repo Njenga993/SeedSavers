@@ -17,7 +17,7 @@ const About = () => {
     {
       title: 'Agrobiodiversity Conservation',
       summary: 'Preserving local varieties in seed banks and on farms to maintain biodiversity.',
-      icon: '🌱',
+      icon: '',
       image: agrobiodiversityImg,
       subCategories: [
         {
@@ -75,7 +75,7 @@ const About = () => {
     {
       title: 'Capacity Building',
       summary: 'Empowering communities through education and training in sustainable agriculture.',
-      icon: '📚',
+      icon: '',
       image: capacityBuildingImg,
       subCategories: [
         {
@@ -131,7 +131,7 @@ const About = () => {
     {
       title: 'Advocacy & Policy',
       summary: 'Shaping policies that protect farmers\' seed rights and biodiversity.',
-      icon: '📢',
+      icon: '',
       image: advocacyImg,
       subCategories: [
         {
@@ -323,7 +323,7 @@ const About = () => {
               {activeTab === 'vision' && (
                 <div className="tab-panel">
                   <h3>Our Vision</h3>
-                  <p>To be a leading agent in promoting diverse seed access to farming communities in Kenya.</p>
+                  <p>To be a leading agent in promoting diverse seed access to farming communities.</p>
                 </div>
               )}
             </div>

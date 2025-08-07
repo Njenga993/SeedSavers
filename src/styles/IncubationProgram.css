@@ -31,7 +31,6 @@
 
 /* Headings */
 .incubation-text h2,
-.incubation-expanded h3,
 .incubation-expanded h4 {
   font-family: var(--s-font);
   font-weight: var(--s-font-weight-bold);
@@ -49,13 +48,6 @@
 }
 
 /* List Items */
-.incubation-text ul li,
-.incubation-expanded ul li {
-  font-family: var(--s-font);
-  font-size: var(--s-font-size-medium);
-  font-weight: var(--s-font-weight-normal);
-  color: #047857;
-}
 
 /* Contact Details */
 .contact-details p,
@@ -105,7 +97,7 @@
 }
 
 .incubation-text h2 {
-  color: #065f46;
+  color: #111111;
   font-size: 2rem;
   margin-bottom: 1rem;
 }
@@ -124,7 +116,7 @@
 
 .incubation-text ul li {
   margin-bottom: 0.5rem;
-  color: #047857;
+  color: #141414;
   font-size: 0.95rem;
 }
 
