@@ -7,6 +7,7 @@ import SpectacuarImage from '../assets/farmer_led.jpg';
 import SpectaclarImage from '../assets/happy.jpg';
 import SpectaularImage from '../assets/harvest.jpeg';
 import SpectcularImage from '../assets/holding.jpeg';
+import Image from '../assets/app.png';
 
 interface ResourceItem {
   id: number;
@@ -84,30 +85,44 @@ const ResourcesPage: React.FC = () => {
     { 
       id: 1, 
       title: "Seed Policy Brief 2023", 
-      fileUrl: "/docs/brief1.pdf", 
-      previewText: "Overview of seed policies in Kenya and their impact on smallholder farmers.",
+      fileUrl: "./docs/OSSS-Policy-brief-2022.pdf", 
+      previewText: "Promoting Open Source Seed Systems for enhanced access and availability of seed and germplasm.",
       imageUrl: SpectacularImage
     },
     { 
       id: 2, 
       title: "Agroecology Brief", 
-      fileUrl: "/docs/brief2.pdf", 
-      previewText: "Promoting sustainable farming practices through policy frameworks.",
-      imageUrl: SpectacularImage
+      fileUrl: "./docs/SSN-Model-for-accessing-non-commercialized-registered-varieties-and-support-for-FMSS.pdf", 
+      previewText: "A model for accesiing non-commercialized registered varieties and support for farmer managed seed systems.",
+      imageUrl: SpectaclarImage
     },
     { 
       id: 3, 
-      title: "Community Seed Laws", 
-      fileUrl: "/docs/brief3.pdf", 
-      previewText: "Understanding local seed laws and community rights.",
-      imageUrl: SpectacularImage
+      title: "Terms and Conditions for Open Source Seed Use in Kenya", 
+      fileUrl: "./docs/NEW-OPEN-SOURCE-SEEDS-MATERIAL-TRANSFER-TCs.pdf", 
+      previewText: "Terms and conditions for open-source seed use in Kenya.",
+      imageUrl: SpectaculrImage
     },
     { 
       id: 4, 
-      title: "Seed Rights in Africa", 
-      fileUrl: "/docs/brief4.pdf", 
-      previewText: "A legal perspective on seed rights across African nations.",
-      imageUrl: SpectacularImage
+      title: "Seed Regulation Protocol", 
+      fileUrl: "./docs/protocol-for-csb-and-national-genebank-collaboration_issd-africa-1.pdf", 
+      previewText: "Protocal",
+      imageUrl: SpectaculaImage
+    },
+    { 
+      id: 5, 
+      title: " seed exchange in Kenya", 
+      fileUrl: "./docs/Online-Seeds-Exchange-policy-brief.pdf", 
+      previewText: "Regulating Online Seed Exchange ",
+      imageUrl: SpectcularImage
+    },
+    { 
+      id: 6, 
+      title: "Seed Security Survey 2024", 
+      fileUrl: "./docs/SSNAgrecolSeedStudyFinalMay-2023 copy.pdf", 
+      previewText: "Survey on seed security and access in Kenya.",
+      imageUrl: SpectaularImage
     },
   ];
 
@@ -166,9 +181,9 @@ const ResourcesPage: React.FC = () => {
   const descriptors: ResourceItem[] = [
     { 
       id: 1, 
-      title: "Bean Descriptor", 
+      title: "Crop Descriptors", 
       fileUrl: "./docs/CROP-DESCRIPTORS.pdf", 
-      previewText: "Comprehensive guide on how to describe and identify bean varieties.",
+      previewText: "Access detailed crop descriptors to learn about the unique characteristics, traits, and growth conditions of various crop varieties, supporting your efforts in sustainable farming and seed conservation.",
       imageUrl: SpectacularImage
     }
 
@@ -177,24 +192,10 @@ const ResourcesPage: React.FC = () => {
   const manuals: ResourceItem[] = [
     { 
       id: 1, 
-      title: "Seed Saving Manual", 
-      fileUrl: "/docs/manual1.pdf", 
-      previewText: "Step-by-step guide on seed saving techniques for various crops.",
-      imageUrl: SpectacularImage
-    },
-    { 
-      id: 2, 
-      title: "Agroecology Training Manual", 
-      fileUrl: "/docs/manual2.pdf", 
-      previewText: "Comprehensive manual for trainers on ecological farming practices.",
-      imageUrl: SpectacularImage
-    },
-    { 
-      id: 3, 
-      title: "Field Guide to Seed Collection", 
-      fileUrl: "/docs/manual3.pdf", 
-      previewText: "A practical guide for seed collectors and conservationists.",
-      imageUrl: SpectacularImage
+      title: "Seed Access", 
+      fileUrl: "./docs/Newsletters.pdf", 
+      previewText: "Promoting diverse seed access to farming communities in Kenya.",
+      imageUrl: SpectaculrImage
     },
   ];
 
@@ -202,14 +203,16 @@ const ResourcesPage: React.FC = () => {
     { 
       id: 1, 
       title: "Seed Exchange Kenya", 
-      fileUrl: "https://seedexchangekenya.app", 
-      previewText: "Connect with local farmers and exchange seeds easily through our mobile platform."
+      fileUrl: "https://play.google.com/store/apps/details?id=org.seedexchangekenya.seedsavers&hl=en&pli=1", 
+      previewText: "Connect with local farmers and exchange seeds easily through our mobile platform.",
+      imageUrl: Image
     },
     { 
       id: 2, 
       title: "Seed Exchange App", 
-      fileUrl: "https://seedexchange.africa", 
-      previewText: "Pan-African seed exchange app connecting diverse farming communities."
+      fileUrl: "https://play.google.com/store/apps/details?id=org.seedexchangekenya.seedsavers&hl=en&pli=1", 
+      previewText: "seed exchange app connecting diverse farming communities.",
+      imageUrl: Image
     },
   ];
 
