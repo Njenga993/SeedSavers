@@ -173,9 +173,12 @@ const BlogPage: React.FC = () => {
                           <span key={index} className="ssk-tag">{tag}</span>
                         ))}
                       </div>
-                      <a href={`/blog/${post.slug}`} className="ssk-read-more">
-                        Read More <FaArrowRight className="ssk-arrow-icon" />
-                      </a>
+                      <a 
+  href="/SeedSavers/blog/FutureOfIndigenousSeeds" 
+  className="ssk-read-more"
+>
+  Read More <FaArrowRight />
+</a>
                     </div>
                   </div>
                 </article>

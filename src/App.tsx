@@ -7,6 +7,7 @@ import About from './pages/About';
 import Contact from './pages/Contact';
 import NewsEvents from './pages/NewsEvents';
 import BlogPage from './pages/Blog';
+import FutureOfIndigenousSeeds from './pages/FutureOfIndigenousSeeds';
 import Resources from './pages/Resources';
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
             <Route path="/news-events" element={<NewsEvents />} />
             <Route path="/resources" element={<Resources />} />
             <Route path="blog" element={<BlogPage />} />
+            <Route path="/FutureOfIndigenousSeeds" element={<FutureOfIndigenousSeeds />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
         </main>

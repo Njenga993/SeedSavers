@@ -1,6 +1,12 @@
 import React, { useState } from "react";
 import "../styles/Resources.css";
 import SpectacularImage from '../assets/n.jpg';
+import SpectaculaImage from '../assets/IPs.jpeg';
+import SpectaculrImage from '../assets/advocacy.jpg';
+import SpectacuarImage from '../assets/farmer_led.jpg';
+import SpectaclarImage from '../assets/happy.jpg';
+import SpectaularImage from '../assets/harvest.jpeg';
+import SpectcularImage from '../assets/holding.jpeg';
 
 interface ResourceItem {
   id: number;
@@ -108,24 +114,52 @@ const ResourcesPage: React.FC = () => {
   const reports: ResourceItem[] = [
     { 
       id: 1, 
-      title: "2024 Annual Report", 
-      fileUrl: "/docs/report1.pdf", 
+      title: "Developing Markets for Agroecology in Nakuru", 
+      fileUrl: "./docs/Developing-Markets-for-Agroecology-in-Nakuru.pdf", 
       previewText: "Highlights of our achievements and milestones in seed conservation.",
       imageUrl: SpectacularImage
     },
     { 
       id: 2, 
-      title: "Impact Assessment Report", 
-      fileUrl: "/docs/report2.pdf", 
+      title: "SSN-NUTRITION-BOOKLET", 
+      fileUrl: "./docs/SSN-NUTRITION-BOOKLET.pdf", 
       previewText: "Measuring the outcomes of our community seed bank programs.",
-      imageUrl: SpectacularImage
+      imageUrl: SpectcularImage
     },
     { 
       id: 3, 
-      title: "Seed Network Growth Report", 
-      fileUrl: "/docs/report3.pdf", 
+      title: "Seed-Savers-Food-Forest-Training-Manual_v2", 
+      fileUrl: "./docs/Seed-Savers-Food-Forest-Training-Manual_v2.pdf", 
       previewText: "Tracking the expansion of our seed bank network across regions.",
-      imageUrl: SpectacularImage
+      imageUrl: SpectaularImage
+    },
+        { 
+      id: 4, 
+      title: "Quality-Assurance-for-Seed-Exchange-booklett", 
+      fileUrl: "./docs/Quality-Assurance-for-Seed-Exchange-booklet.pdf", 
+      previewText: "Tracking the expansion of our seed bank network across regions.",
+      imageUrl: SpectaclarImage
+    },
+        { 
+      id: 5, 
+      title: "Seeds Field Survey Report 2024", 
+      fileUrl: "./docs/Seeds-Field-Survey-Report-2024.pdf", 
+      previewText: "Tracking the expansion of our seed bank network across regions.",
+      imageUrl: SpectacuarImage
+    },
+        { 
+      id: 6, 
+      title: "Community-Seedbank-Guidelines", 
+      fileUrl: "./docs/Community-Seedbank-Guidelines.pdf", 
+      previewText: "Tracking the expansion of our seed bank network across regions.",
+      imageUrl: SpectaculrImage
+    },
+        { 
+      id: 7, 
+      title: "SSN Agrecol Seed Study Final May 2023", 
+      fileUrl: "./docs/SSNAgrecolSeedStudyFinalMay-2023.pdf", 
+      previewText: "Tracking the expansion of our seed bank network across regions.",
+      imageUrl: SpectaculaImage 
     },
   ];
 
@@ -133,24 +167,11 @@ const ResourcesPage: React.FC = () => {
     { 
       id: 1, 
       title: "Bean Descriptor", 
-      fileUrl: "/docs/descriptor1.pdf", 
+      fileUrl: "./docs/CROP-DESCRIPTORS.pdf", 
       previewText: "Comprehensive guide on how to describe and identify bean varieties.",
       imageUrl: SpectacularImage
-    },
-    { 
-      id: 2, 
-      title: "Maize Descriptor", 
-      fileUrl: "/docs/descriptor2.pdf", 
-      previewText: "Detailed descriptive guide for traditional maize types.",
-      imageUrl: SpectacularImage
-    },
-    { 
-      id: 3, 
-      title: "Traditional Crops", 
-      fileUrl: "/docs/descriptor3.pdf", 
-      previewText: "Identification guide for indigenous crops and their characteristics.",
-      imageUrl: SpectacularImage
-    },
+    }
+
   ];
 
   const manuals: ResourceItem[] = [
