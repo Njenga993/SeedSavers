@@ -123,17 +123,24 @@ const Footer = () => {
                 </li>
               </ul>
               
-              <div className="newsletter">
-                <h4>Subscribe to Newsletter</h4>
-                <form className="newsletter-form">
-                  <input 
-                    type="email" 
-                    placeholder="Your email address" 
-                    required 
-                  />
-                  <button type="submit">Subscribe</button>
-                </form>
-              </div>
+             <div className="newsletter">
+    <h4>Subscribe to Newsletter</h4>
+    <form 
+        className="newsletter-form" 
+        action="https://formsubmit.co/seedsavers1@gmail.com" 
+        method="POST"
+    >
+        <input 
+            type="email" 
+            name="email" 
+            placeholder="Your email address" 
+            required 
+        />
+        <input type="hidden" name="_subject" value="New Newsletter Subscription" />
+        <input type="hidden" name="_captcha" value="false" />
+        <button type="submit">Subscribe</button>
+    </form>
+</div>
             </div>
           </div>
         </div>
