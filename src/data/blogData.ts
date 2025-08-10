@@ -17,6 +17,9 @@ export type BlogPost = {
   image: string;
   slug: string;
   content: string; // full blog content
+  category?: string; // Added
+  imageCaption?: string; // Added
+  quote?: string; // Added
 };
 
 export const blogPosts: BlogPost[] = [
