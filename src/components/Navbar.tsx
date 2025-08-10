@@ -15,6 +15,7 @@ import {
 import { motion, AnimatePresence } from 'framer-motion';
 import '../styles/navbar.css';
 import logo from '../assets/ssklogo-.png';
+import { FaXTwitter } from 'react-icons/fa6';
 
 interface NavItem {
   path: string;
@@ -147,22 +148,25 @@ const Navbar = () => {
         >
           <div className="s-container">
             <div className="s-social-icons">
-              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+              <a href="https://www.facebook.com/profile.php?id=100064035750734" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
                 <FaFacebookF />
               </a>
-              <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="Youtube">
+              <a href="https://www.youtube.com/@seedsaversnetworkkenya8211" target="_blank" rel="noopener noreferrer" aria-label="Youtube">
                 <FaYoutube />
               </a>
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <a href="https://www.instagram.com/seedsavers_network?igsh=MXdsZjNwYzh0NDdvbg==" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                 <FaInstagram />
               </a>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+               <a href="https://x.com/Seedsavers_KE" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+                <FaXTwitter />
+              </a>
+              <a href="https://www.linkedin.com/in/seed-savers-kenya-930346284?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                 <FaLinkedinIn />
               </a>
             </div>
             
             <div className="s-top-links">
-              <Link to="/about" >Support Us</Link>
+              <Link to="/contact" >Support Us</Link>
             </div>
           </div>
         </motion.div>

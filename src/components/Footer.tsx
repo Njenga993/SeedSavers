@@ -1,5 +1,5 @@
 // src/components/Footer.tsx
-import { FaFacebookF, FaTwitter, FaLinkedinIn, FaInstagram, FaMapMarkerAlt, FaPhoneAlt, FaEnvelope, FaLeaf, FaPlus, FaMinus } from 'react-icons/fa';
+import { FaFacebookF, FaTwitter, FaLinkedinIn, FaInstagram, FaYoutube, FaMapMarkerAlt, FaPhoneAlt, FaEnvelope, FaLeaf, FaPlus, FaMinus } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import '../styles/footer.css';
@@ -72,10 +72,11 @@ const Footer = () => {
                 education, and sustainable farming practices for future generations.
               </p>
               <div className="footer-social">
-                <a href="#" aria-label="Facebook"><FaFacebookF /></a>
-                <a href="#" aria-label="Twitter"><FaTwitter /></a>
-                <a href="#" aria-label="LinkedIn"><FaLinkedinIn /></a>
-                <a href="#" aria-label="Instagram"><FaInstagram /></a>
+                <a href="https://www.facebook.com/profile.php?id=100064035750734" target='_blank' aria-label="Facebook"><FaFacebookF /></a>
+                <a href="https://x.com/Seedsavers_KE" target='_blank' aria-label="Twitter"><FaTwitter /></a>
+                <a href="https://www.youtube.com/@seedsaversnetworkkenya8211" target='_blank' aria-label="Youtube"><FaYoutube /></a>
+                <a href="https://www.linkedin.com/in/seed-savers-kenya-930346284?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"  target='_blank' aria-label="LinkedIn"><FaLinkedinIn /></a>
+                <a href="https://www.instagram.com/seedsavers_network?igsh=MXdsZjNwYzh0NDdvbg==" target='_blank' aria-label="Instagram"><FaInstagram /></a>
               </div>
             </div>
 

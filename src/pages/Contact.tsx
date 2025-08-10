@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import emailjs from '@emailjs/browser';
 import {
   FaMapMarkerAlt,
   FaPhone,
@@ -26,16 +27,69 @@ type OfficeLocation = {
 
 const ContactPage: React.FC = () => {
   const [showDonationDetails, setShowDonationDetails] = useState(false);
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    subject: '',
+    message: ''
+  });
+  const [statusMessage, setStatusMessage] = useState<string | null>(null);
 
   const toggleDonationDetails = () => {
     setShowDonationDetails(!showDonationDetails);
+  };
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    setFormData({ ...formData, [e.target.id]: e.target.value });
+  };
+
+  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    // Send email to Seed Savers inbox
+    emailjs
+      .send(
+        'service_gpw095d', // service ID
+        'template_ck2k9xf', // main template ID
+        {
+          user_name: formData.name,
+          user_email: formData.email,
+          subject: formData.subject,
+          message: formData.message
+        },
+        'W7z6fDytLu4t06Ihf' // public key
+      )
+      .then(() => {
+        setStatusMessage('✅ Thank you! Your message was sent successfully.');
+        setFormData({ name: '', email: '', subject: '', message: '' });
+
+        // Send auto-reply to user (non-blocking)
+        emailjs
+          .send(
+            'service_gpw095d',
+            'template_hng5blt', // auto-reply template ID
+            {
+              user_name: formData.name,
+              subject: formData.subject,
+              reply_to: formData.email
+            },
+            'W7z6fDytLu4t06Ihf'
+          )
+          .catch((error) => {
+            console.error('Auto-reply failed:', error);
+          });
+      })
+      .catch((error) => {
+        console.error('EmailJS Error:', error);
+        setStatusMessage('❌ Failed to send the message. Please try again later.');
+      });
   };
 
   const contactMethods: ContactMethod[] = [
     {
       icon: <FaMapMarkerAlt className="method-icon" />,
       title: 'Our Headquarters',
-      details: ['Diatomite, Off Nakuru – Nairobi Highway,Gilgil,Kenya P.O. BOX 334 -20116 '],
+      details: ['Diatomite, Off Nakuru – Nairobi Highway, Gilgil, Kenya P.O. BOX 334 -20116 '],
       description: 'Main administrative office'
     },
     {
@@ -61,14 +115,14 @@ const ContactPage: React.FC = () => {
     },
     {
       name: 'Turkana Field Office',
-      address: ' Turkana County, Lodwar',
+      address: 'Turkana County, Lodwar',
       phone: '+254-712-451777',
       email: 'info@seedsaverskenya.org',
       hours: 'Mon-Fri: 8:30am-5:00pm'
     },
     {
       name: 'Baringo Field Office',
-      address: '334 Marigat Main St Baringo, Kenya.',
+      address: '334 Marigat Main St, Baringo, Kenya.',
       phone: '+254-712-451777',
       email: 'info@seedsaverskenya.org',
       hours: 'Mon-Fri: 8:30am-5:00pm'
@@ -93,20 +147,20 @@ const ContactPage: React.FC = () => {
           {/* Contact Form */}
           <section className="contact-form-section">
             <h2>Send Us a Message</h2>
-            <form className="contact-form">
+            <form className="contact-form" onSubmit={sendEmail}>
               <div className="form-group">
                 <label htmlFor="name">Full Name</label>
-                <input type="text" id="name" required />
+                <input type="text" id="name" value={formData.name} onChange={handleChange} required />
               </div>
 
               <div className="form-group">
                 <label htmlFor="email">Email Address</label>
-                <input type="email" id="email" required />
+                <input type="email" id="email" value={formData.email} onChange={handleChange} required />
               </div>
 
               <div className="form-group">
                 <label htmlFor="subject">Subject</label>
-                <select id="subject" required>
+                <select id="subject" value={formData.subject} onChange={handleChange} required>
                   <option value="">Select a topic</option>
                   <option value="donation">Donation Inquiry</option>
                   <option value="partnership">Partnership Opportunity</option>
@@ -118,12 +172,17 @@ const ContactPage: React.FC = () => {
 
               <div className="form-group">
                 <label htmlFor="message">Your Message</label>
-                <textarea id="message" required></textarea>
+                <textarea id="message" value={formData.message} onChange={handleChange} required></textarea>
               </div>
 
               <button type="submit" className="submit-btn">
                 Send Message
               </button>
+
+              {/* Success/Error Message */}
+              {statusMessage && (
+                <p className="form-status">{statusMessage}</p>
+              )}
             </form>
           </section>
 
@@ -169,18 +228,10 @@ const ContactPage: React.FC = () => {
               <div key={index} className="office-card">
                 <h3>{office.name}</h3>
                 <div className="office-details">
-                  <p>
-                    <FaMapMarkerAlt /> {office.address}
-                  </p>
-                  <p>
-                    <FaPhone /> {office.phone}
-                  </p>
-                  <p>
-                    <FaEnvelope /> {office.email}
-                  </p>
-                  <p>
-                    <FaClock /> {office.hours}
-                  </p>
+                  <p><FaMapMarkerAlt /> {office.address}</p>
+                  <p><FaPhone /> {office.phone}</p>
+                  <p><FaEnvelope /> {office.email}</p>
+                  <p><FaClock /> {office.hours}</p>
                 </div>
               </div>
             ))}
@@ -219,9 +270,6 @@ const ContactPage: React.FC = () => {
               <button onClick={toggleDonationDetails} className="cta-button">
                 {showDonationDetails ? 'Hide Donation Details' : 'Donate Now'}
               </button>
-              <a href="/partnerships" className="cta-button secondary">
-                Partner With Us
-              </a>
             </div>
             {showDonationDetails && (
               <div className="donation-details">

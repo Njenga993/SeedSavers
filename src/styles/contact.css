@@ -393,7 +393,7 @@ body {
   }
   
   .contact-hero {
-    min-height: 35vh;
+    min-height: 40vh;
     padding: 3rem 1rem;
   }
   
@@ -427,8 +427,9 @@ body {
   }
   
   .contact-hero {
-    min-height: 30vh;
+    min-height: 35vh;
     padding: 2.5rem 1rem;
+
   }
   
   .contact-hero h1 {
@@ -486,9 +487,9 @@ body {
   }
   
   .contact-hero {
-    min-height: 25vh;
+    min-height: 35vh;
     padding: 2rem 1rem;
-    margin-top: 1rem;
+    margin-top: 4rem;
   }
   
   .contact-hero h1 {

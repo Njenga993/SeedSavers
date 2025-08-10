@@ -7,8 +7,8 @@ import About from './pages/About';
 import Contact from './pages/Contact';
 import NewsEvents from './pages/NewsEvents';
 import BlogPage from './pages/Blog';
-import FutureOfIndigenousSeeds from './pages/FutureOfIndigenousSeeds';
 import Resources from './pages/Resources';
+import BlogDetail from './pages/BlogDetail'; // NEW detail page
 
 function App() {
   return (
@@ -21,8 +21,11 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/news-events" element={<NewsEvents />} />
             <Route path="/resources" element={<Resources />} />
-            <Route path="blog" element={<BlogPage />} />
-            <Route path="/FutureOfIndigenousSeeds" element={<FutureOfIndigenousSeeds />} />
+            <Route path="/blog" element={<BlogPage />} />
+            
+            {/* Dynamic route for blog details */}
+            <Route path="/blog/:slug" element={<BlogDetail />} />
+            
             <Route path="/contact" element={<Contact />} />
           </Routes>
         </main>

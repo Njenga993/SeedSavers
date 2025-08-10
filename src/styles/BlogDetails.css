@@ -1,0 +1,132 @@
+/* General Container */
+.blog-details-container {
+  width: 100vw;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #fff;
+  border-radius: 8px;
+}
+
+/* Hero Section */
+.blog-hero {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.blog-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #145a32; /* Jungle green */
+  margin-bottom: 10px;
+  line-height: 1.3;
+}
+
+.blog-meta {
+  font-size: 0.95rem;
+  color: #777;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.blog-meta span {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* Featured Image */
+.blog-image-container {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.blog-featured-image {
+  width: 100%;
+  max-height: 450px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Blog Content */
+.blog-content {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #333;
+  margin-bottom: 25px;
+}
+
+.blog-content p {
+  margin-bottom: 1.2rem;
+}
+
+/* Tags */
+.blog-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.tag {
+  background: #eaf6ec;
+  color: #145a32;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* Back Button */
+.back-button {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.back-button a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #145a32;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.back-button a:hover {
+  background: #0f4024;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .blog-hero {
+        margin-top: 2rem;
+        margin-bottom: 15px;
+    }
+  .blog-title {
+    font-size: 1.6rem;
+  }
+  .blog-meta {
+    font-size: 0.85rem;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .blog-hero {
+        margin-top: 2rem;
+        margin-bottom: 10px;
+    }
+    .blog-title {
+    font-size: 1.4rem;
+  }
+  .blog-content {
+    font-size: 1rem;
+  }
+}
