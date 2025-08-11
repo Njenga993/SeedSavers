@@ -68,7 +68,7 @@ const Footer = () => {
                 </div>
               </div>
               <p className="footer-about">
-                Preserving Kenya's agricultural heritage through seed conservation,
+                Preserving  agricultural heritage through seed conservation,
                 education, and sustainable farming practices for future generations.
               </p>
               <div className="footer-social">

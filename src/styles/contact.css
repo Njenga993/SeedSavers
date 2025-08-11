@@ -342,6 +342,68 @@ body {
   color: white;
   border-color: white;
 }
+.donation-options {
+  margin-top: 1.5rem;
+}
+
+.donation-table {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 1.5rem;
+  background: #0a0a0a;
+}
+
+.donation-column {
+  flex: 1;
+  min-width: 280px;
+}
+
+.donation-column h3 {
+  color: #2e7d32;
+  margin-bottom: 1rem;
+}
+
+.donation-column p {
+  margin: 0.4rem 0;
+}
+
+.paypal-btn {
+  background-color: #ffc439;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  color: #111;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 6px;
+  margin-top: 1rem;
+}
+
+.paypal-btn:hover {
+  background-color: #f0b92e;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.8rem;
+}
+
+input[type="number"] {
+  width: 100%;
+  padding: 0.4rem;
+  margin-top: 0.3rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+input[type="number"]:focus {
+  outline: none;
+  border-color: var(--jungle-green);
+  box-shadow: 0 0 0 3px rgba(35, 88, 53, 0.1);
+}
 
 /* Responsive Adjustments */
 @media (max-width: 1024px) {

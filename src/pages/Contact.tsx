@@ -26,6 +26,8 @@ type OfficeLocation = {
 };
 
 const ContactPage: React.FC = () => {
+  const [donationAmount, setDonationAmount] = useState<number>(10);
+  const [isRecurring, setIsRecurring] = useState<boolean>(false);
   const [showDonationDetails, setShowDonationDetails] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
@@ -255,34 +257,82 @@ const ContactPage: React.FC = () => {
         </section>
 
         {/* Donation CTA */}
-        <section className="donation-cta">
-          <div className="donation-content">
-            <div className="donation-icon">
-              <FaHandHoldingHeart />
-            </div>
-            <h2>Support Seed Sovereignty</h2>
-            <p>
-              Your donation helps us empower farmers, conserve indigenous seeds,
-              and promote sustainable agriculture across Kenya and beyond. Every
-              contribution — big or small — makes a lasting impact.
-            </p>
-            <div className="cta-buttons">
-              <button onClick={toggleDonationDetails} className="cta-button">
-                {showDonationDetails ? 'Hide Donation Details' : 'Donate Now'}
-              </button>
-            </div>
-            {showDonationDetails && (
-              <div className="donation-details">
-                <h3>Donation Instructions</h3>
-                <p><strong>Bank Name:</strong> Seed Savers Kenya Bank</p>
-                <p><strong>Account Number:</strong> 123456789</p>
-                <p><strong>Branch:</strong> Nairobi CBD</p>
-                <p><strong>Mobile Money (M-Pesa):</strong> Paybill 123456, Acc: SEEDS</p>
-                <p><strong>Email for confirmation:</strong> info@seedsaverskenya.org</p>
-              </div>
-            )}
+<section className="donation-cta">
+  <div className="donation-content">
+    <div className="donation-icon">
+      <FaHandHoldingHeart />
+    </div>
+    <h2>Support Seed Sovereignty</h2>
+    <p>
+      Your donation helps us empower farmers, conserve indigenous seeds,
+      and promote sustainable agriculture across Kenya and beyond.
+      Every contribution — big or small — makes a lasting impact.
+    </p>
+    <div className="cta-buttons">
+      <button onClick={toggleDonationDetails} className="cta-button">
+        {showDonationDetails ? 'Hide Donation Options' : 'Donate Now'}
+      </button>
+    </div>
+
+    {showDonationDetails && (
+      <div className="donation-options">
+        <div className="donation-table">
+          {/* Offline Donations */}
+          <div className="donation-column">
+            <h3>Offline Donation</h3>
+            <p><strong>Bank Name:</strong> Seed Savers Kenya Bank</p>
+            <p><strong>Account Number:</strong> 123456789</p>
+            <p><strong>Branch:</strong> Nairobi CBD</p>
+            <p><strong>Mobile Money (M-Pesa):</strong> Paybill 123456, Acc: SEEDS</p>
+            <p><strong>Email for confirmation:</strong> info@seedsaverskenya.org</p>
           </div>
-        </section>
+
+          {/* Online Donations */}
+          <div className="donation-column">
+            <h3>Online Donation (PayPal)</h3>
+            <form
+              onSubmit={(e) => {
+                e.preventDefault();
+                const baseUrl = "https://www.paypal.com/donate";
+                const params = new URLSearchParams({
+                  business: "your-paypal-email@example.com",
+                  amount: donationAmount.toString(),
+                  currency_code: "USD",
+                  recurring: isRecurring ? "1" : "0"
+                });
+                window.open(`${baseUrl}?${params}`, "_blank");
+              }}
+            >
+              <label htmlFor="amount">Donation Amount (USD)</label>
+              <input
+                type="number"
+                id="amount"
+                value={donationAmount}
+                onChange={(e) => setDonationAmount(Number(e.target.value))}
+                min="1"
+                step="0.01"
+                required
+              />
+
+              <label className="checkbox-label">
+                <input
+                  type="checkbox"
+                  checked={isRecurring}
+                  onChange={(e) => setIsRecurring(e.target.checked)}
+                />
+                Make this a recurring donation
+              </label>
+
+              <button type="submit" className="paypal-btn">
+                Proceed to Donation
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    )}
+  </div>
+</section>
       </div>
     </div>
   );

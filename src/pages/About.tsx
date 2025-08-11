@@ -201,7 +201,7 @@ const About = () => {
       {/* Hero Section */}
         <header className="resources-hero">
         <div className="hero-overlay">
-          <h1>About Seed Savers Kenya</h1>
+          <h1>About Seed Savers Network</h1>
           <p className="hero-subtitle">Preserving indigenous seeds for food sovereignty</p>
         </div>
       </header>
@@ -212,7 +212,7 @@ const About = () => {
         <section className="about-strategies">
           <div className="container">
             <h2 className="section-title">Our Strategic Approach</h2>
-            <p className="section-subtitle">Three pillars guide our work in preserving Kenya's agricultural biodiversity</p>
+            <p className="section-subtitle">Three pillars guide our work in preserving  agricultural biodiversity</p>
             
             <div className="strategy-accordion">
               {strategies.map((strategy, index) => (

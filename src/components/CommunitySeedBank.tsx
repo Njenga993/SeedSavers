@@ -53,9 +53,18 @@ const CommunitySeedBank: React.FC = () => {
           <div className="csb-expanded-content">
             <h3>About the Platform</h3>
             <p>
-              The Community Seed Banks Platform is a self-organized structure within Seed Savers Network that brings
-              together <strong>112 seed banks</strong> across Kenya for knowledge sharing, collective action,
-              and advocacy for seed sovereignty.
+              Community Seed Banks Platform ( CSB) is a self-organized structure within the<strong> Seed Savers
+               Network </strong>that brings together<strong> 112 community seed banks </strong>across Kenya and beyond for knowledge
+                sharing, collective action, and advocacy in support of seed sovereignty and agrobiodiversity
+                 conservation. As of 2025, the platform supports and coordinates the efforts of 112 active
+                  community seed banks spread across the country.
+            </p>
+            <p>
+              The CSB has grown into a powerful coordination hub, supporting the tireless efforts of 
+              these 112 active seed banks. This incredible achievement has been made possible through the <strong>Seed
+               Exchange Kenya initiative and the innovative Seed Exchange App</strong>, which have opened new doors for 
+               seed sharing, collaboration, and empowerment ensuring that the legacy of diverse, indigenous 
+               seeds thrives for generations to come. 
             </p>
             <p>
               It was formed after national dialogue sessions with farmers from <strong>20+ counties</strong> including
