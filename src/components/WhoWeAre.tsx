@@ -1,5 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import '../styles/whoWeAre.css';
+import { Link } from 'react-router-dom';
+import { FaArrowRight} from 'react-icons/fa';
 
 const stats = [
   { label: 'Farmers in Network', value: 96.5, suffix: 'K+' },
@@ -41,7 +43,8 @@ const WhoWeAre = () => {
         We believe that access to a wide variety of seeds is crucial for enhancing food sovereignty, resilience, and sustainability in agriculture. Our goal is to empower farmers by providing them with the resources and knowledge needed to cultivate diverse crops, thereby preserving biodiversity and adapting to changing climate conditions.
       </p>
 
-      <a href="/about" className="read-more-btn">Read More</a>
+      <Link to="/about" className="btn-primary">Read More <FaArrowRight />
+                  </Link>
 
       <div className="card-container">
         <div className="info-card">
