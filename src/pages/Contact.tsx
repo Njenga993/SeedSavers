@@ -4,7 +4,6 @@ import {
   FaMapMarkerAlt,
   FaPhone,
   FaEnvelope,
-  FaClock,
   FaHandHoldingHeart
 } from 'react-icons/fa';
 import '../styles/Contact.css';
@@ -17,13 +16,7 @@ type ContactMethod = {
   description?: string;
 };
 
-type OfficeLocation = {
-  name: string;
-  address: string;
-  phone: string;
-  email: string;
-  hours: string;
-};
+
 
 const ContactPage: React.FC = () => {
   const [donationAmount, setDonationAmount] = useState<number>(10);
@@ -107,29 +100,6 @@ const ContactPage: React.FC = () => {
     }
   ];
 
-  const regionalOffices: OfficeLocation[] = [
-    {
-      name: 'Western Field Office',
-      address: 'Kakamega County',
-      phone: '+254-712-451777',
-      email: 'info@seedsaverskenya.org',
-      hours: 'Mon-Fri: 8:30am-5:00pm'
-    },
-    {
-      name: 'Turkana Field Office',
-      address: 'Turkana County, Lodwar',
-      phone: '+254-712-451777',
-      email: 'info@seedsaverskenya.org',
-      hours: 'Mon-Fri: 8:30am-5:00pm'
-    },
-    {
-      name: 'Baringo Field Office',
-      address: '334 Marigat Main St, Baringo, Kenya.',
-      phone: '+254-712-451777',
-      email: 'info@seedsaverskenya.org',
-      hours: 'Mon-Fri: 8:30am-5:00pm'
-    }
-  ];
 
   return (
     <div className="contact-page">
@@ -221,24 +191,6 @@ const ContactPage: React.FC = () => {
             </div>
           </section>
         </div>
-
-        {/* Regional Offices */}
-        <section className="regional-offices">
-          <h1>Our Regional Offices</h1>
-          <div className="office-grid">
-            {regionalOffices.map((office, index) => (
-              <div key={index} className="office-card">
-                <h3>{office.name}</h3>
-                <div className="office-details">
-                  <p><FaMapMarkerAlt /> {office.address}</p>
-                  <p><FaPhone /> {office.phone}</p>
-                  <p><FaEnvelope /> {office.email}</p>
-                  <p><FaClock /> {office.hours}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </section>
 
         {/* Map Section */}
         <section className="map-section">
