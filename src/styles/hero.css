@@ -65,21 +65,23 @@
   font-weight: 800;
   line-height: 1.1;
   margin-bottom: 1rem;
-  color: var(--hero-dark);
+  color: white;
   margin-top: 4rem;
   align-items: center;
 }
 
-.hero-overlay {
-  max-width: 900px;
+.hero-blur-overlay {
+  max-width: 1000px;
+  max-height: fit-content;
   margin: 0 auto;
   padding: 2rem;
   background: rgba(0, 0, 0, 0.6);
   border-radius: 20px;
-  backdrop-filter: blur(5px);
+  backdrop-filter: blur(3px);
   justify-content: center;
   align-items: center;
   text-align: center;
+  margin-bottom: 2rem;
 }
 
 .title-line {
@@ -91,7 +93,7 @@
   display: inline-block;
   font-size: clamp(1.8rem, 4vw, 2.5rem);
   font-weight: 600;
-  color: var(--hero-primary);
+  color: white;
   position: relative;
   margin: 0.5rem 0;
 }
@@ -107,6 +109,11 @@
   transform: scaleX(0);
   transform-origin: left;
   animation: highlightUnderline 1s ease-out 0.8s forwards;
+}
+.description {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 1.5rem;
 }
 
 .emoji {
@@ -309,6 +316,37 @@
   color: rgba(255, 255, 255, 0.9);
 }
 
+/* Add these to your existing hero.css */
+
+/* Typing effect styles */
+.highlight-text {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #fff;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+  margin: 0.5em 0;
+  display: inline-block;
+  min-height: 3rem;
+}
+
+.typing-cursor {
+  opacity: 0;
+  margin-left: 2px;
+  animation: blink 0.7s infinite;
+}
+
+.typing-cursor.visible {
+  opacity: 1;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+
+
+
 /* Responsive Design */
 @media (max-width: 1200px) {
   .hero-image {
@@ -419,6 +457,12 @@
     
     margin-top: -130px;
     width: 100vw;
+    }
+    .hero-blur-overlay {
+    padding: 1.5rem;
+    width: 90vw;
+    margin-left: -2rem;
+    
     }
   .hero-text h1 {
     font-size: 2rem;
