@@ -1,108 +1,149 @@
 // src/components/Hero.tsx
 import { FaArrowRight, FaHandshake } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
+import { useEffect, useState } from 'react';
 import '../styles/hero.css';
 
+// Import your images
+import slide1Image from '../assets/Spectacular.jpg';
+import slide2Image from '../assets/cbs.jpg'; // Add your second image
+import slide3Image from '../assets/cb.jpg';  // Add your third image
+
 const Hero = () => {
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [typedText, setTypedText] = useState('');
+  const [isTyping, setIsTyping] = useState(true);
+
+  const slides = [
+    {
+      image: slide1Image,
+      title: "Seed Savers Network",
+      highlight: "My Seeds, My Food, My Future",
+      description: "Preserving biodiversity through community seed sharing for a <strong>sustainable</strong> tomorrow.",
+      cta: "Join our movement"
+    },
+    {
+      image: slide2Image,
+      title: "Protect Our Heritage",
+      highlight: "Ancient Seeds, Modern Solutions",
+      description: "Safeguarding <strong>traditional</strong> crop varieties that hold the key to our food security.",
+      cta: "Discover how"
+    },
+    {
+      image: slide3Image,
+      title: "Grow With Us",
+      highlight: "Plant. Share. Thrive.",
+      description: "Building a network of <strong>seed guardians</strong> to combat climate change one seed at a time.",
+      cta: "Get involved"
+    }
+  ];
+
+  // Typewriter effect
+  useEffect(() => {
+    setIsTyping(true);
+    const currentHighlight = slides[currentSlide].highlight;
+    let i = 0;
+    setTypedText('');
+
+    const typingInterval = setInterval(() => {
+      if (i < currentHighlight.length) {
+        setTypedText(prev => prev + currentHighlight.charAt(i));
+        i++;
+      } else {
+        setIsTyping(false);
+        clearInterval(typingInterval);
+      }
+    }, 100);
+
+    return () => clearInterval(typingInterval);
+  }, [currentSlide]);
+
+  // Auto-advance slides
+  useEffect(() => {
+    const slideInterval = setInterval(() => {
+      setCurrentSlide(prev => (prev + 1) % slides.length);
+    }, 8000);
+
+    return () => clearInterval(slideInterval);
+  }, []);
+
   return (
     <section className="hero">
-  <div className="hero-image">
-    <div className="image-overlay"></div>
-  </div>
-
-  <div className="hero-content">
-    <div className="container hero-layout">
-      {/* Text Section */}
-      <div className="hero-text">
+      <AnimatePresence mode='wait'>
         <motion.div
-          initial="hidden"
-          animate="visible"
-          variants={{
-            hidden: { opacity: 0 },
-            visible: {
-              opacity: 1,
-              transition: {
-                staggerChildren: 0.1,
-                delayChildren: 0.3
-              }
-            }
-          }}
+          key={currentSlide}
+          className="hero-image"
+          initial={{ opacity: 1 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 1 }}
+          transition={{ duration: 1 }}
+          style={{ backgroundImage: `url(${slides[currentSlide].image})` }}
         >
-          {/* Main Title */}
-          <motion.div
-            variants={{
-              hidden: { opacity: 0, y: 30 },
-              visible: { 
-                opacity: 1, 
-                y: 0,
-                transition: {
-                  duration: 0.8,
-                  ease: [0.16, 1, 0.3, 1]
-                }
-              }
-            }}
-          >
-            <h1 className="main-title">
-              <div className="hero-overlay">
-              <span className="title-line"><h1>Seed Savers Network</h1></span>
-              <span className="highlight-text">
-                My Seeds, My Food, My Future
-              </span>
-              </div>
-            </h1>
-          </motion.div>
-
-          {/* Tagline */}
-          <motion.h2
-            className="tagline"
-            variants={{
-              hidden: { opacity: 0, y: 20 },
-              visible: { 
-                opacity: 1, 
-                y: 0,
-                transition: {
-                  delay: 0.4,
-                  duration: 0.8
-                }
-              }
-            }}
-          >
-
-          </motion.h2>
-
-          {/* CTA Buttons */}
-          <motion.div 
-            className="h-hero-cta"
-            variants={{
-              hidden: { opacity: 0 },
-              visible: { 
-                opacity: 1,
-                transition: {
-                  delay: 0.8,
-                  duration: 0.8
-                }
-              }
-            }}
-          >
-            <Link to="/about" className="btn-primary">
-              Learn More <FaArrowRight />
-            </Link>
-            <Link to="/contact" className="btn-primary">
-              Get Involved <FaHandshake />
-            </Link>
-          </motion.div>
+          <div className="image-overlay"></div>
         </motion.div>
-        
-      </div>
+      </AnimatePresence>
 
+      <div className="hero-content">
+        <div className="container">
+          <div className="hero-blur-overlay">
+            <AnimatePresence mode='wait'>
+              <motion.div
+                key={currentSlide}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.8 }}
+                className="hero-text-content"
+              >
+                <motion.div
+                  initial={{ y: 20 }}
+                  animate={{ y: 0 }}
+                  transition={{ duration: 0.6 }}
+                >
+                  <h1 className="main-title">
+                    {slides[currentSlide].title}
+                  </h1>
+                  <div className="highlight-container">
+                    <span className="highlight-text">
+                      {typedText}
+                      <span className={`typing-cursor ${isTyping ? 'visible' : ''}`}>|</span>
+                    </span>
+                  </div>
+                </motion.div>
+
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ delay: 1.5 }}
+                  className="description"
+                  dangerouslySetInnerHTML={{ __html: slides[currentSlide].description }}
+                />
+
+                
+              </motion.div>
+            </AnimatePresence>
+
+            
+
+          </div>
+        </div>
       
-  
-    </div>
-    
-  </div>
-  
-</section>
+      <motion.div 
+                  className="h-hero-cta"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 2 }}
+                >
+                  <Link to="/about" className="btn-primary">
+                    Learn More <FaArrowRight />
+                  </Link>
+                  <Link to="/contact" className="btn-primary">
+                    {slides[currentSlide].cta} <FaHandshake />
+                  </Link>
+       </motion.div>
+        </div>
+    </section>
   );
 };
 

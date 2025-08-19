@@ -104,16 +104,15 @@ const Navbar = () => {
     { 
       path: '/about', 
       label: 'Our Work',
+      dropdown: [
+        { path: '/news-events', label: 'News & Events' },
+        { path: '/resources', label: 'Resources' },
+        { path: '/blog', label: 'Blogs' }
+      ]
     },
-    { 
-      path: '/news-events', 
-      label: 'News & Events',
-    },
-    { 
-      path: '/resources', 
-      label: 'Resources',
-    },
-     { path: '/blog', label: 'Blogs' },
+    { path: '/community-platform', label: 'CSB Platform' },
+    { path: '/incubation-program', label: 'Incubation Program' },
+    { path: '/seed-school', label: 'Seed School' },
     { path: '/contact', label: 'Contact' }
   ];
 
