@@ -105,14 +105,24 @@ const Navbar = () => {
       path: '/about', 
       label: 'Our Work',
       dropdown: [
+        { path: '/about#about', label: 'About Us' },
+        { path: '/about#strategies', label: 'Our Strategies' },
+        { path: '/about#journey', label: 'Our Journey' },
+        { path: '/about#mission', label: 'Our work' }
+      ]
+    },
+
+    { path: '/CommunitySeedBankPlatform', label: 'CSB Platform' },
+    { path: '/incubation-program', label: 'Incubation Program' },
+    { path: '/SeedSchool', label: 'Seed School' },
+    {path: '/resources', label: 'News & Resources',
+      dropdown: [
         { path: '/news-events', label: 'News & Events' },
+        {path: '/newsletter', label: 'Newsletter' },
         { path: '/resources', label: 'Resources' },
         { path: '/blog', label: 'Blogs' }
       ]
     },
-    { path: '/community-platform', label: 'CSB Platform' },
-    { path: '/incubation-program', label: 'Incubation Program' },
-    { path: '/seed-school', label: 'Seed School' },
     { path: '/contact', label: 'Contact' }
   ];
 

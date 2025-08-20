@@ -6,8 +6,8 @@ import { useEffect, useState } from 'react';
 import '../styles/hero.css';
 
 // Import your images
-import slide1Image from '../assets/Spectacular.jpg';
-import slide2Image from '../assets/cbs.jpg'; // Add your second image
+import slide1Image from '../assets/seed_pic.jpg';
+import slide2Image from '../assets/Spectacular.jpg'; // Add your second image
 import slide3Image from '../assets/cb.jpg';  // Add your third image
 
 const Hero = () => {

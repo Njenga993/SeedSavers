@@ -1,0 +1,420 @@
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { FaCalendarAlt, FaMapMarkerAlt, FaUsers, FaSeedling, FaGlobe, FaArrowRight, FaPlayCircle } from 'react-icons/fa';
+import '../styles/School.css';
+import foundingImg from '../assets/seed_pic.jpg';
+
+const SeedSchool = () => {
+  const [activeTab, setActiveTab] = useState('upcoming');
+  const [selectedSchool, setSelectedSchool] = useState(0);
+
+  // Data for previous seed schools
+  const seedSchools = [
+    {
+      year: '2023',
+      title: '2nd African Seed School',
+      location: 'Nairobi, Kenya',
+      participants: 42,
+      countries: 15,
+      theme: 'Strengthening African Seed Sovereignty',
+      image: foundingImg,
+      highlights: [
+        'Intensive training on seed conservation techniques',
+        'Field visits to community seed banks',
+        'Policy advocacy workshops',
+        'Hands-on seed saving practices'
+      ],
+      outcomes: [
+        'Established 5 new seed saving initiatives',
+        'Created pan-African seed savers network',
+        'Developed advocacy strategy for seed laws',
+        'Trained 42 seed ambassadors'
+      ],
+      youtubeLink: 'https://youtube.com/embed/example1',
+      photos: [
+        '/api/placeholder/300/200',
+        '/api/placeholder/300/200',
+        '/api/placeholder/300/200',
+        '/api/placeholder/300/200'
+      ]
+    },
+    {
+      year: '2022',
+      title: '1st African Seed School',
+      location: 'Nakuru, Kenya',
+      participants: 28,
+      countries: 9,
+      theme: 'Foundations of Seed Saving',
+      image: foundingImg,
+      highlights: [
+        'Basic seed conservation principles',
+        'Introduction to agroecology',
+        'Community seed bank establishment',
+        'Participatory plant breeding'
+      ],
+      outcomes: [
+        'Launched 3 community seed banks',
+        'Formed East African seed savers alliance',
+        'Documented 50 traditional varieties',
+        'Trained 28 seed guardians'
+      ],
+      youtubeLink: 'https://youtube.com/embed/example2',
+      photos: [
+        '/api/placeholder/300/200',
+        '/api/placeholder/300/200',
+        '/api/placeholder/300/200'
+      ]
+    }
+  ];
+
+  return (
+    <div className="seed-school-page">
+      {/* Hero Section */}
+      <section className="seed-school-hero">
+        <div className="hero-overlay">
+          <div className="container">
+            <h1>Seed school Boot Camp</h1>
+            <p className="hero-subtitle">Cultivating the next generation of seed guardians</p>
+            <div className="hero-stats">
+              <div className="stat">
+                <FaUsers className="stat-icon" />
+                <span>70+ Participants Trained</span>
+              </div>
+              <div className="stat">
+                <FaGlobe className="stat-icon" />
+                <span>15+ African Countries</span>
+              </div>
+              <div className="stat">
+                <FaSeedling className="stat-icon" />
+                <span>100+ Varieties Conserved</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Navigation Tabs */}
+      <section className="school-tabs-section">
+        <div className="container">
+          <div className="school-tabs">
+            <button 
+              className={`tab-button ${activeTab === 'upcoming' ? 'active' : ''}`}
+              onClick={() => setActiveTab('upcoming')}
+            >
+              Upcoming School
+            </button>
+            <button 
+              className={`tab-button ${activeTab === 'previous' ? 'active' : ''}`}
+              onClick={() => setActiveTab('previous')}
+            >
+              Previous Schools
+            </button>
+            <button 
+              className={`tab-button ${activeTab === 'gallery' ? 'active' : ''}`}
+              onClick={() => setActiveTab('gallery')}
+            >
+              Gallery
+            </button>
+          </div>
+        </div>
+      </section>
+
+      {/* Content Section */}
+      <section className="school-content">
+        <div className="container">
+          {/* Upcoming School Tab */}
+          {activeTab === 'upcoming' && (
+            <div className="tab-content">
+              <div className="upcoming-school">
+                <div className="school-header">
+                  <h2>3rd African Seed School 2024</h2>
+                  <div className="school-details">
+                    <div className="detail-item">
+                      <FaCalendarAlt className="detail-icon" />
+                      <span>November 15-25, 2024</span>
+                    </div>
+                    <div className="detail-item">
+                      <FaMapMarkerAlt className="detail-icon" />
+                      <span>Seed Savers Network Training Center, Gilgil, Kenya</span>
+                    </div>
+                    <div className="detail-item">
+                      <FaUsers className="detail-icon" />
+                      <span>50 Participants Expected</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="school-description">
+                  <h3>Theme: "Seeding Resilience: Climate-Adaptive Crops for Africa's Future"</h3>
+                  <p>
+                    Join us for the 3rd African Seed School, a transformative 10-day intensive training program 
+                    dedicated to preserving Africa's agricultural biodiversity. This year's focus is on developing 
+                    climate-resilient seed systems and empowering community seed guardians across the continent.
+                  </p>
+                  
+                  <div className="program-highlights">
+                    <h4>Program Highlights</h4>
+                    <div className="highlight-grid">
+                      <div className="highlight-card">
+                        <div className="highlight-icon">🌱</div>
+                        <h5>Seed Conservation Techniques</h5>
+                        <p>Hands-on training in traditional and modern seed preservation methods</p>
+                      </div>
+                      <div className="highlight-card">
+                        <div className="highlight-icon">🌍</div>
+                        <h5>Climate Resilience</h5>
+                        <p>Identifying and multiplying climate-adaptive crop varieties</p>
+                      </div>
+                      <div className="highlight-card">
+                        <div className="highlight-icon">📚</div>
+                        <h5>Policy Advocacy</h5>
+                        <p>Strategies for advocating farmer seed rights and sovereignty</p>
+                      </div>
+                      <div className="highlight-card">
+                        <div className="highlight-icon">🤝</div>
+                        <h5>Network Building</h5>
+                        <p>Connecting with seed savers from across Africa</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="registration-section">
+                    <h4>Registration Information</h4>
+                    <div className="registration-details">
+                      <div className="reg-detail">
+                        <h5>Who Should Apply</h5>
+                        <ul>
+                          <li>Farmers and seed custodians</li>
+                          <li>Agricultural extension officers</li>
+                          <li>NGO staff working on food sovereignty</li>
+                          <li>Researchers and students in agriculture</li>
+                        </ul>
+                      </div>
+                      <div className="reg-detail">
+                        <h5>Application Process</h5>
+                        <ul>
+                          <li>Submit online application by September 30, 2024</li>
+                          <li>Selected participants will be notified by October 15</li>
+                          <li>Partial scholarships available for deserving applicants</li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div className="cta-buttons">
+                      <Link to="/apply-seed-school" className="btn-primary">
+                        Apply Now <FaArrowRight />
+                      </Link>
+                      <Link to="/download-brochure" className="btn-secondary">
+                        Download Brochure
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          )}
+
+          {/* Previous Schools Tab */}
+          {activeTab === 'previous' && (
+            <div className="tab-content">
+              <div className="previous-schools">
+                <h2>Previous Seed Schools</h2>
+                <p className="section-intro">
+                  Our previous seed schools have trained over 70 participants from 15 African countries, 
+                  creating a powerful network of seed guardians working to preserve Africa's agricultural heritage.
+                </p>
+
+                <div className="schools-selector">
+                  {seedSchools.map((school, index) => (
+                    <button
+                      key={index}
+                      className={`school-selector-btn ${selectedSchool === index ? 'active' : ''}`}
+                      onClick={() => setSelectedSchool(index)}
+                    >
+                      {school.year} Seed School
+                    </button>
+                  ))}
+                </div>
+
+                {seedSchools[selectedSchool] && (
+                  <div className="school-detail">
+                    <div className="school-banner">
+                      <img src={seedSchools[selectedSchool].image} alt={seedSchools[selectedSchool].title} />
+                      <div className="banner-overlay">
+                        <h3>{seedSchools[selectedSchool].title}</h3>
+                        <p>{seedSchools[selectedSchool].theme}</p>
+                      </div>
+                    </div>
+
+                    <div className="school-stats">
+                      <div className="stat-card">
+                        <FaMapMarkerAlt className="stat-icon" />
+                        <div className="stat-content">
+                          <h4>Location</h4>
+                          <p>{seedSchools[selectedSchool].location}</p>
+                        </div>
+                      </div>
+                      <div className="stat-card">
+                        <FaUsers className="stat-icon" />
+                        <div className="stat-content">
+                          <h4>Participants</h4>
+                          <p>{seedSchools[selectedSchool].participants} from {seedSchools[selectedSchool].countries} countries</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="school-content-grid">
+                      <div className="content-column">
+                        <h4>Program Highlights</h4>
+                        <ul className="highlight-list">
+                          {seedSchools[selectedSchool].highlights.map((highlight, idx) => (
+                            <li key={idx}>{highlight}</li>
+                          ))}
+                        </ul>
+                      </div>
+                      <div className="content-column">
+                        <h4>Key Outcomes</h4>
+                        <ul className="outcome-list">
+                          {seedSchools[selectedSchool].outcomes.map((outcome, idx) => (
+                            <li key={idx}>{outcome}</li>
+                          ))}
+                        </ul>
+                      </div>
+                    </div>
+
+                    {seedSchools[selectedSchool].youtubeLink && (
+                      <div className="video-section">
+                        <h4>Watch the Recap</h4>
+                        <div className="video-container">
+                          <iframe
+                            src={seedSchools[selectedSchool].youtubeLink}
+                            title={`${seedSchools[selectedSchool].title} Video`}
+                            frameBorder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowFullScreen
+                          ></iframe>
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                )}
+              </div>
+            </div>
+          )}
+
+          {/* Gallery Tab */}
+          {activeTab === 'gallery' && (
+            <div className="tab-content">
+              <div className="gallery-section">
+                <h2>Seed School Gallery</h2>
+                <p className="section-intro">
+                  Explore moments from our previous Seed Schools through photos and videos that capture 
+                  the learning, sharing, and community building that happens during these transformative events.
+                </p>
+
+                <div className="gallery-selector">
+                  {seedSchools.map((school, index) => (
+                    <button
+                      key={index}
+                      className={`gallery-selector-btn ${selectedSchool === index ? 'active' : ''}`}
+                      onClick={() => setSelectedSchool(index)}
+                    >
+                      {school.year} Gallery
+                    </button>
+                  ))}
+                </div>
+
+                {seedSchools[selectedSchool] && (
+                  <div className="gallery-content">
+                    <h3>{seedSchools[selectedSchool].title} Gallery</h3>
+                    
+                    {seedSchools[selectedSchool].youtubeLink && (
+                      <div className="featured-video">
+                        <h4>Featured Video</h4>
+                        <div className="video-container">
+                          <iframe
+                            src={seedSchools[selectedSchool].youtubeLink}
+                            title={`${seedSchools[selectedSchool].title} Video`}
+                            frameBorder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowFullScreen
+                          ></iframe>
+                        </div>
+                      </div>
+                    )}
+
+                    <div className="photo-gallery">
+                      <h4>Photo Gallery</h4>
+                      <div className="gallery-grid">
+                        {seedSchools[selectedSchool].photos.map((photo, index) => (
+                          <div key={index} className="gallery-item">
+                            <img src={photo} alt={`Seed School ${seedSchools[selectedSchool].year} - Photo ${index + 1}`} />
+                            <div className="gallery-overlay">
+                              <FaPlayCircle className="view-icon" />
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                )}
+              </div>
+            </div>
+          )}
+        </div>
+      </section>
+
+      {/* Testimonials Section */}
+      <section className="testimonials-section">
+        <div className="container">
+          <h2>What Participants Say</h2>
+          <div className="testimonials-grid">
+            <div className="testimonial-card">
+              <div className="testimonial-content">
+                <p>"The Seed School transformed my understanding of seed sovereignty. I returned to my community and established our first community seed bank."</p>
+              </div>
+              <div className="testimonial-author">
+                <h4>Amara Okeke</h4>
+                <p>Nigeria, 2023 Participant</p>
+              </div>
+            </div>
+            <div className="testimonial-card">
+              <div className="testimonial-content">
+                <p>"The connections I made with other seed savers across Africa have been invaluable. We continue to share seeds and knowledge."</p>
+              </div>
+              <div className="testimonial-author">
+                <h4>Thomas Mbeki</h4>
+                <p>South Africa, 2022 Participant</p>
+              </div>
+            </div>
+            <div className="testimonial-card">
+              <div className="testimonial-content">
+                <p>"This training gave me the tools to advocate for farmers' seed rights in my country. The policy sessions were particularly impactful."</p>
+              </div>
+              <div className="testimonial-author">
+                <h4>Fatima Abdi</h4>
+                <p>Ethiopia, 2023 Participant</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Partners Section */}
+      <section className="partners-section">
+        <div className="container">
+          <h2>Our Partners</h2>
+          <p className="section-intro">The African Seed School is made possible through collaboration with these organizations</p>
+          <div className="partners-grid">
+            <div className="partner-logo">AFSA</div>
+            <div className="partner-logo">Biovision</div>
+            <div className="partner-logo">Alliance for Food Sovereignty</div>
+            <div className="partner-logo">Local Futures</div>
+            <div className="partner-logo">Greenpeace Africa</div>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+};
+
+export default SeedSchool;
