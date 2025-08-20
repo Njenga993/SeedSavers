@@ -4,7 +4,7 @@ import "../styles/SeedSchool.css";
 import seedSchoolImg1 from "../assets/seedschool_sep.jpg";
 
 const SeedSchool: React.FC = () => {
-  const [showMore, setShowMore] = useState(false);
+  const [] = useState(false);
 
   const handleRegisterClick = () => {
     // Open registration form in a new tab
