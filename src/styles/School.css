@@ -39,6 +39,7 @@
   background-color: var(--light-bg);
   overflow-x: hidden;
   width: 100vw;
+
 }
 
 .container {
@@ -49,8 +50,8 @@
 
 /* ===== HERO SECTION ===== */
 .seed-school-hero {
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../assets/seed_school_hero.jpg') center/cover no-repeat;
-  height: 70vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../assets/seedschool.jpg') center/cover no-repeat;
+  height: 80vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -59,7 +60,7 @@
   position: relative;
 }
 
-.hero-overlay {
+.S-hero-overlay {
   background: rgba(0, 0, 0, 0.5);
   padding: 3rem;
   border-radius: 12px;
@@ -73,14 +74,14 @@
   color: var(--white);
 }
 
-.hero-subtitle {
+.S-hero-subtitle {
   font-size: clamp(1.2rem, 2.5vw, 1.8rem);
   opacity: 0.9;
   margin-bottom: 2rem;
   font-weight: var(--s-font-weight-medium);
 }
 
-.hero-stats {
+.S-hero-stats {
   display: flex;
   justify-content: center;
   gap: 3rem;
@@ -88,14 +89,14 @@
   flex-wrap: wrap;
 }
 
-.stat {
+.S-stat {
   display: flex;
   align-items: center;
   gap: 0.5rem;
   font-weight: var(--s-font-weight-medium);
 }
 
-.stat-icon {
+.S-stat-icon {
   color: var(--gold-accent);
   font-size: 1.2rem;
 }

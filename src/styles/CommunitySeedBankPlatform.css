@@ -8,7 +8,7 @@
 /* Hero Section */
 .csb-hero {
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../assets/cb.jpg') center/cover no-repeat;
-  height: 60vh;
+  height: 80vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -17,7 +17,7 @@
   position: relative;
 }
 
-.hero-overlay {
+.cbp-hero-overlay {
   background: rgba(0, 0, 0, 0.5);
   padding: 3rem;
   border-radius: 12px;
@@ -30,32 +30,32 @@
   font-weight: 700;
 }
 
-.hero-subtitle {
+.cbp-hero-subtitle {
   font-size: 1.5rem;
   opacity: 0.9;
   margin-bottom: 2rem;
 }
 
-.hero-stats {
+.cbp-hero-stats {
   display: flex;
   justify-content: center;
   gap: 3rem;
   margin-top: 2rem;
 }
 
-.stat {
+.cbp-stat {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.stat-number {
+.cbp-stat-number {
   font-size: 2.5rem;
   font-weight: 800;
   color: #d4af37;
 }
 
-.stat-label {
+.cbp-stat-label {
   font-size: 1rem;
   opacity: 0.9;
 }

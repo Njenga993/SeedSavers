@@ -9,8 +9,8 @@
 
 /* Hero Section */
 .incubation-hero {
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../assets/incubation_hero.jpg') center/cover no-repeat;
-  height: 60vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../assets/seed_pic.jpg') center/cover no-repeat;
+  height: 80vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -20,7 +20,7 @@
   
 }
 
-.hero-overlay {
+.I-hero-overlay {
   background: rgba(0, 0, 0, 0.5);
   padding: 3rem;
   border-radius: 12px;
@@ -33,32 +33,32 @@
   font-weight: 700;
 }
 
-.hero-subtitle {
+.I-hero-subtitle {
   font-size: 1.5rem;
   opacity: 0.9;
   margin-bottom: 2rem;
 }
 
-.hero-stats {
+.I-hero-stats {
   display: flex;
   justify-content: center;
   gap: 3rem;
   margin-top: 2rem;
 }
 
-.stat {
+.I-stat {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.stat-number {
+.I-stat-number {
   font-size: 2.5rem;
   font-weight: 800;
   color: #d4af37;
 }
 
-.stat-label {
+.I-stat-label {
   font-size: 1rem;
   opacity: 0.9;
 }

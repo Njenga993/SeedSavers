@@ -18,8 +18,8 @@ const Hero = () => {
   const slides = [
     {
       image: slide1Image,
-      title: "Seed Savers Network",
-      highlight: "My Seeds, My Food, My Future",
+      title: "The Biggest Community Seed Bank Network ",
+      highlight: "in Africa",
       description: "Preserving biodiversity through community seed sharing for a <strong>sustainable</strong> tomorrow.",
       cta: "Join our movement"
     },
@@ -39,7 +39,7 @@ const Hero = () => {
     }
   ];
 
-  // Typewriter effect
+  // Typewriter effect (fixed to spell words correctly)
   useEffect(() => {
     setIsTyping(true);
     const currentHighlight = slides[currentSlide].highlight;
@@ -47,8 +47,8 @@ const Hero = () => {
     setTypedText('');
 
     const typingInterval = setInterval(() => {
-      if (i < currentHighlight.length) {
-        setTypedText(prev => prev + currentHighlight.charAt(i));
+      if (i <= currentHighlight.length) {
+        setTypedText(currentHighlight.slice(0, i));
         i++;
       } else {
         setIsTyping(false);
@@ -119,30 +119,25 @@ const Hero = () => {
                   className="description"
                   dangerouslySetInnerHTML={{ __html: slides[currentSlide].description }}
                 />
-
-                
               </motion.div>
             </AnimatePresence>
-
-            
-
           </div>
         </div>
       
-      <motion.div 
-                  className="h-hero-cta"
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 2 }}
-                >
-                  <Link to="/about" className="btn-primary">
-                    Learn More <FaArrowRight />
-                  </Link>
-                  <Link to="/contact" className="btn-primary">
-                    {slides[currentSlide].cta} <FaHandshake />
-                  </Link>
-       </motion.div>
-        </div>
+        <motion.div 
+          className="h-hero-cta"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 2 }}
+        >
+          <Link to="/about" className="btn-primary">
+            Learn More <FaArrowRight />
+          </Link>
+          <Link to="/contact" className="btn-primary">
+            {slides[currentSlide].cta} <FaHandshake />
+          </Link>
+        </motion.div>
+      </div>
     </section>
   );
 };
