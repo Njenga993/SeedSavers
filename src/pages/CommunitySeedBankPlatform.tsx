@@ -136,24 +136,24 @@ const CommunitySeedBankPlatform: React.FC = () => {
     <div className="csb-platform-page">
       {/* Hero Section */}
       <section className="csb-hero">
-        <div className="hero-overlay">
-          <div className="container">
+        <div className="cbp-hero-overlay">
+          <div className="cbp-container">
             <h1>Community Seed Bank Platform</h1>
-            <p className="hero-subtitle">
+            <p className="cbp-hero-subtitle">
               Connecting 112 community seed banks across Kenya for seed sovereignty and biodiversity conservation
             </p>
-            <div className="hero-stats">
-              <div className="stat">
-                <span className="stat-number">112</span>
-                <span className="stat-label">Seed Banks</span>
+            <div className="cbp-hero-stats">
+              <div className="cbp-stat">
+                <span className="cbp-stat-number">112</span>
+                <span className="cbp-stat-label">Seed Banks</span>
               </div>
-              <div className="stat">
-                <span className="stat-number">20+</span>
-                <span className="stat-label">Counties</span>
+              <div className="cbp-stat">
+                <span className="cbp-stat-number">20+</span>
+                <span className="cbp-stat-label">Counties</span>
               </div>
-              <div className="stat">
-                <span className="stat-number">1000+</span>
-                <span className="stat-label">Seed Varieties</span>
+              <div className="cbp-stat">
+                <span className="cbp-stat-number">1000+</span>
+                <span className="cbp-stat-label">Seed Varieties</span>
               </div>
             </div>
           </div>

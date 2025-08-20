@@ -71,21 +71,21 @@ const SeedSchool = () => {
     <div className="seed-school-page">
       {/* Hero Section */}
       <section className="seed-school-hero">
-        <div className="hero-overlay">
-          <div className="container">
+        <div className="S-hero-overlay">
+          <div className="S-container">
             <h1>Seed school Boot Camp</h1>
-            <p className="hero-subtitle">Cultivating the next generation of seed guardians</p>
-            <div className="hero-stats">
-              <div className="stat">
-                <FaUsers className="stat-icon" />
+            <p className="S-hero-subtitle">Cultivating the next generation of seed guardians</p>
+            <div className="S-hero-stats">
+              <div className="S-stat">
+                <FaUsers className="S-stat-icon" />
                 <span>70+ Participants Trained</span>
               </div>
-              <div className="stat">
-                <FaGlobe className="stat-icon" />
+              <div className="S-stat">
+                <FaGlobe className="S-stat-icon" />
                 <span>15+ African Countries</span>
               </div>
-              <div className="stat">
-                <FaSeedling className="stat-icon" />
+              <div className="S-stat">
+                <FaSeedling className="S-stat-icon" />
                 <span>100+ Varieties Conserved</span>
               </div>
             </div>

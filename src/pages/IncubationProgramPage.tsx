@@ -14,24 +14,24 @@ const IncubationProgramPage: React.FC = () => {
     <div className="incubation-page">
       {/* Hero Section */}
       <section className="incubation-hero">
-        <div className="hero-overlay">
-          <div className="container">
+        <div className="I-hero-overlay">
+          <div className="I-container">
             <h1>Agroecology Incubation Program</h1>
-            <p className="hero-subtitle">
+            <p className="I-hero-subtitle">
               Cultivating sustainable food enterprises for a resilient future
             </p>
-            <div className="hero-stats">
-              <div className="stat">
-                <span className="stat-number">25+</span>
-                <span className="stat-label">Startups Supported</span>
+            <div className="I-hero-stats">
+              <div className="I-stat">
+                <span className="I-stat-number">25+</span>
+                <span className="I-stat-label">Startups Supported</span>
               </div>
-              <div className="stat">
-                <span className="stat-number">₦5M+</span>
-                <span className="stat-label">Seed Funding</span>
+              <div className="I-stat">
+                <span className="I-stat-number">₦5M+</span>
+                <span className="I-stat-label">Seed Funding</span>
               </div>
-              <div className="stat">
-                <span className="stat-number">85%</span>
-                <span className="stat-label">Success Rate</span>
+              <div className="I-stat">
+                <span className="I-stat-number">85%</span>
+                <span className="I-stat-label">Success Rate</span>
               </div>
             </div>
           </div>
