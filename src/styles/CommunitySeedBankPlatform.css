@@ -1,0 +1,669 @@
+/* src/styles/CommunitySeedBankPlatform.css */
+.csb-platform-page {
+  font-family: 'Inter', sans-serif;
+  color: #333;
+  width: 100vw;
+}
+
+/* Hero Section */
+.csb-hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../assets/cb.jpg') center/cover no-repeat;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  position: relative;
+}
+
+.hero-overlay {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 3rem;
+  border-radius: 12px;
+  max-width: 900px;
+}
+
+.csb-hero h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  opacity: 0.9;
+  margin-bottom: 2rem;
+}
+
+.hero-stats {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  margin-top: 2rem;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.stat-number {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #d4af37;
+}
+
+.stat-label {
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+/* Tabs Navigation */
+.platform-tabs {
+  background-color: white;
+  padding: 2rem 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.tab-button {
+  padding: 1rem 2rem;
+  background: none;
+  border: none;
+  border-bottom: 3px solid transparent;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  color: #666;
+}
+
+.tab-button.active {
+  border-bottom-color: #235835;
+  color: #235835;
+  font-weight: 600;
+}
+
+.tab-button:hover {
+  color: #235835;
+}
+
+/* Content Section */
+.platform-content {
+  padding: 4rem 0;
+  background-color: #f8f9f6;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.tab-content {
+  animation: fadeIn 0.5s ease;
+}
+
+.content-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.text-content h2 {
+  color: #235835;
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+}
+
+.text-content p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+  color: #444;
+}
+
+.text-content strong {
+  color: #235835;
+  font-weight: 600;
+}
+
+.image-content img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Impact Section */
+.impact-section {
+  margin-top: 3rem;
+}
+
+.impact-section h3 {
+  color: #235835;
+  margin-bottom: 2rem;
+  font-size: 1.8rem;
+}
+
+.impact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.impact-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.impact-card:hover {
+  transform: translateY(-5px);
+}
+
+.impact-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.impact-card h4 {
+  color: #235835;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.impact-card p {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 0;
+}
+
+/* Network Tab */
+.section-intro {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 3rem;
+  text-align: center;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.counties-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.county-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.county-header {
+  padding: 1.5rem;
+  background: linear-gradient(135deg, #235835, #2c5e3a);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.county-header:hover {
+  background: linear-gradient(135deg, #2c5e3a, #235835);
+}
+
+.county-header h3 {
+  margin: 0;
+  font-size: 1.3rem;
+}
+
+.county-stats {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+}
+
+.expand-icon {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.county-seedbanks {
+  padding: 1.5rem;
+  background: #f8f9f6;
+}
+
+.seedbanks-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.seedbank-item {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 0.8rem;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.seedbank-id {
+  background: #d4af37;
+  color: #235835;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+.seedbank-name {
+  font-size: 0.95rem;
+  color: #444;
+}
+
+/* Map Section */
+.map-section {
+  margin-top: 4rem;
+  text-align: center;
+}
+
+.map-section h3 {
+  color: #235835;
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+}
+
+.map-section p {
+  color: #666;
+  margin-bottom: 2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.map-placeholder {
+  background: linear-gradient(135deg, #e8f5e9, #d4edda);
+  border-radius: 12px;
+  padding: 4rem 2rem;
+  border: 2px dashed #235835;
+}
+
+.map-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.map-content span {
+  font-size: 3rem;
+}
+
+.map-content p {
+  font-size: 1.2rem;
+  color: #235835;
+  font-weight: 600;
+  margin: 0;
+}
+
+.map-content small {
+  color: #666;
+}
+
+/* Values Tab */
+.values-content {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.mission-section {
+  margin-bottom: 3rem;
+}
+
+.mission-card {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  border-left: 4px solid #d4af37;
+}
+
+.mission-card h3 {
+  color: #235835;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+}
+
+.mission-card p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #444;
+  margin: 0;
+}
+
+.values-section {
+  margin-bottom: 3rem;
+}
+
+.values-section h3 {
+  color: #235835;
+  margin-bottom: 2rem;
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.value-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.value-card:hover {
+  transform: translateY(-5px);
+}
+
+.value-card h4 {
+  color: #235835;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.value-card p {
+  color: #666;
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.governance-section h3 {
+  color: #235835;
+  margin-bottom: 2rem;
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+.governance-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+.governance-content img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.governance-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.governance-list li {
+  padding: 0.8rem 0;
+  border-bottom: 1px solid #eee;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.governance-list li:before {
+  content: "✓";
+  color: #d4af37;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
+
+/* Contact Tab */
+.contact-content h2 {
+  color: #235835;
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 2.5rem;
+}
+
+.contact-intro {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 3rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  margin-bottom: 3rem;
+}
+
+.contact-info, .involvement-options {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.contact-info h3, .involvement-options h3 {
+  color: #235835;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+}
+
+.contact-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  margin-bottom: 1.5rem;
+}
+
+.contact-item strong {
+  color: #235835;
+  font-weight: 600;
+}
+
+.contact-item a {
+  color: #666;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contact-item a:hover {
+  color: #235835;
+}
+
+.option-card {
+  background: #f8f9f6;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  border-left: 3px solid #d4af37;
+}
+
+.option-card h4 {
+  color: #235835;
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.option-card p {
+  color: #666;
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.newsletter-section {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+.newsletter-section h3 {
+  color: #235835;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.newsletter-section p {
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+.newsletter-form {
+  display: flex;
+  gap: 1rem;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.newsletter-form input {
+  flex: 1;
+  padding: 0.8rem 1.2rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.subscribe-btn {
+  padding: 0.8rem 1.5rem;
+  background: #235835;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.subscribe-btn:hover {
+  background: #2c5e3a;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive Design */
+@media (max-width: 968px) {
+  .content-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .governance-content {
+    grid-template-columns: 1fr;
+  }
+  
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .csb-hero h1 {
+    font-size: 2.5rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.2rem;
+  }
+  
+  .hero-stats {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .tabs {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .tab-button {
+    width: 100%;
+    max-width: 250px;
+    margin-bottom: 0.5rem;
+  }
+  
+  .counties-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .impact-grid, .values-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .newsletter-form {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 1rem;
+  }
+  
+  .hero-overlay {
+    padding: 1.5rem;
+  }
+  
+  .text-content h2 {
+    font-size: 2rem;
+  }
+  
+  .county-header {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+  
+  .seedbanks-grid {
+    grid-template-columns: 1fr;
+  }
+}

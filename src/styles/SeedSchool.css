@@ -3,265 +3,212 @@
 
 :root {
   --s-font: 'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif;
-  --s-font-size-base: 16px;
-  --s-font-size-small: 0.95rem;
-  --s-font-size-medium: 1.05rem;
-  --s-font-size-large: 1.2rem;
-  --s-font-weight-normal: 400;
-  --s-font-weight-medium: 500;
-  --s-font-weight-semibold: 600;
-  --s-font-weight-bold: 700;
+  --primary-green: #2F4B26;
+  --secondary-green: #4a7225;
+  --light-green: #e9f5e1;
+  --accent-gold: #d4af37;
+  --text-dark: #333;
+  --text-medium: #555;
+  --white: #ffffff;
 }
-
-/* Typography Consistency */
-.seed-school-section,
-.seed-school-container,
-.seed-school-content,
-.seed-school-description,
-.upcoming-school-info,
-.seed-school-contact,
-.seed-school-expanded,
-.seed-school-expanded-content,
-.expanded-column,
-.benefits-section,
-.expanded-column ul li,
-.benefits-section li {
-  font-family: var(--s-font);
-  font-size: var(--s-font-size-base);
-  font-weight: var(--s-font-weight-normal);
-  color: #333;
-}
-
-/* Headings */
-.seed-school-heading,
-.seed-school-expanded h3,
-.expanded-column h4,
-.benefits-section h4 {
-  font-family: var(--s-font);
-  font-weight: var(--s-font-weight-bold);
-  color: #2F4B26;
-}
-
-/* CTA Buttons */
-.seed-school-cta {
-  font-family: var(--s-font);
-  font-weight: var(--s-font-weight-semibold);
-  font-size: var(--s-font-size-medium);
-}
-
-.seed-school-cta.secondary {
-  font-family: var(--s-font);
-  font-weight: var(--s-font-weight-medium);
-}
-
-/* Stat Box Text */
-.stat-box h3 {
-  font-family: var(--s-font);
-  font-size: 1.5rem;
-  font-weight: var(--s-font-weight-bold);
-  color: #2d6a4f;
-}
-
-.stat-box p {
-  font-family: var(--s-font);
-  font-size: var(--s-font-size-small);
-  font-weight: var(--s-font-weight-medium);
-  color: #555;
-}
-
 
 .seed-school-section {
-  padding: 4rem 1rem;
+  padding: 3rem 1rem;
   background-color: #f7fdf9;
+  font-family: var(--s-font);
 }
 
 .seed-school-container {
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
+  gap: 3rem;
   align-items: center;
-  justify-content: space-between;
 }
 
-.seed-school-images {
+.seed-school-image {
   flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  min-width: 300px;
 }
 
-.seed-school-images img {
+.seed-school-image img {
   width: 100%;
-  border-radius: 10px;
-  object-fit: cover;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
 .seed-school-content {
   flex: 1;
-  min-width: 300px;
 }
 
 .seed-school-heading {
-  font-size: 2.2rem;
-  color: #2F4B26;
-  margin-bottom: 1rem;
+  font-size: 2.5rem;
+  color: var(--primary-green);
+  margin-bottom: 0.5rem;
+  font-weight: 700;
 }
 
-.seed-school-description,
-.upcoming-school-info {
-  font-size: 1.1rem;
-  color: #333;
-  line-height: 1.6;
-  margin-bottom: 1.5rem;
+.seed-school-tagline {
+  font-size: 1.2rem;
+  color: var(--secondary-green);
+  margin-bottom: 2rem;
+  font-weight: 500;
+  line-height: 1.4;
 }
 
-.upcoming-school-info strong {
-  color: #2d6a4f;
-}
-
-.seed-school-stats {
+.seed-school-highlights {
   display: flex;
-  gap: 1.5rem;
-  margin: 1.5rem 0;
-}
-
-.stat-box {
-  text-align: center;
-  background: #e8f5e9;
-  padding: 1rem;
-  border-radius: 8px;
-  flex: 1;
-}
-
-.stat-box h3 {
-  font-size: 1.5rem;
-  color: #2d6a4f;
-  margin: 0;
-}
-
-.stat-box p {
-  margin: 0;
-  font-size: 0.9rem;
-  color: #555;
-}
-
-.seed-school-contact {
-  margin: 1rem 0;
-  color: #555;
-}
-
-.seed-school-cta {
-  display: inline-block;
-  background-color: #d4af37;
-  color: #fff;
-  padding: 0.75rem 1.5rem;
-  text-decoration: none;
-  border-radius: 50px;
-  margin-top: 1rem;
-  border: none;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.seed-school-cta:hover {
-  background-color: #2F4B26;
-}
-
-/* Expanded Section Styles */
-.seed-school-expanded {
-  width: 100%;
-  background-color: #ffffff;
-  padding: 2rem 0;
-  margin-top: 2rem;
-  border-top: 1px solid #e5e7eb;
-}
-
-.seed-school-expanded-content {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1rem;
-}
-
-.seed-school-expanded h3 {
-  color: #2F4B26;
-  font-size: 1.8rem;
-  margin-bottom: 1.5rem;
-}
-
-.expanded-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
+  flex-direction: column;
+  gap: 1rem;
   margin-bottom: 2rem;
 }
 
-.expanded-column h4 {
-  color: #2d6a4f;
-  margin-bottom: 1rem;
-  font-size: 1.2rem;
+.highlight-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.1rem;
 }
 
-.expanded-column ul {
-  padding-left: 1.5rem;
+.highlight-icon {
+  font-size: 1.5rem;
 }
 
-.expanded-column li {
-  margin-bottom: 0.8rem;
-  color: #374151;
+.seed-school-date {
+  background-color: var(--light-green);
+  padding: 1.2rem;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+  text-align: center;
+  font-size: 1.1rem;
 }
 
-.benefits-section {
-  background: #f8f9fa;
-  padding: 1.5rem;
-  border-radius: 8px;
-  margin: 2rem 0;
+.seed-school-date strong {
+  color: var(--primary-green);
 }
 
-.benefits-section h4 {
-  color: #2d6a4f;
-  margin-bottom: 1rem;
+.seed-school-ctas {
+  display: flex;
+  gap: 1.2rem;
+}
+/* Add these styles to your existing SeedSchool.css */
+
+.seed-school-ctas {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
 }
 
-.benefits-section ul {
-  padding-left: 1.5rem;
-  margin-top: 1rem;
+.seed-cta-button {
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+  transition: all 0.3s ease;
+  font-size: 0.95rem;
 }
 
-.benefits-section li {
-  margin-bottom: 0.5rem;
+.seed-cta-button.primary {
+  background: linear-gradient(135deg, #d4af37, #f1c40f);
+  color: #235835;
+  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
 }
 
-.seed-school-cta.secondary {
-  background-color: #fef3c7;
-  color: #92400e;
-  border: 1px solid #facc15;
+.seed-cta-button.primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
 }
 
-.seed-school-cta.secondary:hover {
-  background-color: #fde68a;
+.seed-cta-button.secondary {
+  background: transparent;
+  color: #235835;
+  border: 2px solid #235835;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-  .expanded-grid {
-    grid-template-columns: 1fr;
+.seed-cta-button.secondary:hover {
+  background: #235835;
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+  .seed-school-ctas {
+    flex-direction: column;
   }
+  
+  .seed-cta-button {
+    width: 100%;
+  }
+}
 
+.seed_cta-button {
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: var(--s-font);
+}
+
+.seed_cta-button.primary {
+  background-color: var(--accent-gold);
+  color: var(--white);
+}
+
+.seed_cta-button.primary:hover {
+  background-color: #c19b2e;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
+}
+
+.seed_cta-button.secondary {
+  background-color: transparent;
+  color: var(--secondary-green);
+  border: 2px solid var(--secondary-green);
+}
+
+.seed_cta-button.secondary:hover {
+  background-color: rgba(74, 114, 37, 0.1);
+  transform: translateY(-3px);
+}
+
+/* Responsive design */
+@media (max-width: 900px) {
+  .seed-school-container {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .seed-school-image, .seed-school-content {
+    width: 100%;
+  }
+  
+  .seed-school-heading {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .seed-school-ctas {
+    flex-direction: column;
+  }
+  
   .seed-school-heading {
     font-size: 1.8rem;
   }
-}
-
-@media (max-width: 480px) {
-  .seed-school-stats {
-    flex-direction: column;
+  
+  .seed-school-tagline {
+    font-size: 1.1rem;
   }
-
-  .seed-school-heading {
-    font-size: 1.5rem;
+  
+  .highlight-item {
+    font-size: 1rem;
   }
 }

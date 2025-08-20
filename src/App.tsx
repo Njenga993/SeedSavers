@@ -9,6 +9,10 @@ import NewsEvents from './pages/NewsEvents';
 import BlogPage from './pages/Blog';
 import Resources from './pages/Resources';
 import BlogDetail from './pages/BlogDetail'; // NEW detail page
+import SeedSchool from './pages/SeedSchool';
+import CommunitySeedBankPlatform from './pages/CommunitySeedBankPlatform';
+import IncubationProgramPage from './pages/IncubationProgramPage';
+import NewsletterPage from './pages/NewsletterPage';
 
 function App() {
   return (
@@ -19,6 +23,10 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
+            <Route path="/SeedSchool" element={<SeedSchool />} />
+            <Route path="/CommunitySeedBankPlatform" element={<CommunitySeedBankPlatform />} />
+            <Route path="/incubation-program" element={<IncubationProgramPage />} />
+            <Route path="/newsletter" element={<NewsletterPage />} />
             <Route path="/news-events" element={<NewsEvents />} />
             <Route path="/resources" element={<Resources />} />
             <Route path="/blog" element={<BlogPage />} />

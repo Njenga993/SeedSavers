@@ -1,0 +1,431 @@
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import "../styles/NewsletterPage.css";
+import latestIssue from "../assets/seed_pic.jpg";
+import archiveImage from "../assets/seed_pic.jpg";
+import subscriptionImage from "../assets/seed_pic.jpg";
+
+const NewsletterPage: React.FC = () => {
+  const [activeTab, setActiveTab] = useState("latest");
+  const [email, setEmail] = useState("");
+  const [subscribed, setSubscribed] = useState(false);
+
+  const handleSubscribe = (e: React.FormEvent) => {
+    e.preventDefault();
+    // Simulate subscription success
+    setSubscribed(true);
+    setEmail("");
+    // You would integrate with your email service here
+  };
+
+  // Sample newsletter data
+  const newsletters = [
+    {
+      id: 1,
+      title: "Seed Sovereignty Quarterly - Spring 2024",
+      date: "March 15, 2024",
+      excerpt: "Celebrating 112 community seed banks across Kenya and new policy victories for farmer seed rights.",
+      image: latestIssue,
+      tags: ["Policy", "Community", "Conservation"],
+      readTime: "12 min read",
+      featured: true
+    },
+    {
+      id: 2,
+      title: "Agroecology Innovations - Winter 2023",
+      date: "December 10, 2023",
+      excerpt: "Spotlight on youth-led agroecology startups and climate-resilient farming techniques.",
+      image: archiveImage,
+      tags: ["Innovation", "Youth", "Climate"],
+      readTime: "8 min read"
+    },
+    {
+      id: 3,
+      title: "Seed Savers Digest - Fall 2023",
+      date: "September 22, 2023",
+      excerpt: "National seed fair highlights and success stories from our incubation program graduates.",
+      image: subscriptionImage,
+      tags: ["Events", "Success Stories", "Training"],
+      readTime: "10 min read"
+    },
+    {
+      id: 4,
+      title: "Biodiversity Bulletin - Summer 2023",
+      date: "June 30, 2023",
+      excerpt: "Documenting 64 new traditional varieties and community conservation efforts across East Africa.",
+      image: latestIssue,
+      tags: ["Biodiversity", "Research", "Documentation"],
+      readTime: "15 min read"
+    },
+    {
+      id: 5,
+      title: "Food Sovereignty Times - Spring 2023",
+      date: "March 18, 2023",
+      excerpt: "Policy updates and community advocacy strategies for protecting indigenous seed systems.",
+      image: archiveImage,
+      tags: ["Policy", "Advocacy", "Community"],
+      readTime: "11 min read"
+    },
+    {
+      id: 6,
+      title: "Seed Guardians Journal - Winter 2022",
+      date: "December 5, 2022",
+      excerpt: "Celebrating our seed ambassadors and their impact on preserving agricultural heritage.",
+      image: subscriptionImage,
+      tags: ["Ambassadors", "Impact", "Heritage"],
+      readTime: "9 min read"
+    }
+  ];
+
+  return (
+    <div className="newsletter-page">
+      {/* Hero Section */}
+      <section className="newsletter-hero">
+        <div className="hero-overlay">
+          <div className="container">
+            <h1>Seed Savers Newsletter</h1>
+            <p className="hero-subtitle">
+              Stay updated on seed sovereignty, agroecology innovations, and food system transformation
+            </p>
+            <div className="hero-stats">
+              <div className="stat">
+                <span className="stat-number">1K+</span>
+                <span className="stat-label">Subscribers</span>
+              </div>
+              <div className="stat">
+                <span className="stat-number">20+</span>
+                <span className="stat-label">Issues Published</span>
+              </div>
+              <div className="stat">
+                <span className="stat-number">15</span>
+                <span className="stat-label">Countries Reached</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Navigation Tabs */}
+      <section className="newsletter-tabs">
+        <div className="container">
+          <div className="tabs">
+            <button 
+              className={`tab-button ${activeTab === 'latest' ? 'active' : ''}`}
+              onClick={() => setActiveTab('latest')}
+            >
+              Latest Issue
+            </button>
+            <button 
+              className={`tab-button ${activeTab === 'archive' ? 'active' : ''}`}
+              onClick={() => setActiveTab('archive')}
+            >
+              Archive
+            </button>
+            <button 
+              className={`tab-button ${activeTab === 'subscribe' ? 'active' : ''}`}
+              onClick={() => setActiveTab('subscribe')}
+            >
+              Subscribe
+            </button>
+          </div>
+        </div>
+      </section>
+
+      {/* Content Section */}
+      <section className="newsletter-content">
+        <div className="container">
+          {/* Latest Issue Tab */}
+          {activeTab === 'latest' && (
+            <div className="tab-content">
+              <div className="latest-issue">
+                <div className="issue-header">
+                  <div className="issue-image">
+                    <img src={latestIssue} alt="Spring 2024 Newsletter Cover" />
+                    <div className="issue-badge">Latest Issue</div>
+                  </div>
+                  <div className="issue-info">
+                    <h2>Seed Sovereignty Quarterly - Spring 2024</h2>
+                    <div className="issue-meta">
+                      <span className="issue-date">March 15, 2024</span>
+                      <span className="read-time">12 min read</span>
+                      <div className="tags">
+                        {["Policy", "Community", "Conservation"].map(tag => (
+                          <span key={tag} className="tag">{tag}</span>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="issue-content">
+                  <div className="content-grid">
+                    <div className="main-content">
+                      <h3>Featured Stories</h3>
+                      
+                      <article className="feature-story">
+                        <h4>112 Community Seed Banks and Growing</h4>
+                        <p>
+                          This quarter, we celebrate a monumental achievement: 112 community seed banks 
+                          now actively preserving indigenous varieties across Kenya. From the arid lands 
+                          of Turkana to the fertile highlands of Kakamega, farmers are reclaiming seed 
+                          sovereignty and building resilient food systems.
+                        </p>
+                        <p>
+                          Our network has expanded to include 15 new seed banks in Baringo County alone, 
+                          each serving as a hub for knowledge exchange, seed multiplication, and community 
+                          empowerment. These efforts have preserved over 200 traditional varieties that 
+                          were on the brink of extinction.
+                        </p>
+                      </article>
+
+                      <article className="feature-story">
+                        <h4>Policy Victory for Farmer Seed Rights</h4>
+                        <p>
+                          After years of advocacy, we're thrilled to announce a significant policy shift 
+                          recognizing farmer-managed seed systems. The new legislation acknowledges the 
+                          rights of farmers to save, use, exchange, and sell their seeds—a crucial step 
+                          toward food sovereignty.
+                        </p>
+                        <p>
+                          This victory wouldn't have been possible without the relentless efforts of 
+                          our seed ambassadors and partner organizations who participated in stakeholder 
+                          meetings, submitted policy briefs, and mobilized communities across the country.
+                        </p>
+                      </article>
+
+                      <div className="stats-highlight">
+                        <h4>By the Numbers: Spring 2024 Impact</h4>
+                        <div className="stats-grid">
+                          <div className="stat-item">
+                            <span className="number">3,285</span>
+                            <span className="label">Farmers Reached</span>
+                          </div>
+                          <div className="stat-item">
+                            <span className="number">83</span>
+                            <span className="label">Seed Fairs Conducted</span>
+                          </div>
+                          <div className="stat-item">
+                            <span className="number">15</span>
+                            <span className="label">New Varieties Documented</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="sidebar">
+                      <div className="upcoming-events">
+                        <h4>Upcoming Events</h4>
+                        <div className="event-item">
+                          <h5>National Seed Fair 2024</h5>
+                          <p>April 15-17, 2024 • Nairobi, Kenya</p>
+                          <span className="event-tag">Registration Open</span>
+                        </div>
+                        <div className="event-item">
+                          <h5>Agroecology Training Workshop</h5>
+                          <p>May 3-5, 2024 • Gilgil Training Center</p>
+                          <span className="event-tag">Limited Slots</span>
+                        </div>
+                      </div>
+
+                      <div className="quick-links">
+                        <h4>Quick Links</h4>
+                        <Link to="/community-seed-banks" className="quick-link">
+                          Community Seed Bank Network
+                        </Link>
+                        <Link to="/incubation-program" className="quick-link">
+                          Agroecology Incubation Program
+                        </Link>
+                        <Link to="/seed-school" className="quick-link">
+                          Seed School Boot Camp
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="download-section">
+                    <h4>Download Full Issue</h4>
+                    <p>Get the complete Spring 2024 newsletter in PDF format</p>
+                    <button className="download-btn">
+                      Download PDF (2.4 MB)
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          )}
+
+          {/* Archive Tab */}
+          {activeTab === 'archive' && (
+            <div className="tab-content">
+              <h2>Newsletter Archive</h2>
+              <p className="section-intro">
+                Browse our collection of past newsletters and publications
+              </p>
+
+              <div className="archive-filters">
+                <div className="filter-group">
+                  <label>Filter by Year:</label>
+                  <select>
+                    <option>All Years</option>
+                    <option>2024</option>
+                    <option>2023</option>
+                    <option>2022</option>
+                  </select>
+                </div>
+                <div className="filter-group">
+                  <label>Filter by Topic:</label>
+                  <select>
+                    <option>All Topics</option>
+                    <option>Policy</option>
+                    <option>Community</option>
+                    <option>Innovation</option>
+                    <option>Conservation</option>
+                  </select>
+                </div>
+              </div>
+
+              <div className="archive-grid">
+                {newsletters.map(newsletter => (
+                  <div key={newsletter.id} className="archive-item">
+                    <div className="archive-image">
+                      <img src={newsletter.image} alt={newsletter.title} />
+                    </div>
+                    <div className="archive-content">
+                      <h3>{newsletter.title}</h3>
+                      <div className="archive-meta">
+                        <span className="date">{newsletter.date}</span>
+                        <span className="read-time">{newsletter.readTime}</span>
+                      </div>
+                      <p>{newsletter.excerpt}</p>
+                      <div className="tags">
+                        {newsletter.tags.map(tag => (
+                          <span key={tag} className="tag">{tag}</span>
+                        ))}
+                      </div>
+                      <button className="read-btn">
+                        Read Issue
+                      </button>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              <div className="pagination">
+                <button className="pagination-btn">Previous</button>
+                <span className="page-number">Page 1 of 3</span>
+                <button className="pagination-btn">Next</button>
+              </div>
+            </div>
+          )}
+
+          {/* Subscribe Tab */}
+          {activeTab === 'subscribe' && (
+            <div className="tab-content">
+              <div className="subscribe-content">
+                <div className="subscribe-grid">
+                  <div className="subscribe-info">
+                    <h2>Stay Connected</h2>
+                    <p className="subscribe-intro">
+                      Join our community of 1,000+ subscribers who receive regular updates on 
+                      seed sovereignty, agroecology innovations, and food system transformation.
+                    </p>
+
+                    <div className="benefits-list">
+                      <h4>What You'll Receive:</h4>
+                      <ul>
+                        <li>Quarterly digital newsletter with in-depth articles</li>
+                        <li>Early access to event announcements and registrations</li>
+                        <li>Exclusive interviews with seed guardians and experts</li>
+                        <li>Policy updates and advocacy opportunities</li>
+                        <li>Success stories from our network of community seed banks</li>
+                      </ul>
+                    </div>
+
+                    <div className="testimonial">
+                      <blockquote>
+                        "The Seed Savers newsletter keeps me informed about critical developments 
+                        in seed sovereignty. It's an invaluable resource for anyone working in 
+                        sustainable agriculture."
+                      </blockquote>
+                      <cite>- Dr. Wanjiru, Agricultural Researcher</cite>
+                    </div>
+                  </div>
+
+                  <div className="subscribe-form-container">
+                    {subscribed ? (
+                      <div className="success-message">
+                        <div className="success-icon">✓</div>
+                        <h3>Welcome to Our Community!</h3>
+                        <p>
+                          Thank you for subscribing to our newsletter. You'll receive a confirmation 
+                          email shortly with access to our latest issue.
+                        </p>
+                        <button 
+                          className="back-btn"
+                          onClick={() => setSubscribed(false)}
+                        >
+                          Subscribe Another Email
+                        </button>
+                      </div>
+                    ) : (
+                      <div className="subscribe-form">
+                        <h3>Subscribe to Our Newsletter</h3>
+                        <form onSubmit={handleSubscribe}>
+                          <div className="form-group">
+                            <label htmlFor="name">Full Name</label>
+                            <input
+                              type="text"
+                              id="name"
+                              placeholder="Enter your full name"
+                              required
+                            />
+                          </div>
+                          <div className="form-group">
+                            <label htmlFor="email">Email Address</label>
+                            <input
+                              type="email"
+                              id="email"
+                              placeholder="Enter your email address"
+                              value={email}
+                              onChange={(e) => setEmail(e.target.value)}
+                              required
+                            />
+                          </div>
+                          <div className="form-group">
+                            <label htmlFor="interest">Primary Interest</label>
+                            <select id="interest">
+                              <option>Select your interest</option>
+                              <option>Community Seed Banking</option>
+                              <option>Agroecology Entrepreneurship</option>
+                              <option>Policy & Advocacy</option>
+                              <option>Research & Education</option>
+                              <option>General Updates</option>
+                            </select>
+                          </div>
+                          <div className="form-group">
+                            <label className="checkbox-label">
+                              <input type="checkbox" required />
+                              <span>I agree to receive email updates and newsletters</span>
+                            </label>
+                          </div>
+                          <button type="submit" className="subscribe-btn">
+                            Subscribe Now
+                          </button>
+                        </form>
+                        <p className="privacy-note">
+                          We respect your privacy and will never share your information with third parties.
+                        </p>
+                      </div>
+                    )}
+                  </div>
+                </div>
+              </div>
+            </div>
+          )}
+        </div>
+      </section>
+    </div>
+  );
+};
+
+export default NewsletterPage;
