@@ -66,14 +66,14 @@ const WhoWeAre = () => {
       </Link>
 
       <div ref={cardsRef} className="card-container">
-        <div className={`info-card ${visible ? 'slide-in-up' : ''}`} style={{ animationDelay: visible ? '0.2s' : '0s' }}>
+        <div className={`w-info-card ${visible ? 'slide-in-up' : ''}`} style={{ animationDelay: visible ? '0.2s' : '0s' }}>
           <div className="card-icon"></div>
-          <h3>Our Mission</h3>
+          <h2>Our Mission</h2>
           <p>We are on a mission to conserve agrobiodiversity by strengthening communities' seed systems for improved seed access and enhanced food sovereignty.</p>
         </div>
-        <div className={`info-card ${visible ? 'slide-in-up' : ''}`} style={{ animationDelay: visible ? '0.4s' : '0s' }}>
-          <div className="card-icon"></div>
-          <h3>Our Vision</h3>
+        <div className={`w-info-card ${visible ? 'slide-in-up' : ''}`} style={{ animationDelay: visible ? '0.4s' : '0s' }}>
+          <div className="w-card-icon"></div>
+          <h2>Our Vision</h2>
           <p>To be a leading agent in promoting diverse seed access to farming communities.</p>
         </div>
       </div>

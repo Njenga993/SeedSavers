@@ -132,28 +132,28 @@ const CommunitySeedBankPlatform: React.FC = () => {
     ]}
   ];
 
-  return (
-    <div className="csb-platform-page">
+    return (
+    <div className="csbp-platform-page">
       {/* Hero Section */}
-      <section className="csb-hero">
-        <div className="cbp-hero-overlay">
-          <div className="cbp-container">
+      <section className="csbp-hero">
+        <div className="csbp-hero-overlay">
+          <div className="csbp-container">
             <h1>Community Seed Bank Platform</h1>
-            <p className="cbp-hero-subtitle">
+            <p className="csbp-hero-subtitle">
               Connecting 112 community seed banks across Kenya for seed sovereignty and biodiversity conservation
             </p>
-            <div className="cbp-hero-stats">
-              <div className="cbp-stat">
-                <span className="cbp-stat-number">112</span>
-                <span className="cbp-stat-label">Seed Banks</span>
+            <div className="csbp-hero-stats">
+              <div className="csbp-stat">
+                <span className="csbp-stat-number">112</span>
+                <span className="csbp-stat-label">Seed Banks</span>
               </div>
-              <div className="cbp-stat">
-                <span className="cbp-stat-number">20+</span>
-                <span className="cbp-stat-label">Counties</span>
+              <div className="csbp-stat">
+                <span className="csbp-stat-number">20+</span>
+                <span className="csbp-stat-label">Counties</span>
               </div>
-              <div className="cbp-stat">
-                <span className="cbp-stat-number">1000+</span>
-                <span className="cbp-stat-label">Seed Varieties</span>
+              <div className="csbp-stat">
+                <span className="csbp-stat-number">1000+</span>
+                <span className="csbp-stat-label">Seed Varieties</span>
               </div>
             </div>
           </div>
@@ -161,29 +161,29 @@ const CommunitySeedBankPlatform: React.FC = () => {
       </section>
 
       {/* Navigation Tabs */}
-      <section className="platform-tabs">
-        <div className="container">
-          <div className="tabs">
+      <section className="csbp-platform-tabs">
+        <div className="csbp-container">
+          <div className="csbp-tabs">
             <button 
-              className={`tab-button ${activeTab === 'overview' ? 'active' : ''}`}
+              className={`csbp-tab-button ${activeTab === 'overview' ? 'csbp-active' : ''}`}
               onClick={() => setActiveTab('overview')}
             >
               Overview
             </button>
             <button 
-              className={`tab-button ${activeTab === 'network' ? 'active' : ''}`}
+              className={`csbp-tab-button ${activeTab === 'network' ? 'csbp-active' : ''}`}
               onClick={() => setActiveTab('network')}
             >
               Our Network
             </button>
             <button 
-              className={`tab-button ${activeTab === 'values' ? 'active' : ''}`}
+              className={`csbp-tab-button ${activeTab === 'values' ? 'csbp-active' : ''}`}
               onClick={() => setActiveTab('values')}
             >
               Values & Mission
             </button>
             <button 
-              className={`tab-button ${activeTab === 'contact' ? 'active' : ''}`}
+              className={`csbp-tab-button ${activeTab === 'contact' ? 'csbp-active' : ''}`}
               onClick={() => setActiveTab('contact')}
             >
               Contact
@@ -193,13 +193,13 @@ const CommunitySeedBankPlatform: React.FC = () => {
       </section>
 
       {/* Content Section */}
-      <section className="platform-content">
-        <div className="container">
+      <section className="csbp-platform-content">
+        <div className="csbp-container">
           {/* Overview Tab */}
           {activeTab === 'overview' && (
-            <div className="tab-content">
-              <div className="content-grid">
-                <div className="text-content">
+            <div className="csbp-tab-content">
+              <div className="csbp-content-grid">
+                <div className="csbp-text-content">
                   <h2>About the Platform</h2>
                   <p>
                     The Community Seed Banks Platform (CSB) is a self-organized structure within the 
@@ -219,28 +219,28 @@ const CommunitySeedBankPlatform: React.FC = () => {
                     Kakamega, Bungoma, Nakuru, Embu, Siaya, Turkana, and more.
                   </p>
 
-                  <div className="impact-section">
+                  <div className="csbp-impact-section">
                     <h3>Our Impact</h3>
-                    <div className="impact-grid">
-                      <div className="impact-card">
-                        <div className="impact-icon">🌱</div>
+                    <div className="csbp-impact-grid">
+                      <div className="csbp-impact-card">
+                        <div className="csbp-impact-icon">🌱</div>
                         <h4>Seed Preservation</h4>
                         <p>Preserving thousands of indigenous seed varieties from extinction</p>
                       </div>
-                      <div className="impact-card">
-                        <div className="impact-icon">🤝</div>
+                      <div className="csbp-impact-card">
+                        <div className="csbp-impact-icon">🤝</div>
                         <h4>Community Building</h4>
                         <p>Connecting farmers across Kenya for knowledge exchange</p>
                       </div>
-                      <div className="impact-card">
-                        <div className="impact-icon">🌍</div>
+                      <div className="csbp-impact-card">
+                        <div className="csbp-impact-icon">🌍</div>
                         <h4>Biodiversity</h4>
                         <p>Protecting agricultural biodiversity for future generations</p>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div className="image-content">
+                <div className="csbp-image-content">
                   <img src={seedExchange} alt="Farmers exchanging seeds" />
                 </div>
               </div>
@@ -249,34 +249,34 @@ const CommunitySeedBankPlatform: React.FC = () => {
 
           {/* Network Tab */}
           {activeTab === 'network' && (
-            <div className="tab-content">
+            <div className="csbp-tab-content">
               <h2>Our Seed Bank Network</h2>
-              <p className="section-intro">
+              <p className="csbp-section-intro">
                 Explore our growing network of 112 community seed banks spread across Kenya, 
                 each playing a vital role in preserving our agricultural heritage.
               </p>
 
-              <div className="counties-grid">
+              <div className="csbp-counties-grid">
                 {seedBanksByCounty.map(county => (
-                  <div key={county.id} className="county-card">
+                  <div key={county.id} className="csbp-county-card">
                     <div 
-                      className="county-header"
+                      className="csbp-county-header"
                       onClick={() => setExpandedCounty(expandedCounty === county.id ? null : county.id)}
                     >
                       <h3>{county.name} County</h3>
-                      <span className="county-stats">{county.count} Seed Banks</span>
-                      <span className="expand-icon">
+                      <span className="csbp-county-stats">{county.count} Seed Banks</span>
+                      <span className="csbp-expand-icon">
                         {expandedCounty === county.id ? '−' : '+'}
                       </span>
                     </div>
                     
                     {expandedCounty === county.id && (
-                      <div className="county-seedbanks">
-                        <div className="seedbanks-grid">
+                      <div className="csbp-county-seedbanks">
+                        <div className="csbp-seedbanks-grid">
                           {county.seedBanks.map(([id, name]) => (
-                            <div key={id} className="seedbank-item">
-                              <span className="seedbank-id">{id}</span>
-                              <span className="seedbank-name">{name}</span>
+                            <div key={id} className="csbp-seedbank-item">
+                              <span className="csbp-seedbank-id">{id}</span>
+                              <span className="csbp-seedbank-name">{name}</span>
                             </div>
                           ))}
                         </div>
@@ -286,11 +286,11 @@ const CommunitySeedBankPlatform: React.FC = () => {
                 ))}
               </div>
 
-              <div className="map-section">
+              <div className="csbp-map-section">
                 <h3>Network Map</h3>
                 <p>Our seed banks are strategically located across Kenya to maximize impact and accessibility</p>
-                <div className="map-placeholder">
-                  <div className="map-content">
+                <div className="csbp-map-placeholder">
+                  <div className="csbp-map-content">
                     <span>🌍</span>
                     <p>Interactive Map Coming Soon</p>
                     <small>Visualizing our 112 seed bank locations across Kenya</small>
@@ -302,11 +302,11 @@ const CommunitySeedBankPlatform: React.FC = () => {
 
           {/* Values Tab */}
           {activeTab === 'values' && (
-            <div className="tab-content">
-              <div className="values-content">
-                <div className="mission-section">
+            <div className="csbp-tab-content">
+              <div className="csbp-values-content">
+                <div className="csbp-mission-section">
                   <h2>Mission & Values</h2>
-                  <div className="mission-card">
+                  <div className="csbp-mission-card">
                     <h3>Our Mission</h3>
                     <p>
                       To strengthen the capacity, collaboration, and advocacy of community seed banks by promoting inclusive
@@ -315,41 +315,41 @@ const CommunitySeedBankPlatform: React.FC = () => {
                   </div>
                 </div>
 
-                <div className="values-section">
+                <div className="csbp-values-section">
                   <h3>Core Values</h3>
-                  <div className="values-grid">
-                    <div className="value-card">
+                  <div className="csbp-values-grid">
+                    <div className="csbp-value-card">
                       <h4>Seed Sovereignty</h4>
                       <p>Right to save, use, exchange, and sell seeds</p>
                     </div>
-                    <div className="value-card">
+                    <div className="csbp-value-card">
                       <h4>Solidarity</h4>
                       <p>Mutual support among members</p>
                     </div>
-                    <div className="value-card">
+                    <div className="csbp-value-card">
                       <h4>Sustainability</h4>
                       <p>Conservation of biodiversity</p>
                     </div>
-                    <div className="value-card">
+                    <div className="csbp-value-card">
                       <h4>Inclusivity</h4>
                       <p>Women, youth, and marginalized group participation</p>
                     </div>
-                    <div className="value-card">
+                    <div className="csbp-value-card">
                       <h4>Transparency</h4>
                       <p>Accountability and open communication</p>
                     </div>
-                    <div className="value-card">
+                    <div className="csbp-value-card">
                       <h4>Innovation</h4>
                       <p>Learning through training and seed fairs</p>
                     </div>
                   </div>
                 </div>
 
-                <div className="governance-section">
+                <div className="csbp-governance-section">
                   <h3>Governance & Operations</h3>
-                  <div className="governance-content">
+                  <div className="csbp-governance-content">
                     <img src={farmersGroup} alt="Farmers in governance meeting" />
-                    <div className="governance-list">
+                    <div className="csbp-governance-list">
                       <ul>
                         <li>Led by elected representatives from various regions</li>
                         <li>Holds biannual leadership meetings and regional seed fairs</li>
@@ -366,53 +366,53 @@ const CommunitySeedBankPlatform: React.FC = () => {
 
           {/* Contact Tab */}
           {activeTab === 'contact' && (
-            <div className="tab-content">
-              <div className="contact-content">
+            <div className="csbp-tab-content">
+              <div className="csbp-contact-content">
                 <h2>Get Involved</h2>
-                <p className="contact-intro">
+                <p className="csbp-contact-intro">
                   Join our network of seed guardians or learn how to start your own community seed bank
                 </p>
 
-                <div className="contact-grid">
-                  <div className="contact-info">
+                <div className="csbp-contact-grid">
+                  <div className="csbp-contact-info">
                     <h3>Contact Information</h3>
-                    <div className="contact-item">
+                    <div className="csbp-contact-item">
                       <strong>Email:</strong>
                       <a href="mailto:info@seedsaverskenya.org">info@seedsaverskenya.org</a>
                     </div>
-                    <div className="contact-item">
+                    <div className="csbp-contact-item">
                       <strong>Phone:</strong>
                       <a href="tel:+254712451777">+254-712-451777</a>
                     </div>
-                    <div className="contact-item">
+                    <div className="csbp-contact-item">
                       <strong>Address:</strong>
                       <span>Seed Savers Network, Gilgil, Kenya</span>
                     </div>
                   </div>
 
-                  <div className="involvement-options">
+                  <div className="csbp-involvement-options">
                     <h3>Ways to Get Involved</h3>
-                    <div className="option-card">
+                    <div className="csbp-option-card">
                       <h4>Start a Seed Bank</h4>
                       <p>Get guidance on establishing a community seed bank in your area</p>
                     </div>
-                    <div className="option-card">
+                    <div className="csbp-option-card">
                       <h4>Join Existing Network</h4>
                       <p>Connect with existing seed banks in your region</p>
                     </div>
-                    <div className="option-card">
+                    <div className="csbp-option-card">
                       <h4>Volunteer</h4>
                       <p>Support our mission through volunteering opportunities</p>
                     </div>
                   </div>
                 </div>
 
-                <div className="newsletter-section">
+                <div className="csbp-newsletter-section">
                   <h3>Stay Updated</h3>
                   <p>Subscribe to our newsletter for updates on seed conservation efforts</p>
-                  <div className="newsletter-form">
+                  <div className="csbp-newsletter-form">
                     <input type="email" placeholder="Enter your email address" />
-                    <button className="subscribe-btn">Subscribe</button>
+                    <button className="csbp-subscribe-btn">Subscribe</button>
                   </div>
                 </div>
               </div>
