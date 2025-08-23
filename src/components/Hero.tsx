@@ -7,8 +7,8 @@ import '../styles/hero.css';
 
 // Import your images
 import slide1Image from '../assets/seed_pic.jpg';
-import slide2Image from '../assets/Spectacular.jpg'; // Add your second image
-import slide3Image from '../assets/cb.jpg';  // Add your third image
+import slide2Image from '../assets/Spectacular.jpg';
+import slide3Image from '../assets/cb.jpg';
 
 const Hero = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -39,7 +39,7 @@ const Hero = () => {
     }
   ];
 
-  // Typewriter effect (fixed to spell words correctly)
+  // Typewriter effect
   useEffect(() => {
     setIsTyping(true);
     const currentHighlight = slides[currentSlide].highlight;

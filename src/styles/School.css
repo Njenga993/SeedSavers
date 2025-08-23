@@ -1,4 +1,4 @@
-/* src/styles/seedSchool.css */
+/* src/styles/SeedSchool.css */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
 :root {
@@ -7,7 +7,6 @@
   --faded-jungle: rgba(35, 88, 53, 0.8);
   --muted-green: #e8f5e9;
   --text-dark: #333333;
-  --section-padding: 6rem;
   --white: #ffffff;
   --light-bg: #f8f9f6;
   --medium-gray: #666666;
@@ -39,32 +38,33 @@
   background-color: var(--light-bg);
   overflow-x: hidden;
   width: 100vw;
-
 }
 
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 0 clamp(1rem, 3vw, 2rem);
 }
 
 /* ===== HERO SECTION ===== */
 .seed-school-hero {
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../assets/seedschool.jpg') center/cover no-repeat;
-  height: 80vh;
+  min-height: 80vh;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   color: var(--white);
   position: relative;
+  padding: 2rem 1rem;
 }
 
 .S-hero-overlay {
   background: rgba(0, 0, 0, 0.5);
-  padding: 3rem;
+  padding: clamp(2rem, 5vw, 3rem);
   border-radius: 12px;
   max-width: 900px;
+  width: 100%;
 }
 
 .seed-school-hero h1 {
@@ -72,6 +72,7 @@
   margin-bottom: 1rem;
   font-weight: var(--s-font-weight-bold);
   color: var(--white);
+  line-height: 1.2;
 }
 
 .S-hero-subtitle {
@@ -79,12 +80,13 @@
   opacity: 0.9;
   margin-bottom: 2rem;
   font-weight: var(--s-font-weight-medium);
+  line-height: 1.4;
 }
 
 .S-hero-stats {
   display: flex;
   justify-content: center;
-  gap: 3rem;
+  gap: clamp(1.5rem, 3vw, 3rem);
   margin-top: 2rem;
   flex-wrap: wrap;
 }
@@ -94,6 +96,7 @@
   align-items: center;
   gap: 0.5rem;
   font-weight: var(--s-font-weight-medium);
+  font-size: clamp(0.9rem, 1.5vw, 1rem);
 }
 
 .S-stat-icon {
@@ -106,24 +109,29 @@
   background-color: var(--white);
   padding: 2rem 0;
   box-shadow: var(--shadow-light);
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 .school-tabs {
   display: flex;
   justify-content: center;
   gap: 1rem;
+  flex-wrap: wrap;
 }
 
 .tab-button {
-  padding: 1rem 2rem;
+  padding: 1rem clamp(1rem, 2vw, 2rem);
   background: none;
   border: none;
   border-bottom: 3px solid transparent;
-  font-size: var(--s-font-size-medium);
+  font-size: clamp(1rem, 1.5vw, 1.1rem);
   cursor: pointer;
   transition: all 0.3s ease;
   font-weight: var(--s-font-weight-medium);
   color: var(--medium-gray);
+  white-space: nowrap;
 }
 
 .tab-button.active {
@@ -149,7 +157,7 @@
 .upcoming-school {
   background: var(--white);
   border-radius: 12px;
-  padding: 3rem;
+  padding: clamp(2rem, 3vw, 3rem);
   box-shadow: var(--shadow-light);
 }
 
@@ -160,15 +168,16 @@
 
 .school-header h2 {
   color: var(--jungle-green);
-  font-size: 2.5rem;
+  font-size: clamp(2rem, 4vw, 2.5rem);
   margin-bottom: 1.5rem;
   font-weight: var(--s-font-weight-bold);
+  line-height: 1.3;
 }
 
 .school-details {
   display: flex;
   justify-content: center;
-  gap: 3rem;
+  gap: clamp(1.5rem, 3vw, 3rem);
   flex-wrap: wrap;
 }
 
@@ -177,22 +186,27 @@
   align-items: center;
   gap: 0.5rem;
   font-weight: var(--s-font-weight-medium);
+  font-size: clamp(0.9rem, 1.5vw, 1rem);
 }
 
 .detail-icon {
   color: var(--gold-accent);
+  font-size: 1.1rem;
 }
 
 .school-description h3 {
   color: var(--jungle-green);
   margin-bottom: 1.5rem;
   font-weight: var(--s-font-weight-semibold);
+  font-size: clamp(1.3rem, 2.5vw, 1.6rem);
+  line-height: 1.4;
 }
 
 .school-description p {
   font-size: var(--s-font-size-medium);
   line-height: 1.8;
   margin-bottom: 2rem;
+  color: var(--text-dark);
 }
 
 .program-highlights {
@@ -204,6 +218,7 @@
   margin-bottom: 2rem;
   font-weight: var(--s-font-weight-semibold);
   text-align: center;
+  font-size: clamp(1.3rem, 2.5vw, 1.6rem);
 }
 
 .highlight-grid {
@@ -217,11 +232,12 @@
   padding: 2rem;
   border-radius: 8px;
   text-align: center;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .highlight-card:hover {
   transform: translateY(-5px);
+  box-shadow: var(--shadow-medium);
 }
 
 .highlight-icon {
@@ -233,11 +249,14 @@
   color: var(--jungle-green);
   margin-bottom: 1rem;
   font-weight: var(--s-font-weight-semibold);
+  font-size: 1.2rem;
 }
 
 .highlight-card p {
   font-size: var(--s-font-size-small);
   margin-bottom: 0;
+  line-height: 1.6;
+  color: var(--medium-gray);
 }
 
 .registration-section {
@@ -252,6 +271,7 @@
   margin-bottom: 2rem;
   text-align: center;
   font-weight: var(--s-font-weight-semibold);
+  font-size: clamp(1.3rem, 2.5vw, 1.6rem);
 }
 
 .registration-details {
@@ -265,6 +285,7 @@
   color: var(--jungle-green);
   margin-bottom: 1rem;
   font-weight: var(--s-font-weight-semibold);
+  font-size: 1.1rem;
 }
 
 .reg-detail ul {
@@ -276,6 +297,7 @@
   padding: 0.3rem 0;
   position: relative;
   padding-left: 1.5rem;
+  line-height: 1.6;
 }
 
 .reg-detail li:before {
@@ -302,6 +324,9 @@
   align-items: center;
   gap: 0.5rem;
   transition: all 0.3s ease;
+  font-size: 1rem;
+  text-align: center;
+  justify-content: center;
 }
 
 .btn-primary {
@@ -332,7 +357,7 @@
 .previous-schools {
   background: var(--white);
   border-radius: 12px;
-  padding: 3rem;
+  padding: clamp(2rem, 3vw, 3rem);
   box-shadow: var(--shadow-light);
 }
 
@@ -340,6 +365,11 @@
   text-align: center;
   margin-bottom: 3rem;
   font-size: var(--s-font-size-medium);
+  line-height: 1.6;
+  color: var(--medium-gray);
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .schools-selector {
@@ -358,6 +388,7 @@
   cursor: pointer;
   transition: all 0.3s ease;
   font-weight: var(--s-font-weight-medium);
+  font-size: 0.95rem;
 }
 
 .school-selector-btn.active {
@@ -379,7 +410,7 @@
   border-radius: 12px;
   overflow: hidden;
   margin-bottom: 2rem;
-  height: 400px;
+  height: clamp(300px, 40vw, 400px);
 }
 
 .school-banner img {
@@ -401,6 +432,12 @@
 .banner-overlay h3 {
   margin-bottom: 0.5rem;
   font-weight: var(--s-font-weight-bold);
+  font-size: clamp(1.5rem, 3vw, 2rem);
+}
+
+.banner-overlay p {
+  opacity: 0.9;
+  font-size: clamp(1rem, 1.5vw, 1.1rem);
 }
 
 .school-stats {
@@ -422,12 +459,19 @@
 .stat-card .stat-icon {
   font-size: 2rem;
   color: var(--jungle-green);
+  flex-shrink: 0;
 }
 
 .stat-content h4 {
   margin-bottom: 0.5rem;
   color: var(--jungle-green);
   font-weight: var(--s-font-weight-semibold);
+}
+
+.stat-content p {
+  color: var(--medium-gray);
+  margin: 0;
+  line-height: 1.6;
 }
 
 .school-content-grid {
@@ -441,6 +485,7 @@
   color: var(--jungle-green);
   margin-bottom: 1.5rem;
   font-weight: var(--s-font-weight-semibold);
+  font-size: 1.3rem;
 }
 
 .highlight-list, .outcome-list {
@@ -453,10 +498,11 @@
   border-bottom: 1px solid var(--light-gray);
   position: relative;
   padding-left: 1.5rem;
+  line-height: 1.6;
 }
 
 .highlight-list li:before {
-  content: "";
+  content: "•";
   color: var(--gold-accent);
   font-weight: bold;
   position: absolute;
@@ -464,7 +510,9 @@
 }
 
 .outcome-list li:before {
-  content: "";
+  content: "✓";
+  color: var(--gold-accent);
+  font-weight: bold;
   position: absolute;
   left: 0;
 }
@@ -477,6 +525,7 @@
   color: var(--jungle-green);
   margin-bottom: 1.5rem;
   font-weight: var(--s-font-weight-semibold);
+  font-size: 1.3rem;
 }
 
 .video-container {
@@ -485,22 +534,34 @@
   height: 0;
   overflow: hidden;
   border-radius: 8px;
+  background: var(--light-bg);
 }
 
-.video-container iframe {
+.video-placeholder {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  border: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--medium-gray);
+  text-align: center;
+}
+
+.video-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: var(--jungle-green);
 }
 
 /* Gallery Styles */
 .gallery-section {
   background: var(--white);
   border-radius: 12px;
-  padding: 3rem;
+  padding: clamp(2rem, 3vw, 3rem);
   box-shadow: var(--shadow-light);
 }
 
@@ -520,6 +581,7 @@
   cursor: pointer;
   transition: all 0.3s ease;
   font-weight: var(--s-font-weight-medium);
+  font-size: 0.95rem;
 }
 
 .gallery-selector-btn.active {
@@ -537,6 +599,7 @@
   margin-bottom: 2rem;
   text-align: center;
   font-weight: var(--s-font-weight-bold);
+  font-size: clamp(1.5rem, 3vw, 2rem);
 }
 
 .featured-video {
@@ -547,12 +610,14 @@
   color: var(--jungle-green);
   margin-bottom: 1.5rem;
   font-weight: var(--s-font-weight-semibold);
+  font-size: 1.3rem;
 }
 
 .photo-gallery h4 {
   color: var(--jungle-green);
   margin-bottom: 1.5rem;
   font-weight: var(--s-font-weight-semibold);
+  font-size: 1.3rem;
 }
 
 .gallery-grid {
@@ -614,6 +679,7 @@
   color: var(--jungle-green);
   margin-bottom: 3rem;
   font-weight: var(--s-font-weight-bold);
+  font-size: clamp(2rem, 4vw, 2.5rem);
 }
 
 .testimonials-grid {
@@ -650,6 +716,7 @@
 .testimonial-content p {
   font-style: italic;
   line-height: 1.6;
+  color: var(--text-dark);
 }
 
 .testimonial-author h4 {
@@ -674,6 +741,7 @@
   color: var(--jungle-green);
   margin-bottom: 1rem;
   font-weight: var(--s-font-weight-bold);
+  font-size: clamp(2rem, 4vw, 2.5rem);
 }
 
 .partners-section .section-intro {
@@ -696,6 +764,11 @@
   font-weight: var(--s-font-weight-semibold);
   color: var(--jungle-green);
   min-height: 120px;
+  transition: transform 0.3s ease;
+}
+
+.partner-logo:hover {
+  transform: translateY(-5px);
 }
 
 /* ===== ANIMATIONS ===== */
@@ -706,7 +779,7 @@
 
 /* ===== RESPONSIVE DESIGN ===== */
 @media (max-width: 768px) {
-  .hero-stats {
+  .S-hero-stats {
     flex-direction: column;
     gap: 1rem;
   }
@@ -714,6 +787,7 @@
   .school-tabs {
     flex-direction: column;
     align-items: center;
+    gap: 0.5rem;
   }
   
   .tab-button {
@@ -751,10 +825,6 @@
     max-width: 250px;
   }
   
-  .school-banner {
-    height: 300px;
-  }
-  
   .gallery-grid {
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   }
@@ -762,19 +832,20 @@
 
 @media (max-width: 480px) {
   .seed-school-hero {
-    height: 60vh;
+    min-height: 60vh;
+    margin-top: 1.2rem;
   }
   
-  .hero-overlay {
+  .S-hero-overlay {
     padding: 1.5rem;
   }
   
   .upcoming-school, .previous-schools, .gallery-section {
-    padding: 2rem 1.5rem;
+    padding: 1.5rem;
   }
   
   .school-header h2 {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
   
   .testimonials-grid {
@@ -783,5 +854,20 @@
   
   .partners-grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  
+  .partner-logo {
+    padding: 1.5rem;
+    min-height: 100px;
+    font-size: 0.9rem;
+  }
+  
+  .registration-section {
+    padding: 1.5rem;
+  }
+  
+  .highlight-card {
+    padding: 1.5rem;
   }
 }
