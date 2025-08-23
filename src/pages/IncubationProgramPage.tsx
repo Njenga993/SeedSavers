@@ -92,12 +92,12 @@ const IncubationProgramPage: React.FC = () => {
                         <p>Guidance from experienced agroecology entrepreneurs</p>
                       </div>
                       <div className="ip-feature-card">
-                        <div className="ip-feature-icon">🌱</div>
+                        <div className="ip-feature-icon">📚</div>
                         <h4>Training & Workshops</h4>
                         <p>Business development and technical skills training</p>
                       </div>
                       <div className="ip-feature-card">
-                        <div className="ip-feature-icon">📈</div>
+                        <div className="ip-feature-icon">🌐</div>
                         <h4>Market Access</h4>
                         <p>Connections to local and international markets</p>
                       </div>
@@ -209,13 +209,10 @@ const IncubationProgramPage: React.FC = () => {
                     <div className="ip-video-section">
                       <h4>Watch Their Story</h4>
                       <div className="ip-video-container">
-                        <iframe
-                          src="https://www.youtube.com/embed/example-nyakazi"
-                          title="Nyakazi Organics Success Story"
-                          frameBorder="0"
-                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                          allowFullScreen
-                        ></iframe>
+                        <div className="ip-video-placeholder">
+                          <span className="ip-video-icon">▶️</span>
+                          <p>Video coming soon</p>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -281,13 +278,10 @@ const IncubationProgramPage: React.FC = () => {
                     <div className="ip-video-section">
                       <h4>Watch Their Story</h4>
                       <div className="ip-video-container">
-                        <iframe
-                          src="https://www.youtube.com/embed/example-sunnybites"
-                          title="Organic Sunny Bites Success Story"
-                          frameBorder="0"
-                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                          allowFullScreen
-                        ></iframe>
+                        <div className="ip-video-placeholder">
+                          <span className="ip-video-icon">▶️</span>
+                          <p>Video coming soon</p>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -359,19 +353,23 @@ const IncubationProgramPage: React.FC = () => {
                   <h3>Eligibility Criteria</h3>
                   <div className="ip-criteria-grid">
                     <div className="ip-criterion">
-                      <h4>✅ Innovation</h4>
+                      <div className="ip-criterion-icon">💡</div>
+                      <h4>Innovation</h4>
                       <p>Novel approach to agroecology or food systems</p>
                     </div>
                     <div className="ip-criterion">
-                      <h4>✅ Impact Potential</h4>
+                      <div className="ip-criterion-icon">🌍</div>
+                      <h4>Impact Potential</h4>
                       <p>Clear social and environmental impact</p>
                     </div>
                     <div className="ip-criterion">
-                      <h4>✅ Scalability</h4>
+                      <div className="ip-criterion-icon">📈</div>
+                      <h4>Scalability</h4>
                       <p>Potential for growth and replication</p>
                     </div>
                     <div className="ip-criterion">
-                      <h4>✅ Team Commitment</h4>
+                      <div className="ip-criterion-icon">👥</div>
+                      <h4>Team Commitment</h4>
                       <p>Dedicated team with relevant skills</p>
                     </div>
                   </div>
@@ -393,17 +391,18 @@ const IncubationProgramPage: React.FC = () => {
                 <div className="ip-contact-info">
                   <h3>Have Questions?</h3>
                   <div className="ip-contact-details">
-                    <p>
-                      <strong>Email:</strong>{' '}
+                    <div className="ip-contact-item">
+                      <strong>Email:</strong>
                       <a href="mailto:incubation@seedsaverskenya.org">incubation@seedsaverskenya.org</a>
-                    </p>
-                    <p>
-                      <strong>Phone:</strong>{' '}
+                    </div>
+                    <div className="ip-contact-item">
+                      <strong>Phone:</strong>
                       <a href="tel:+254712451777">+254-712-451777</a>
-                    </p>
-                    <p>
-                      <strong>Office Hours:</strong> Monday-Friday, 8:00 AM - 5:00 PM EAT
-                    </p>
+                    </div>
+                    <div className="ip-contact-item">
+                      <strong>Office Hours:</strong>
+                      <span>Monday-Friday, 8:00 AM - 5:00 PM EAT</span>
+                    </div>
                   </div>
                 </div>
               </div>

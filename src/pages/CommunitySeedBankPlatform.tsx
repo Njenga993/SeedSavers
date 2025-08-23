@@ -132,7 +132,7 @@ const CommunitySeedBankPlatform: React.FC = () => {
     ]}
   ];
 
-    return (
+  return (
     <div className="csbp-platform-page">
       {/* Hero Section */}
       <section className="csbp-hero">
@@ -289,12 +289,17 @@ const CommunitySeedBankPlatform: React.FC = () => {
               <div className="csbp-map-section">
                 <h3>Network Map</h3>
                 <p>Our seed banks are strategically located across Kenya to maximize impact and accessibility</p>
-                <div className="csbp-map-placeholder">
-                  <div className="csbp-map-content">
-                    <span>🌍</span>
-                    <p>Interactive Map Coming Soon</p>
-                    <small>Visualizing our 112 seed bank locations across Kenya</small>
-                  </div>
+                <div className="csbp-map-container">
+                  <iframe
+                    src="https://www.google.com/maps/d/u/0/embed?mid=1opDBI-BQlTTirgnvYyXccPmsuEpw85k&z=7"
+                    width="100%"
+                    height="500"
+                    style={{ border: 0 }}
+                    loading="lazy"
+                    allowFullScreen
+                    referrerPolicy="no-referrer-when-downgrade"
+                    title="Seed Savers Kenya Map"
+                  ></iframe>
                 </div>
               </div>
             </div>
@@ -319,26 +324,32 @@ const CommunitySeedBankPlatform: React.FC = () => {
                   <h3>Core Values</h3>
                   <div className="csbp-values-grid">
                     <div className="csbp-value-card">
+                      <div className="csbp-value-icon">🌿</div>
                       <h4>Seed Sovereignty</h4>
                       <p>Right to save, use, exchange, and sell seeds</p>
                     </div>
                     <div className="csbp-value-card">
+                      <div className="csbp-value-icon">👥</div>
                       <h4>Solidarity</h4>
                       <p>Mutual support among members</p>
                     </div>
                     <div className="csbp-value-card">
+                      <div className="csbp-value-icon">♻️</div>
                       <h4>Sustainability</h4>
                       <p>Conservation of biodiversity</p>
                     </div>
                     <div className="csbp-value-card">
+                      <div className="csbp-value-icon">🤲</div>
                       <h4>Inclusivity</h4>
                       <p>Women, youth, and marginalized group participation</p>
                     </div>
                     <div className="csbp-value-card">
+                      <div className="csbp-value-icon">🔍</div>
                       <h4>Transparency</h4>
                       <p>Accountability and open communication</p>
                     </div>
                     <div className="csbp-value-card">
+                      <div className="csbp-value-icon">💡</div>
                       <h4>Innovation</h4>
                       <p>Learning through training and seed fairs</p>
                     </div>
@@ -393,14 +404,17 @@ const CommunitySeedBankPlatform: React.FC = () => {
                   <div className="csbp-involvement-options">
                     <h3>Ways to Get Involved</h3>
                     <div className="csbp-option-card">
+                      <div className="csbp-option-icon">🏦</div>
                       <h4>Start a Seed Bank</h4>
                       <p>Get guidance on establishing a community seed bank in your area</p>
                     </div>
                     <div className="csbp-option-card">
+                      <div className="csbp-option-icon">🌐</div>
                       <h4>Join Existing Network</h4>
                       <p>Connect with existing seed banks in your region</p>
                     </div>
                     <div className="csbp-option-card">
+                      <div className="csbp-option-icon">🙋</div>
                       <h4>Volunteer</h4>
                       <p>Support our mission through volunteering opportunities</p>
                     </div>

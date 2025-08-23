@@ -42,15 +42,15 @@ const CommunitySeedBank: React.FC = () => {
 
           <div className="csb-features">
             <div className="feature">
-              <span className="feature-icon">🌱</span>
+              <span className="feature-icon"></span>
               <span>Seed Preservation</span>
             </div>
             <div className="feature">
-              <span className="feature-icon">🤝</span>
+              <span className="feature-icon"></span>
               <span>Community Exchange</span>
             </div>
             <div className="feature">
-              <span className="feature-icon">🌍</span>
+              <span className="feature-icon"></span>
               <span>Biodiversity Protection</span>
             </div>
           </div>

@@ -37,15 +37,15 @@ const IncubationProgram: React.FC = () => {
 
           <div className="incubation-features">
             <div className="feature">
-              <span className="feature-icon">🚀</span>
+              <span className="feature-icon"></span>
               <span>Seed Funding</span>
             </div>
             <div className="feature">
-              <span className="feature-icon">👥</span>
+              <span className="feature-icon"></span>
               <span>Expert Mentorship</span>
             </div>
             <div className="feature">
-              <span className="feature-icon">🌱</span>
+              <span className="feature-icon"></span>
               <span>Market Access</span>
             </div>
           </div>

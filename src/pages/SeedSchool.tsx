@@ -73,7 +73,7 @@ const SeedSchool = () => {
       <section className="seed-school-hero">
         <div className="S-hero-overlay">
           <div className="S-container">
-            <h1>Seed school Boot Camp</h1>
+            <h1>Seed School Boot Camp</h1>
             <p className="S-hero-subtitle">Cultivating the next generation of seed guardians</p>
             <div className="S-hero-stats">
               <div className="S-stat">
@@ -285,13 +285,10 @@ const SeedSchool = () => {
                       <div className="video-section">
                         <h4>Watch the Recap</h4>
                         <div className="video-container">
-                          <iframe
-                            src={seedSchools[selectedSchool].youtubeLink}
-                            title={`${seedSchools[selectedSchool].title} Video`}
-                            frameBorder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowFullScreen
-                          ></iframe>
+                          <div className="video-placeholder">
+                            <FaPlayCircle className="video-icon" />
+                            <p>Video coming soon</p>
+                          </div>
                         </div>
                       </div>
                     )}
@@ -327,20 +324,15 @@ const SeedSchool = () => {
                   <div className="gallery-content">
                     <h3>{seedSchools[selectedSchool].title} Gallery</h3>
                     
-                    {seedSchools[selectedSchool].youtubeLink && (
-                      <div className="featured-video">
-                        <h4>Featured Video</h4>
-                        <div className="video-container">
-                          <iframe
-                            src={seedSchools[selectedSchool].youtubeLink}
-                            title={`${seedSchools[selectedSchool].title} Video`}
-                            frameBorder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowFullScreen
-                          ></iframe>
+                    <div className="featured-video">
+                      <h4>Featured Video</h4>
+                      <div className="video-container">
+                        <div className="video-placeholder">
+                          <FaPlayCircle className="video-icon" />
+                          <p>Video coming soon</p>
                         </div>
                       </div>
-                    )}
+                    </div>
 
                     <div className="photo-gallery">
                       <h4>Photo Gallery</h4>

@@ -39,14 +39,13 @@
   line-height: 1.6;
   background-color: var(--light-bg);
   overflow-x: hidden;
-   width: 100vw;
+  width: 100vw;
 }
 
 .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 2rem;
- 
 }
 
 .section-title {
@@ -82,17 +81,25 @@
 .resources-hero {
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../assets/about_hero.jpg') center/cover no-repeat;
   height: 60vh;
+  min-height: 400px;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   color: var(--white);
+  position: relative;
+}
+
+.hero-overlay {
+  max-width: 800px;
+  padding: 0 2rem;
 }
 
 .hero-overlay h1 {
   font-size: clamp(2.5rem, 6vw, 4rem);
   margin-bottom: 1rem;
   font-weight: var(--s-font-weight-bold);
+  line-height: 1.2;
 }
 
 .hero-subtitle {
@@ -108,53 +115,33 @@
 }
 
 .about-intro-content {
-  display: flex;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
   gap: 3rem;
   align-items: flex-start;
 }
 
 .about-text {
-  flex: 2;
+  font-size: var(--s-font-size-medium);
+  line-height: 1.8;
 }
 
 .about-text p {
-  font-size: var(--s-font-size-medium);
-  line-height: 1.8;
   margin-bottom: 1.5rem;
   color: var(--text-dark);
 }
 
-.about-stats {
-  flex: 1;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1.5rem;
+.about-image {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--shadow-medium);
 }
 
-.stat-item {
-  background: var(--white);
-  padding: 1.5rem;
-  border-radius: 8px;
-  text-align: center;
-  box-shadow: var(--shadow-light);
-  transition: transform 0.3s ease;
-}
-
-.stat-item:hover {
-  transform: translateY(-5px);
-}
-
-.stat-item h3 {
-  font-size: 2.5rem;
-  color: var(--jungle-green);
-  margin-bottom: 0.5rem;
-  font-weight: var(--s-font-weight-bold);
-}
-
-.stat-item p {
-  color: var(--medium-gray);
-  margin: 0;
-  font-size: var(--s-font-size-small);
+.about-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  min-height: 300px;
 }
 
 /* ===== JOURNEY & MILESTONES SECTION ===== */
@@ -165,7 +152,14 @@
   overflow: hidden;
 }
 
-.journey-milestones::before {
+.journey-timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+.journey-timeline::before {
   content: '';
   position: absolute;
   top: 0;
@@ -175,13 +169,6 @@
   height: 100%;
   background: linear-gradient(to bottom, var(--jungle-green), var(--gold-accent));
   z-index: 1;
-}
-
-.journey-timeline {
-  position: relative;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 2rem 0;
 }
 
 .timeline-item {
@@ -373,6 +360,18 @@
   padding: 2rem;
   box-shadow: var(--shadow-light);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.strategy-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: var(--gold-accent);
 }
 
 .strategy-card:hover {
@@ -387,8 +386,15 @@
 }
 
 .strategy-icon {
-  font-size: 2rem;
+  font-size: 2.5rem;
   margin-right: 1rem;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(212, 175, 55, 0.1);
+  border-radius: 50%;
 }
 
 .strategy-header h3 {
@@ -407,13 +413,19 @@
 
 .strategy-image-container {
   margin-bottom: 1.5rem;
+  border-radius: 8px;
+  overflow: hidden;
 }
 
 .strategy-image {
   width: 100%;
-  border-radius: 8px;
   height: 200px;
   object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.strategy-card:hover .strategy-image {
+  transform: scale(1.05);
 }
 
 /* Sub Strategies */
@@ -422,6 +434,11 @@
   border: 1px solid var(--light-gray);
   border-radius: 8px;
   overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.sub-strategy:hover {
+  border-color: var(--gold-accent);
 }
 
 .sub-strategy-header {
@@ -458,6 +475,8 @@
 
 .sub-strategy-image {
   margin-bottom: 1rem;
+  border-radius: 8px;
+  overflow: hidden;
 }
 
 .sub-strategy-image img {
@@ -507,6 +526,7 @@
   display: flex;
   justify-content: center;
   margin-bottom: 2rem;
+  border-bottom: 1px solid var(--light-gray);
 }
 
 .tab-button {
@@ -518,6 +538,7 @@
   cursor: pointer;
   transition: all 0.3s ease;
   font-weight: var(--s-font-weight-medium);
+  color: var(--medium-gray);
 }
 
 .tab-button.active {
@@ -550,9 +571,23 @@
 }
 
 /* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 1024px) {
+  .about-intro-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .about-image {
+    order: -1;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+}
+
 @media (max-width: 768px) {
   .resources-hero {
     height: 50vh;
+    min-height: 350px;
   }
   
   .hero-overlay h1 {
@@ -563,24 +598,12 @@
     font-size: 1.2rem;
   }
   
-  .about-intro-content {
-    flex-direction: column;
-  }
-  
-  .about-stats {
-    grid-template-columns: 1fr;
-  }
-  
-  .strategies-grid {
-    grid-template-columns: 1fr;
-  }
-  
   .section-title {
     font-size: 2rem;
   }
   
   /* Journey Timeline Responsive */
-  .journey-milestones::before {
+  .journey-timeline::before {
     left: 30px;
   }
   
@@ -608,9 +631,22 @@
   .stats-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+  
+  .strategies-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 576px) {
+  .container {
+    padding: 0 1.5rem;
+  }
+  
+  .resources-hero {
+    height: 40vh;
+    min-height: 300px;
+  }
+  
   .stats-grid {
     grid-template-columns: 1fr;
   }
@@ -628,6 +664,7 @@
   .core-tabs {
     flex-direction: column;
     align-items: center;
+    border-bottom: none;
   }
   
   .tab-button {
@@ -635,6 +672,51 @@
     max-width: 300px;
     text-align: center;
     margin-bottom: 0.5rem;
+    border-bottom: 1px solid var(--light-gray);
+  }
+  
+  .tab-button.active {
+    border-bottom: 3px solid var(--jungle-green);
+  }
+  
+  .strategy-card {
+    padding: 1.5rem;
+  }
+  
+  .strategy-header {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .strategy-icon {
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .hero-overlay h1 {
+    font-size: 2rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+  
+  .section-title {
+    font-size: 1.8rem;
+  }
+  
+  .section-subtitle {
+    font-size: 1.1rem;
+  }
+  
+  .timeline-content {
+    padding: 1.5rem;
+  }
+  
+  .stat-number {
+    font-size: 2rem;
   }
 }
 
@@ -649,7 +731,6 @@
 }
 
 /* ===== COMPONENT STYLES ===== */
-/* Ensure all components use the same typography system */
 .about-page,
 .about-page * {
   font-family: var(--s-font);
@@ -666,22 +747,4 @@
 .about-page p {
   font-weight: var(--s-font-weight-normal);
   line-height: 1.6;
-}
-
-/* Button Styles */
-.cta-button {
-  display: inline-block;
-  padding: 0.8rem 1.5rem;
-  background-color: var(--gold-accent);
-  color: var(--white);
-  text-decoration: none;
-  border-radius: 4px;
-  font-weight: var(--s-font-weight-semibold);
-  transition: background-color 0.3s ease;
-  border: none;
-  cursor: pointer;
-}
-
-.cta-button:hover {
-  background-color: #3d8b40;
 }

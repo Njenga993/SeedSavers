@@ -8,7 +8,7 @@ const SeedSchool: React.FC = () => {
 
   const handleRegisterClick = () => {
     // Open registration form in a new tab
-    window.open("https://forms.gle/your-actual-form-link", "_blank");
+    window.open("https://forms.gle/hLzhrDBbQqsYLgRy7", "_blank");
   };
 
   return (
@@ -28,15 +28,15 @@ const SeedSchool: React.FC = () => {
           
           <div className="seed-school-highlights">
             <div className="highlight-item">
-              <span className="highlight-icon">🌱</span>
+              <span className="highlight-icon"></span>
               <span>Hands-on training</span>
             </div>
             <div className="highlight-item">
-              <span className="highlight-icon">🌍</span>
+              <span className="highlight-icon"></span>
               <span>10+ countries reached</span>
             </div>
             <div className="highlight-item">
-              <span className="highlight-icon">👥</span>
+              <span className="highlight-icon"></span>
               <span>800+ learners trained</span>
             </div>
           </div>
