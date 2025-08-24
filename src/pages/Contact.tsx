@@ -7,7 +7,7 @@ import {
   FaHandHoldingHeart
 } from 'react-icons/fa';
 import '../styles/Contact.css';
-import SpectacularImage from '../assets/SSN headq.jpeg';
+import SpectacularImage from '../assets/hero_1.jpg';
 
 type ContactMethod = {
   icon: React.ReactNode;
@@ -15,8 +15,6 @@ type ContactMethod = {
   details: string[];
   description?: string;
 };
-
-
 
 const ContactPage: React.FC = () => {
   const [donationAmount, setDonationAmount] = useState<number>(10);
@@ -82,32 +80,31 @@ const ContactPage: React.FC = () => {
 
   const contactMethods: ContactMethod[] = [
     {
-      icon: <FaMapMarkerAlt className="method-icon" />,
+      icon: <FaMapMarkerAlt className="contact-method-icon" />,
       title: 'Our Headquarters',
       details: ['Diatomite, Off Nakuru – Nairobi Highway, Gilgil, Kenya P.O. BOX 334 -20116 '],
       description: 'Main administrative office'
     },
     {
-      icon: <FaPhone className="method-icon" />,
+      icon: <FaPhone className="contact-method-icon" />,
       title: 'Call Us',
       details: ['0712 451777'],
       description: 'Monday-Friday, 8am-5pm EAT'
     },
     {
-      icon: <FaEnvelope className="method-icon" />,
+      icon: <FaEnvelope className="contact-method-icon" />,
       title: 'Email Us',
       details: ['info@seedsaverskenya.org']
     }
   ];
 
-
   return (
     <div className="contact-page">
       {/* Hero Section */}
       <section className="contact-hero">
-        <div className="hero-overlay">
+        <div className="contact-hero-overlay">
           <h1>Get in Touch</h1>
-          <p className="c-hero-subtitle">
+          <p className="contact-hero-subtitle">
             Connect with our team to learn more about our seed conservation efforts
           </p>
         </div>
@@ -120,17 +117,17 @@ const ContactPage: React.FC = () => {
           <section className="contact-form-section">
             <h2>Send Us a Message</h2>
             <form className="contact-form" onSubmit={sendEmail}>
-              <div className="form-group">
+              <div className="contact-form-group">
                 <label htmlFor="name">Full Name</label>
                 <input type="text" id="name" value={formData.name} onChange={handleChange} required />
               </div>
 
-              <div className="form-group">
+              <div className="contact-form-group">
                 <label htmlFor="email">Email Address</label>
                 <input type="email" id="email" value={formData.email} onChange={handleChange} required />
               </div>
 
-              <div className="form-group">
+              <div className="contact-form-group">
                 <label htmlFor="subject">Subject</label>
                 <select id="subject" value={formData.subject} onChange={handleChange} required>
                   <option value="">Select a topic</option>
@@ -142,18 +139,18 @@ const ContactPage: React.FC = () => {
                 </select>
               </div>
 
-              <div className="form-group">
+              <div className="contact-form-group">
                 <label htmlFor="message">Your Message</label>
                 <textarea id="message" value={formData.message} onChange={handleChange} required></textarea>
               </div>
 
-              <button type="submit" className="submit-btn">
+              <button type="submit" className="contact-submit-btn">
                 Send Message
               </button>
 
               {/* Success/Error Message */}
               {statusMessage && (
-                <p className="form-status">{statusMessage}</p>
+                <p className="contact-form-status">{statusMessage}</p>
               )}
             </form>
           </section>
@@ -164,38 +161,38 @@ const ContactPage: React.FC = () => {
             <div className="contact-methods">
               {contactMethods.map((method, index) => (
                 <div key={index} className="contact-method">
-                  <div className="method-icon-container">
+                  <div className="contact-method-icon-container">
                     {method.icon}
                   </div>
-                  <div className="method-content">
+                  <div className="contact-method-content">
                     <h3>{method.title}</h3>
-                    <div className="method-details">
+                    <div className="contact-method-details">
                       {method.details.map((detail, i) => (
                         <p key={i}>{detail}</p>
                       ))}
                     </div>
                     {method.description && (
-                      <p className="method-description">{method.description}</p>
+                      <p className="contact-method-description">{method.description}</p>
                     )}
                   </div>
                 </div>
               ))}
             </div>
 
-            <div className="office-image-container">
+            <div className="contact-office-image-container">
               <img
                 src={SpectacularImage}
                 alt="Seed Savers Office"
-                className="office-image"
+                className="contact-office-image"
               />
             </div>
           </section>
         </div>
 
         {/* Map Section */}
-        <section className="map-section">
+        <section className="contact-map-section">
           <h2>Find Us on the Map</h2>
-          <div className="contact-map">
+          <div className="contact-map-container">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.695390960483!2d36.26753727437194!3d-0.44976953528270935!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1829a149b3e5b3e5%3A0xcde1f0a37810fe6e!2sSeed%20Savers%20Network%20Training%20and%20Stay!5e0!3m2!1sen!2ske!4v1754466094580!5m2!1sen!2ske"
               width="100%"
@@ -209,82 +206,82 @@ const ContactPage: React.FC = () => {
         </section>
 
         {/* Donation CTA */}
-<section className="donation-cta">
-  <div className="donation-content">
-    <div className="donation-icon">
-      <FaHandHoldingHeart />
-    </div>
-    <h2>Support Seed Sovereignty</h2>
-    <p>
-      Your donation helps us empower farmers, conserve indigenous seeds,
-      and promote sustainable agriculture across Kenya and beyond.
-      Every contribution — big or small — makes a lasting impact.
-    </p>
-    <div className="cta-buttons">
-      <button onClick={toggleDonationDetails} className="cta-button">
-        {showDonationDetails ? 'Hide Donation Options' : 'Donate Now'}
-      </button>
-    </div>
-
-    {showDonationDetails && (
-      <div className="donation-options">
-        <div className="donation-table">
-          {/* Offline Donations */}
-          <div className="donation-column">
-            <h3>Offline Donation</h3>
-            <p><strong>Bank Name:</strong> Seed Savers Kenya Bank</p>
-            <p><strong>Account Number:</strong> 123456789</p>
-            <p><strong>Branch:</strong> Nairobi CBD</p>
-            <p><strong>Mobile Money (M-Pesa):</strong> Paybill 123456, Acc: SEEDS</p>
-            <p><strong>Email for confirmation:</strong> info@seedsaverskenya.org</p>
-          </div>
-
-          {/* Online Donations */}
-          <div className="donation-column">
-            <h3>Online Donation (PayPal)</h3>
-            <form
-              onSubmit={(e) => {
-                e.preventDefault();
-                const baseUrl = "https://www.paypal.com/donate";
-                const params = new URLSearchParams({
-                  business: "your-paypal-email@example.com",
-                  amount: donationAmount.toString(),
-                  currency_code: "USD",
-                  recurring: isRecurring ? "1" : "0"
-                });
-                window.open(`${baseUrl}?${params}`, "_blank");
-              }}
-            >
-              <label htmlFor="amount">Donation Amount (USD)</label>
-              <input
-                type="number"
-                id="amount"
-                value={donationAmount}
-                onChange={(e) => setDonationAmount(Number(e.target.value))}
-                min="1"
-                step="0.01"
-                required
-              />
-
-              <label className="checkbox-label">
-                <input
-                  type="checkbox"
-                  checked={isRecurring}
-                  onChange={(e) => setIsRecurring(e.target.checked)}
-                />
-                Make this a recurring donation
-              </label>
-
-              <button type="submit" className="paypal-btn">
-                Proceed to Donation
+        <section className="contact-donation-cta">
+          <div className="contact-donation-content">
+            <div className="contact-donation-icon">
+              <FaHandHoldingHeart />
+            </div>
+            <h2>Support Seed Sovereignty</h2>
+            <p>
+              Your donation helps us empower farmers, conserve indigenous seeds,
+              and promote sustainable agriculture across Kenya and beyond.
+              Every contribution — big or small — makes a lasting impact.
+            </p>
+            <div className="contact-cta-buttons">
+              <button onClick={toggleDonationDetails} className="contact-cta-button">
+                {showDonationDetails ? 'Hide Donation Options' : 'Donate Now'}
               </button>
-            </form>
+            </div>
+
+            {showDonationDetails && (
+              <div className="contact-donation-options">
+                <div className="contact-donation-table">
+                  {/* Offline Donations */}
+                  <div className="contact-donation-column">
+                    <h3>Offline Donation</h3>
+                    <p><strong>Bank Name:</strong> Seed Savers Kenya Bank</p>
+                    <p><strong>Account Number:</strong> 123456789</p>
+                    <p><strong>Branch:</strong> Nairobi CBD</p>
+                    <p><strong>Mobile Money (M-Pesa):</strong> Paybill 123456, Acc: SEEDS</p>
+                    <p><strong>Email for confirmation:</strong> info@seedsaverskenya.org</p>
+                  </div>
+
+                  {/* Online Donations */}
+                  <div className="contact-donation-column">
+                    <h3>Online Donation (PayPal)</h3>
+                    <form
+                      onSubmit={(e) => {
+                        e.preventDefault();
+                        const baseUrl = "https://www.paypal.com/donate";
+                        const params = new URLSearchParams({
+                          business: "your-paypal-email@example.com",
+                          amount: donationAmount.toString(),
+                          currency_code: "USD",
+                          recurring: isRecurring ? "1" : "0"
+                        });
+                        window.open(`${baseUrl}?${params}`, "_blank");
+                      }}
+                    >
+                      <label htmlFor="amount">Donation Amount (USD)</label>
+                      <input
+                        type="number"
+                        id="amount"
+                        value={donationAmount}
+                        onChange={(e) => setDonationAmount(Number(e.target.value))}
+                        min="1"
+                        step="0.01"
+                        required
+                      />
+
+                      <label className="contact-checkbox-label">
+                        <input
+                          type="checkbox"
+                          checked={isRecurring}
+                          onChange={(e) => setIsRecurring(e.target.checked)}
+                        />
+                        Make this a recurring donation
+                      </label>
+
+                      <button type="submit" className="contact-paypal-btn">
+                        Proceed to Donation
+                      </button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            )}
           </div>
-        </div>
-      </div>
-    )}
-  </div>
-</section>
+        </section>
       </div>
     </div>
   );

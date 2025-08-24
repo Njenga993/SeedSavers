@@ -1,4 +1,4 @@
-/* Contact Page Styles - Fully Responsive */
+/* Contact Page Styles - Fully Responsive with Unique Classes */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
 :root {
@@ -18,6 +18,10 @@
   --faded-jungle: rgba(35, 88, 53, 0.8);
   --muted-green: #e8f5e9;
   --text-dark: #333333;
+  --light-bg: #f8f9f6;
+  --white: #ffffff;
+  --medium-gray: #666666;
+  --light-gray: #e0e0e0;
   --section-padding: 6rem;
 }
 
@@ -39,7 +43,7 @@ body {
   color: var(--text-dark);
   overflow-x: hidden;
   width: 100vw;
-  background-color: aliceblue;
+  background-color: var(--light-bg);
 }
 
 /* Contact Page Container */
@@ -60,13 +64,13 @@ body {
   justify-content: center;
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url('../assets/seeds.jpg') no-repeat center center/cover;
-  color: white;
+  color: var(--white);
   text-align: center;
   padding: 2rem 1rem;
   margin-bottom: var(--section-padding);
 }
 
-.c-hero-content {
+.contact-hero-overlay {
   width: 100%;
   max-width: 800px;
   padding: 0 1.5rem;
@@ -77,13 +81,15 @@ body {
   font-weight: 800;
   line-height: 1.2;
   margin-bottom: 1.5rem;
+  color: var(--white);
 }
 
-.c-hero-subtitle {
+.contact-hero-subtitle {
   font-size: clamp(1.1rem, 2vw, 1.5rem);
   margin-bottom: 2rem;
   font-weight: 400;
   opacity: 0.9;
+  line-height: 1.6;
 }
 
 /* Main Content Container */
@@ -103,419 +109,390 @@ body {
 
 /* Form Section */
 .contact-form-section {
-  background-color: white;
-  padding: 2rem;
-  border-radius: 12px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  background-color: var(--white);
+  padding: 2.5rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  border: 1px solid var(--light-gray);
+}
+
+.contact-form-section h2 {
+  color: var(--jungle-green);
+  margin-bottom: 2rem;
+  font-size: 1.8rem;
+  font-weight: var(--s-font-weight-bold);
+  text-align: center;
 }
 
 .contact-form {
   display: grid;
-  gap: 1.25rem;
+  gap: 1.5rem;
 }
 
-.form-group {
+.contact-form-group {
   margin-bottom: 0.5rem;
 }
 
-.form-group label {
+.contact-form-group label {
   display: block;
-  margin-bottom: 0.5rem;
-  font-weight: 600;
-  color: var(--text-dark);
-  font-size: 0.95rem;
+  margin-bottom: 0.75rem;
+  font-weight: var(--s-font-weight-semibold);
+  color: var(--jungle-green);
+  font-size: 1rem;
 }
 
-.form-group input,
-.form-group select,
-.form-group textarea {
-  width: 100%;
-  padding: 0.9rem;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  font-size: 0.95rem;
-  background-color: #363131;
-  transition: all 0.3s ease;
-}
-
-.form-group input:focus,
-.form-group select:focus,
-.form-group textarea:focus {
-  outline: none;
-  border-color: var(--jungle-green);
-  box-shadow: 0 0 0 3px rgba(35, 88, 53, 0.1);
-  background-color: black;
-}
-
-.form-group textarea {
-  resize: vertical;
-  min-height: 150px;
-}
-
-.submit-btn {
+.contact-form-group input,
+.contact-form-group select,
+.contact-form-group textarea {
   width: 100%;
   padding: 1rem;
-  background-color: var(--jungle-green);
-  color: white;
-  border: none;
-  border-radius: 8px;
+  border: 2px solid var(--light-gray);
+  border-radius: 10px;
   font-size: 1rem;
-  font-weight: 600;
-  cursor: pointer;
+  background-color: var(--white);
   transition: all 0.3s ease;
-  margin-top: 0.5rem;
+  font-family: var(--s-font);
 }
 
-.submit-btn:hover {
-  background-color: var(--gold-accent);
-  color: var(--jungle-green);
+.contact-form-group input:focus,
+.contact-form-group select:focus,
+.contact-form-group textarea:focus {
+  outline: none;
+  border-color: var(--jungle-green);
+  box-shadow: 0 0 0 3px rgba(35, 88, 53, 0.15);
+  background-color: var(--muted-green);
+}
+
+.contact-form-group textarea {
+  resize: vertical;
+  min-height: 150px;
+  line-height: 1.6;
+}
+
+.contact-submit-btn {
+  width: 100%;
+  padding: 1.25rem;
+  background: linear-gradient(135deg, var(--jungle-green), #1a5c2f);
+  color: var(--white);
+  border: none;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  font-weight: var(--s-font-weight-semibold);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+  box-shadow: 0 4px 15px rgba(35, 88, 53, 0.3);
+}
+
+.contact-submit-btn:hover {
+  background: linear-gradient(135deg, #1a5c2f, var(--jungle-green));
   transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(35, 88, 53, 0.4);
+}
+
+.contact-form-status {
+  text-align: center;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-top: 1rem;
+  font-weight: var(--s-font-weight-medium);
+  background-color: var(--muted-green);
+  border: 1px solid var(--jungle-green);
+  color: var(--jungle-green);
 }
 
 /* Contact Info Section */
 .contact-info-section {
-  background-color: var(--muted-green);
-  padding: 2rem;
-  border-radius: 12px;
+  background: linear-gradient(135deg, var(--muted-green) 0%, #e0f0e1 100%);
+  padding: 2.5rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  border: 1px solid var(--light-gray);
+}
+
+.contact-info-section h2 {
+  color: var(--jungle-green);
+  margin-bottom: 2rem;
+  font-size: 1.8rem;
+  font-weight: var(--s-font-weight-bold);
+  text-align: center;
 }
 
 .contact-methods {
   display: grid;
-  gap: 1.5rem;
+  gap: 2rem;
 }
 
 .contact-method {
   display: flex;
-  gap: 1rem;
+  gap: 1.25rem;
   align-items: flex-start;
+  padding: 1.5rem;
+  background: var(--white);
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
 }
 
-.method-icon-container {
-  font-size: 1.25rem;
+.contact-method:hover {
+  transform: translateY(-3px);
+}
+
+.contact-method-icon-container {
+  font-size: 1.5rem;
   color: var(--gold-accent);
   margin-top: 0.2rem;
+  flex-shrink: 0;
 }
 
-.method-content h3 {
+.contact-method-content h3 {
   color: var(--jungle-green);
-  margin-bottom: 0.5rem;
-  font-size: 1.1rem;
+  margin-bottom: 0.75rem;
+  font-size: 1.2rem;
+  font-weight: var(--s-font-weight-semibold);
 }
 
-.method-details p {
+.contact-method-details p {
   color: var(--text-dark);
-  margin-bottom: 0.25rem;
-  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  line-height: 1.6;
 }
 
-.method-description {
-  color: #666;
-  font-size: 0.85rem;
-  margin-top: 0.5rem;
+.contact-method-description {
+  color: var(--medium-gray);
+  font-size: 0.9rem;
+  margin-top: 0.75rem;
+  font-style: italic;
 }
 
-.office-image-container {
-  margin-top: 2rem;
-  border-radius: 8px;
+.contact-office-image-container {
+  margin-top: 2.5rem;
+  border-radius: 12px;
   overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
 }
 
-.office-image {
+.contact-office-image {
   width: 100%;
   height: auto;
   display: block;
+  transition: transform 0.3s ease;
 }
 
-/* Regional Offices */
-.regional-offices {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1.5rem var(--section-padding);
-  text-align: center;
-  color: black;
-  margin-top: 3rem;
-}
-
-.office-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.5rem;
-  margin-top: 1.5rem;
-}
-
-.office-card {
-  background: white;
-  padding: 1.5rem;
-  border-radius: 8px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-}
-
-.office-card h3 {
-  color: var(--jungle-green);
-  margin-bottom: 1rem;
-  font-size: 1.1rem;
-}
-
-.office-details p {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  margin-bottom: 0.75rem;
-  color: var(--text-dark);
-  font-size: 0.9rem;
+.contact-office-image:hover {
+  transform: scale(1.02);
 }
 
 /* Map Section */
-.map-section {
+.contact-map-section {
   width: 100%;
   max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1.5rem var(--section-padding);
+  margin: 4rem auto;
+  padding: 0 1.5rem;
 }
 
-.contact-map {
-  border-radius: 8px;
+.contact-map-section h2 {
+  color: var(--jungle-green);
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  font-weight: var(--s-font-weight-bold);
+  text-align: center;
+}
+
+.contact-map-container {
+  border-radius: 12px;
   overflow: hidden;
-  margin-top: 1.5rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--light-gray);
 }
 
-.contact-map iframe {
+.contact-map-container iframe {
   width: 100%;
-  height: 400px;
+  height: 450px;
   border: 0;
 }
 
 /* Donation CTA */
-.donation-cta {
+.contact-donation-cta {
   background: linear-gradient(135deg, var(--jungle-green) 0%, #1a5c2f 100%);
-  color: white;
+  color: var(--white);
   padding: var(--section-padding) 1.5rem;
   text-align: center;
+  margin-top: 4rem;
+  border-radius: 16px;
 }
 
-.donation-content {
+.contact-donation-content {
   max-width: 800px;
   margin: 0 auto;
 }
 
-.donation-icon {
-  font-size: 2.5rem;
+.contact-donation-icon {
+  font-size: 3rem;
   margin-bottom: 1.5rem;
   color: var(--gold-accent);
 }
 
-.donation-cta h2 {
-  color: white;
+.contact-donation-cta h2 {
+  color: var(--white);
   margin-bottom: 1rem;
   font-size: clamp(1.8rem, 3vw, 2.5rem);
+  font-weight: var(--s-font-weight-bold);
 }
 
-.donation-cta p {
+.contact-donation-cta p {
   font-size: clamp(1rem, 1.2vw, 1.2rem);
   margin-bottom: 2rem;
   opacity: 0.9;
   line-height: 1.6;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.cta-buttons {
+.contact-cta-buttons {
   display: flex;
   justify-content: center;
   gap: 1rem;
   flex-wrap: wrap;
+  margin-bottom: 2rem;
 }
 
-.cta-button {
+.contact-cta-button {
   display: inline-block;
-  padding: 0.9rem 1.8rem;
+  padding: 1rem 2rem;
   background-color: var(--gold-accent);
   color: var(--jungle-green);
   text-decoration: none;
   border-radius: 50px;
-  font-weight: 600;
+  font-weight: var(--s-font-weight-semibold);
   transition: all 0.3s ease;
   border: 2px solid var(--gold-accent);
-}
-
-.cta-button.secondary {
-  background-color: transparent;
-  color: white;
-  border-color: white;
-}
-.donation-options {
-  margin-top: 1.5rem;
-}
-
-.donation-table {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  padding: 1.5rem;
-  background: #0a0a0a;
-}
-
-.donation-column {
-  flex: 1;
-  min-width: 280px;
-}
-
-.donation-column h3 {
-  color: #2e7d32;
-  margin-bottom: 1rem;
-}
-
-.donation-column p {
-  margin: 0.4rem 0;
-}
-
-.paypal-btn {
-  background-color: #ffc439;
-  border: none;
-  padding: 0.6rem 1.2rem;
-  color: #111;
-  font-weight: bold;
   cursor: pointer;
-  border-radius: 6px;
-  margin-top: 1rem;
+  font-size: 1.1rem;
 }
 
-.paypal-btn:hover {
-  background-color: #f0b92e;
-}
-
-.checkbox-label {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  margin-top: 0.8rem;
-}
-
-input[type="number"] {
-  width: 100%;
-  padding: 0.4rem;
-  margin-top: 0.3rem;
-  border-radius: 4px;
-  border: 1px solid #ccc;
-}
-input[type="number"]:focus {
-  outline: none;
-  border-color: var(--jungle-green);
-  box-shadow: 0 0 0 3px rgba(35, 88, 53, 0.1);
-}
-/* Donation Section - Fully Responsive */
-.donation-cta {
-  background: linear-gradient(135deg, var(--jungle-green) 0%, #1a5c2f 100%);
-  color: white;
-  padding: var(--section-padding) 1rem;
-  text-align: center;
-}
-
-.donation-content {
-  max-width: min(100%, 800px);
-  margin: 0 auto;
-}
-
-.donation-icon {
-  font-size: clamp(2rem, 5vw, 2.5rem);
-  margin-bottom: 1rem;
+.contact-cta-button:hover {
+  background-color: transparent;
   color: var(--gold-accent);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
 }
 
-.donation-options {
+.contact-donation-options {
   margin-top: 2rem;
-  animation: fadeIn 0.3s ease-out;
+  animation: fadeIn 0.5s ease-out;
 }
 
-.donation-table {
+.contact-donation-table {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
   background: rgba(255, 255, 255, 0.1);
-  border-radius: 12px;
-  padding: 1.5rem;
-  backdrop-filter: blur(8px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 2rem;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-.donation-column {
-  padding: 1rem;
+.contact-donation-column {
+  padding: 1.5rem;
   background: rgba(0, 0, 0, 0.2);
-  border-radius: 8px;
+  border-radius: 12px;
   transition: transform 0.3s ease;
 }
 
-.donation-column:hover {
+.contact-donation-column:hover {
   transform: translateY(-5px);
 }
 
-.donation-column h3 {
+.contact-donation-column h3 {
   color: var(--gold-accent);
-  margin-bottom: 1rem;
-  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  font-size: 1.3rem;
+  font-weight: var(--s-font-weight-semibold);
   border-bottom: 2px solid var(--gold-accent);
-  padding-bottom: 0.5rem;
+  padding-bottom: 0.75rem;
 }
 
-.donation-column p {
-  margin: 0.75rem 0;
-  font-size: 0.95rem;
-  line-height: 1.5;
+.contact-donation-column p {
+  margin: 1rem 0;
+  font-size: 1rem;
+  line-height: 1.6;
+  opacity: 0.9;
 }
 
-.donation-column strong {
+.contact-donation-column strong {
   color: var(--gold-accent);
+  font-weight: var(--s-font-weight-semibold);
 }
 
-/* Form Elements */
-.donation-column form {
+.contact-donation-column form {
   display: grid;
-  gap: 1rem;
+  gap: 1.25rem;
 }
 
-.donation-column label {
+.contact-donation-column label {
   display: block;
   margin-bottom: 0.5rem;
-  font-weight: 500;
-}
-
-.donation-column input[type="number"] {
-  width: 100%;
-  padding: 0.75rem;
-  border: 1px solid #ddd;
-  border-radius: 6px;
-  background: rgba(14, 13, 13, 0.9);
+  font-weight: var(--s-font-weight-medium);
   font-size: 1rem;
 }
 
-.checkbox-label {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-size: 0.9rem;
+.contact-donation-column input[type="number"] {
+  width: 100%;
+  padding: 1rem;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--white);
+  font-size: 1rem;
+  transition: all 0.3s ease;
 }
 
-.paypal-btn {
+.contact-donation-column input[type="number"]:focus {
+  outline: none;
+  border-color: var(--gold-accent);
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.contact-checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+.contact-checkbox-label input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--gold-accent);
+}
+
+.contact-paypal-btn {
   width: 100%;
-  padding: 0.75rem;
+  padding: 1rem;
   background-color: #ffc439;
   color: #111;
   border: none;
-  border-radius: 6px;
-  font-weight: bold;
+  border-radius: 8px;
+  font-weight: var(--s-font-weight-semibold);
   cursor: pointer;
   transition: all 0.3s ease;
-  margin-top: 0.5rem;
+  margin-top: 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
+  font-size: 1rem;
 }
 
-.paypal-btn:hover {
+.contact-paypal-btn:hover {
   background-color: #f0b92e;
   transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(255, 196, 57, 0.4);
 }
 
 /* Animations */
@@ -525,130 +502,27 @@ input[type="number"]:focus {
 }
 
 /* Responsive Adjustments */
-@media (max-width: 768px) {
-  .donation-table {
-    grid-template-columns: 1fr;
-    padding: 1rem;
-  }
-  
-  .donation-column {
-    padding: 1.25rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .donation-cta {
-    padding: var(--section-padding) 0.5rem;
-  }
-  
-  .donation-table {
-    gap: 1rem;
-    padding: 0.75rem;
-  }
-  
-  .donation-column h3 {
-    font-size: 1.1rem;
-  }
-  
-  .donation-column p {
-    font-size: 0.9rem;
-  }
-  
-  .paypal-btn {
-    padding: 0.65rem;
-  }
-}
-
-/* Responsive Adjustments */
 @media (max-width: 1024px) {
   :root {
     --section-padding: 5rem;
   }
   
   .contact-hero {
-    min-height: 45vh;
+    min-height: 60vh;
   }
   
-  .contact-map iframe {
-    height: 350px;
-  }
   .contact-grid {
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
   }
+  
   .contact-form-section,
   .contact-info-section {
-    padding: 1.5rem;
+    padding: 2rem;
   }
-  .form-group input,
-  .form-group select,
-  .form-group textarea {
-    padding: 0.9rem;
-  }
-  .submit-btn {
-    padding: 1rem;
-  }
-  .office-grid {
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  }
-  .office-card {
-    padding: 1.5rem;
-  }
-  .office-card h3 {
-    font-size: 1.2rem;
-  }
-  .office-details p {
-    font-size: 0.95rem;
-  }
-  .donation-icon {
-    font-size: 2.5rem;
-  }
-  .donation-cta h2 {
-    font-size: 2rem;
-  }
-  .donation-cta p {
-    font-size: 1.1rem;
-  }
-  .cta-button {
-    padding: 0.8rem 1.5rem;
-    font-size: 1rem;
-  }
-  .cta-button.secondary {
-    padding: 0.8rem 1.5rem;
-    font-size: 1rem;
-  }
-  .donation-table {
-    flex-direction: column;
-    align-items: center;
-  }
-  .donation-column {
-    width: 100%;
-    max-width: 350px;
-    margin-bottom: 1.5rem;
-  }
-  .donation-column h3 {
-    font-size: 1.2rem;
-  }
-  .donation-column p {
-    font-size: 0.95rem;
-  }
-  .paypal-btn {
-    width: 100%;
-    max-width: 200px;
-    padding: 0.8rem;
-    font-size: 1rem;
-  }
-  .checkbox-label {
-    font-size: 0.95rem;
-  }
-  input[type="number"] {
-    padding: 0.8rem;
-    font-size: 0.95rem;
-  }
-  .contact-methods {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  }
-  .method-icon-container {
-    font-size: 1.2rem;
+  
+  .contact-donation-table {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -658,84 +532,33 @@ input[type="number"]:focus {
   }
   
   .contact-hero {
-    min-height: 40vh;
+    min-height: 50vh;
     padding: 4rem 1rem;
   }
   
-  .contact-grid {
-    grid-template-columns: 1fr;
+  .contact-form-section,
+  .contact-info-section {
+    padding: 1.5rem;
   }
   
-  .cta-buttons {
+  .contact-method {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+  
+  .contact-cta-buttons {
     flex-direction: column;
     align-items: center;
   }
   
-  .cta-button {
+  .contact-cta-button {
     width: 100%;
     max-width: 280px;
   }
   
-  .office-grid {
-    grid-template-columns: 1fr;
-  }
-  .office-card {
-    padding: 1.5rem;
-  }
-  .office-card h3 {
-    font-size: 1.1rem;
-  }
-  .office-details p {
-    font-size: 0.9rem;
-  }
-  .donation-icon {
-    font-size: 2.2rem;
-  }
-  .donation-cta h2 {
-    font-size: 1.8rem;
-  }
-  .donation-cta p {
-    font-size: 1rem;
-  }
-  .donation-table {
-    flex-direction: column;
-    align-items: center;
-  }
-  .donation-column {
-    width: 100%;
-    max-width: 320px;
-    margin-bottom: 1.5rem;
-  }
-  .donation-column h3 {
-    font-size: 1.1rem;
-  }
-  .donation-column p {
-    font-size: 0.9rem;
-  }
-  .paypal-btn {
-    width: 100%;
-    max-width: 220px;
-    padding: 0.7rem;
-    font-size: 0.95rem;
-  }
-  .checkbox-label {
-    font-size: 0.9rem;
-  }
-  input[type="number"] {
-    padding: 0.7rem;
-    font-size: 0.9rem;
-  }
-  .contact-methods {
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  }
-  .method-icon-container {
-    font-size: 1.1rem;
-  }
-  .method-content h3 {
-    font-size: 1rem;
-  }
-  .method-details p {
-    font-size: 0.9rem;
+  .contact-map-container iframe {
+    height: 350px;
   }
 }
 
@@ -745,307 +568,110 @@ input[type="number"]:focus {
   }
   
   .contact-hero {
-    min-height: 40vh;
+    min-height: 45vh;
     padding: 3rem 1rem;
   }
   
+  .contact-container {
+    padding: 2rem 1rem;
+  }
+  
   .contact-form-section,
   .contact-info-section {
-    padding: 1.5rem;
+    padding: 1.25rem;
   }
   
-  .form-group input,
-  .form-group select,
-  .form-group textarea {
-    padding: 0.8rem;
-  }
-  
-  .submit-btn {
+  .contact-form-group input,
+  .contact-form-group select,
+  .contact-form-group textarea {
     padding: 0.9rem;
   }
   
-  .contact-map iframe {
-    height: 300px;
+  .contact-submit-btn {
+    padding: 1.1rem;
   }
   
-  .office-card {
+  .contact-donation-cta {
+    padding: 2rem 1rem;
+  }
+  
+  .contact-donation-table {
+    padding: 1.5rem;
+  }
+  
+  .contact-donation-column {
     padding: 1.25rem;
   }
-  .office-card h3 {
-    font-size: 1.1rem;
+  
+  .contact-map-container iframe {
+    height: 300px;
   }
-  .office-details p {
-    font-size: 0.9rem;
-  }
-  .donation-icon {
-    font-size: 2rem;
-  }
-  .donation-cta h2 {
-    font-size: 1.6rem;
-  }
-  .donation-cta p {
-    font-size: 0.95rem;
-  }
-  .cta-button {
-    padding: 0.7rem 1.5rem;
-    font-size: 0.95rem;
-  }
-  .cta-button.secondary {
-    padding: 0.7rem 1.5rem;
-    font-size: 0.95rem;
-  }
-  .donation-table {
-    flex-direction: column;
-    align-items: center;
-  }
-  .donation-column {
-    width: 100%;
-    max-width: 300px;
-    margin-bottom: 1.5rem;
-  }
-  .donation-column h3 {
-    font-size: 1.1rem;
-  }
-  .donation-column p {
-    font-size: 0.9rem;
-  }
-  .paypal-btn {
-    width: 100%;
-    max-width: 200px;
-    padding: 0.7rem;
-    font-size: 0.9rem;
-  }
-  .checkbox-label {
-    font-size: 0.85rem;
-  }
-  input[type="number"] {
-    padding: 0.6rem;
-    font-size: 0.85rem;
-  }
-  .contact-methods {
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  }
-  .method-icon-container {
-    font-size: 1rem;
-  }
-  .method-content h3 {
-    font-size: 0.95rem;
-  }
-  .method-details p {
-    font-size: 0.85rem;
-  }
-
 }
 
 @media (max-width: 480px) {
-  :root {
-    --section-padding: 2.5rem;
-  }
-  
-  .contact-hero {
-    min-height: 35vh;
-    padding: 2.5rem 1rem;
-
-  }
-  
   .contact-hero h1 {
-    font-size: 1.8rem;
+    font-size: 2rem;
   }
   
-  .c-hero-subtitle {
+  .contact-hero-subtitle {
+    font-size: 1.1rem;
+  }
+  
+  .contact-form-section h2,
+  .contact-info-section h2 {
+    font-size: 1.5rem;
+  }
+  
+  .contact-donation-cta h2 {
+    font-size: 1.6rem;
+  }
+  
+  .contact-donation-cta p {
     font-size: 1rem;
+  }
+  
+  .contact-cta-button {
+    padding: 0.9rem 1.5rem;
+    font-size: 1rem;
+  }
+  
+  .contact-paypal-btn {
+    padding: 0.9rem;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .contact-hero {
+    min-height: 40vh;
+    padding: 2rem 1rem;
   }
   
   .contact-form-section,
   .contact-info-section {
-    padding: 1.25rem;
+    padding: 1rem;
   }
   
-  .form-group label {
-    font-size: 0.9rem;
-  }
-  
-  .form-group input,
-  .form-group select,
-  .form-group textarea {
-    padding: 0.75rem;
-    font-size: 0.9rem;
-  }
-  
-  .contact-method {
-    gap: 0.75rem;
-  }
-  
-  .method-icon-container {
-    font-size: 1.1rem;
-  }
-  
-  .method-content h3 {
-    font-size: 1rem;
-  }
-  
-  .method-details p {
-    font-size: 0.9rem;
-  }
-  
-  .contact-map iframe {
-    height: 250px;
-  }
-  
-  .donation-icon {
-    font-size: 2rem;
-  }
-  .donation-cta h2 {
-    font-size: 1.5rem;
-  }
-
-  .donation-cta p {
-    font-size: 0.9rem;
-  }
-  .cta-button {
-    padding: 0.6rem 1.2rem;
-    font-size: 0.9rem;
-  }
-  .cta-button.secondary {
-    padding: 0.6rem 1.2rem;
-    font-size: 0.9rem;
-  }
-  .donation-table {
-    flex-direction: column;
-    align-items: center;
-  }
-  .donation-column {
-    width: 100%;
-    max-width: 280px;
-    margin-bottom: 1.5rem;
-  }
-  .donation-column h3 {
-    font-size: 1.1rem;
-  }
-  .donation-column p {
-    font-size: 0.9rem;
-  }
-  .paypal-btn {
-    width: 100%;
-    max-width: 180px;
-    padding: 0.6rem;
-    font-size: 0.85rem;
-  }
-  .checkbox-label {
-    font-size: 0.8rem;
-  }
-  input[type="number"] {
-    padding: 0.5rem;
-    font-size: 0.85rem;
-  }
-  .contact-methods {
-    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  }
-  .method-icon-container {
-    font-size: 0.9rem;
-  }
-  .method-content h3 {
-    font-size: 0.9rem;
-  }
-  .method-details p {
-    font-size: 0.8rem;
-  }
-}
-@media (max-width: 400px){
-  .donation-table {
-    flex-direction: column;
-  }
-  .donation-column{
-    max-width: 200px;
-
-  }
-}
-@media (max-width: 360px) {
-  :root {
-    --section-padding: 2rem;
-  }
-  
-  .contact-hero {
-    min-height: 35vh;
-    padding: 2rem 1rem;
-    margin-top: 4rem;
-  }
-  
-  .contact-hero h1 {
-    font-size: 1.6rem;
-  }
-  
-  .form-group input,
-  .form-group select,
-  .form-group textarea {
-    padding: 0.7rem;
-  }
-  
-  .submit-btn {
+  .contact-form-group input,
+  .contact-form-group select,
+  .contact-form-group textarea {
     padding: 0.8rem;
   }
   
-  .contact-map iframe {
-    height: 200px;
+  .contact-submit-btn {
+    padding: 1rem;
+    font-size: 1rem;
   }
-  .donation-icon {
-    font-size: 1.8rem;
+  
+  .contact-donation-table {
+    padding: 1rem;
   }
-  .donation-cta h2 {
-    font-size: 1.4rem;
+  
+  .contact-donation-column {
+    padding: 1rem;
   }
-  .donation-cta p {
-    font-size: 0.85rem;
-  }
-  .cta-button {
-    padding: 0.5rem 1rem;
-    font-size: 0.85rem;
-  }
-  .cta-button.secondary {
-    padding: 0.5rem 1rem;
-    font-size: 0.85rem;
-  }
-  .donation-table {
-    flex-direction: column;
-    align-items: center;
-  }
-  .donation-column {
-    width: 100%;
-    max-width: 260px;
-    margin-bottom: 1.5rem;
-  }
-  .donation-column h3 {
-    font-size: 1.1rem;
-  }
-  .donation-column p {
-    font-size: 0.85rem;
-  }
-  .paypal-btn {
-    width: 100%;
-    max-width: 160px;
-    padding: 0.5rem;
-    font-size: 0.8rem;
-  }
-  .checkbox-label {
-    font-size: 0.75rem;
-  }
-  input[type="number"] {
-    padding: 0.4rem;
-    font-size: 0.8rem;
-  }
-  .contact-methods {
-    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-  }
-  .method-icon-container {
-    font-size: 0.8rem;
-  }
-  .method-content h3 {
-    font-size: 0.85rem;
-  }
-  .method-details p {
-    font-size: 0.75rem;
-  }
-  .office-grid {
-    grid-template-columns: 1fr;
+  
+  .contact-map-container iframe {
+    height: 250px;
   }
 }
