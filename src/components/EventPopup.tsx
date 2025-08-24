@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "../styles/EventPopup.css";
-import flyerImage from "../assets/seedschool_sep.jpg"; // Replace with your actual image
+import flyerImage from "../assets/seedschool_sep.webp"; // Replace with your actual image
 
 const EventPopup: React.FC = () => {
   const [show, setShow] = useState(false);

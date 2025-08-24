@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "../styles/SeedSchool.css";
-import seedSchoolImg1 from "../assets/seedschool_sep.jpg";
+import seedSchoolImg1 from "../assets/seedschool_sep.webp";
 
 const SeedSchool: React.FC = () => {
   const [] = useState(false);

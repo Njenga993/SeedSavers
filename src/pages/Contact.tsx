@@ -7,7 +7,7 @@ import {
   FaHandHoldingHeart
 } from 'react-icons/fa';
 import '../styles/Contact.css';
-import SpectacularImage from '../assets/hero_1.jpg';
+import SpectacularImage from '../assets/hero_1.webp';
 
 type ContactMethod = {
   icon: React.ReactNode;

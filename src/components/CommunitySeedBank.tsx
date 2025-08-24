@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "../styles/CommunitySeedBank.css";
-import seedStorage from "../assets/cb.jpg";
+import seedStorage from "../assets/cb.webp";
 
 const CommunitySeedBank: React.FC = () => {
   return (

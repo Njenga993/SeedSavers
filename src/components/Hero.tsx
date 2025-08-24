@@ -6,9 +6,9 @@ import { useEffect, useState } from 'react';
 import '../styles/hero.css';
 
 // Import your images
-import slide1Image from '../assets/seed_pic.jpg';
-import slide2Image from '../assets/Spectacular.jpg';
-import slide3Image from '../assets/hero_1.jpg';
+import slide1Image from '../assets/seed_pic.webp';
+import slide2Image from '../assets/Spectacular.webp';
+import slide3Image from '../assets/hero_1.webp';
 
 const Hero = () => {
   const [currentSlide, setCurrentSlide] = useState(0);

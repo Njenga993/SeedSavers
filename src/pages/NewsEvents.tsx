@@ -1,14 +1,14 @@
 import "../styles/NewsEvents.css";
-import SpectacularImage from '../assets/n.jpg'; 
+import SpectacularImage from '../assets/n.webp'; 
 import { Link } from 'react-router-dom';
 import { FaArrowRight, FaHandshake } from 'react-icons/fa';
-import Image from '../assets/seedfair.jpg';
-import Images from '../assets/cbs.jpg';
-import Img from '../assets/seedaccess.jpeg';
-import ngiri from '../assets/ngiri.jpeg';
-import Ambs from '../assets/seed-ambasadors.jpg';
-import Solar from '../assets/Solar dryer.jpeg';
-import IPS from '../assets/IPs.jpeg';
+import Image from '../assets/seedfair.webp';
+import Images from '../assets/cbs.webp';
+import Img from '../assets/seedaccess.webp';
+import ngiri from '../assets/ngiri.webp';
+import Ambs from '../assets/seed-ambasadors.webp';
+import Solar from '../assets/Solar dryer.webp';
+import IPS from '../assets/IPs.webp';
 
 const NewsEvents = () => {
   return (

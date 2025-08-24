@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "../styles/NewsletterPage.css";
-import latestIssue from "../assets/seed_pic.jpg";
-import archiveImage from "../assets/seed_pic.jpg";
-import subscriptionImage from "../assets/seed_pic.jpg";
+import latestIssue from "../assets/seed_pic.webp";
+import archiveImage from "../assets/seed_pic.webp";
+import subscriptionImage from "../assets/seed_pic.webp";
 
 const NewsletterPage: React.FC = () => {
   const [activeTab, setActiveTab] = useState("latest");

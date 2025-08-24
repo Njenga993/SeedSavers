@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "../styles/CommunitySeedBankPlatform.css";
-import seedExchange from "../assets/cb.jpg";
-import farmersGroup from "../assets/cbs.jpg";
+import seedExchange from "../assets/cb.webp";
+import farmersGroup from "../assets/cbs.webp";
 
 const CommunitySeedBankPlatform: React.FC = () => {
   const [activeTab, setActiveTab] = useState("overview");

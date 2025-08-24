@@ -8,7 +8,7 @@
 
 /* Hero Section */
 .newsletter-hero {
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../assets/seed_pic.jpg') center/cover no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../assets/seed_pic.webp') center/cover no-repeat;
   min-height: 80vh;
   display: flex;
   align-items: center;

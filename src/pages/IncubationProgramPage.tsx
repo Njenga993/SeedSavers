@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import "../styles/IncubationProgramPage.css";
-import nyakaziImage from "../assets/cb.jpg";
-import sunnyBitesImage from "../assets/cbs.jpg";
-import mentorshipImage from "../assets/cb.jpg";
-import demoImage from "../assets/cbs.jpg";
+import nyakaziImage from "../assets/cb.webp";
+import sunnyBitesImage from "../assets/cbs.webp";
+import mentorshipImage from "../assets/cb.webp";
+import demoImage from "../assets/cbs.webp";
 
 const IncubationProgramPage: React.FC = () => {
   const [activeTab, setActiveTab] = useState("overview");

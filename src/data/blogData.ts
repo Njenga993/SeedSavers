@@ -1,10 +1,10 @@
 // src/data/blogData.ts
-import SpectacularImage from '../assets/Spectacular.jpg';
-import Spectacular from '../assets/Makokha.jpg';
-import Image from '../assets/vihiga leafy.png';
-import Access from '../assets/seedaccess.jpeg';
-import Journalist from '../assets/journalists.jpeg';
-import Bio from '../assets/Bio-pesticides.jpeg';
+import SpectacularImage from '../assets/Spectacular.webp';
+import Spectacular from '../assets/Makokha.webp';
+import Image from '../assets/vihiga leafy.webp';
+import Access from '../assets/seedaccess.webp';
+import Journalist from '../assets/journalists.webp';
+import Bio from '../assets/Bio-pesticides.webp';
 
 export type BlogPost = {
   id: string;

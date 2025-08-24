@@ -14,7 +14,7 @@ import {
 } from 'react-icons/fa';
 import { motion, AnimatePresence } from 'framer-motion';
 import '../styles/navbar.css';
-import logo from '../assets/ssklogo-.png';
+import logo from '../assets/ssklogo-.webp';
 import { FaXTwitter } from 'react-icons/fa6';
 
 interface NavItem {
