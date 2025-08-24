@@ -24,7 +24,7 @@ const IncubationProgramPage: React.FC = () => {
                 <span className="ip-stat-label">Startups Supported</span>
               </div>
               <div className="ip-stat">
-                <span className="ip-stat-number">$5M+</span>
+                <span className="ip-stat-number">3M+</span>
                 <span className="ip-stat-label">Seed Funding</span>
               </div>
               <div className="ip-stat">

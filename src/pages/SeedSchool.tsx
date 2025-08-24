@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { FaCalendarAlt, FaMapMarkerAlt, FaUsers, FaSeedling, FaGlobe, FaArrowRight, FaPlayCircle } from 'react-icons/fa';
+import { FaCalendarAlt, FaMapMarkerAlt, FaUsers,FaGlobe, FaArrowRight, FaPlayCircle } from 'react-icons/fa';
 import '../styles/School.css';
 import foundingImg from '../assets/seed_pic.webp';
 
@@ -78,15 +78,11 @@ const SeedSchool = () => {
             <div className="S-hero-stats">
               <div className="S-stat">
                 <FaUsers className="S-stat-icon" />
-                <span>70+ Participants Trained</span>
+                <span>200+ Participants Trained</span>
               </div>
               <div className="S-stat">
                 <FaGlobe className="S-stat-icon" />
-                <span>15+ African Countries</span>
-              </div>
-              <div className="S-stat">
-                <FaSeedling className="S-stat-icon" />
-                <span>100+ Varieties Conserved</span>
+                <span>15+ Countries</span>
               </div>
             </div>
           </div>
@@ -131,7 +127,7 @@ const SeedSchool = () => {
                   <div className="school-details">
                     <div className="detail-item">
                       <FaCalendarAlt className="detail-icon" />
-                      <span>November 15-25, 2024</span>
+                      <span>Octomber 26-November 7, 2025</span>
                     </div>
                     <div className="detail-item">
                       <FaMapMarkerAlt className="detail-icon" />
@@ -139,7 +135,7 @@ const SeedSchool = () => {
                     </div>
                     <div className="detail-item">
                       <FaUsers className="detail-icon" />
-                      <span>50 Participants Expected</span>
+                      <span>50+ Participants Expected</span>
                     </div>
                   </div>
                 </div>
@@ -147,7 +143,7 @@ const SeedSchool = () => {
                 <div className="school-description">
                   <h3>Theme: "Seeding Resilience: Climate-Adaptive Crops for Africa's Future"</h3>
                   <p>
-                    Join us for the 3rd African Seed School, a transformative 10-day intensive training program 
+                    Join us for the 3rd Seed School Boot Camp, a transformative 2 weeks intensive training program 
                     dedicated to preserving Africa's agricultural biodiversity. This year's focus is on developing 
                     climate-resilient seed systems and empowering community seed guardians across the continent.
                   </p>
@@ -191,21 +187,19 @@ const SeedSchool = () => {
                         </ul>
                       </div>
                       <div className="reg-detail">
-                        <h5>Application Process</h5>
+                        <h5>Costs</h5>
                         <ul>
-                          <li>Submit online application by September 30, 2024</li>
-                          <li>Selected participants will be notified by October 15</li>
-                          <li>Partial scholarships available for deserving applicants</li>
+                          <li>Accommodation,Meals & Tuition: $1000 (For the Whole Period) </li>
+
                         </ul>
                       </div>
+                      
                     </div>
                     <div className="cta-buttons">
-                      <Link to="/apply-seed-school" className="btn-primary">
+                      <Link to="https://forms.gle/hLzhrDBbQqsYLgRy7" target="_blank" className="btn-primary">
                         Apply Now <FaArrowRight />
                       </Link>
-                      <Link to="/download-brochure" className="btn-secondary">
-                        Download Brochure
-                      </Link>
+                    
                     </div>
                   </div>
                 </div>
@@ -366,7 +360,7 @@ const SeedSchool = () => {
               </div>
               <div className="testimonial-author">
                 <h4>Amara Okeke</h4>
-                <p>Nigeria, 2023 Participant</p>
+                <p>Kisumu, 2025 Participant</p>
               </div>
             </div>
             <div className="testimonial-card">
@@ -374,8 +368,8 @@ const SeedSchool = () => {
                 <p>"The connections I made with other seed savers across Africa have been invaluable. We continue to share seeds and knowledge."</p>
               </div>
               <div className="testimonial-author">
-                <h4>Thomas Mbeki</h4>
-                <p>South Africa, 2022 Participant</p>
+                <h4>Irene Kiplangat</h4>
+                <p>Baringo, 2025 Participant</p>
               </div>
             </div>
             <div className="testimonial-card">
@@ -384,24 +378,9 @@ const SeedSchool = () => {
               </div>
               <div className="testimonial-author">
                 <h4>Fatima Abdi</h4>
-                <p>Ethiopia, 2023 Participant</p>
+                <p>Ethiopia, 2024 Participant</p>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Partners Section */}
-      <section className="partners-section">
-        <div className="container">
-          <h2>Our Partners</h2>
-          <p className="section-intro">The African Seed School is made possible through collaboration with these organizations</p>
-          <div className="partners-grid">
-            <div className="partner-logo">AFSA</div>
-            <div className="partner-logo">Biovision</div>
-            <div className="partner-logo">Alliance for Food Sovereignty</div>
-            <div className="partner-logo">Local Futures</div>
-            <div className="partner-logo">Greenpeace Africa</div>
           </div>
         </div>
       </section>

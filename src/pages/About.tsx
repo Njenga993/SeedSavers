@@ -419,7 +419,7 @@ const About = () => {
                   <div className="stat-label">Years of Service</div>
                 </div>
                 <div className="stat-box">
-                  <div className="stat-number">105</div>
+                  <div className="stat-number">112+</div>
                   <div className="stat-label">Community Seed Banks</div>
                 </div>
                 <div className="stat-box">
