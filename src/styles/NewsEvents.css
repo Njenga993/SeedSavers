@@ -325,7 +325,7 @@
 /* Newsletter Section */
 .newsletter-section {
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
-              url('../assets/winowing.jpeg') center/cover no-repeat;
+              url('../assets/winowing.webp') center/cover no-repeat;
   color: white;
   padding: var(--section-padding) 0;
   text-align: center;

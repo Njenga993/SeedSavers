@@ -3,7 +3,7 @@ import { FaFacebookF, FaTwitter, FaLinkedinIn, FaInstagram, FaYoutube, FaMapMark
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import '../styles/footer.css';
-import logo from '../assets/ssklogo-.png';
+import logo from '../assets/ssklogo-.webp';
 
 const Footer = () => {
   const [faqOpen, setFaqOpen] = useState(false);

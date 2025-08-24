@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { FaArrowRight } from 'react-icons/fa';
 
 // Replace with your actual image path
-import teamPhoto from '../assets/about_us.jpg';
+import teamPhoto from '../assets/about_us.webp';
 
 const stats = [
   { label: 'Farmers in Network', value: 96.5, suffix: 'K+' },

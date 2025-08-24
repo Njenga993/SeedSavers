@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "../styles/IncubationProgram.css";
-import SpectacularImage from "../assets/nyakazi.jpg";
+import SpectacularImage from "../assets/nyakazi.webp";
 
 const IncubationProgram: React.FC = () => {
   return (

@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FaCalendarAlt, FaMapMarkerAlt, FaUsers, FaSeedling, FaGlobe, FaArrowRight, FaPlayCircle } from 'react-icons/fa';
 import '../styles/School.css';
-import foundingImg from '../assets/seed_pic.jpg';
+import foundingImg from '../assets/seed_pic.webp';
 
 const SeedSchool = () => {
   const [activeTab, setActiveTab] = useState('upcoming');

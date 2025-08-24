@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import "../styles/Resources.css";
-import SpectacularImage from '../assets/n.jpg';
-import SpectaculaImage from '../assets/IPs.jpeg';
-import SpectaculrImage from '../assets/advocacy.jpg';
-import SpectacuarImage from '../assets/farmer_led.jpg';
-import SpectaclarImage from '../assets/happy.jpg';
-import SpectaularImage from '../assets/harvest.jpeg';
-import SpectcularImage from '../assets/holding.jpeg';
-import Image from '../assets/app.png';
+import SpectacularImage from '../assets/n.webp';
+import SpectaculaImage from '../assets/IPs.webp';
+import SpectaculrImage from '../assets/advocacy.webp';
+import SpectacuarImage from '../assets/farmer_led.webp';
+import SpectaclarImage from '../assets/happy.webp';
+import SpectaularImage from '../assets/harvest.webp';
+import SpectcularImage from '../assets/holding.webp';
+import Image from '../assets/app.webp';
 
 interface ResourceItem {
   id: number;

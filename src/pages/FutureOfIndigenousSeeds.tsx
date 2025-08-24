@@ -1,8 +1,8 @@
 // src/pages/FutureOfIndigenousSeeds.tsx
 import { Link } from 'react-router-dom';
 import { FaCalendarAlt, FaUser, FaArrowLeft } from 'react-icons/fa';
-import SpectacularImage from '../assets/Spectacular.jpg';
-import Image from '../assets/vihiga leafy.png';
+import SpectacularImage from '../assets/Spectacular.webp';
+import Image from '../assets/vihiga leafy.webp';
 import '../styles/Blog.css';
 
 const FutureOfIndigenousSeeds = () => {
