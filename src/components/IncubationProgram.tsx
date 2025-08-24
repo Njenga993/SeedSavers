@@ -9,23 +9,19 @@ const IncubationProgram: React.FC = () => {
       <div className="incubation-container">
         {/* Left-side text */}
         <div className="incubation-text">
-          <h2>Agroecology Incubation Program</h2>
+          <h2> Incubation Program</h2>
           <p className="incubation-tagline">
             Nurturing the next generation of sustainable food entrepreneurs
           </p>
           
           <div className="incubation-stats">
             <div className="stat">
-              <span className="stat-number">25+</span>
+              <span className="stat-number">3+</span>
               <span className="stat-label">Startups Supported</span>
             </div>
             <div className="stat">
               <span className="stat-number">100%</span>
               <span className="stat-label">Agroecology Focus</span>
-            </div>
-            <div className="stat">
-              <span className="stat-number">2</span>
-              <span className="stat-label">Years Running</span>
             </div>
           </div>
 
