@@ -9,7 +9,7 @@ import teamPhoto from '../assets/about_us.jpg';
 const stats = [
   { label: 'Farmers in Network', value: 96.5, suffix: 'K+' },
   { label: 'Documented Local Crop Varieties', value: 188 },
-  { label: 'Seedbanks', value: 120, suffix: '+' },
+  { label: 'Seedbanks', value: 112, suffix: '+' },
   { label: 'Documented Lost Crop Varieties', value: 89 },
   { label: 'Kitchen Gardens', value: 7, suffix: 'K+' }
 ];

@@ -127,7 +127,7 @@ const SeedSchool = () => {
             <div className="tab-content">
               <div className="upcoming-school">
                 <div className="school-header">
-                  <h2>3rd African Seed School 2024</h2>
+                  <h2>3rd Seed School Boot Camp 2025</h2>
                   <div className="school-details">
                     <div className="detail-item">
                       <FaCalendarAlt className="detail-icon" />
@@ -156,22 +156,22 @@ const SeedSchool = () => {
                     <h4>Program Highlights</h4>
                     <div className="highlight-grid">
                       <div className="highlight-card">
-                        <div className="highlight-icon">🌱</div>
+                        <div className="highlight-icon"></div>
                         <h5>Seed Conservation Techniques</h5>
                         <p>Hands-on training in traditional and modern seed preservation methods</p>
                       </div>
                       <div className="highlight-card">
-                        <div className="highlight-icon">🌍</div>
+                        <div className="highlight-icon"></div>
                         <h5>Climate Resilience</h5>
                         <p>Identifying and multiplying climate-adaptive crop varieties</p>
                       </div>
                       <div className="highlight-card">
-                        <div className="highlight-icon">📚</div>
+                        <div className="highlight-icon"></div>
                         <h5>Policy Advocacy</h5>
                         <p>Strategies for advocating farmer seed rights and sovereignty</p>
                       </div>
                       <div className="highlight-card">
-                        <div className="highlight-icon">🤝</div>
+                        <div className="highlight-icon"></div>
                         <h5>Network Building</h5>
                         <p>Connecting with seed savers from across Africa</p>
                       </div>

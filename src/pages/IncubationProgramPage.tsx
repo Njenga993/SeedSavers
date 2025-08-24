@@ -14,17 +14,17 @@ const IncubationProgramPage: React.FC = () => {
       <section className="ip-incubation-hero">
         <div className="ip-hero-overlay">
           <div className="ip-container">
-            <h1>Agroecology Incubation Program</h1>
+            <h1> Incubation Program</h1>
             <p className="ip-hero-subtitle">
               Cultivating sustainable food enterprises for a resilient future
             </p>
             <div className="ip-hero-stats">
               <div className="ip-stat">
-                <span className="ip-stat-number">25+</span>
+                <span className="ip-stat-number">3+</span>
                 <span className="ip-stat-label">Startups Supported</span>
               </div>
               <div className="ip-stat">
-                <span className="ip-stat-number">₦5M+</span>
+                <span className="ip-stat-number">$5M+</span>
                 <span className="ip-stat-label">Seed Funding</span>
               </div>
               <div className="ip-stat">
@@ -82,22 +82,22 @@ const IncubationProgramPage: React.FC = () => {
                     <h3>What We Offer</h3>
                     <div className="ip-features-grid">
                       <div className="ip-feature-card">
-                        <div className="ip-feature-icon">💰</div>
+                        <div className="ip-feature-icon"></div>
                         <h4>Seed Funding</h4>
                         <p>Financial support to kickstart your agroecology venture</p>
                       </div>
                       <div className="ip-feature-card">
-                        <div className="ip-feature-icon">👥</div>
+                        <div className="ip-feature-icon"></div>
                         <h4>Expert Mentorship</h4>
                         <p>Guidance from experienced agroecology entrepreneurs</p>
                       </div>
                       <div className="ip-feature-card">
-                        <div className="ip-feature-icon">📚</div>
+                        <div className="ip-feature-icon"></div>
                         <h4>Training & Workshops</h4>
                         <p>Business development and technical skills training</p>
                       </div>
                       <div className="ip-feature-card">
-                        <div className="ip-feature-icon">🌐</div>
+                        <div className="ip-feature-icon"></div>
                         <h4>Market Access</h4>
                         <p>Connections to local and international markets</p>
                       </div>
@@ -353,22 +353,22 @@ const IncubationProgramPage: React.FC = () => {
                   <h3>Eligibility Criteria</h3>
                   <div className="ip-criteria-grid">
                     <div className="ip-criterion">
-                      <div className="ip-criterion-icon">💡</div>
+                      <div className="ip-criterion-icon"></div>
                       <h4>Innovation</h4>
                       <p>Novel approach to agroecology or food systems</p>
                     </div>
                     <div className="ip-criterion">
-                      <div className="ip-criterion-icon">🌍</div>
+                      <div className="ip-criterion-icon"></div>
                       <h4>Impact Potential</h4>
                       <p>Clear social and environmental impact</p>
                     </div>
                     <div className="ip-criterion">
-                      <div className="ip-criterion-icon">📈</div>
+                      <div className="ip-criterion-icon"></div>
                       <h4>Scalability</h4>
                       <p>Potential for growth and replication</p>
                     </div>
                     <div className="ip-criterion">
-                      <div className="ip-criterion-icon">👥</div>
+                      <div className="ip-criterion-icon"></div>
                       <h4>Team Commitment</h4>
                       <p>Dedicated team with relevant skills</p>
                     </div>

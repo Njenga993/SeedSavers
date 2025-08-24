@@ -79,8 +79,8 @@
 
 /* ===== HERO SECTION ===== */
 .resources-hero {
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../assets/about_hero.jpg') center/cover no-repeat;
-  height: 60vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../assets/hero_1.jpg') center/cover no-repeat;
+  height: 80vh;
   min-height: 400px;
   display: flex;
   align-items: center;

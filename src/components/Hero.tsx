@@ -8,7 +8,7 @@ import '../styles/hero.css';
 // Import your images
 import slide1Image from '../assets/seed_pic.jpg';
 import slide2Image from '../assets/Spectacular.jpg';
-import slide3Image from '../assets/cb.jpg';
+import slide3Image from '../assets/hero_1.jpg';
 
 const Hero = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -33,7 +33,7 @@ const Hero = () => {
     {
       image: slide3Image,
       title: "Grow With Us",
-      highlight: "Plant. Share. Thrive.",
+      highlight: "My Seeds. My Food. My Future.",
       description: "Building a network of <strong>seed guardians</strong> to combat climate change one seed at a time.",
       cta: "Get involved"
     }
