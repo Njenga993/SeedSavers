@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import "../styles/IncubationProgramPage.css";
-import nyakaziImage from "../assets/cb.webp";
-import sunnyBitesImage from "../assets/cbs.webp";
-import mentorshipImage from "../assets/cb.webp";
-import demoImage from "../assets/cbs.webp";
+import nyakaziImage from "../assets/nyakazi_inside.webp";
+import sunnyBitesImage from "../assets/sunny.webp";
+import mentorshipImage from "../assets/incubation.webp";
+import demoImage from "../assets/sunny.webp";
 
 const IncubationProgramPage: React.FC = () => {
   const [activeTab, setActiveTab] = useState("overview");
@@ -160,15 +160,15 @@ const IncubationProgramPage: React.FC = () => {
                       <p className="ip-enterprise-tagline">Premium Dehydrated Vegetables • Gilgil, Kenya</p>
                       <div className="ip-enterprise-stats">
                         <div className="ip-enterprise-stat">
-                          <span className="ip-stat-value">2022</span>
+                          <span className="ip-stat-value">2023</span>
                           <span className="ip-stat-label">Founded</span>
                         </div>
                         <div className="ip-enterprise-stat">
-                          <span className="ip-stat-value">12+</span>
+                          <span className="ip-stat-value">4+</span>
                           <span className="ip-stat-label">Products</span>
                         </div>
                         <div className="ip-enterprise-stat">
-                          <span className="ip-stat-value">5</span>
+                          <span className="ip-stat-value">25</span>
                           <span className="ip-stat-label">Jobs Created</span>
                         </div>
                       </div>
@@ -180,7 +180,7 @@ const IncubationProgramPage: React.FC = () => {
                       <h4>About Nyakazi Organics</h4>
                       <p>
                         Nyakazi Organics specializes in solar-dehydrated vegetables, preserving 
-                        nutritional value while extending shelf life. Founded by local women farmers 
+                        nutritional value while extending shelf life. Founded by local youths 
                         in Gilgil, the enterprise addresses post-harvest losses while creating 
                         value-added products for urban markets.
                       </p>
@@ -190,31 +190,39 @@ const IncubationProgramPage: React.FC = () => {
                       <h4>Impact & Achievements</h4>
                       <ul>
                         <li>Reduced post-harvest losses by 70% for partner farmers</li>
-                        <li>Created stable income for 15 smallholder farmers</li>
-                        <li>Expanded to 3 major supermarket chains in Nairobi</li>
-                        <li>Won 2023 Green Innovation Award</li>
+                        <li>Created stable income for 135 smallholder farmers</li>
+                        <li>Expanded to supplying customers from allover the country and Diaspora</li>
+                        <li>Won 2024 Dish Competition Award</li>
                       </ul>
                     </div>
 
                     <div className="ip-detail-section">
                       <h4>Product Range</h4>
                       <div className="ip-products-grid">
-                        <div className="ip-product-item">Dehydrated Kale</div>
-                        <div className="ip-product-item">Sun-dried Tomatoes</div>
-                        <div className="ip-product-item">Vegetable Powder Mix</div>
-                        <div className="ip-product-item">Herbal Seasonings</div>
+                        <div className="ip-product-item">Dehydrated Black Night Shade(Managu)</div>
+                        <div className="ip-product-item">Dehydrated Spider Plant(Saaga)</div>
+                        <div className="ip-product-item">Dehydrated Amathan(Terere)</div>
+                        <div className="ip-product-item">Dehydrated Oyster Mushrooms</div>
                       </div>
                     </div>
 
                     <div className="ip-video-section">
-                      <h4>Watch Their Story</h4>
-                      <div className="ip-video-container">
-                        <div className="ip-video-placeholder">
-                          <span className="ip-video-icon">▶️</span>
-                          <p>Video coming soon</p>
-                        </div>
-                      </div>
-                    </div>
+  <h4>Watch Their Story</h4>
+  <div className="ip-video-container">
+    <iframe
+      width="560"
+      height="315"
+      src="https://www.youtube.com/embed/JjG-pl3N54Q?si=yzYW8lI_bA_rajkq"
+      title="YouTube video player"
+      frameBorder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerPolicy="strict-origin-when-cross-origin"
+      allowFullScreen
+      className="ip-video-iframe"
+    ></iframe>
+  </div>
+</div>
+
                   </div>
                 </div>
 
@@ -233,11 +241,11 @@ const IncubationProgramPage: React.FC = () => {
                           <span className="ip-stat-label">Launched</span>
                         </div>
                         <div className="ip-enterprise-stat">
-                          <span className="ip-stat-value">8+</span>
+                          <span className="ip-stat-value">4+</span>
                           <span className="ip-stat-label">Fruit Varieties</span>
                         </div>
                         <div className="ip-enterprise-stat">
-                          <span className="ip-stat-value">7</span>
+                          <span className="ip-stat-value">17</span>
                           <span className="ip-stat-label">Youth Employed</span>
                         </div>
                       </div>
@@ -259,8 +267,8 @@ const IncubationProgramPage: React.FC = () => {
                       <h4>Impact & Achievements</h4>
                       <ul>
                         <li>Utilizes 3+ tons of surplus fruit annually</li>
-                        <li>Provides market access for 25 small-scale fruit farmers</li>
-                        <li>Featured in Kenya Agricultural Show 2023</li>
+                        <li>Provides market access for 125 small-scale fruit farmers</li>
+                        <li>Featured in Kenya Agricultural Show 2025</li>
                         <li>Recipient of Youth Enterprise Fund grant</li>
                       </ul>
                     </div>
@@ -269,9 +277,12 @@ const IncubationProgramPage: React.FC = () => {
                       <h4>Product Range</h4>
                       <div className="ip-products-grid">
                         <div className="ip-product-item">Dried Mango Slices</div>
-                        <div className="ip-product-item">Pineapple Chips</div>
-                        <div className="ip-product-item">Tropical Fruit Mix</div>
-                        <div className="ip-product-item">Fruit Energy Bars</div>
+                        <div className="ip-product-item">Dried Pineapple Chips</div>
+                        <div className="ip-product-item">Fruit Mix</div>
+                        <div className="ip-product-item">Dried Banana Chips</div>
+                        <div className="ip-product-item">Dried Pawpaw Chips</div>
+                        <div className="ip-product-item">Local Honey</div>
+                        <div className="ip-product-item">Tea Knob</div>
                       </div>
                     </div>
 
@@ -292,15 +303,15 @@ const IncubationProgramPage: React.FC = () => {
                 <h3>Collective Impact</h3>
                 <div className="ip-impact-grid">
                   <div className="ip-impact-item">
-                    <span className="ip-impact-number">30+</span>
+                    <span className="ip-impact-number">80+</span>
                     <span className="ip-impact-label">Jobs Created</span>
                   </div>
                   <div className="ip-impact-item">
-                    <span className="ip-impact-number">40+</span>
+                    <span className="ip-impact-number">240+</span>
                     <span className="ip-impact-label">Farmers Supported</span>
                   </div>
                   <div className="ip-impact-item">
-                    <span className="ip-impact-number">₦2.5M+</span>
+                    <span className="ip-impact-number">2.5M+</span>
                     <span className="ip-impact-label">Annual Revenue</span>
                   </div>
                   <div className="ip-impact-item">
@@ -375,25 +386,12 @@ const IncubationProgramPage: React.FC = () => {
                   </div>
                 </div>
 
-                <div className="ip-application-cta">
-                  <h3>Ready to Apply?</h3>
-                  <p>Take the first step toward transforming your agroecology idea into a successful enterprise</p>
-                  <div className="ip-cta-buttons">
-                    <button className="ip-cta-button ip-primary">
-                      Apply Now
-                    </button>
-                    <button className="ip-cta-button ip-secondary">
-                      Download Application Guide
-                    </button>
-                  </div>
-                </div>
-
                 <div className="ip-contact-info">
                   <h3>Have Questions?</h3>
                   <div className="ip-contact-details">
                     <div className="ip-contact-item">
                       <strong>Email:</strong>
-                      <a href="mailto:incubation@seedsaverskenya.org">incubation@seedsaverskenya.org</a>
+                      <a href="mailto:incubation@seedsaverskenya.org">info@seedsaverskenya.org</a>
                     </div>
                     <div className="ip-contact-item">
                       <strong>Phone:</strong>

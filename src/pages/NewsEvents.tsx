@@ -45,7 +45,7 @@ const NewsEvents = () => {
                 <span>USD 1,000</span>
                 <span>Deadline: Oct 12</span>
               </div>
-               <Link to="/about" className="btn-primary">
+               <Link to="/SeedSchool" className="btn-primary">
                             Learn More <FaArrowRight />
                           </Link>
             </div>
@@ -65,7 +65,7 @@ const NewsEvents = () => {
               and capacity building. We aim to empower emerging leaders who are
               passionate about agroecological transformation.
               </p>
-               <Link to="/about" className="btn-primary">
+               <Link to="/incubation-program" className="btn-primary">
               Learn More <FaHandshake />
             </Link>
             </div>
@@ -93,9 +93,6 @@ const NewsEvents = () => {
                 Join farmers from across the region to exchange indigenous seeds,
                 share knowledge, and celebrate agricultural biodiversity.
               </p>
-              <Link to="/about" className="btn-primary">
-              Learn More <FaHandshake />
-            </Link>
             </div>
           </div>
 
@@ -111,9 +108,6 @@ const NewsEvents = () => {
                 Our rotating seed exchange program visits different communities
                 to facilitate local seed sharing and preservation.
               </p>
-              <Link to="/about" className="btn-primary">
-              Learn More <FaHandshake />
-            </Link>
             </div>
           </div>
         </div>
@@ -270,14 +264,14 @@ const NewsEvents = () => {
       </section>
 
       {/* Newsletter Section */}
-      <section className="newsletter-section">
-        <div className="newsletter-content">
+      <section className="newsletters-section">
+        <div className="newsletters-content">
           <h2>Stay Updated</h2>
           <p>
             Subscribe to our newsletter for the latest news, events, and seed
             conservation updates
           </p>
-          <form className="newsletter-form">
+          <form className="newsletters-form">
             <input
               type="email"
               placeholder="Your email address"

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "../styles/CommunitySeedBankPlatform.css";
-import seedExchange from "../assets/cb.webp";
+import seedExchange from "../assets/kikopey.webp";
 import farmersGroup from "../assets/cbs.webp";
 
 const CommunitySeedBankPlatform: React.FC = () => {
