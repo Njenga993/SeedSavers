@@ -323,7 +323,7 @@
 }
 
 /* Newsletter Section */
-.newsletter-section {
+.newsletters-section {
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
               url('../assets/winowing.webp') center/cover no-repeat;
   color: white;
@@ -331,27 +331,27 @@
   text-align: center;
 }
 
-.newsletter-content {
+.newsletters-content {
   max-width: 600px;
   margin: 0 auto;
 }
 
-.newsletter-content h2 {
+.newsletters-content h2 {
   font-size: 2.2rem;
   margin-bottom: 1rem;
 }
 
-.newsletter-content p {
+.newsletters-content p {
   margin-bottom: 2rem;
 }
 
-.newsletter-form {
+.newsletters-form {
   display: flex;
   max-width: 500px;
   margin: 0 auto;
 }
 
-.newsletter-form input {
+.newsletters-form input {
   flex: 1;
   padding: 1rem;
   border: none;
@@ -359,7 +359,7 @@
   font-size: 1rem;
 }
 
-.newsletter-form button {
+.newsletters-form button {
   background: var(--jungle-green);
   color: white;
   border: none;
@@ -370,14 +370,15 @@
   transition: background 0.3s ease;
 }
 
-.newsletter-form button:hover {
+.newsletters-form button:hover {
   background: #1e4a34;
 }
 
 .privacy-note {
   font-size: 0.8rem;
-  opacity: 0.8;
+  opacity: 1.8;
   margin-top: 1rem;
+
 }
 
 /* Responsive Design */
@@ -407,17 +408,17 @@
     padding: 1rem;
   }
   
-  .newsletter-form {
+  .newsletters-form {
     flex-direction: column;
   }
   
-  .newsletter-form input,
-  .newsletter-form button {
+  .newsletters-form input,
+  .newsletters-form button {
     border-radius: 50px;
     width: 100%;
   }
   
-  .newsletter-form button {
+  .newsletters-form button {
     margin-top: 1rem;
     padding: 1rem;
   }
@@ -471,17 +472,17 @@
         padding: 0.8rem 1rem;
         font-size: 0.9rem;
     }
-    .newsletter-content h2 {
+    .newsletters-content h2 {
         font-size: 1.8rem;
     }
-    .newsletter-content p {
+    .newsletters-content p {
         font-size: 0.9rem;
     }
-    .newsletter-form input {
+    .newsletters-form input {
         padding: 0.8rem;
         font-size: 0.9rem;
     }
-    .newsletter-form button {
+    .newsletters-form button {
         padding: 0.8rem 1rem;
         font-size: 0.9rem;
     }
@@ -533,18 +534,18 @@
         padding: 0.8rem 1rem;
         font-size: 0.9rem;
     }
-    .newsletter-content h2 {
+    .newsletters-content h2 {
         font-size: 1.8rem;
     }
-    .newsletter-content p {
+    .newsletters-content p {
         font-size: 0.9rem;
     }
 
-    .newsletter-form input {
+    .newsletters-form input {
         padding: 0.8rem;
         font-size: 0.9rem;
     }
-    .newsletter-form button {
+    .newsletters-form button {
         padding: 0.8rem 1rem;
         font-size: 0.9rem;
     }

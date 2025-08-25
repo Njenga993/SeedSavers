@@ -2,7 +2,8 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FaCalendarAlt, FaMapMarkerAlt, FaUsers,FaGlobe, FaArrowRight, FaPlayCircle } from 'react-icons/fa';
 import '../styles/School.css';
-import foundingImg from '../assets/seed_pic.webp';
+import foundingImg from '../assets/seedschool.webp';
+
 
 const SeedSchool = () => {
   const [activeTab, setActiveTab] = useState('upcoming');
@@ -11,7 +12,7 @@ const SeedSchool = () => {
   // Data for previous seed schools
   const seedSchools = [
     {
-      year: '2023',
+      year: '2025',
       title: '2nd African Seed School',
       location: 'Nairobi, Kenya',
       participants: 42,
@@ -39,7 +40,7 @@ const SeedSchool = () => {
       ]
     },
     {
-      year: '2022',
+      year: '2024',
       title: '1st African Seed School',
       location: 'Nakuru, Kenya',
       participants: 28,
@@ -214,8 +215,8 @@ const SeedSchool = () => {
               <div className="previous-schools">
                 <h2>Previous Seed Schools</h2>
                 <p className="section-intro">
-                  Our previous seed schools have trained over 70 participants from 15 African countries, 
-                  creating a powerful network of seed guardians working to preserve Africa's agricultural heritage.
+                  Our previous seed schools have trained over 80 participants from 15  countries, 
+                  creating a powerful network of seed guardians working to preserve  agricultural heritage.
                 </p>
 
                 <div className="schools-selector">
@@ -278,14 +279,22 @@ const SeedSchool = () => {
 
                     {seedSchools[selectedSchool].youtubeLink && (
                       <div className="video-section">
-                        <h4>Watch the Recap</h4>
-                        <div className="video-container">
-                          <div className="video-placeholder">
-                            <FaPlayCircle className="video-icon" />
-                            <p>Video coming soon</p>
-                          </div>
-                        </div>
-                      </div>
+  <h4>Watch the Recap</h4>
+  <div className="video-container">
+    <iframe
+      width="560"
+      height="315"
+      src="https://www.youtube.com/embed/zCtXqpJgXDk?si=pZ0h3Mtqbz_9V2RT"
+      title="YouTube video player"
+      frameBorder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerPolicy="strict-origin-when-cross-origin"
+      allowFullScreen
+      className="video-iframe"
+    ></iframe>
+  </div>
+</div>
+
                     )}
                   </div>
                 )}
@@ -319,15 +328,22 @@ const SeedSchool = () => {
                   <div className="gallery-content">
                     <h3>{seedSchools[selectedSchool].title} Gallery</h3>
                     
-                    <div className="featured-video">
-                      <h4>Featured Video</h4>
-                      <div className="video-container">
-                        <div className="video-placeholder">
-                          <FaPlayCircle className="video-icon" />
-                          <p>Video coming soon</p>
-                        </div>
-                      </div>
-                    </div>
+                                         <div className="video-section">
+  <h4>Watch the Recap</h4>
+  <div className="video-container">
+    <iframe
+      width="560"
+      height="315"
+      src="https://www.youtube.com/embed/5JWQw6SEEjw?si=ef6WHP92dvQ6dPzb"
+      title="YouTube video player"
+      frameBorder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerPolicy="strict-origin-when-cross-origin"
+      allowFullScreen
+      className="video-iframe"
+    ></iframe>
+  </div>
+</div>
 
                     <div className="photo-gallery">
                       <h4>Photo Gallery</h4>
