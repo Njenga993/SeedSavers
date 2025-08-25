@@ -190,6 +190,7 @@ const SeedSchool = () => {
                         <h5>Costs</h5>
                         <ul>
                           <li>Accommodation,Meals & Tuition: $1000 (For the Whole Period) </li>
+                          <li>Send your Application by : <strong>12th Octomber</strong></li>
 
                         </ul>
                       </div>

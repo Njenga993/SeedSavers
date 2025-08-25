@@ -258,8 +258,8 @@
 
 .csbp-county-header {
   padding: 1.5rem;
-  background: linear-gradient(135deg, var(--jungle-green), #2c5e3a);
-  color: var(--white);
+  background: #fafafa;
+  color: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -280,7 +280,7 @@
 }
 
 .csbp-county-stats {
-  background: rgba(255, 255, 255, 0.2);
+  background: #235835;
   padding: 0.3rem 0.8rem;
   border-radius: 20px;
   font-size: 0.9rem;
@@ -290,6 +290,7 @@
 .csbp-expand-icon {
   font-size: 1.2rem;
   font-weight: bold;
+  color:#235835;
 }
 
 .csbp-county-seedbanks {
