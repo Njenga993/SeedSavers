@@ -11,7 +11,8 @@
     "preview": "vite preview",
     "predeploy": "npm run build",
     "start": "vite",
-    "deploy": "gh-pages -d dist -r https://github.com/Njenga993/SeedSavers.git"
+    "deploy": "gh-pages -d dist -r https://github.com/Njenga993/SeedSavers.git --depth=1"
+
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^7.0.0",
