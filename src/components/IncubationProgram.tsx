@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "../styles/IncubationProgram.css";
-import SpectacularImage from "../assets/nyakazi.webp";
+import SpectacularImage from "../assets/incubation.webp";
 
 const IncubationProgram: React.FC = () => {
   return (
@@ -33,15 +33,12 @@ const IncubationProgram: React.FC = () => {
 
           <div className="incubation-features">
             <div className="feature">
-              <span className="feature-icon"></span>
               <span>Seed Funding</span>
             </div>
             <div className="feature">
-              <span className="feature-icon"></span>
               <span>Expert Mentorship</span>
             </div>
             <div className="feature">
-              <span className="feature-icon"></span>
               <span>Market Access</span>
             </div>
           </div>
