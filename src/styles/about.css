@@ -52,7 +52,7 @@
   text-align: center;
   font-size: clamp(2rem, 5vw, 3rem);
   font-weight: var(--s-font-weight-bold);
-  color: var(--jungle-green);
+  color: black;
   margin-bottom: 1rem;
   position: relative;
 }
@@ -62,7 +62,7 @@
   display: block;
   width: 80px;
   height: 4px;
-  background: var(--gold-accent);
+  background: black;
   margin: 1rem auto;
 }
 

@@ -1,25 +1,28 @@
 import { useState, useRef, useEffect } from 'react';
 import '../styles/about.css';
 // Import strategy images
-import agrobiodiversityImg from '../assets/holding.webp';
-import capacityBuildingImg from '../assets/farmer_led.webp';
-import advocacyImg from '../assets/advocacy.webp';
+import agrobiodiversityImg from '../assets/kikopey.webp';
+import capacityBuildingImg from '../assets/seed-ambasadors.webp';
+import advocacyImg from '../assets/case.webp';
 // Import sub-strategy images
-import seedBankImg from '../assets/seed_pic.webp';
-import regenerationImg from '../assets/seed_pic.webp';
+import seedBankImg from '../assets/kikopey.webp';
+import regenerationImg from '../assets/dommy.webp';
 import geneBankImg from '../assets/seed_pic.webp';
 import seedExchangeImg from '../assets/seed_pic.webp';
-import agroecologyImg from '../assets/seed_pic.webp';
-import ambassadorImg from '../assets/seed_pic.webp';
-import valueAdditionImg from '../assets/seed_pic.webp';
-import learningCenterImg from '../assets/seed_pic.webp';
-import policyImg from '../assets/seed_pic.webp';
-import farmerAdvocacyImg from '../assets/seed_pic.webp';
-import seedFairsImg from '../assets/seed_pic.webp';
+import agroecologyImg from '../assets/harvest_1.webp';
+import ambassadorImg from '../assets/seed-ambasadors.webp';
+import valueAdditionImg from '../assets/nyakazi_inside.webp';
+import learningCenterImg from '../assets/hero_1.webp';
+import policyImg from '../assets/court.webp';
+import farmerAdvocacyImg from '../assets/seed-ambasadors.webp';
+import seedFairsImg from '../assets/fair.webp';
 // Import journey images
-import foundingImg from '../assets/seed_pic.webp';
+import foundingImg from '../assets/main.webp';
 import expansionImg from '../assets/seed_pic.webp';
-import recognitionImg from '../assets/seed_pic.webp';
+import recognitionImg from '../assets/IPs.webp';
+import recent from '../assets/hero_1.webp'
+import innovation from '../assets/sunny.webp'
+import seedfair from '../assets/seedfair.webp'
 // Import Seed School component
 import SeedSchool from '../components/SeedSchool';
 import IncubationProgram from '../components/IncubationProgram';
@@ -139,13 +142,12 @@ const About = () => {
         {
           title: 'Community Learning Center',
           description: [
-            'Hubs in Gilgil, Baringo and Kakamega',
             'Practical, hands-on learning space',
             'Knowledge exchange between farmers and researchers',
             'Preserve traditional agricultural practices',
             'Integrate modern sustainable farming techniques'
           ],
-          impact: '3 centers serving thousands of visitors annually',
+          impact: 'center serving thousands of visitors annually',
           expanded: false,
           image: learningCenterImg
         }
@@ -203,7 +205,7 @@ const About = () => {
   // Journey and Milestones data
   const [journey] = useState([
     {
-      year: '2010',
+      year: '2009',
       title: 'Foundation',
       description: 'Seed Savers Network was established with a vision to preserve indigenous seeds and empower farming communities.',
       image: foundingImg,
@@ -241,11 +243,11 @@ const About = () => {
       year: '2019',
       title: 'Growth',
       description: 'Significant growth in community seed banks and international partnerships.',
-      image: null,
+      image: seedfair,
       milestones: [
         '75+ community seed banks established',
         'International partnerships formed',
-        'First deposits to Svalbard Global Seed Vault',
+        'Deposits to Svalbard Global Seed Vault',
         'Digital seed exchange platform launched'
       ]
     },
@@ -253,25 +255,27 @@ const About = () => {
       year: '2022',
       title: 'Innovation',
       description: 'Integration of technology and expansion of climate resilience programs.',
-      image: null,
+      image: innovation,
       milestones: [
         'Mobile training app launched',
         'Climate-resilient seed varieties identified',
         '15,000+ farmers trained in agroecology',
-        'Expanded to 8 counties'
+        'Expanded to 8 counties',
+        'Started an Incubation Program'
       ]
     },
     {
-      year: '2024',
+      year: '2025',
       title: 'Present',
-      description: 'Current achievements and ongoing initiatives across East Africa.',
-      image: null,
+      description: 'Current achievements and ongoing initiatives across  Africa.',
+      image: recent,
       milestones: [
-        '105 community seed banks',
+        '112+ community seed banks',
         '96,500+ farmers in network',
         '3,000+ seed varieties conserved',
         '4,820 trained Seed Ambassadors',
-        '83 seed fairs conducted'
+        '83 seed fairs conducted',
+        '3 Seed School Boot camps Hosted'
       ]
     }
   ]);
@@ -339,7 +343,7 @@ const About = () => {
         {/* About Us Section with ref for scrolling */}
         <section ref={aboutRef} id="about" className="about-intro-section">
           <div className="container">
-            <h2 className="section-title">Our Story</h2>
+            <h1 className="section-itle">Our Story</h1>
             <div className="about-intro-content">
               <div className="about-text">
                 <p>
@@ -353,19 +357,20 @@ const About = () => {
                   Our journey began with a simple yet powerful realization: the loss of traditional seed varieties 
                   represents not just a loss of genetic diversity, but a loss of cultural heritage, traditional knowledge, 
                   and community resilience. For over a decade, we have been at the forefront of the seed conservation 
-                  movement in East Africa, establishing a network of community seed banks, training seed ambassadors, 
+                  movement in Africa, establishing a network of community seed banks, training seed ambassadors, 
                   and advocating for policies that protect farmers' rights to save, exchange, and sell their seeds.
                 </p>
                 <p>
-                  Today, we work with over 96,500 farmers across 8 counties, maintaining 105 community seed banks 
+                  Today, we work with over 96,500 farmers across Africa, maintaining 112+ community seed banks 
                   that safeguard thousands of indigenous varieties. Our approach combines traditional knowledge with 
                   modern sustainable practices, creating a holistic model that addresses food security, climate resilience, 
                   and economic empowerment simultaneously.
                 </p>
                 <p>
-                  We believe that farmers are not just food producers but custodians of genetic diversity and innovators 
-                  in their own right. By strengthening farmer-managed seed systems, we are building a more resilient, 
-                  diverse, and sovereign food future for all.
+                   We believe that access to a wide variety of seeds is crucial for enhancing food sovereignty, resilience, 
+                   and sustainability in agriculture. Our goal is to empower farmers by providing them with the resources 
+                   and knowledge needed to cultivate diverse crops, thereby preserving biodiversity and adapting to changing
+                    climate conditions.
                 </p>
               </div>
               <div className="about-image">
@@ -382,7 +387,7 @@ const About = () => {
         <section ref={journeyRef} id="journey" className="journey-milestones">
           <div className="container">
             <h2 className="section-title">Our Journey & Milestones</h2>
-            <p className="section-subtitle">From humble beginnings to a nationwide movement for seed sovereignty</p>
+            <p className="section-subtitle">From humble beginnings to a worldwide movement for seed sovereignty</p>
             
             <div className="journey-timeline">
               {journey.map((period, index) => (
@@ -415,7 +420,7 @@ const About = () => {
               <h3>Our Impact Over the Years</h3>
               <div className="stats-grid">
                 <div className="stat-box">
-                  <div className="stat-number">14</div>
+                  <div className="stat-number">16</div>
                   <div className="stat-label">Years of Service</div>
                 </div>
                 <div className="stat-box">
@@ -445,7 +450,7 @@ const About = () => {
               {strategies.map((strategy, index) => (
                 <div className="strategy-card" key={index}>
                   <div className="strategy-header">
-                    <div className="strategy-icon">{strategy.icon}</div>
+                    
                     <h3>{strategy.title}</h3>
                   </div>
                   <p className="strategy-summary">{strategy.summary}</p>

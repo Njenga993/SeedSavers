@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "../styles/CommunitySeedBank.css";
-import seedStorage from "../assets/cb.webp";
+import seedStorage from "../assets/kikopey.webp";
 
 const CommunitySeedBank: React.FC = () => {
   return (
@@ -14,7 +14,7 @@ const CommunitySeedBank: React.FC = () => {
 
         {/* Right Side Text */}
         <div className="csb-text">
-          <h2>Community Seed Bank Network</h2>
+          <h2>Community Seed Bank Platform</h2>
           <p className="csb-tagline">
             Preserving Africa's agricultural heritage, one seed at a time
           </p>
@@ -42,15 +42,12 @@ const CommunitySeedBank: React.FC = () => {
 
           <div className="csb-features">
             <div className="feature">
-              <span className="feature-icon"></span>
               <span>Seed Preservation</span>
             </div>
             <div className="feature">
-              <span className="feature-icon"></span>
               <span>Community Exchange</span>
             </div>
             <div className="feature">
-              <span className="feature-icon"></span>
               <span>Biodiversity Protection</span>
             </div>
           </div>
