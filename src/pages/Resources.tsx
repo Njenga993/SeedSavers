@@ -8,6 +8,8 @@ import SpectaclarImage from '../assets/happy.webp';
 import SpectaularImage from '../assets/harvest.webp';
 import SpectcularImage from '../assets/holding.webp';
 import Image from '../assets/app.webp';
+import Image2 from '../assets/seedex.webp';
+
 
 interface ResourceItem {
   id: number;
@@ -203,9 +205,9 @@ const ResourcesPage: React.FC = () => {
     { 
       id: 1, 
       title: "Seed Exchange Kenya", 
-      fileUrl: "https://play.google.com/store/apps/details?id=org.seedexchangekenya.seedsavers&hl=en&pli=1", 
-      previewText: "Connect with local farmers and exchange seeds easily through our mobile platform.",
-      imageUrl: Image
+      fileUrl: "https://seedexchangekenya.org/", 
+      previewText: "Its a Website that Connects the local farmers and makes exchange of seeds easy.",
+      imageUrl: Image2
     },
     { 
       id: 2, 
@@ -232,27 +234,6 @@ const ResourcesPage: React.FC = () => {
       <ResourceSection title="Descriptors" resources={descriptors} altBg />
       <ResourceSection title="Manuals & Publications" resources={manuals} />
 
-      {/* Newsletter Section - Consistent with News & Events */}
-      <section className="newsletter-section">
-        <div className="newsletter-content">
-          <h2>Stay Updated</h2>
-          <p>
-            Subscribe to our newsletter for new resources, updates, and seed
-            conservation news
-          </p>
-          <form className="newsletter-form">
-            <input
-              type="email"
-              placeholder="Your email address"
-              required
-            />
-            <button type="submit">Subscribe</button>
-          </form>
-          <p className="privacy-note">
-            We respect your privacy. Unsubscribe at any time.
-          </p>
-        </div>
-      </section>
     </div>
   );
 };
