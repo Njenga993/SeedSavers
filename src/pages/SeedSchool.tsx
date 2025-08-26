@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { FaCalendarAlt, FaMapMarkerAlt, FaUsers,FaGlobe, FaArrowRight, FaPlayCircle } from 'react-icons/fa';
+import { FaCalendarAlt, FaMapMarkerAlt, FaUsers,FaGlobe, FaArrowRight } from 'react-icons/fa';
 import '../styles/School.css';
 import foundingImg from '../assets/seedschool.webp';
 
@@ -14,7 +14,7 @@ const SeedSchool = () => {
     {
       year: '2025',
       title: '2nd African Seed School',
-      location: 'Nairobi, Kenya',
+      location: 'Seed Savers Network Training Center, Gilgil, Kenya',
       participants: 42,
       countries: 15,
       theme: 'Strengthening African Seed Sovereignty',
@@ -42,7 +42,7 @@ const SeedSchool = () => {
     {
       year: '2024',
       title: '1st African Seed School',
-      location: 'Nakuru, Kenya',
+      location: 'Seed Savers Network Training Center, Gilgil, Kenya',
       participants: 28,
       countries: 9,
       theme: 'Foundations of Seed Saving',
@@ -345,19 +345,7 @@ const SeedSchool = () => {
   </div>
 </div>
 
-                    <div className="photo-gallery">
-                      <h4>Photo Gallery</h4>
-                      <div className="gallery-grid">
-                        {seedSchools[selectedSchool].photos.map((photo, index) => (
-                          <div key={index} className="gallery-item">
-                            <img src={photo} alt={`Seed School ${seedSchools[selectedSchool].year} - Photo ${index + 1}`} />
-                            <div className="gallery-overlay">
-                              <FaPlayCircle className="view-icon" />
-                            </div>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
+                   
                   </div>
                 )}
               </div>

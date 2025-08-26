@@ -41,7 +41,7 @@ const About = () => {
         {
           title: 'Community Seed Banks',
           description: [
-            'Established 105 community seed banks across Kenya',
+            'Established 112+ community seed banks across Kenya',
             'Safeguard thousands of indigenous and climate-resilient seed varieties',
             'Serve as local seed reserves for smallholder farmers',
             'Reduce reliance on commercial seed markets',

@@ -1,12 +1,15 @@
 import React, { useState } from "react";
 import "../styles/Resources.css";
-import SpectacularImage from '../assets/n.webp';
-import SpectaculaImage from '../assets/IPs.webp';
-import SpectaculrImage from '../assets/advocacy.webp';
-import SpectacuarImage from '../assets/farmer_led.webp';
-import SpectaclarImage from '../assets/happy.webp';
-import SpectaularImage from '../assets/harvest.webp';
-import SpectcularImage from '../assets/holding.webp';
+import SpectacularImage from '../assets/beans.webp';
+import SpectaculaImage from '../assets/seed_fair.webp';
+import SpectaculrImage from '../assets/vine.webp';
+import SpectacuarImage from '../assets/kikopey.webp';
+import SpectaclarImage from '../assets/maize.webp';
+import SpectaularImage from '../assets/IPs.webp';
+import SpectcularImage from '../assets/seedex.webp';
+import Market from '../assets/winowing.webp';
+import Sorghum from '../assets/sorghum.webp';
+import Food from '../assets/foods.webp';
 import Image from '../assets/app.webp';
 import Image2 from '../assets/seedex.webp';
 
@@ -134,21 +137,21 @@ const ResourcesPage: React.FC = () => {
       title: "Developing Markets for Agroecology in Nakuru", 
       fileUrl: "./docs/Developing-Markets-for-Agroecology-in-Nakuru.pdf", 
       previewText: "Highlights of our achievements and milestones in seed conservation.",
-      imageUrl: SpectacularImage
+      imageUrl: Market
     },
     { 
       id: 2, 
       title: "SSN-NUTRITION-BOOKLET", 
       fileUrl: "./docs/SSN-NUTRITION-BOOKLET.pdf", 
       previewText: "Measuring the outcomes of our community seed bank programs.",
-      imageUrl: SpectcularImage
+      imageUrl: Sorghum
     },
     { 
       id: 3, 
       title: "Seed-Savers-Food-Forest-Training-Manual_v2", 
       fileUrl: "./docs/Seed-Savers-Food-Forest-Training-Manual_v2.pdf", 
       previewText: "Tracking the expansion of our seed bank network across regions.",
-      imageUrl: SpectaularImage
+      imageUrl:Food
     },
         { 
       id: 4, 
@@ -162,14 +165,14 @@ const ResourcesPage: React.FC = () => {
       title: "Seeds Field Survey Report 2024", 
       fileUrl: "./docs/Seeds-Field-Survey-Report-2024.pdf", 
       previewText: "Tracking the expansion of our seed bank network across regions.",
-      imageUrl: SpectacuarImage
+      imageUrl: SpectaularImage
     },
         { 
       id: 6, 
       title: "Community-Seedbank-Guidelines", 
       fileUrl: "./docs/Community-Seedbank-Guidelines.pdf", 
       previewText: "Tracking the expansion of our seed bank network across regions.",
-      imageUrl: SpectaculrImage
+      imageUrl: SpectacuarImage
     },
         { 
       id: 7, 
@@ -197,7 +200,7 @@ const ResourcesPage: React.FC = () => {
       title: "Seed Access", 
       fileUrl: "./docs/Newsletters.pdf", 
       previewText: "Promoting diverse seed access to farming communities in Kenya.",
-      imageUrl: SpectaculrImage
+      imageUrl: SpectaclarImage
     },
   ];
 
