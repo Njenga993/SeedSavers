@@ -82,22 +82,22 @@ const IncubationProgramPage: React.FC = () => {
                     <h3>What We Offer</h3>
                     <div className="ip-features-grid">
                       <div className="ip-feature-card">
-                        <div className="ip-feature-icon"></div>
                         <h4>Seed Funding</h4>
                         <p>Financial support to kickstart your agroecology venture</p>
                       </div>
                       <div className="ip-feature-card">
-                        <div className="ip-feature-icon"></div>
+                        <h4>Common Manufacturing Space</h4>
+                        <p>We Provide a Common Fully Fanished Manufacturing Space to the Enterprenuers</p>
+                      </div>
+                      <div className="ip-feature-card">
                         <h4>Expert Mentorship</h4>
                         <p>Guidance from experienced agroecology entrepreneurs</p>
                       </div>
                       <div className="ip-feature-card">
-                        <div className="ip-feature-icon"></div>
                         <h4>Training & Workshops</h4>
                         <p>Business development and technical skills training</p>
                       </div>
                       <div className="ip-feature-card">
-                        <div className="ip-feature-icon"></div>
                         <h4>Market Access</h4>
                         <p>Connections to local and international markets</p>
                       </div>
@@ -201,7 +201,7 @@ const IncubationProgramPage: React.FC = () => {
                       <div className="ip-products-grid">
                         <div className="ip-product-item">Dehydrated Black Night Shade(Managu)</div>
                         <div className="ip-product-item">Dehydrated Spider Plant(Saaga)</div>
-                        <div className="ip-product-item">Dehydrated Amathan(Terere)</div>
+                        <div className="ip-product-item">Dehydrated Amaranth(Terere)</div>
                         <div className="ip-product-item">Dehydrated Oyster Mushrooms</div>
                       </div>
                     </div>
