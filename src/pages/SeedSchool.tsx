@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { FaCalendarAlt, FaMapMarkerAlt, FaUsers,FaGlobe, FaArrowRight } from 'react-icons/fa';
 import '../styles/School.css';
 import foundingImg from '../assets/seedschool.webp';
+import founding from '../assets/seed_pic.webp';
 
 
 const SeedSchool = () => {
@@ -18,7 +19,7 @@ const SeedSchool = () => {
       participants: 92,
       countries: 15,
       theme: 'Strengthening African Seed Sovereignty',
-      image: foundingImg,
+      image: founding,
       highlights: [
         'Intensive training on seed conservation techniques',
         'Field visits to community seed banks',
