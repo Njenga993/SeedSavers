@@ -15,7 +15,7 @@ const SeedSchool = () => {
       year: '2025',
       title: '2nd African Seed School',
       location: 'Seed Savers Network Training Center, Gilgil, Kenya',
-      participants: 42,
+      participants: 92,
       countries: 15,
       theme: 'Strengthening African Seed Sovereignty',
       image: foundingImg,
@@ -43,7 +43,7 @@ const SeedSchool = () => {
       year: '2024',
       title: '1st African Seed School',
       location: 'Seed Savers Network Training Center, Gilgil, Kenya',
-      participants: 28,
+      participants: 88,
       countries: 9,
       theme: 'Foundations of Seed Saving',
       image: foundingImg,
@@ -83,7 +83,7 @@ const SeedSchool = () => {
               </div>
               <div className="S-stat">
                 <FaGlobe className="S-stat-icon" />
-                <span>15+ Countries</span>
+                <span>35+ Countries</span>
               </div>
             </div>
           </div>
