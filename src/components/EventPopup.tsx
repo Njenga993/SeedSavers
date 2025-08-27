@@ -1,5 +1,9 @@
 import React, { useEffect, useState } from "react";
 import "../styles/EventPopup.css";
+import { Link } from 'react-router-dom';
+import { 
+  FaArrowRight,
+} from 'react-icons/fa';
 import flyerImage from "../assets/seedschool_sep.webp"; // Replace with your actual image
 
 const EventPopup: React.FC = () => {
@@ -37,13 +41,9 @@ const EventPopup: React.FC = () => {
                               <p> <strong>Apply by: 12<sup>th</sup></strong> October 2025</p>
                               <p> <strong>Contact:</strong> info@seedsaverskenya.org | +254-712-451777</p>
 
-                             <button>
-  <li>
-    <a href="https://forms.gle/hLzhrDBbQqsYLgRy7" target="_blank" rel="noopener noreferrer">
-      Register Here
-    </a>
-  </li>
-</button>
+<Link to="https://forms.gle/hLzhrDBbQqsYLgRy7" target="_blank" className="btn-primary">
+            Register Here <FaArrowRight />
+          </Link>
 
           </div>
         </div>
