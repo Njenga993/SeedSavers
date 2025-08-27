@@ -13,6 +13,7 @@ import SeedSchool from './pages/SeedSchool';
 import CommunitySeedBankPlatform from './pages/CommunitySeedBankPlatform';
 import IncubationProgramPage from './pages/IncubationProgramPage';
 import NewsletterPage from './pages/NewsletterPage';
+import ScrollToTopButton from './components/ScrollToTopButton';
 
 function App() {
   return (
@@ -37,6 +38,7 @@ function App() {
             <Route path="/contact" element={<Contact />} />
           </Routes>
         </main>
+        <ScrollToTopButton />
         <Footer />
       </div>
     </Router>
