@@ -365,8 +365,8 @@ const SeedSchool = () => {
                 <p>"The Seed School transformed my understanding of seed sovereignty. I returned to my community and established our first community seed bank."</p>
               </div>
               <div className="testimonial-author">
-                <h4>Amara Okeke</h4>
-                <p>Kisumu, 2025 Participant</p>
+                <h4>Robert Agwank</h4>
+                <p>Uganda, 2025 Participant</p>
               </div>
             </div>
             <div className="testimonial-card">
@@ -383,8 +383,8 @@ const SeedSchool = () => {
                 <p>"This training gave me the tools to advocate for farmers' seed rights in my country. The policy sessions were particularly impactful."</p>
               </div>
               <div className="testimonial-author">
-                <h4>Fatima Abdi</h4>
-                <p>Ethiopia, 2024 Participant</p>
+                <h4>Akasa Andembo</h4>
+                <p>Uganda, 2025 Participant</p>
               </div>
             </div>
           </div>
