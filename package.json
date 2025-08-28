@@ -1,5 +1,5 @@
 {
-  "homepage": "https://github.com/Njenga993/SeedSavers",
+  "homepage": ".", 
   "name": "seedsavers",
   "private": true,
   "version": "0.0.0",
@@ -11,7 +11,7 @@
     "preview": "vite preview",
     "predeploy": "npm run build",
     "start": "vite",
-    "deploy": "gh-pages -d dist -r https://github.com/Njenga993/SeedSavers.git --depth=1"
+    "deploy": "npm run build && gh-pages -d dist"
 
   },
   "dependencies": {
