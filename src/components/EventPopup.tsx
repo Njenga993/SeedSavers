@@ -30,7 +30,7 @@ const EventPopup: React.FC = () => {
                  <h2>3rd Seed Boot Camp – October 26 to November 7, 2025</h2>
                      <p>
                     Join our October cohort for the 3rd <strong>Seed Boot Camp</strong> at the 
-                     Seed Savers Network Learning Center, Gilgil, Kenya.
+                     Seed Savers Network Learning Center, in Gilgil, Kenya.
                         Learn about <strong>seed security assessment</strong>, <strong>seed banking</strong>, 
                          <strong>documentation</strong>, <strong>policy & rights</strong>, and more — 
                              all in a <strong>hands-on, farmer-led</strong> training environment.
