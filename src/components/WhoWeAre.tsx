@@ -129,9 +129,8 @@ const StatCard = ({
 
   return (
     <div className="stat-card" style={{ animationDelay: trigger ? `${order * 0.1}s` : '0s' }}>
-      <div className="stat-icon"></div>
-      <h3>{count.toLocaleString()}<span>{suffix}</span></h3>
-      <p>{label}</p>
+      <div className="stat-number">{count.toLocaleString()}<span>{suffix}</span></div>
+      <div className="stat-label">{label}</div>
     </div>
   );
 };

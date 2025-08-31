@@ -145,12 +145,12 @@
 .s-dropdown-menu {
   position: absolute;
   top: 100%;
-  left: 0;
+  left: -2rem;
   background: var(--s-light);
   min-width: 200px;
-  border-radius: 8px;
+  border-radius: 10px;
   box-shadow: var(--s-shadow-lg);
-  padding: 0.5rem 0;
+  padding: 1.5rem 0;
   z-index: 1001;
   list-style: none;
   display: none;
@@ -171,6 +171,11 @@
 .s-dropdown-menu li a:hover {
   background: var(--s-secondary);
   color: var(--s-primary) !important;
+}
+
+/* Dropdown icon spacing */
+.s-nav-links li a svg {
+  margin-left: 0.3rem; /* Added space between text and icon */
 }
 
 /* Nav Actions */
@@ -198,6 +203,11 @@
 .s-search-toggle:hover, 
 .s-hamburger:hover {
   color: var(--s-secondary);
+}
+
+/* Hide hamburger on large screens */
+.s-hamburger {
+  display: none;
 }
 
 /* Search Bar */
@@ -258,6 +268,7 @@
   background: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(5px);
   z-index: 1000; /* Lower than sidebar */
+  display: none; /* Hide by default */
 }
 
 .s-sidebar {
@@ -269,6 +280,7 @@
   background: var(--s-light);
   z-index: 1001; /* Higher than blur */
   overflow-y: auto;
+  display: none; /* Hide by default */
 }
 
 .s-sidebar-links {
@@ -324,6 +336,11 @@
   font-size: var(--s-font-size-medium);
 }
 
+/* Mobile dropdown icon spacing */
+.s-mobile-dropdown-btn svg {
+  margin-left: 0.3rem; /* Added space between text and icon */
+}
+
 /* Body Padding to Prevent Content Hiding */
 body {
   padding-top: 150px; /* Adjust based on your navbar height */
@@ -347,6 +364,20 @@ body {
   
   body {
     padding-top: 120px;
+  }
+  
+  /* Show sidebar on mobile */
+  .s-blur-overlay {
+    display: block;
+  }
+  
+  .s-sidebar {
+    display: block;
+  }
+  
+  /* Show hamburger on mobile */
+  .s-hamburger {
+    display: block;
   }
 }
 
