@@ -242,9 +242,9 @@ const ContactPage: React.FC = () => {
                     <form
                       onSubmit={(e) => {
                         e.preventDefault();
-                        const baseUrl = "https://www.paypal.com/donate";
+                        const baseUrl = " ";
                         const params = new URLSearchParams({
-                          business: "your-paypal-email@example.com",
+                          business: " ",
                           amount: donationAmount.toString(),
                           currency_code: "USD",
                           recurring: isRecurring ? "1" : "0"

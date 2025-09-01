@@ -175,7 +175,9 @@
 
 /* Dropdown icon spacing */
 .s-nav-links li a svg {
-  margin-left: 0.3rem; /* Added space between text and icon */
+  margin-left: 0.5rem; /* Added space between text and icon */
+  margin-top: 0.4rem;
+  align-items: center;
 }
 
 /* Nav Actions */
@@ -338,7 +340,7 @@
 
 /* Mobile dropdown icon spacing */
 .s-mobile-dropdown-btn svg {
-  margin-left: 0.3rem; /* Added space between text and icon */
+  margin-left: 0.5rem; /* Added space between text and icon */
 }
 
 /* Body Padding to Prevent Content Hiding */
