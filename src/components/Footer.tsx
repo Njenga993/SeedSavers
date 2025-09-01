@@ -1,4 +1,3 @@
-// src/components/Footer.tsx
 import { FaFacebookF, FaTwitter, FaLinkedinIn, FaInstagram, FaYoutube, FaMapMarkerAlt, FaPhoneAlt, FaEnvelope, FaLeaf, FaPlus, FaMinus } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
@@ -111,7 +110,9 @@ const Footer = () => {
               <ul className="footer-contact">
                 <li>
                   <FaMapMarkerAlt />
-                  <span>Diatomite, Off Nakuru – Nairobi Highway, Gilgil,Kenya </span>
+                  <span>Diatomite, Off Nakuru – Nairobi Highway, Gilgil,Kenya </span></li>
+                <li>
+                  <FaMapMarkerAlt />
                   <span> P.O. BOX 334 -20116 </span>
                 </li>
                 <li>
@@ -124,10 +125,10 @@ const Footer = () => {
                 </li>
               </ul>
               
-             <div className="newsletter">
+             <div className="footer-newsletter">
     <h4>Subscribe to Newsletter</h4>
     <form 
-        className="newsletter-form" 
+        className="footer-newsletter-form" 
         action="https://formsubmit.co/seedsavers1@gmail.com" 
         method="POST"
     >
