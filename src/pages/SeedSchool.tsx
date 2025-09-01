@@ -129,7 +129,7 @@ const SeedSchool = () => {
                   <div className="school-details">
                     <div className="detail-item">
                       <FaCalendarAlt className="detail-icon" />
-                      <span>Octomber 26-November 7, 2025</span>
+                      <span>October 26-November 7, 2025</span>
                     </div>
                     <div className="detail-item">
                       <FaMapMarkerAlt className="detail-icon" />
@@ -192,7 +192,7 @@ const SeedSchool = () => {
                         <h5>Costs</h5>
                         <ul>
                           <li>Accommodation,Meals & Tuition: $1000 (For the Whole Period) </li>
-                          <li>Send your Application by : <strong>12th Octomber</strong></li>
+                          <li>Send your Application by : <strong>12th October</strong></li>
 
                         </ul>
                       </div>
