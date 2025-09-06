@@ -112,10 +112,10 @@ const NewsEvents = () => {
                 <h3>Annual Indigenous Seed Fair</h3>
                 <div className="ne-card-meta">
                   <span className="ne-meta-item">
-                    <FaMapMarkerAlt /> Nakuru County
+                    <FaMapMarkerAlt /> Laikipia County
                   </span>
                   <span className="ne-meta-item">
-                    <FaCalendarAlt /> March 15, 2025
+                    <FaCalendarAlt /> October 17, 2025
                   </span>
                 </div>
                 <p className="ne-card-description">

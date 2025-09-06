@@ -150,7 +150,7 @@ const NewsletterPage: React.FC = () => {
                   <div className="nl-issue-info">
                     <h2>Seed Sovereignty Quarterly - Spring 2024</h2>
                     <div className="nl-issue-meta">
-                      <span className="nl-issue-date">March 15, 2024</span>
+                      <span className="nl-issue-date">July 15, 2025</span>
                       <span className="nl-read-time">12 min read</span>
                       <div className="nl-tags">
                         {["Policy", "Community", "Conservation"].map(tag => (
@@ -220,40 +220,33 @@ const NewsletterPage: React.FC = () => {
                       <div className="nl-upcoming-events">
                         <h4>Upcoming Events</h4>
                         <div className="nl-event-item">
-                          <h5>National Seed Fair 2024</h5>
-                          <p>April 15-17, 2024 • Nairobi, Kenya</p>
+                          <h5>National Seed Fair 2025</h5>
+                          <p>October 15-17, 2025 • Nanyuki, Kenya</p>
                           <span className="nl-event-tag">Registration Open</span>
                         </div>
                         <div className="nl-event-item">
-                          <h5>Agroecology Training Workshop</h5>
-                          <p>May 3-5, 2024 • Gilgil Training Center</p>
+                          <h5>Seed School Boot Camp </h5>
+                          <p>October 26th - Nov 7, 2025 • Gilgil Training Center</p>
                           <span className="nl-event-tag">Limited Slots</span>
                         </div>
                       </div>
 
                       <div className="nl-quick-links">
                         <h4>Quick Links</h4>
-                        <Link to="/community-seed-banks" className="nl-quick-link">
+                        <Link to="/CommunitySeedBankPlatform" className="nl-quick-link">
                           Community Seed Bank Network
                         </Link>
                         <Link to="/incubation-program" className="nl-quick-link">
                           Agroecology Incubation Program
                         </Link>
-                        <Link to="/seed-school" className="nl-quick-link">
+                        <Link to="/SeedSchool" className="nl-quick-link">
                           Seed School Boot Camp
                         </Link>
                       </div>
                     </div>
                   </div>
 
-                  <div className="nl-download-section">
-                    <h4>Download Full Issue</h4>
-                    <p>Get the complete Spring 2024 newsletter in PDF format</p>
-                    <button className="nl-download-btn">
-                      <FaDownload />
-                      Download PDF (2.4 MB)
-                    </button>
-                  </div>
+                  
                 </div>
               </div>
             </div>
