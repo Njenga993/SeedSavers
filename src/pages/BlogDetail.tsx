@@ -1,7 +1,6 @@
-// src/pages/BlogDetails.tsx
 import { useParams, Link } from 'react-router-dom';
 import { blogPosts } from '../data/blogData';
-import { FaArrowLeft, FaCalendarAlt, FaUser, FaTag, FaShareAlt, FaBookmark } from 'react-icons/fa';
+import { FaArrowLeft, FaCalendarAlt, FaUser, FaTag, FaShareAlt, FaBookmark, FaFacebookF, FaTwitter, FaLinkedin } from 'react-icons/fa';
 import '../styles/BlogDetails.css';
 
 export default function BlogDetails() {
@@ -10,11 +9,11 @@ export default function BlogDetails() {
 
   if (!post) {
     return (
-      <div className="blog-details-container">
-        <div className="not-found-content">
+      <div className="bd-container">
+        <div className="bd-not-found">
           <h2>Article Not Found</h2>
           <p>The article you're looking for doesn't exist or may have been moved.</p>
-          <Link to="/blog" className="back-link">
+          <Link to="/blog" className="bd-back-link">
             <FaArrowLeft /> Back to Blog
           </Link>
         </div>
@@ -23,18 +22,18 @@ export default function BlogDetails() {
   }
 
   return (
-    <div className="blog-details-container">
+    <div className="bd-container">
       {/* Hero Section */}
-      <div className="blog-hero">
-        <div className="breadcrumb">
+      <div className="bd-hero">
+        <div className="bd-breadcrumb">
           <Link to="/blog">Blog</Link> / {post.category}
         </div>
-        <h1 className="blog-title">{post.title}</h1>
-        <p className="blog-excerpt">{post.excerpt}</p>
+        <h1 className="bd-title">{post.title}</h1>
+        <p className="bd-excerpt">{post.excerpt}</p>
         
-        <div className="blog-meta">
-          <div className="author-info">
-            <div className="author-avatar">
+        <div className="bd-meta">
+          <div className="bd-author-info">
+            <div className="bd-author-avatar">
               {post.author.charAt(0).toUpperCase()}
             </div>
             <span><FaUser /> {post.author}</span>
@@ -43,64 +42,70 @@ export default function BlogDetails() {
           <span>{post.readTime} read</span>
         </div>
         
-        <div className="action-buttons">
-          <button className="share-button"><FaShareAlt /> Share</button>
-          <button className="save-button"><FaBookmark /> Save</button>
+        <div className="bd-action-buttons">
+          <button className="bd-share-button"><FaShareAlt /> Share</button>
+          <button className="bd-save-button"><FaBookmark /> Save</button>
         </div>
       </div>
 
       {/* Featured Image */}
-      <div className="blog-image-container">
-        <img src={post.image} alt={post.title} className="blog-featured-image" />
-        {post.imageCaption && <p className="image-caption">{post.imageCaption}</p>}
+      <div className="bd-image-container">
+        <img src={post.image} alt={post.title} className="bd-featured-image" />
+        {post.imageCaption && <p className="bd-image-caption">{post.imageCaption}</p>}
       </div>
 
       {/* Content */}
-      <article className="blog-content">
+      <article className="bd-content">
         {post.content.split('\n\n').map((paragraph, index) => (
-          <p key={index} className={index % 3 === 0 ? "highlight-paragraph" : ""}>
+          <p key={index} className={index % 3 === 0 ? "bd-highlight-paragraph" : ""}>
             {paragraph.trim()}
           </p>
         ))}
         
         {post.quote && (
-          <blockquote className="blog-quote">
+          <blockquote className="bd-quote">
             "{post.quote}"
           </blockquote>
         )}
       </article>
 
       {/* Tags and Social Sharing */}
-      <div className="blog-footer">
-        <div className="blog-tags">
+      <div className="bd-footer">
+        <div className="bd-tags">
           <h3>Topics:</h3>
-          <div className="tags-container">
+          <div className="bd-tags-container">
             {post.tags.map((tag, i) => (
-              <span key={i} className="tag"><FaTag /> {tag}</span>
+              <span key={i} className="bd-tag"><FaTag /> {tag}</span>
             ))}
           </div>
         </div>
         
-        <div className="social-sharing">
+        <div className="bd-social-sharing">
           <h3>Share this article:</h3>
-          <div className="social-buttons">
-            <button className="twitter">Twitter</button>
-            <button className="facebook">Facebook</button>
-            <button className="linkedin">LinkedIn</button>
+          <div className="bd-social-buttons">
+            <button className="bd-twitter">
+              <FaTwitter /> Twitter
+            </button>
+            <button className="bd-facebook">
+              <FaFacebookF /> Facebook
+            </button>
+            <button className="bd-linkedin">
+              <FaLinkedin /> LinkedIn
+            </button>
           </div>
         </div>
       </div>
 
       {/* Back Link */}
-      <div className="back-button">
+      <div className="bd-back-button">
         <Link to="/blog"><FaArrowLeft /> Back to Blog</Link>
       </div>
       
       {/* Newsletter CTA */}
-      <div className="newsletter-cta">
+      <div className="bd-newsletter-cta">
         <h3>Enjoyed this article?</h3>
         <p>Subscribe to our newsletter for more content like this</p>
-        <form className="subscribe-form">
+        <form className="bd-subscribe-form">
           <input type="email" placeholder="Your email address" />
           <button type="submit">Subscribe</button>
         </form>
