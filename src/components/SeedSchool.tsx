@@ -33,11 +33,11 @@ const SeedSchool: React.FC = () => {
             </div>
             <div className="highlight-item">
               <span className="highlight-icon"></span>
-              <span>10+ countries reached</span>
+              <span>35+ countries reached</span>
             </div>
             <div className="highlight-item">
               <span className="highlight-icon"></span>
-              <span>800+ learners trained</span>
+              <span>200+ learners trained</span>
             </div>
           </div>
 
