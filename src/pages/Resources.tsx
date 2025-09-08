@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "../styles/Resources.css";
 import SpectacularImage from '../assets/beans.webp';
-import SpectaculaImage from '../assets/seed_fair.webp';
+import SpectaculaImage from '../assets/holding.webp';
 import SpectaculrImage from '../assets/vine.webp';
 import SpectacuarImage from '../assets/kikopey.webp';
 import SpectaclarImage from '../assets/maize.webp';
