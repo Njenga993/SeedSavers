@@ -216,7 +216,7 @@ const SeedSchool = () => {
               <div className="previous-schools">
                 <h2>Previous Seed Schools</h2>
                 <p className="section-intro">
-                  Our previous seed schools have trained over 80 participants from 15  countries, 
+                  Our previous seed schools have trained over 200 participants from 35  countries, 
                   creating a powerful network of seed guardians working to preserve  agricultural heritage.
                 </p>
 
