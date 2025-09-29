@@ -9,8 +9,38 @@ import ngiri from '../assets/ngiri.webp';
 import Ambs from '../assets/seed-ambasadors.webp';
 import Solar from '../assets/Solar dryer.webp';
 import IPS from '../assets/IPs.webp';
+import { useState } from 'react';
 
 const NewsEvents = () => {
+    // Newsletter state
+    const [email, setEmail] = useState("");
+    const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+  
+    const handleNewsletterSubmit = async (e: React.FormEvent) => {
+      e.preventDefault();
+      setStatus("loading");
+  
+      const formData = new FormData();
+      formData.append("EMAIL", email);
+      // Hidden bot field
+      formData.append("b_c2934a21fbcd75c1bb1f92088_dfb6ccb275", "");
+  
+      try {
+        await fetch(
+          "https://github.us4.list-manage.com/subscribe/post?u=c2934a21fbcd75c1bb1f92088&id=dfb6ccb275&f_id=00e6e9e8f0",
+          {
+            method: "POST",
+            mode: "no-cors", // Mailchimp blocks CORS, so we can't get detailed response
+            body: formData,
+          }
+        );
+        setStatus("success");
+        setEmail("");
+      } catch (error) {
+        setStatus("error");
+      }
+    };
+  
   return (
     <div className="ne-page">
       {/* Hero Section */}
@@ -346,29 +376,53 @@ const NewsEvents = () => {
         </div>
       </section>
 
-      {/* Newsletter Section */}
-      <section className="ne-newsletter">
-        <div className="ne-container">
-          <div className="ne-newsletter-content">
-            <h2>Stay Updated</h2>
-            <p>
-              Subscribe to our newsletter for the latest news, events, and seed
-              conservation updates
-            </p>
-            <form className="ne-newsletter-form">
-              <input
-                type="email"
-                placeholder="Your email address"
-                required
-              />
-              <button type="submit">Subscribe</button>
-            </form>
-            <p className="ne-privacy-note">
-              We respect your privacy. Unsubscribe at any time.
-            </p>
-          </div>
-        </div>
-      </section>
+     {/* Newsletter Section */}
+<section className="ne-newsletter">
+  <div className="ne-container">
+    <div className="ne-newsletter-content">
+      <h2>Stay Updated</h2>
+      <p>
+        Subscribe to our newsletter for the latest news, events, and seed
+        conservation updates
+      </p>
+
+      <form 
+        onSubmit={handleNewsletterSubmit} 
+        className="ne-newsletter-form"
+      >
+        <input
+          type="email"
+          name="EMAIL"
+          placeholder="Your email address"
+          className="newsletter-input"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          required
+        />
+        <button
+          type="submit"
+          className="newsletter-button"
+          disabled={status === "loading"}
+        >
+          {status === "loading" ? "Subscribing..." : "Subscribe"}
+        </button>
+      </form>
+
+      {/* Status messages */}
+      {status === "success" && (
+        <p className="newsletter-success">✅ Thanks for subscribing!</p>
+      )}
+      {status === "error" && (
+        <p className="newsletter-error">❌ Something went wrong. Please try again.</p>
+      )}
+
+      <p className="ne-privacy-note">
+        We respect your privacy. Unsubscribe at any time.
+      </p>
+    </div>
+  </div>
+</section>
+
     </div>
   );
 };

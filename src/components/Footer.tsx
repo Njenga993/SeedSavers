@@ -20,12 +20,12 @@ const Footer = () => {
 
     const formData = new FormData();
     formData.append("EMAIL", email);
-    // Hidden bot field
-    formData.append("b_c2934a21fbcd75c1bb1f92088_dfb6ccb275", "");
+    // Hidden bot field (new Mailchimp honeypot)
+    formData.append("b_f5b8f5616c5e9392c677bdcf2_67e58bdfd2", "");
 
     try {
       await fetch(
-        "https://github.us4.list-manage.com/subscribe/post?u=c2934a21fbcd75c1bb1f92088&id=dfb6ccb275&f_id=00e6e9e8f0",
+        "https://seedsaverskenya.us2.list-manage.com/subscribe/post?u=f5b8f5616c5e9392c677bdcf2&id=67e58bdfd2&f_id=007f7be1f0",
         {
           method: "POST",
           mode: "no-cors", // Mailchimp blocks CORS, so we can't get detailed response
@@ -163,6 +163,10 @@ const Footer = () => {
                 <h4>Subscribe to Newsletter</h4>
                 <form 
                   onSubmit={handleNewsletterSubmit}
+                  action="https://seedsaverskenya.us2.list-manage.com/subscribe/post?u=f5b8f5616c5e9392c677bdcf2&amp;id=67e58bdfd2&amp;f_id=007f7be1f0"
+                  method="post"
+                  target="_blank"
+                  noValidate
                   className="footer-newsletter-form"
                 >
                   <input 
@@ -174,6 +178,17 @@ const Footer = () => {
                     onChange={(e) => setEmail(e.target.value)}
                     required 
                   />
+
+                  {/* Honeypot field */}
+                  <div style={{ position: "absolute", left: "-5000px" }} aria-hidden="true">
+                    <input 
+                      type="text" 
+                      name="b_f5b8f5616c5e9392c677bdcf2_67e58bdfd2" 
+                      tabIndex={-1} 
+                      defaultValue="" 
+                    />
+                  </div>
+
                   <button 
                     type="submit" 
                     className="newsletter-button"
@@ -190,6 +205,12 @@ const Footer = () => {
                 {status === "error" && (
                   <p className="newsletter-error">❌ Something went wrong. Please try again.</p>
                 )}
+
+                {/* Mailchimp response placeholders */}
+                <div id="mce-responses" className="clear foot">
+                  <div className="newsletter-error" id="mce-error-response" style={{display:"none"}}></div>
+                  <div className="newsletter-success" id="mce-success-response" style={{display:"none"}}></div>
+                </div>
               </div>
             </div>
           </div>

@@ -152,6 +152,27 @@ body {
   background-color: var(--white);
   transition: all 0.3s ease;
   font-family: var(--s-font);
+  color: var(--text-dark); /* Ensure text color is dark for readability */
+}
+
+/* Fix for select dropdown readability */
+.contact-form-group select {
+  color: var(--text-dark);
+  background-color: var(--white);
+}
+
+.contact-form-group select option {
+  color: var(--text-dark);
+  background-color: var(--white);
+  padding: 10px;
+}
+
+.contact-form-group select:invalid {
+  color: var(--medium-gray);
+}
+
+.contact-form-group select option[value=""] {
+  color: var(--medium-gray);
 }
 
 .contact-form-group input:focus,
