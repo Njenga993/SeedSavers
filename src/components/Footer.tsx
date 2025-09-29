@@ -1,4 +1,7 @@
-import { FaFacebookF, FaTwitter, FaLinkedinIn, FaInstagram, FaYoutube, FaMapMarkerAlt, FaPhoneAlt, FaEnvelope, FaLeaf, FaPlus, FaMinus } from 'react-icons/fa';
+import { 
+  FaFacebookF, FaTwitter, FaLinkedinIn, FaInstagram, FaYoutube, 
+  FaMapMarkerAlt, FaPhoneAlt, FaEnvelope, FaLeaf, FaPlus, FaMinus 
+} from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import '../styles/footer.css';
@@ -6,7 +9,36 @@ import logo from '../assets/ssklogo-.webp';
 
 const Footer = () => {
   const [faqOpen, setFaqOpen] = useState(false);
-  
+
+  // Newsletter state
+  const [email, setEmail] = useState("");
+  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+
+  const handleNewsletterSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setStatus("loading");
+
+    const formData = new FormData();
+    formData.append("EMAIL", email);
+    // Hidden bot field (new Mailchimp honeypot)
+    formData.append("b_f5b8f5616c5e9392c677bdcf2_67e58bdfd2", "");
+
+    try {
+      await fetch(
+        "https://seedsaverskenya.us2.list-manage.com/subscribe/post?u=f5b8f5616c5e9392c677bdcf2&id=67e58bdfd2&f_id=007f7be1f0",
+        {
+          method: "POST",
+          mode: "no-cors", // Mailchimp blocks CORS, so we can't get detailed response
+          body: formData,
+        }
+      );
+      setStatus("success");
+      setEmail("");
+    } catch (error) {
+      setStatus("error");
+    }
+  };
+
   // FAQ data
   const faqs = [
     [
@@ -67,15 +99,15 @@ const Footer = () => {
                 </div>
               </div>
               <p className="footer-about">
-                Preserving  agricultural heritage through seed conservation,
+                Preserving agricultural heritage through seed conservation,
                 education, and sustainable farming practices for future generations.
               </p>
               <div className="footer-social">
                 <a href="https://www.facebook.com/profile.php?id=100064035750734" target='_blank' aria-label="Facebook"><FaFacebookF /></a>
                 <a href="https://x.com/Seedsavers_KE" target='_blank' aria-label="Twitter"><FaTwitter /></a>
                 <a href="https://www.youtube.com/@seedsaversnetworkkenya8211" target='_blank' aria-label="Youtube"><FaYoutube /></a>
-                <a href="https://www.linkedin.com/in/seed-savers-kenya-930346284?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"  target='_blank' aria-label="LinkedIn"><FaLinkedinIn /></a>
-                <a href="https://www.instagram.com/seedsavers_network?igsh=MXdsZjNwYzh0NDdvbg==" target='_blank' aria-label="Instagram"><FaInstagram /></a>
+                <a href="https://www.linkedin.com/in/seed-savers-kenya-930346284"  target='_blank' aria-label="LinkedIn"><FaLinkedinIn /></a>
+                <a href="https://www.instagram.com/seedsavers_network" target='_blank' aria-label="Instagram"><FaInstagram /></a>
               </div>
             </div>
 
@@ -104,16 +136,17 @@ const Footer = () => {
               </ul>
             </div>
 
-            {/* Contact Column */}
+            {/* Contact + Newsletter Column */}
             <div className="footer-col">
               <h3 className="footer-title">Contact Us Today</h3>
               <ul className="footer-contact">
                 <li>
                   <FaMapMarkerAlt />
-                  <span>Diatomite, Off Nakuru – Nairobi Highway, Gilgil,Kenya </span></li>
+                  <span>Diatomite, Off Nakuru – Nairobi Highway, Gilgil, Kenya</span>
+                </li>
                 <li>
                   <FaMapMarkerAlt />
-                  <span> P.O. BOX 334 -20116 </span>
+                  <span>P.O. BOX 334 -20116</span>
                 </li>
                 <li>
                   <FaPhoneAlt />
@@ -125,24 +158,60 @@ const Footer = () => {
                 </li>
               </ul>
               
-             <div className="footer-newsletter">
-    <h4>Subscribe to Newsletter</h4>
-    <form 
-        className="footer-newsletter-form" 
-        action="https://formsubmit.co/seedsavers1@gmail.com" 
-        method="POST"
-    >
-        <input 
-            type="email" 
-            name="email" 
-            placeholder="Your email address" 
-            required 
-        />
-        <input type="hidden" name="_subject" value="New Newsletter Subscription" />
-        <input type="hidden" name="_captcha" value="false" />
-        <button type="submit">Subscribe</button>
-    </form>
-</div>
+              {/* Mailchimp Newsletter Form */}
+              <div className="footer-newsletter">
+                <h4>Subscribe to Newsletter</h4>
+                <form 
+                  onSubmit={handleNewsletterSubmit}
+                  action="https://seedsaverskenya.us2.list-manage.com/subscribe/post?u=f5b8f5616c5e9392c677bdcf2&amp;id=67e58bdfd2&amp;f_id=007f7be1f0"
+                  method="post"
+                  target="_blank"
+                  noValidate
+                  className="footer-newsletter-form"
+                >
+                  <input 
+                    type="email" 
+                    name="EMAIL" 
+                    placeholder="Your email address" 
+                    className="newsletter-input"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    required 
+                  />
+
+                  {/* Honeypot field */}
+                  <div style={{ position: "absolute", left: "-5000px" }} aria-hidden="true">
+                    <input 
+                      type="text" 
+                      name="b_f5b8f5616c5e9392c677bdcf2_67e58bdfd2" 
+                      tabIndex={-1} 
+                      defaultValue="" 
+                    />
+                  </div>
+
+                  <button 
+                    type="submit" 
+                    className="newsletter-button"
+                    disabled={status === "loading"}
+                  >
+                    {status === "loading" ? "Subscribing..." : "Subscribe"}
+                  </button>
+                </form>
+
+                {/* Status messages */}
+                {status === "success" && (
+                  <p className="newsletter-success">✅ Thanks for subscribing!</p>
+                )}
+                {status === "error" && (
+                  <p className="newsletter-error">❌ Something went wrong. Please try again.</p>
+                )}
+
+                {/* Mailchimp response placeholders */}
+                <div id="mce-responses" className="clear foot">
+                  <div className="newsletter-error" id="mce-error-response" style={{display:"none"}}></div>
+                  <div className="newsletter-success" id="mce-success-response" style={{display:"none"}}></div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -186,8 +255,8 @@ const Footer = () => {
       <div className="footer-bottom"> 
         <div className="container">
           <div className="footer-bottom-content">
-            <p>&copy; {new Date().getFullYear()} Seed Savers Network. All rights reserved. </p>
-            <p>Powered by <Link to="https://njenga993.github.io/kspace/" target="_blank">kspace </Link> </p>
+            <p>&copy; {new Date().getFullYear()} Seed Savers Network. All rights reserved.</p>
+            <p>Powered by <Link to="https://njenga993.github.io/kspace/" target="_blank">kspace</Link></p>
             <div className="footer-legal">
               <Link to="/#">Privacy Policy</Link>
               <Link to="/#">Terms of Service</Link>
