@@ -6,76 +6,92 @@ import archiveImage from "../assets/seed_pic.webp";
 import subscriptionImage from "../assets/seed_pic.webp";
 import { FaArrowRight, FaDownload, FaCheck, FaQuoteLeft } from "react-icons/fa";
 
+// Type for newsletters
+interface Newsletter {
+  id: number;
+  title: string;
+  date: string;
+  excerpt: string;
+  image: string;
+  tags: string[];
+  readTime: string;
+  featured?: boolean;
+}
+
 const NewsletterPage: React.FC = () => {
-  const [activeTab, setActiveTab] = useState("latest");
+  const [activeTab, setActiveTab] = useState<"latest" | "archive" | "subscribe">("latest");
   const [email, setEmail] = useState("");
   const [subscribed, setSubscribed] = useState(false);
 
   const handleSubscribe = (e: React.FormEvent) => {
     e.preventDefault();
-    // Simulate subscription success
     setSubscribed(true);
     setEmail("");
-    // You would integrate with your email service here
   };
 
-  // Sample newsletter data
-  const newsletters = [
+  // Newsletter data
+  const newsletters: Newsletter[] = [
     {
       id: 1,
       title: "Seed Sovereignty Quarterly - Spring 2024",
       date: "March 15, 2024",
-      excerpt: "Celebrating 112 community seed banks across Kenya and new policy victories for farmer seed rights.",
+      excerpt:
+        "Celebrating 112 community seed banks across Kenya and new policy victories for farmer seed rights.",
       image: latestIssue,
       tags: ["Policy", "Community", "Conservation"],
       readTime: "12 min read",
-      featured: true
+      featured: true,
     },
     {
       id: 2,
       title: "Agroecology Innovations - Winter 2023",
       date: "December 10, 2023",
-      excerpt: "Spotlight on youth-led agroecology startups and climate-resilient farming techniques.",
+      excerpt:
+        "Spotlight on youth-led agroecology startups and climate-resilient farming techniques.",
       image: archiveImage,
       tags: ["Innovation", "Youth", "Climate"],
-      readTime: "8 min read"
+      readTime: "8 min read",
     },
     {
       id: 3,
       title: "Seed Savers Digest - Fall 2023",
       date: "September 22, 2023",
-      excerpt: "National seed fair highlights and success stories from our incubation program graduates.",
+      excerpt:
+        "National seed fair highlights and success stories from our incubation program graduates.",
       image: subscriptionImage,
       tags: ["Events", "Success Stories", "Training"],
-      readTime: "10 min read"
+      readTime: "10 min read",
     },
     {
       id: 4,
       title: "Biodiversity Bulletin - Summer 2023",
       date: "June 30, 2023",
-      excerpt: "Documenting 64 new traditional varieties and community conservation efforts across East Africa.",
+      excerpt:
+        "Documenting 64 new traditional varieties and community conservation efforts across East Africa.",
       image: latestIssue,
       tags: ["Biodiversity", "Research", "Documentation"],
-      readTime: "15 min read"
+      readTime: "15 min read",
     },
     {
       id: 5,
       title: "Food Sovereignty Times - Spring 2023",
       date: "March 18, 2023",
-      excerpt: "Policy updates and community advocacy strategies for protecting indigenous seed systems.",
+      excerpt:
+        "Policy updates and community advocacy strategies for protecting indigenous seed systems.",
       image: archiveImage,
       tags: ["Policy", "Advocacy", "Community"],
-      readTime: "11 min read"
+      readTime: "11 min read",
     },
     {
       id: 6,
       title: "Seed Guardians Journal - Winter 2022",
       date: "December 5, 2022",
-      excerpt: "Celebrating our seed ambassadors and their impact on preserving agricultural heritage.",
+      excerpt:
+        "Celebrating our seed ambassadors and their impact on preserving agricultural heritage.",
       image: subscriptionImage,
       tags: ["Ambassadors", "Impact", "Heritage"],
-      readTime: "9 min read"
-    }
+      readTime: "9 min read",
+    },
   ];
 
   return (
@@ -86,7 +102,8 @@ const NewsletterPage: React.FC = () => {
           <div className="nl-hero-text">
             <h1>Seed Savers Newsletter</h1>
             <p className="nl-hero-subtitle">
-              Stay updated on seed sovereignty, agroecology innovations, and food system transformation
+              Stay updated on seed sovereignty, agroecology innovations, and food system
+              transformation
             </p>
             <div className="nl-hero-stats">
               <div className="nl-stat">
@@ -110,21 +127,21 @@ const NewsletterPage: React.FC = () => {
       <section className="nl-tabs">
         <div className="nl-container">
           <div className="nl-tab-buttons">
-            <button 
-              className={`nl-tab-button ${activeTab === 'latest' ? 'nl-active' : ''}`}
-              onClick={() => setActiveTab('latest')}
+            <button
+              className={`nl-tab-button ${activeTab === "latest" ? "nl-active" : ""}`}
+              onClick={() => setActiveTab("latest")}
             >
               Latest Issue
             </button>
-            <button 
-              className={`nl-tab-button ${activeTab === 'archive' ? 'nl-active' : ''}`}
-              onClick={() => setActiveTab('archive')}
+            <button
+              className={`nl-tab-button ${activeTab === "archive" ? "nl-active" : ""}`}
+              onClick={() => setActiveTab("archive")}
             >
               Archive
             </button>
-            <button 
-              className={`nl-tab-button ${activeTab === 'subscribe' ? 'nl-active' : ''}`}
-              onClick={() => setActiveTab('subscribe')}
+            <button
+              className={`nl-tab-button ${activeTab === "subscribe" ? "nl-active" : ""}`}
+              onClick={() => setActiveTab("subscribe")}
             >
               Subscribe
             </button>
@@ -135,8 +152,8 @@ const NewsletterPage: React.FC = () => {
       {/* Content Section */}
       <section className="nl-content">
         <div className="nl-container">
-          {/* Latest Issue Tab */}
-          {activeTab === 'latest' && (
+          {/* Latest Issue */}
+          {activeTab === "latest" && (
             <div className="nl-tab-content">
               <div className="nl-latest-issue">
                 <div className="nl-issue-header">
@@ -153,8 +170,10 @@ const NewsletterPage: React.FC = () => {
                       <span className="nl-issue-date">July 15, 2025</span>
                       <span className="nl-read-time">12 min read</span>
                       <div className="nl-tags">
-                        {["Policy", "Community", "Conservation"].map(tag => (
-                          <span key={tag} className="nl-tag">{tag}</span>
+                        {["Policy", "Community", "Conservation"].map((tag) => (
+                          <span key={tag} className="nl-tag">
+                            {tag}
+                          </span>
                         ))}
                       </div>
                     </div>
@@ -165,35 +184,36 @@ const NewsletterPage: React.FC = () => {
                   <div className="nl-content-grid">
                     <div className="nl-main-content">
                       <h3>Featured Stories</h3>
-                      
+
                       <article className="nl-feature-story">
                         <h4>112 Community Seed Banks and Growing</h4>
                         <p>
-                          This quarter, we celebrate a monumental achievement: 112 community seed banks 
-                          now actively preserving indigenous varieties across Kenya. From the arid lands 
-                          of Turkana to the fertile highlands of Kakamega, farmers are reclaiming seed 
-                          sovereignty and building resilient food systems.
+                          This quarter, we celebrate a monumental achievement: 112 community seed
+                          banks now actively preserving indigenous varieties across Kenya. From the
+                          arid lands of Turkana to the fertile highlands of Kakamega, farmers are
+                          reclaiming seed sovereignty and building resilient food systems.
                         </p>
                         <p>
-                          Our network has expanded to include 15 new seed banks in Baringo County alone, 
-                          each serving as a hub for knowledge exchange, seed multiplication, and community 
-                          empowerment. These efforts have preserved over 200 traditional varieties that 
-                          were on the brink of extinction.
+                          Our network has expanded to include 15 new seed banks in Baringo County
+                          alone, each serving as a hub for knowledge exchange, seed multiplication,
+                          and community empowerment. These efforts have preserved over 200
+                          traditional varieties that were on the brink of extinction.
                         </p>
                       </article>
 
                       <article className="nl-feature-story">
                         <h4>Policy Victory for Farmer Seed Rights</h4>
                         <p>
-                          After years of advocacy, we're thrilled to announce a significant policy shift 
-                          recognizing farmer-managed seed systems. The new legislation acknowledges the 
-                          rights of farmers to save, use, exchange, and sell their seeds—a crucial step 
-                          toward food sovereignty.
+                          After years of advocacy, we're thrilled to announce a significant policy
+                          shift recognizing farmer-managed seed systems. The new legislation
+                          acknowledges the rights of farmers to save, use, exchange, and sell their
+                          seeds—a crucial step toward food sovereignty.
                         </p>
                         <p>
-                          This victory wouldn't have been possible without the relentless efforts of 
-                          our seed ambassadors and partner organizations who participated in stakeholder 
-                          meetings, submitted policy briefs, and mobilized communities across the country.
+                          This victory wouldn't have been possible without the relentless efforts of
+                          our seed ambassadors and partner organizations who participated in
+                          stakeholder meetings, submitted policy briefs, and mobilized communities
+                          across the country.
                         </p>
                       </article>
 
@@ -245,15 +265,13 @@ const NewsletterPage: React.FC = () => {
                       </div>
                     </div>
                   </div>
-
-                  
                 </div>
               </div>
             </div>
           )}
 
-          {/* Archive Tab */}
-          {activeTab === 'archive' && (
+          {/* Archive */}
+          {activeTab === "archive" && (
             <div className="nl-tab-content">
               <div className="nl-section-header">
                 <h2>Newsletter Archive</h2>
@@ -285,7 +303,7 @@ const NewsletterPage: React.FC = () => {
               </div>
 
               <div className="nl-archive-grid">
-                {newsletters.map(newsletter => (
+                {newsletters.map((newsletter) => (
                   <div key={newsletter.id} className="nl-archive-item">
                     <div className="nl-archive-image">
                       <img src={newsletter.image} alt={newsletter.title} />
@@ -298,8 +316,10 @@ const NewsletterPage: React.FC = () => {
                       </div>
                       <p>{newsletter.excerpt}</p>
                       <div className="nl-tags">
-                        {newsletter.tags.map(tag => (
-                          <span key={tag} className="nl-tag">{tag}</span>
+                        {newsletter.tags.map((tag) => (
+                          <span key={tag} className="nl-tag">
+                            {tag}
+                          </span>
                         ))}
                       </div>
                       <button className="nl-read-btn">
@@ -318,34 +338,44 @@ const NewsletterPage: React.FC = () => {
             </div>
           )}
 
-          {/* Subscribe Tab */}
-          {activeTab === 'subscribe' && (
+          {/* Subscribe */}
+          {activeTab === "subscribe" && (
             <div className="nl-tab-content">
               <div className="nl-subscribe-content">
                 <div className="nl-subscribe-grid">
                   <div className="nl-subscribe-info">
                     <h2>Stay Connected</h2>
                     <p className="nl-subscribe-intro">
-                      Join our community of 1,000+ subscribers who receive regular updates on 
-                      seed sovereignty, agroecology innovations, and food system transformation.
+                      Join our community of 1,000+ subscribers who receive regular updates on seed
+                      sovereignty, agroecology innovations, and food system transformation.
                     </p>
 
                     <div className="nl-benefits-list">
                       <h4>What You'll Receive:</h4>
                       <ul>
-                        <li><FaCheck /> Quarterly digital newsletter with in-depth articles</li>
-                        <li><FaCheck /> Early access to event announcements and registrations</li>
-                        <li><FaCheck /> Exclusive interviews with seed guardians and experts</li>
-                        <li><FaCheck /> Policy updates and advocacy opportunities</li>
-                        <li><FaCheck /> Success stories from our network of community seed banks</li>
+                        <li>
+                          <FaCheck /> Quarterly digital newsletter with in-depth articles
+                        </li>
+                        <li>
+                          <FaCheck /> Early access to event announcements and registrations
+                        </li>
+                        <li>
+                          <FaCheck /> Exclusive interviews with seed guardians and experts
+                        </li>
+                        <li>
+                          <FaCheck /> Policy updates and advocacy opportunities
+                        </li>
+                        <li>
+                          <FaCheck /> Success stories from our network of community seed banks
+                        </li>
                       </ul>
                     </div>
 
                     <div className="nl-testimonial">
                       <FaQuoteLeft className="nl-quote-icon" />
                       <blockquote>
-                        "The Seed Savers newsletter keeps me informed about critical developments 
-                        in seed sovereignty. It's an invaluable resource for anyone working in 
+                        "The Seed Savers newsletter keeps me informed about critical developments in
+                        seed sovereignty. It's an invaluable resource for anyone working in
                         sustainable agriculture."
                       </blockquote>
                       <cite>- Dr. Wanjiru, Agricultural Researcher</cite>
@@ -360,13 +390,10 @@ const NewsletterPage: React.FC = () => {
                         </div>
                         <h3>Welcome to Our Community!</h3>
                         <p>
-                          Thank you for subscribing to our newsletter. You'll receive a confirmation 
+                          Thank you for subscribing to our newsletter. You'll receive a confirmation
                           email shortly with access to our latest issue.
                         </p>
-                        <button 
-                          className="nl-back-btn"
-                          onClick={() => setSubscribed(false)}
-                        >
+                        <button className="nl-back-btn" onClick={() => setSubscribed(false)}>
                           Subscribe Another Email
                         </button>
                       </div>
@@ -376,12 +403,7 @@ const NewsletterPage: React.FC = () => {
                         <form onSubmit={handleSubscribe}>
                           <div className="nl-form-group">
                             <label htmlFor="name">Full Name</label>
-                            <input
-                              type="text"
-                              id="name"
-                              placeholder="Enter your full name"
-                              required
-                            />
+                            <input type="text" id="name" placeholder="Enter your full name" required />
                           </div>
                           <div className="nl-form-group">
                             <label htmlFor="email">Email Address</label>
@@ -416,7 +438,8 @@ const NewsletterPage: React.FC = () => {
                           </button>
                         </form>
                         <p className="nl-privacy-note">
-                          We respect your privacy and will never share your information with third parties.
+                          We respect your privacy and will never share your information with third
+                          parties.
                         </p>
                       </div>
                     )}

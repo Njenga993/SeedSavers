@@ -421,14 +421,7 @@ const CommunitySeedBankPlatform: React.FC = () => {
                   </div>
                 </div>
 
-                <div className="csbp-newsletter-section">
-                  <h3>Stay Updated</h3>
-                  <p>Subscribe to our newsletter for updates on seed conservation efforts</p>
-                  <div className="csbp-newsletter-form">
-                    <input type="email" placeholder="Enter your email address" />
-                    <button className="csbp-subscribe-btn">Subscribe</button>
-                  </div>
-                </div>
+
               </div>
             </div>
           )}
