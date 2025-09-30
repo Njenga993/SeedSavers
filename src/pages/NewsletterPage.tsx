@@ -1,9 +1,13 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "../styles/NewsletterPage.css";
-import latestIssue from "../assets/seed_pic.webp";
-import archiveImage from "../assets/seed_pic.webp";
-import subscriptionImage from "../assets/seed_pic.webp";
+import latestIssue from "../assets/beat.webp";
+import subscription from "../assets/bw.webp";
+import subscriptionI from "../assets/zim.webp";
+import subscriptionIm from "../assets/kseed.webp";
+import subscriptionIma from "../assets/sheila.webp";
+import subscriptionImag from "../assets/ash.webp";
+
 import { FaArrowRight, FaDownload, FaCheck, FaQuoteLeft } from "react-icons/fa";
 
 // Type for newsletters
@@ -33,7 +37,7 @@ const NewsletterPage: React.FC = () => {
   const newsletters: Newsletter[] = [
     {
       id: 1,
-      title: "Seed Sovereignty Quarterly - Spring 2024",
+      title: "Seed Sovereignty Quarterly - Spring 2025",
       date: "March 15, 2024",
       excerpt:
         "Celebrating 112 community seed banks across Kenya and new policy victories for farmer seed rights.",
@@ -44,51 +48,51 @@ const NewsletterPage: React.FC = () => {
     },
     {
       id: 2,
-      title: "Agroecology Innovations - Winter 2023",
+      title: "Agroecology Innovations - Winter 2025",
       date: "December 10, 2023",
       excerpt:
         "Spotlight on youth-led agroecology startups and climate-resilient farming techniques.",
-      image: archiveImage,
+      image: subscription,
       tags: ["Innovation", "Youth", "Climate"],
       readTime: "8 min read",
     },
     {
       id: 3,
-      title: "Seed Savers Digest - Fall 2023",
+      title: "Seed Savers Digest - Fall 2025",
       date: "September 22, 2023",
       excerpt:
         "National seed fair highlights and success stories from our incubation program graduates.",
-      image: subscriptionImage,
+      image: subscriptionI,
       tags: ["Events", "Success Stories", "Training"],
       readTime: "10 min read",
     },
     {
       id: 4,
-      title: "Biodiversity Bulletin - Summer 2023",
+      title: "Biodiversity Bulletin - Summer 2025",
       date: "June 30, 2023",
       excerpt:
         "Documenting 64 new traditional varieties and community conservation efforts across East Africa.",
-      image: latestIssue,
+      image: subscriptionIm,
       tags: ["Biodiversity", "Research", "Documentation"],
       readTime: "15 min read",
     },
     {
       id: 5,
-      title: "Food Sovereignty Times - Spring 2023",
+      title: "Food Sovereignty Times - Spring 2025",
       date: "March 18, 2023",
       excerpt:
         "Policy updates and community advocacy strategies for protecting indigenous seed systems.",
-      image: archiveImage,
+      image: subscriptionIma,
       tags: ["Policy", "Advocacy", "Community"],
       readTime: "11 min read",
     },
     {
       id: 6,
-      title: "Seed Guardians Journal - Winter 2022",
+      title: "Seed Guardians Journal - Winter 2025",
       date: "December 5, 2022",
       excerpt:
         "Celebrating our seed ambassadors and their impact on preserving agricultural heritage.",
-      image: subscriptionImage,
+      image: subscriptionImag,
       tags: ["Ambassadors", "Impact", "Heritage"],
       readTime: "9 min read",
     },
@@ -158,14 +162,14 @@ const NewsletterPage: React.FC = () => {
               <div className="nl-latest-issue">
                 <div className="nl-issue-header">
                   <div className="nl-issue-image">
-                    <img src={latestIssue} alt="Spring 2024 Newsletter Cover" />
+                    <img src={latestIssue} alt="Spring 2025 Newsletter Cover" />
                     <div className="nl-issue-badge">
                       <FaDownload />
                       Latest Issue
                     </div>
                   </div>
                   <div className="nl-issue-info">
-                    <h2>Seed Sovereignty Quarterly - Spring 2024</h2>
+                    <h2>Seed Sovereignty Quarterly - Spring 2025</h2>
                     <div className="nl-issue-meta">
                       <span className="nl-issue-date">July 15, 2025</span>
                       <span className="nl-read-time">12 min read</span>
@@ -323,7 +327,7 @@ const NewsletterPage: React.FC = () => {
                         ))}
                       </div>
                       <button className="nl-read-btn">
-                        Read Issue <FaArrowRight />
+                        Coming Soon... <FaArrowRight />
                       </button>
                     </div>
                   </div>

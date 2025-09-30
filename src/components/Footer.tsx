@@ -44,7 +44,7 @@ const Footer = () => {
     [
       { 
         question: "What is Seed Savers Kenya?", 
-        answer: "We are a non-profit organization dedicated to preserving indigenous seeds and promoting sustainable agriculture practices across Kenya." 
+        answer: "We are a non-governmental organization dedicated to preserving indigenous seeds and promoting sustainable agriculture practices across Kenya." 
       },
       { 
         question: "How can I get involved?", 
@@ -255,7 +255,7 @@ const Footer = () => {
       <div className="footer-bottom"> 
         <div className="container">
           <div className="footer-bottom-content">
-            <p>&copy; {new Date().getFullYear()} Seed Savers Network. All rights reserved.</p>
+            <p>&copy; {new Date().getFullYear()}-2030 Seed Savers Network. All rights reserved.</p>
             <p>Powered by <Link to="https://njenga993.github.io/kspace/" target="_blank">kspace</Link></p>
             <div className="footer-legal">
               <Link to="/#">Privacy Policy</Link>
