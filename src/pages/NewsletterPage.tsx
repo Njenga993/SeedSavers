@@ -25,12 +25,43 @@ interface Newsletter {
 const NewsletterPage: React.FC = () => {
   const [activeTab, setActiveTab] = useState<"latest" | "archive" | "subscribe">("latest");
   const [email, setEmail] = useState("");
-  const [subscribed, setSubscribed] = useState(false);
+  const [name, setName] = useState("");
+  const [interest, setInterest] = useState("");
+  const [agreed, setAgreed] = useState(false);
+  
+  // Mailchimp state - same as footer
+  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
 
-  const handleSubscribe = (e: React.FormEvent) => {
+  const handleNewsletterSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubscribed(true);
-    setEmail("");
+    setStatus("loading");
+
+    const formData = new FormData();
+    formData.append("EMAIL", email);
+    formData.append("FNAME", name);
+    if (interest) {
+      formData.append("INTEREST", interest);
+    }
+    // Hidden bot field (same Mailchimp honeypot as footer)
+    formData.append("b_f5b8f5616c5e9392c677bdcf2_67e58bdfd2", "");
+
+    try {
+      await fetch(
+        "https://seedsaverskenya.us2.list-manage.com/subscribe/post?u=f5b8f5616c5e9392c677bdcf2&id=67e58bdfd2&f_id=007f7be1f0",
+        {
+          method: "POST",
+          mode: "no-cors", // Mailchimp blocks CORS, so we can't get detailed response
+          body: formData,
+        }
+      );
+      setStatus("success");
+      setEmail("");
+      setName("");
+      setInterest("");
+      setAgreed(false);
+    } catch (error) {
+      setStatus("error");
+    }
   };
 
   // Newsletter data
@@ -387,7 +418,7 @@ const NewsletterPage: React.FC = () => {
                   </div>
 
                   <div className="nl-subscribe-form-container">
-                    {subscribed ? (
+                    {status === "success" ? (
                       <div className="nl-success-message">
                         <div className="nl-success-icon">
                           <FaCheck />
@@ -397,54 +428,115 @@ const NewsletterPage: React.FC = () => {
                           Thank you for subscribing to our newsletter. You'll receive a confirmation
                           email shortly with access to our latest issue.
                         </p>
-                        <button className="nl-back-btn" onClick={() => setSubscribed(false)}>
+                        <button 
+                          className="nl-back-btn" 
+                          onClick={() => setStatus("idle")}
+                        >
                           Subscribe Another Email
                         </button>
                       </div>
                     ) : (
                       <div className="nl-subscribe-form">
                         <h3>Subscribe to Our Newsletter</h3>
-                        <form onSubmit={handleSubscribe}>
+                        
+                        {/* Status messages */}
+                        {status === "error" && (
+                          <p className="nl-error-message">
+                            ❌ Something went wrong. Please try again.
+                          </p>
+                        )}
+                        
+                        <form 
+                          onSubmit={handleNewsletterSubmit}
+                          action="https://seedsaverskenya.us2.list-manage.com/subscribe/post?u=f5b8f5616c5e9392c677bdcf2&amp;id=67e58bdfd2&amp;f_id=007f7be1f0"
+                          method="post"
+                          target="_blank"
+                          noValidate
+                        >
                           <div className="nl-form-group">
                             <label htmlFor="name">Full Name</label>
-                            <input type="text" id="name" placeholder="Enter your full name" required />
+                            <input 
+                              type="text" 
+                              id="name" 
+                              name="FNAME"
+                              placeholder="Enter your full name" 
+                              value={name}
+                              onChange={(e) => setName(e.target.value)}
+                              required 
+                            />
                           </div>
+                          
                           <div className="nl-form-group">
                             <label htmlFor="email">Email Address</label>
                             <input
                               type="email"
                               id="email"
+                              name="EMAIL"
                               placeholder="Enter your email address"
                               value={email}
                               onChange={(e) => setEmail(e.target.value)}
                               required
                             />
                           </div>
+                          
                           <div className="nl-form-group">
                             <label htmlFor="interest">Primary Interest</label>
-                            <select id="interest">
-                              <option>Select your interest</option>
-                              <option>Community Seed Banking</option>
-                              <option>Agroecology Entrepreneurship</option>
-                              <option>Policy & Advocacy</option>
-                              <option>Research & Education</option>
-                              <option>General Updates</option>
+                            <select 
+                              id="interest"
+                              name="INTEREST"
+                              value={interest}
+                              onChange={(e) => setInterest(e.target.value)}
+                            >
+                              <option value="">Select your interest</option>
+                              <option value="Community Seed Banking">Community Seed Banking</option>
+                              <option value="Agroecology Entrepreneurship">Agroecology Entrepreneurship</option>
+                              <option value="Policy & Advocacy">Policy & Advocacy</option>
+                              <option value="Research & Education">Research & Education</option>
+                              <option value="General Updates">General Updates</option>
                             </select>
                           </div>
+                          
                           <div className="nl-form-group">
                             <label className="nl-checkbox-label">
-                              <input type="checkbox" required />
+                              <input 
+                                type="checkbox" 
+                                checked={agreed}
+                                onChange={(e) => setAgreed(e.target.checked)}
+                                required 
+                              />
                               <span>I agree to receive email updates and newsletters</span>
                             </label>
                           </div>
-                          <button type="submit" className="nl-subscribe-btn">
-                            Subscribe Now
+
+                          {/* Honeypot field - same as footer */}
+                          <div style={{ position: "absolute", left: "-5000px" }} aria-hidden="true">
+                            <input 
+                              type="text" 
+                              name="b_f5b8f5616c5e9392c677bdcf2_67e58bdfd2" 
+                              tabIndex={-1} 
+                              defaultValue="" 
+                            />
+                          </div>
+
+                          <button 
+                            type="submit" 
+                            className="nl-subscribe-btn"
+                            disabled={status === "loading" || !agreed}
+                          >
+                            {status === "loading" ? "Subscribing..." : "Subscribe Now"}
                           </button>
                         </form>
+                        
                         <p className="nl-privacy-note">
                           We respect your privacy and will never share your information with third
                           parties.
                         </p>
+
+                        {/* Mailchimp response placeholders */}
+                        <div id="mce-responses" className="clear foot">
+                          <div className="nl-error-message" id="mce-error-response" style={{display:"none"}}></div>
+                          <div className="nl-success-message" id="mce-success-response" style={{display:"none"}}></div>
+                        </div>
                       </div>
                     )}
                   </div>
