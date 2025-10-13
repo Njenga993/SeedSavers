@@ -71,7 +71,7 @@ const NewsletterPage: React.FC = () => {
       title: "Seed Sovereignty Quarterly - Spring 2025",
       date: "March 15, 2024",
       excerpt:
-        "Celebrating 112 community seed banks across Kenya and new policy victories for farmer seed rights.",
+        "Celebrating 121+ community seed banks across Kenya and new policy victories for farmer seed rights.",
       image: latestIssue,
       tags: ["Policy", "Community", "Conservation"],
       readTime: "12 min read",
@@ -221,9 +221,9 @@ const NewsletterPage: React.FC = () => {
                       <h3>Featured Stories</h3>
 
                       <article className="nl-feature-story">
-                        <h4>112 Community Seed Banks and Growing</h4>
+                        <h4>121+ Community Seed Banks and Growing</h4>
                         <p>
-                          This quarter, we celebrate a monumental achievement: 112 community seed
+                          This quarter, we celebrate a monumental achievement: 121+ community seed
                           banks now actively preserving indigenous varieties across Kenya. From the
                           arid lands of Turkana to the fertile highlands of Kakamega, farmers are
                           reclaiming seed sovereignty and building resilient food systems.
@@ -242,7 +242,7 @@ const NewsletterPage: React.FC = () => {
                           After years of advocacy, we're thrilled to announce a significant policy
                           shift recognizing farmer-managed seed systems. The new legislation
                           acknowledges the rights of farmers to save, use, exchange, and sell their
-                          seeds—a crucial step toward food sovereignty.
+                          seeds a crucial step toward food sovereignty.
                         </p>
                         <p>
                           This victory wouldn't have been possible without the relentless efforts of
@@ -253,7 +253,7 @@ const NewsletterPage: React.FC = () => {
                       </article>
 
                       <div className="nl-stats-highlight">
-                        <h4>By the Numbers: Spring 2024 Impact</h4>
+                        <h4>By the Numbers: Spring 2025 Impact</h4>
                         <div className="nl-stats-grid">
                           <div className="nl-stat-item">
                             <span className="nl-number">3,285</span>
@@ -276,7 +276,7 @@ const NewsletterPage: React.FC = () => {
                         <h4>Upcoming Events</h4>
                         <div className="nl-event-item">
                           <h5>National Seed Fair 2025</h5>
-                          <p>October 15-17, 2025 • Nanyuki, Kenya</p>
+                          <p>October 14-15, 2025 • Nanyuki, Kenya</p>
                           <span className="nl-event-tag">Registration Open</span>
                         </div>
                         <div className="nl-event-item">
