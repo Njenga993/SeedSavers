@@ -245,7 +245,7 @@
 }
 
 .csbp-county-card {
-  background: var(--white);
+  background: var(--jungle-green);
   border-radius: 12px;
   overflow: hidden;
   box-shadow: var(--shadow-light);
@@ -258,7 +258,7 @@
 
 .csbp-county-header {
   padding: 1.5rem;
-  background: #fafafa;
+  background: linear-gradient(135deg, #2c5e3a, var(--jungle-green));
   color: white;
   display: flex;
   justify-content: space-between;
@@ -290,12 +290,12 @@
 .csbp-expand-icon {
   font-size: 1.2rem;
   font-weight: bold;
-  color:#235835;
+  color:white;
 }
 
 .csbp-county-seedbanks {
   padding: 1.5rem;
-  background: var(--light-bg);
+  background: var(--jungle-green);
   max-height: 400px;
   overflow-y: auto;
 }

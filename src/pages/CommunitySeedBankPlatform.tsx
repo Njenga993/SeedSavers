@@ -144,7 +144,7 @@ const CommunitySeedBankPlatform: React.FC = () => {
             </p>
             <div className="csbp-hero-stats">
               <div className="csbp-stat">
-                <span className="csbp-stat-number">112+</span>
+                <span className="csbp-stat-number">121+</span>
                 <span className="csbp-stat-label">Seed Banks</span>
               </div>
               <div className="csbp-stat">
@@ -203,13 +203,13 @@ const CommunitySeedBankPlatform: React.FC = () => {
                   <h2>About the Platform</h2>
                   <p>
                     The Community Seed Banks Platform (CSB) is a self-organized structure within the 
-                    <strong> Seed Savers Network</strong> that brings together <strong>112+ community seed banks</strong> across Kenya 
+                    <strong> Seed Savers Network</strong> that brings together <strong>121+ community seed banks</strong> across Kenya 
                     and beyond for knowledge sharing, collective action, and advocacy in support of 
                     seed sovereignty and agrobiodiversity conservation.
                   </p>
                   <p>
                     The CSB has grown into a powerful coordination hub, supporting the tireless efforts of 
-                    these 112+ active seed banks. This incredible achievement has been made possible through 
+                    these 121+ active seed banks. This incredible achievement has been made possible through 
                     the <strong>Seed Exchange Kenya initiative and the innovative Seed Exchange App</strong>, which have opened 
                     new doors for seed sharing, collaboration, and empowerment ensuring that the legacy of 
                     diverse, indigenous seeds thrives for generations to come.
@@ -252,7 +252,7 @@ const CommunitySeedBankPlatform: React.FC = () => {
             <div className="csbp-tab-content">
               <h2>Our Seed Bank Network</h2>
               <p className="csbp-section-intro">
-                Explore our growing network of 112+ community seed banks spread across Kenya, 
+                Explore our growing network of 121+ community seed banks spread across Kenya, 
                 each playing a vital role in preserving our agricultural heritage.
               </p>
 
