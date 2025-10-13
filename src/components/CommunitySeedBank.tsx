@@ -21,7 +21,7 @@ const CommunitySeedBank: React.FC = () => {
           
           <div className="csb-highlights">
             <div className="csb-stat">
-              <span className="stat-number">112+</span>
+              <span className="stat-number">121+</span>
               <span className="stat-label">Active Seed Banks</span>
             </div>
             <div className="csb-stat">

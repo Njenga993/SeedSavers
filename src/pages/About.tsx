@@ -41,7 +41,7 @@ const About = () => {
         {
           title: 'Community Seed Banks',
           description: [
-            'Established 112+ community seed banks across Kenya',
+            'Established 121+ community seed banks across Kenya',
             'Safeguard thousands of indigenous and climate-resilient seed varieties',
             'Serve as local seed reserves for smallholder farmers',
             'Reduce reliance on commercial seed markets',
@@ -270,7 +270,7 @@ const About = () => {
       description: 'Current achievements and ongoing initiatives across  Africa.',
       image: recent,
       milestones: [
-        '112+ community seed banks',
+        '121+ community seed banks',
         '96,500+ farmers in network',
         '3,000+ seed varieties conserved',
         '4,820 trained Seed Ambassadors',
@@ -361,7 +361,7 @@ const About = () => {
                   and advocating for policies that protect farmers' rights to save, exchange, and sell their seeds.
                 </p>
                 <p>
-                  Today, we work with over 96,500 farmers across Africa, maintaining 112+ community seed banks 
+                  Today, we work with over 96,500 farmers across Africa, maintaining 121+ community seed banks 
                   that safeguard thousands of indigenous varieties. Our approach combines traditional knowledge with 
                   modern sustainable practices, creating a holistic model that addresses food security, climate resilience, 
                   and economic empowerment simultaneously.
@@ -424,7 +424,7 @@ const About = () => {
                   <div className="stat-label">Years of Service</div>
                 </div>
                 <div className="stat-box">
-                  <div className="stat-number">112+</div>
+                  <div className="stat-number">121+</div>
                   <div className="stat-label">Community Seed Banks</div>
                 </div>
                 <div className="stat-box">
