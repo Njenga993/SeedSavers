@@ -89,42 +89,42 @@ const ResourcesPage: React.FC = () => {
   const policyBriefs: ResourceItem[] = [
     { 
       id: 1, 
-      title: "Seed Policy Brief 2023", 
+      title: "OPEN SOURCE SEED SYSTEMS", 
       fileUrl: "./docs/OSSS-Policy-brief-2022.pdf", 
       previewText: "Promoting Open Source Seed Systems for enhanced access and availability of seed and germplasm.",
       imageUrl: SpectacularImage
     },
     { 
       id: 2, 
-      title: "Agroecology Brief", 
+      title: "Support for Farmer Managed Seed Systems", 
       fileUrl: "./docs/SSN-Model-for-accessing-non-commercialized-registered-varieties-and-support-for-FMSS.pdf", 
       previewText: "A model for accesiing non-commercialized registered varieties and support for farmer managed seed systems.",
       imageUrl: SpectaclarImage
     },
     { 
       id: 3, 
-      title: "Terms and Conditions for Open Source Seed Use in Kenya", 
+      title: " Open Source Seed Use in Kenya", 
       fileUrl: "./docs/NEW-OPEN-SOURCE-SEEDS-MATERIAL-TRANSFER-TCs.pdf", 
       previewText: "Terms and conditions for open-source seed use in Kenya.",
       imageUrl: SpectaculrImage
     },
     { 
       id: 4, 
-      title: "Seed Regulation Protocol", 
+      title: "Protocol for collaboration between the National Genebank and Community Seed Banks in Kenya", 
       fileUrl: "./docs/protocol-for-csb-and-national-genebank-collaboration_issd-africa-1.pdf", 
       previewText: "Protocal",
       imageUrl: SpectaculaImage
     },
     { 
       id: 5, 
-      title: " seed exchange in Kenya", 
+      title: " REGULATING ONLINE SEED EXCHANGE", 
       fileUrl: "./docs/Online-Seeds-Exchange-policy-brief.pdf", 
       previewText: "Regulating Online Seed Exchange ",
       imageUrl: SpectcularImage
     },
     { 
       id: 6, 
-      title: "Seed Security Survey 2024", 
+      title: "Farmers’ Seed Practices in Nakuru Kenya", 
       fileUrl: "./docs/SSNAgrecolSeedStudyFinalMay-2023 copy.pdf", 
       previewText: "Survey on seed security and access in Kenya.",
       imageUrl: SpectaularImage
@@ -141,42 +141,42 @@ const ResourcesPage: React.FC = () => {
     },
     { 
       id: 2, 
-      title: "SSN-NUTRITION-BOOKLET", 
+      title: "10 Rich underutilised crops ", 
       fileUrl: "./docs/SSN-NUTRITION-BOOKLET.pdf", 
       previewText: "Measuring the outcomes of our community seed bank programs.",
       imageUrl: Sorghum
     },
     { 
       id: 3, 
-      title: "Seed-Savers-Food-Forest-Training-Manual_v2", 
+      title: "Seed-Savers-Food-Forest-Manual", 
       fileUrl: "./docs/Seed-Savers-Food-Forest-Training-Manual_v2.pdf", 
       previewText: "Tracking the expansion of our seed bank network across regions.",
       imageUrl:Food
     },
         { 
       id: 4, 
-      title: "Quality-Assurance-for-Seed-Exchange-booklett", 
+      title: "Partcipatory Quality Assurance for Seed Exchange", 
       fileUrl: "./docs/Quality-Assurance-for-Seed-Exchange-booklet.pdf", 
       previewText: "Tracking the expansion of our seed bank network across regions.",
       imageUrl: SpectaclarImage
     },
         { 
       id: 5, 
-      title: "Seeds Field Survey Report 2024", 
+      title: "Farmers’	Seed	Practices	in	Nakuru Kenya", 
       fileUrl: "./docs/Seeds-Field-Survey-Report-2024.pdf", 
       previewText: "Tracking the expansion of our seed bank network across regions.",
       imageUrl: SpectaularImage
     },
         { 
       id: 6, 
-      title: "Community-Seedbank-Guidelines", 
+      title: "Community Seedbank Establishment Guidelines", 
       fileUrl: "./docs/Community-Seedbank-Guidelines.pdf", 
       previewText: "Tracking the expansion of our seed bank network across regions.",
       imageUrl: SpectacuarImage
     },
         { 
       id: 7, 
-      title: "SSN Agrecol Seed Study Final May 2023", 
+      title: "Farmers’ Seed Practices in Nakuru Kenya", 
       fileUrl: "./docs/SSNAgrecolSeedStudyFinalMay-2023.pdf", 
       previewText: "Tracking the expansion of our seed bank network across regions.",
       imageUrl: SpectaculaImage 
@@ -197,7 +197,7 @@ const ResourcesPage: React.FC = () => {
   const manuals: ResourceItem[] = [
     { 
       id: 1, 
-      title: "Seed Access", 
+      title: "PROMOTING DIVERSE SEED ACCESS TO FARMING COMMUNITIES IN KENYA", 
       fileUrl: "./docs/Newsletters.pdf", 
       previewText: "Promoting diverse seed access to farming communities in Kenya.",
       imageUrl: SpectaclarImage
