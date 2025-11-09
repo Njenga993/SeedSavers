@@ -1,0 +1,80 @@
+/* src/styles/Loader.css */
+
+/* Loader overlay covers the whole screen */
+.loader-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+
+/* --- NEW: Container for the morphing dots --- */
+.morphing-dots-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px; /* Creates space between the dots */
+}
+
+/* --- NEW: Styling for each individual dot --- */
+.dot {
+  width: 12px;
+  height: 12px;
+  background-color: #235835; /* Your jungle green accent */
+  border-radius: 50%;
+  
+  /* Apply the morphing animation */
+  animation: morph 1.5s ease-in-out infinite;
+}
+
+/* --- NEW: Stagger the animation for each dot to create a wave --- */
+.dot:nth-child(1) {
+  animation-delay: -0.32s;
+}
+
+.dot:nth-child(2) {
+  animation-delay: -0.16s;
+}
+
+.dot:nth-child(3) {
+  animation-delay: 0;
+}
+
+/* --- NEW: The keyframes for the morphing animation --- */
+@keyframes morph {
+  0%, 80%, 100% {
+    transform: scale(0.8);
+    opacity: 0.5;
+  }
+  40% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+}
+
+/* Text below spinner (unchanged) */
+.loader-text {
+  margin-top: 20px; /* Slightly more space for the new loader */
+  font-size: 1rem;
+  color:#235835;
+  letter-spacing: 1px;
+  font-weight: 500;
+}
+
+/* Fade-out effect when loader disappears (unchanged) */
+.loader-overlay.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+.loader-overlay.visible {
+  opacity: 1;
+  visibility: visible;
+}
