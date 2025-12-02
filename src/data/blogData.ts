@@ -5,6 +5,7 @@ import Image from '../assets/vihiga leafy.webp';
 import Access from '../assets/seedaccess.webp';
 import Journalist from '../assets/journalists.webp';
 import Bio from '../assets/Bio-pesticides.webp';
+import SpectacularImagecourt from '../assets/DSC_3294.webp';
 
 export type BlogPost = {
   id: string;
@@ -23,8 +24,29 @@ export type BlogPost = {
 };
 
 export const blogPosts: BlogPost[] = [
+   {
+  id: '1',
+  title: 'The Seeds of Freedom: Kenya s Landmark Win for Agricultural Sovereignty  Africa Farming Journal',
+  excerpt:
+    'On 27 November 2025, Kenya’s High Court ruled that farmers have the constitutional right to save, share and exchange indigenous seeds — striking down parts of the Seed and Plant Varieties Act that criminalized traditional seed-saving practices. This decision is hailed as a landmark victory for seed sovereignty, agrobiodiversity, and the rights of smallholder farmers to preserve indigenous seed systems and cultural heritage.',
+  author: 'Africa Farming Journal',
+  date: '27 November 2025',
+  readTime: '≈5 min read',
+  tags: ['Seed Sovereignty', 'Agriculture', 'Food Security', 'Biodiversity'],
+  image: SpectacularImagecourt,
+  slug: 'seeds-of-freedom-kenya-agricultural-sovereignty',
+  content: `
+On 27 November 2025, the High Court of Kenya delivered a historic ruling affirming that farmers have the right to save and share their indigenous seeds. The court struck down punitive provisions of the Seed and Plant Varieties Act (CAP 326) that criminalized seed-saving, sharing, and exchange — offences previously punishable by up to two years in prison or a fine of KSh 1,000,000. :contentReference[oaicite:3]{index=3}
+
+This legislation threatened to undermine traditional seed systems, erode cultural heritage, and marginalize smallholder farmers who depend on farmer-managed seed systems for food security and biodiversity. :contentReference[oaicite:4]{index=4} The ruling, therefore, is not just a legal win — it represents a reaffirmation of Kenya’s agricultural sovereignty and a triumph for communities preserving indigenous seed varieties. :contentReference[oaicite:5]{index=5}
+
+With this decision, farmers are now free to conserve, exchange, and share indigenous seeds without fear of prosecution. The verdict reinforces the value of indigenous seed systems in climate-resilient agriculture, food security, and long-term sustainability by safeguarding agrobiodiversity and cultural heritage. :contentReference[oaicite:6]{index=6}
+
+This outcome also sends a powerful signal against the push by large commercial seed companies to monopolize the seed supply, and restores agency to farmers to decide what they plant and preserve on their lands. :contentReference[oaicite:7]{index=7}
+  `,
+},
   {
-    id: '1',
+    id: '2',
     title: 'Empowering Communities through Traditional Vegetables: A Success Story from Vihiga CBO',
     excerpt:
       'At the heart of Vihiga County, a powerful agricultural transformation is unfolding. Thanks to the collaborative efforts of the Seed Savers Network, Bioversity International & CIAT, FAO and ITGPRFA,',
@@ -74,7 +96,7 @@ As the movement grows, so too does the hope that other communities will follow i
     `,
   },
   {
-    id: '2',
+    id: '3',
     title: 'Journalists Have a Critical Role in Safeguarding Kenya’s Food Systems',
     excerpt:
       'Agriculture, environment and climate journalists have been urged to take a keen interest in Kenya’s agriculture policies by factually reporting on its effects on the country’s food system.  Seed Savers Network (Kenya),',
@@ -119,7 +141,7 @@ Atieno, at the same time, underscored the importance of accurate, people-centred
     `,
   },
   {
-    id: '3',
+    id: '4',
     title:
       'Farmers, Experts Hail Ban on Hazardous Pesticides, Call for Stronger Oversight',
     excerpt:
@@ -167,7 +189,7 @@ At the same time, civil society groups and farmers have raised concerns over the
     `,
   },
   {
-    id: '4',
+    id: '5',
     title:
       'Characterization and Documentation of Traditional Leafy Vegetables in Vihiga',
     excerpt:
@@ -203,7 +225,7 @@ For Seed Savers Network Kenya, having the farmers participate in the characteriz
     `,
   },
   {
-    id: '5',
+    id: '6',
     title:
       'Creating Seas of Change: Concepter Makokha’s Rise in Agro-Entrepreneurship.',
     excerpt:
@@ -227,7 +249,7 @@ Concepter’s story highlights the impact of empowering women in agriculture thr
     `,
   },
   {
-    id: '6',
+    id: '7',
     title: 'Advancing Farmers’ Rights: A Commitment to Promoting Seed Access',
     excerpt:
       'Kenya has made a significant leap in advancing farmers’ rights with the introduction of the Seeds and Plant Varieties (Conservation, Access, and Benefit Sharing of Plant Genetic Resources for Food and Agriculture)',
