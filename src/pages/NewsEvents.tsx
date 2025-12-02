@@ -1,7 +1,7 @@
 import "../styles/NewsEvents.css";
 import SpectacularImage from '../assets/n.webp'; 
 import { Link } from 'react-router-dom';
-import { FaArrowRight, FaHandshake, FaCalendarAlt, FaMapMarkerAlt, FaPlayCircle, FaFileDownload, FaEye, FaExternalLinkAlt } from 'react-icons/fa';
+import { FaArrowRight, FaHandshake, FaCalendarAlt, FaMapMarkerAlt, FaPlayCircle, FaFileDownload, FaExternalLinkAlt } from 'react-icons/fa';
 import Image from '../assets/seedfair.webp';
 import Images from '../assets/cbs.webp';
 import Img from '../assets/seedaccess.webp';
