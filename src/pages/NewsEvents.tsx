@@ -1,7 +1,7 @@
 import "../styles/NewsEvents.css";
 import SpectacularImage from '../assets/n.webp'; 
 import { Link } from 'react-router-dom';
-import { FaArrowRight, FaHandshake, FaCalendarAlt, FaMapMarkerAlt, FaPlayCircle } from 'react-icons/fa';
+import { FaArrowRight, FaHandshake, FaCalendarAlt, FaMapMarkerAlt, FaPlayCircle, FaFileDownload, FaEye, FaExternalLinkAlt } from 'react-icons/fa';
 import Image from '../assets/seedfair.webp';
 import Images from '../assets/cbs.webp';
 import Img from '../assets/seedaccess.webp';
@@ -9,6 +9,8 @@ import ngiri from '../assets/ngiri.webp';
 import Ambs from '../assets/seed-ambasadors.webp';
 import Solar from '../assets/Solar dryer.webp';
 import IPS from '../assets/IPs.webp';
+import DocumentImage from '../assets/DSC_3325.webp'; // New image for document card
+import FreedomImage from '../assets/DSC_3236.webp'; // New image for seed of freedom story
 import { useState } from 'react';
 
 const NewsEvents = () => {
@@ -52,6 +54,87 @@ const NewsEvents = () => {
             <p>Stay updated with our latest activities, programs, and success stories</p>
           </div>
         </div>
+        </div>
+      </section>
+
+      {/* Featured Resources Section */}
+      <section className="ne-section">
+        <div className="ne-container">
+          <div className="ne-section-header">
+            <h2>Featured </h2>
+            <p>Explore our latest stories</p>
+            <div className="ne-divider"></div>
+          </div>
+
+          <div className="ne-resources-grid">
+            {/* Document Card */}
+            <div className="ne-resource-card">
+              <div className="ne-resource-image">
+                <img src={DocumentImage} alt="Document" />
+                <div className="ne-resource-overlay">
+                  <span className="ne-resource-type">Document</span>
+                </div>
+              </div>
+              <div className="ne-resource-content">
+                <h3>The Seed judgement 2025 By the High court of Kenya and its implications for seed diversity</h3>
+                <p className="ne-resource-description">
+                  Analysis of the 2025 High Court seed judgement and its implications for seed diversity. 
+                  This document provides insights into the legal framework and its impact on farmers' rights and seed conservation.
+
+                </p>
+                <div className="ne-resource-meta">
+                  <span className="ne-meta-item">
+                    <FaCalendarAlt /> Published: December 2025
+                  </span>
+                  <span className="ne-meta-item">
+                    Pages: 27
+                  </span>
+                </div>
+                <div className="ne-resource-actions">
+                  <a href="./docs/The seed Judgment.pdf" target="_blank" rel="noopener noreferrer" className="ne-resource-button ne-external-link-button">
+                    View Document <FaExternalLinkAlt />
+                  </a>
+                  <a href="./docs/The seed Judgment.pdf" download className="ne-resource-button ne-external-link-button">
+                    Download <FaFileDownload />
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            {/* Story Card */}
+            <div className="ne-resource-card">
+              <div className="ne-resource-image">
+                <img src={FreedomImage} alt="Seed of Freedom Story" />
+                <div className="ne-resource-overlay">
+                  <span className="ne-resource-type">Story</span>
+                </div>
+              </div>
+              <div className="ne-resource-content">
+                <h3>The Seeds of Freedom: Kenya s Landmark Win for Agricultural Sovereignty Africa Farming Journal</h3>
+                <p className="ne-resource-description">
+                  On 27 November 2025, Kenya’s High Court ruled that farmers have the constitutional 
+                  right to save, share and exchange indigenous seeds — striking down parts of the Seed 
+                  and Plant Varieties Act that criminalized traditional seed-saving practices. 
+                  This decision is hailed as a landmark victory for seed sovereignty, agrobiodiversity,
+                   and the rights of smallholder farmers to preserve indigenous seed systems and cultural
+                    heritage.
+                </p>
+                <div className="ne-resource-meta">
+                  <span className="ne-meta-item">
+                    <FaCalendarAlt /> Published: DECEMBER 2025
+                  </span>
+                  <span className="ne-meta-item">
+                    Reading time: 8 min
+                  </span>
+                </div>
+                <div className="ne-resource-actions">
+                  <a href="https://africafarmingjournal.org/the-seeds-of-freedom/" target="_blank" rel="noopener noreferrer" className="ne-resource-button ne-external-link-button">
+                    Read Full Story <FaExternalLinkAlt />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
