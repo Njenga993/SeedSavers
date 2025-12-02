@@ -12,6 +12,7 @@ import Sorghum from '../assets/sorghum.webp';
 import Food from '../assets/foods.webp';
 import Image from '../assets/app.webp';
 import Image2 from '../assets/seedex.webp';
+import Market1 from '../assets/DSC_3325.webp';
 
 
 interface ResourceItem {
@@ -129,53 +130,61 @@ const ResourcesPage: React.FC = () => {
       previewText: "Survey on seed security and access in Kenya.",
       imageUrl: SpectaularImage
     },
+  
   ];
 
   const reports: ResourceItem[] = [
+    {
+      id: 1,
+      title: "The Seed judgement 2025 By the High court of Kenya and its implications for seed diversity",
+      fileUrl: "./docs/The seed Judgment.pdf",
+      previewText: "Analysis of the 2025 High Court seed judgement and its implications for seed diversity.",
+      imageUrl: Market1
+    },
     { 
-      id: 1, 
+      id: 2, 
       title: "Developing Markets for Agroecology in Nakuru", 
       fileUrl: "./docs/Developing-Markets-for-Agroecology-in-Nakuru.pdf", 
       previewText: "Highlights of our achievements and milestones in seed conservation.",
       imageUrl: Market
     },
     { 
-      id: 2, 
+      id: 3, 
       title: "10 Rich underutilised crops ", 
       fileUrl: "./docs/SSN-NUTRITION-BOOKLET.pdf", 
       previewText: "Measuring the outcomes of our community seed bank programs.",
       imageUrl: Sorghum
     },
     { 
-      id: 3, 
+      id: 4, 
       title: "Seed-Savers-Food-Forest-Manual", 
       fileUrl: "./docs/Seed-Savers-Food-Forest-Training-Manual_v2.pdf", 
       previewText: "Tracking the expansion of our seed bank network across regions.",
       imageUrl:Food
     },
         { 
-      id: 4, 
+      id: 5, 
       title: "Partcipatory Quality Assurance for Seed Exchange", 
       fileUrl: "./docs/Quality-Assurance-for-Seed-Exchange-booklet.pdf", 
       previewText: "Tracking the expansion of our seed bank network across regions.",
       imageUrl: SpectaclarImage
     },
         { 
-      id: 5, 
+      id: 6, 
       title: "Farmers’	Seed	Practices	in	Nakuru Kenya", 
       fileUrl: "./docs/Seeds-Field-Survey-Report-2024.pdf", 
       previewText: "Tracking the expansion of our seed bank network across regions.",
       imageUrl: SpectaularImage
     },
         { 
-      id: 6, 
+      id: 7, 
       title: "Community Seedbank Establishment Guidelines", 
       fileUrl: "./docs/Community-Seedbank-Guidelines.pdf", 
       previewText: "Tracking the expansion of our seed bank network across regions.",
       imageUrl: SpectacuarImage
     },
         { 
-      id: 7, 
+      id: 8, 
       title: "Farmers’ Seed Practices in Nakuru Kenya", 
       fileUrl: "./docs/SSNAgrecolSeedStudyFinalMay-2023.pdf", 
       previewText: "Tracking the expansion of our seed bank network across regions.",
