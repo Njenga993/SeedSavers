@@ -7,6 +7,8 @@ import subscriptionI from "../assets/zim.webp";
 import subscriptionIm from "../assets/kseed.webp";
 import subscriptionIma from "../assets/sheila.webp";
 import subscriptionImag from "../assets/ash.webp";
+import SEO from "../components/SEO";
+
 
 import { FaArrowRight, FaDownload, FaCheck, FaQuoteLeft } from "react-icons/fa";
 
@@ -23,6 +25,45 @@ interface Newsletter {
 }
 
 const NewsletterPage: React.FC = () => {
+
+  // ⬇️ SEO Metadata for Newsletter Page
+<SEO
+  title="Newsletter | Seed Sovereignty Updates, Agroecology Insights & Community Stories"
+  description="Explore the Seed Savers Kenya newsletter featuring insights on seed sovereignty, agroecology innovations, farmer stories, policy updates, and community seed bank impact across Kenya and Africa."
+  url="https://seedsaverskenya.org/newsletter"
+  image={latestIssue}
+  keywords={[
+    "seed savers kenya newsletter",
+    "agroecology newsletter kenya",
+    "seed sovereignty updates",
+    "indigenous seeds newsletter",
+    "community seed banks kenya",
+    "farmer seed rights africa",
+    "agricultural biodiversity kenya",
+    "food system transformation",
+    "seed ambassadors kenya",
+    "plant biodiversity conservation africa"
+  ]}
+  jsonLd={{
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    name: "Seed Savers Newsletter",
+    description:
+      "Quarterly newsletter featuring insights on seed sovereignty, agroecology innovation, policy updates, seed fairs, and community impact stories across Kenya.",
+    url: "https://seedsaverskenya.org/newsletter",
+    image: latestIssue,
+    publisher: {
+      "@type": "Organization",
+      name: "Seed Savers Network Kenya",
+      logo: "https://seedsaverskenya.org/logo.png",
+    },
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": "https://seedsaverskenya.org/newsletter"
+    }
+  }}
+/>
+
   const [activeTab, setActiveTab] = useState<"latest" | "archive" | "subscribe">("latest");
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");

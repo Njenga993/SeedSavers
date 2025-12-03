@@ -12,8 +12,53 @@ import IPS from '../assets/IPs.webp';
 import DocumentImage from '../assets/DSC_3325.webp'; // New image for document card
 import FreedomImage from '../assets/DSC_3236.webp'; // New image for seed of freedom story
 import { useState } from 'react';
+import SEO from "../components/SEO";
+
 
 const NewsEvents = () => {
+
+  // ⬇️ SEO Metadata
+<SEO
+  title="News & Events | Seed Savers Network Kenya"
+  description="Stay updated with the latest news, events, success stories, seed fairs, policy updates, and documentary videos from Seed Savers Network Kenya. Explore featured resources, community stories, and upcoming Seed School programs."
+  url="https://seedsaverskenya.org/news-events"
+  image={SpectacularImage}
+  keywords={[
+    "seed savers kenya news",
+    "kenya agriculture news",
+    "seed sovereignty kenya",
+    "indigenous seeds kenya",
+    "agroecology events kenya",
+    "community seed banks kenya",
+    "seed fairs kenya",
+    "farmer seed rights",
+    "seed school kenya",
+    "seed policy kenya",
+    "agricultural biodiversity kenya",
+    "seed justice africa"
+  ]}
+  jsonLd={{
+    "@context": "https://schema.org",
+    "@type": "NewsMediaOrganization",
+    name: "Seed Savers Network Kenya - News & Events",
+    url: "https://seedsaverskenya.org/news-events",
+    description:
+      "Latest news, events, seed fairs, policy updates, and success stories from Seed Savers Network Kenya.",
+    image: SpectacularImage,
+    publisher: {
+      "@type": "Organization",
+      name: "Seed Savers Network Kenya",
+      logo: "https://seedsaverskenya.org/logo.png"
+    },
+    mainEntityOfPage: {
+      "@type": "CollectionPage",
+      name: "News & Events",
+      description:
+        "A collection of stories, articles, videos, and event highlights from Seed Savers Network Kenya."
+    }
+  }}
+/>
+
     // Newsletter state
     const [email, setEmail] = useState("");
     const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");

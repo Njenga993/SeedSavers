@@ -4,9 +4,50 @@ import nyakaziImage from "../assets/nyakazi_inside.webp";
 import sunnyBitesImage from "../assets/sunny.webp";
 import mentorshipImage from "../assets/incubation.webp";
 import demoImage from "../assets/sunny.webp";
+import SEO from "../components/SEO";
+
 
 const IncubationProgramPage: React.FC = () => {
   const [activeTab, setActiveTab] = useState("overview");
+
+  // ⬇️ Insert SEO here
+  <SEO
+    title="Agroecology Incubation Program | Seed Savers Network Kenya"
+    description="Discover Seed Savers Network Kenya’s Agroecology Incubation Program supporting startups with funding, manufacturing space, mentorship, and market access. Learn how to apply today."
+    url="https://seedsaverskenya.org/incubation-program"
+    image={mentorshipImage}
+    keywords={[
+      "agroecology incubation kenya",
+      "agricultural startups kenya",
+      "seed savers network incubation",
+      "youth agribusiness kenya",
+      "food systems innovation kenya",
+      "agroecology mentorship program",
+      "startup funding kenya",
+      "value addition agriculture kenya",
+      "incubation hub kenya",
+      "common manufacturing space kenya"
+    ]}
+    jsonLd={{
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      name: "Agroecology Incubation Program",
+      description:
+        "Seed Savers Network Kenya supports early-stage agroecology entrepreneurs with funding, mentorship, training, and manufacturing facilities.",
+      url: "https://seedsaverskenya.org/incubation-program",
+      image: mentorshipImage,
+      publisher: {
+        "@type": "Organization",
+        name: "Seed Savers Network Kenya",
+      },
+      mainEntity: {
+        "@type": "Organization",
+        name: "Seed Savers Network Kenya Agroecology Incubation Program",
+        description:
+          "An incubation program supporting early-stage entrepreneurs in sustainable agriculture.",
+      }
+    }}
+  />
 
   return (
     <div className="ip-incubation-page">

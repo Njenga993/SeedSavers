@@ -15,6 +15,8 @@ import Image2 from '../assets/seedex.webp';
 import Market1 from '../assets/DSC_3325.webp';
 
 
+
+
 interface ResourceItem {
   id: number;
   title: string;
@@ -24,12 +26,17 @@ interface ResourceItem {
 }
 
 const ResourceSection: React.FC<{
+  
+
   title: string;
   resources: ResourceItem[];
   altBg?: boolean;
 }> = ({ title, resources, altBg = false }) => {
   const [showAll, setShowAll] = useState(false);
   const visibleResources = showAll ? resources : resources.slice(0, 3);
+
+  
+  
 
   return (
     <section className={`resource-section ${altBg ? 'alt-bg' : ''}`}>

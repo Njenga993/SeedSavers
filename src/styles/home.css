@@ -25,7 +25,9 @@
   font-weight: 400;
   line-height: 1.6;
 }
-
+.visually-hidden {
+ display: none;
+}
 /* Headings */
 .hero h1,
 .hero h2,

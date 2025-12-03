@@ -1,9 +1,12 @@
 import { useState, useRef, useEffect } from 'react';
+import SEO from '../components/SEO';  // <-- ADDED
 import '../styles/about.css';
+
 // Import strategy images
 import agrobiodiversityImg from '../assets/kikopey.webp';
 import capacityBuildingImg from '../assets/seed-ambasadors.webp';
 import advocacyImg from '../assets/case.webp';
+
 // Import sub-strategy images
 import seedBankImg from '../assets/kikopey.webp';
 import regenerationImg from '../assets/dommy.webp';
@@ -16,21 +19,24 @@ import learningCenterImg from '../assets/hero_1.webp';
 import policyImg from '../assets/court.webp';
 import farmerAdvocacyImg from '../assets/seed-ambasadors.webp';
 import seedFairsImg from '../assets/fair.webp';
+
 // Import journey images
 import foundingImg from '../assets/main.webp';
 import expansionImg from '../assets/seed_pic.webp';
 import recognitionImg from '../assets/IPs.webp';
-import recent from '../assets/hero_1.webp'
-import innovation from '../assets/sunny.webp'
-import seedfair from '../assets/seedfair.webp'
-// Import Seed School component
+import recent from '../assets/hero_1.webp';
+import innovation from '../assets/sunny.webp';
+import seedfair from '../assets/seedfair.webp';
+
+// Import components
 import SeedSchool from '../components/SeedSchool';
 import IncubationProgram from '../components/IncubationProgram';
 import CommunitySeedBank from '../components/CommunitySeedBank';
 
-
 const About = () => {
   const [activeTab, setActiveTab] = useState<'mission' | 'vision'>('mission');
+
+  // ----- Existing state for strategies, journey, etc. -----
   const [strategies, setStrategies] = useState([
     {
       title: 'Agrobiodiversity Conservation',
@@ -147,7 +153,7 @@ const About = () => {
             'Preserve traditional agricultural practices',
             'Integrate modern sustainable farming techniques'
           ],
-          impact: 'center serving thousands of visitors annually',
+          impact: 'Center serving thousands of visitors annually',
           expanded: false,
           image: learningCenterImg
         }
@@ -202,7 +208,6 @@ const About = () => {
     }
   ]);
 
-  // Journey and Milestones data
   const [journey] = useState([
     {
       year: '2009',
@@ -267,7 +272,7 @@ const About = () => {
     {
       year: '2025',
       title: 'Present',
-      description: 'Current achievements and ongoing initiatives across  Africa.',
+      description: 'Current achievements and ongoing initiatives across Africa.',
       image: recent,
       milestones: [
         '121+ community seed banks',
@@ -280,57 +285,90 @@ const About = () => {
     }
   ]);
 
-  // Refs for smooth scrolling
   const aboutRef = useRef<HTMLDivElement>(null);
   const strategiesRef = useRef<HTMLDivElement>(null);
   const missionRef = useRef<HTMLDivElement>(null);
   const journeyRef = useRef<HTMLDivElement>(null);
 
-  // Function to toggle sub-strategy expansion
+  // Toggle sub-strategies
   const toggleSubStrategy = (strategyIndex: number, subIndex: number) => {
-    setStrategies(prevStrategies => {
-      return prevStrategies.map((strategy, sIndex) => {
+    setStrategies(prev =>
+      prev.map((strategy, sIndex) => {
         if (sIndex !== strategyIndex) return strategy;
-        
         return {
           ...strategy,
-          subCategories: strategy.subCategories.map((sub, scIndex) => {
-            if (scIndex !== subIndex) return { ...sub, expanded: false };
-            return { ...sub, expanded: !sub.expanded };
-          })
+          subCategories: strategy.subCategories.map((sub, scIndex) =>
+            scIndex === subIndex
+              ? { ...sub, expanded: !sub.expanded }
+              : { ...sub, expanded: false }
+          )
         };
-      });
-    });
+      })
+    );
   };
 
-  // Scroll to section when URL hash changes
+  // Smooth scroll on hash change
   useEffect(() => {
-    const handleHashChange = () => {
+    const handleHash = () => {
       const hash = window.location.hash;
-      if (hash === '#about' && aboutRef.current) {
+      if (hash === '#about' && aboutRef.current)
         aboutRef.current.scrollIntoView({ behavior: 'smooth' });
-      } else if (hash === '#strategies' && strategiesRef.current) {
+      if (hash === '#strategies' && strategiesRef.current)
         strategiesRef.current.scrollIntoView({ behavior: 'smooth' });
-      } else if (hash === '#mission' && missionRef.current) {
+      if (hash === '#mission' && missionRef.current)
         missionRef.current.scrollIntoView({ behavior: 'smooth' });
-      } else if (hash === '#journey' && journeyRef.current) {
+      if (hash === '#journey' && journeyRef.current)
         journeyRef.current.scrollIntoView({ behavior: 'smooth' });
-      }
     };
 
-    // Initial check on component mount
-    handleHashChange();
-
-    // Listen for hash changes
-    window.addEventListener('hashchange', handleHashChange);
-
-    return () => {
-      window.removeEventListener('hashchange', handleHashChange);
-    };
+    handleHash();
+    window.addEventListener('hashchange', handleHash);
+    return () => window.removeEventListener('hashchange', handleHash);
   }, []);
 
   return (
     <div className="about-page">
+
+      {/* ⭐⭐⭐ SEO SECTION ADDED ⭐⭐⭐ */}
+      <SEO
+        title="About Seed Savers Network Kenya – Indigenous Seed Preservation, Agroecology & Farmer Empowerment"
+        description="Learn about the history, mission, vision, strategy, and impact of Seed Savers Network Kenya. Discover our work in indigenous seed preservation, agrobiodiversity conservation, community seed banks, agroecology training, and farmer-led seed sovereignty advocacy."
+        url="https://seedsaverskenya.org/about"
+        image="https://seedsaverskenya.org/og-about.jpg"
+        keywords={[
+          "Seed Savers Network Kenya",
+          "indigenous seed preservation Kenya",
+          "community seed banks Kenya",
+          "agroecology Kenya",
+          "traditional seeds Kenya",
+          "heirloom seeds Kenya",
+          "farmer empowerment Kenya",
+          "food sovereignty Kenya",
+          "seed sovereignty Kenya",
+          "seed conservation Africa",
+          "agro-biodiversity Kenya",
+          "farmer seed training Kenya"
+        ]}
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@type": "AboutPage",
+          "name": "About Seed Savers Network Kenya",
+          "description": "Seed Savers Network Kenya preserves indigenous seeds, promotes agroecology, strengthens community seed systems, and empowers farmers across Kenya.",
+          "url": "https://seedsaverskenya.org/about",
+          "publisher": {
+            "@type": "Organization",
+            "name": "Seed Savers Network Kenya",
+            "url": "https://seedsaverskenya.org",
+            "logo": "https://seedsaverskenya.org/logo.png"
+          }
+        }}
+      />
+
+      {/* Hidden H1 for SEO */}
+      <h1 className="visually-hidden">
+        About Seed Savers Network Kenya – Our Story, Strategy, Mission & Impact
+      </h1>
+
       {/* Hero Section */}
       <header className="resources-hero">
         <div className="hero-overlay">
@@ -339,8 +377,10 @@ const About = () => {
         </div>
       </header>
 
+      {/* ------------------ MAIN CONTENT ------------------ */}
       <main className="about-content">
-        {/* About Us Section with ref for scrolling */}
+
+        {/* About Intro Section */}
         <section ref={aboutRef} id="about" className="about-intro-section">
           <div className="container">
             <h1 className="section-itle">Our Story</h1>
@@ -373,22 +413,23 @@ const About = () => {
                     climate conditions.
                 </p>
               </div>
+
               <div className="about-image">
                 <img 
                   src={regenerationImg} 
-                  alt="Farmers exchanging seeds in a community seed bank" 
+                  alt="Farmers exchanging indigenous seeds in a community seed bank" 
                 />
               </div>
             </div>
           </div>
         </section>
 
-        {/* Journey and Milestones Section */}
+        {/* Journey Section */}
         <section ref={journeyRef} id="journey" className="journey-milestones">
           <div className="container">
             <h2 className="section-title">Our Journey & Milestones</h2>
             <p className="section-subtitle">From humble beginnings to a worldwide movement for seed sovereignty</p>
-            
+
             <div className="journey-timeline">
               {journey.map((period, index) => (
                 <div key={index} className={`timeline-item ${index % 2 === 0 ? 'left' : 'right'}`}>
@@ -396,13 +437,16 @@ const About = () => {
                   <div className="timeline-content">
                     <h3>{period.title}</h3>
                     <p>{period.description}</p>
-                    
+
                     {period.image && (
                       <div className="timeline-image">
-                        <img src={period.image} alt={`${period.year} - ${period.title}`} />
+                        <img 
+                          src={period.image} 
+                          alt={`${period.year} milestone – ${period.title}`} 
+                        />
                       </div>
                     )}
-                    
+
                     <div className="milestones-list">
                       <h4>Key Achievements:</h4>
                       <ul>
@@ -440,29 +484,29 @@ const About = () => {
           </div>
         </section>
 
-        {/* Strategies Section with ref for scrolling */}
+        {/* Strategies */}
         <section ref={strategiesRef} id="strategies" className="about-strategies">
           <div className="container">
             <h2 className="section-title">Our Strategic Approach</h2>
             <p className="section-subtitle">Three pillars guide our work in preserving agricultural biodiversity</p>
-            
+
             <div className="strategies-grid">
               {strategies.map((strategy, index) => (
                 <div className="strategy-card" key={index}>
                   <div className="strategy-header">
-                    
                     <h3>{strategy.title}</h3>
                   </div>
+
                   <p className="strategy-summary">{strategy.summary}</p>
-                  
+
                   <div className="strategy-image-container">
                     <img 
                       src={strategy.image} 
-                      alt={`${strategy.title} strategy`}
-                      className="strategy-image"
+                      alt={`${strategy.title} strategy`} 
+                      className="strategy-image" 
                     />
                   </div>
-                  
+
                   <div className="sub-strategies">
                     {strategy.subCategories.map((sub, subIndex) => (
                       <div 
@@ -478,17 +522,22 @@ const About = () => {
                             {sub.expanded ? '−' : '+'}
                           </span>
                         </div>
-                        
+
                         {sub.expanded && (
                           <div className="sub-strategy-content">
                             <div className="sub-strategy-image">
-                              <img src={sub.image} alt={sub.title} />
+                              <img 
+                                src={sub.image} 
+                                alt={`${sub.title} initiative`} 
+                              />
                             </div>
+
                             <ul className="strategy-points">
                               {sub.description.map((point, i) => (
                                 <li key={i}>{point}</li>
                               ))}
                             </ul>
+
                             {sub.impact && (
                               <div className="impact-note">
                                 <strong>Impact:</strong> {sub.impact}
@@ -499,21 +548,23 @@ const About = () => {
                       </div>
                     ))}
                   </div>
+
                 </div>
               ))}
             </div>
           </div>
         </section>
 
+        {/* Additional Components */}
         <SeedSchool />
         <IncubationProgram />
         <CommunitySeedBank />
-        
 
-        {/* Mission/Vision Section with ref for scrolling */}
+        {/* Mission & Vision */}
         <section ref={missionRef} id="mission" className="about-core">
           <div className="container">
             <h2 className="section-title">Our Core</h2>
+
             <div className="core-tabs">
               <button
                 className={`tab-button ${activeTab === 'mission' ? 'active' : ''}`}
@@ -533,18 +584,25 @@ const About = () => {
               {activeTab === 'mission' && (
                 <div className="tab-panel">
                   <h3>Our Mission</h3>
-                  <p>We are on a mission to conserve agrobiodiversity by strengthening communities' seed systems for improved seed access and enhanced food sovereignty.</p>
+                  <p>
+                    We are on a mission to conserve agrobiodiversity by strengthening communities' seed systems 
+                    for improved seed access and enhanced food sovereignty.
+                  </p>
                 </div>
               )}
+
               {activeTab === 'vision' && (
                 <div className="tab-panel">
                   <h3>Our Vision</h3>
-                  <p>To be a leading agent in promoting diverse seed access to farming communities.</p>
+                  <p>
+                    To be a leading agent in promoting diverse seed access to farming communities.
+                  </p>
                 </div>
               )}
             </div>
           </div>
         </section>
+
       </main>
     </div>
   );

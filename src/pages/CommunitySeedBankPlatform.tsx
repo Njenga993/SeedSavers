@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import "../styles/CommunitySeedBankPlatform.css";
 import seedExchange from "../assets/kikopey.webp";
 import farmersGroup from "../assets/cbs.webp";
+import SEO from "../components/SEO";
+
 
 const CommunitySeedBankPlatform: React.FC = () => {
   const [activeTab, setActiveTab] = useState("overview");
@@ -131,6 +133,25 @@ const CommunitySeedBankPlatform: React.FC = () => {
       ['110', 'Mwaani Community Seed Bank', 'MWAANI']
     ]}
   ];
+  
+  <SEO
+  title="Community Seed Bank Platform | 121+ Seed Banks Across Kenya | Seed Savers Network"
+  description="Explore Kenya’s largest network of 121+ community seed banks across 20+ counties. Learn how farmers preserve indigenous seeds, exchange varieties, strengthen seed sovereignty, and build resilient seed systems with Seed Savers Network."
+  keywords={[
+    "community seed banks kenya",
+    "seed savers network kenya",
+    "indigenous seed preservation kenya",
+    "seed exchange kenya",
+    "agro-biodiversity kenya",
+    "traditional seeds kenya",
+    "seed sovereignty kenya",
+    "farmer seed systems kenya",
+    "seed mapping kenya",
+  ]}
+  url="https://seedsaverskenya.org/community-seed-bank-platform"
+  image={seedExchange}
+/>
+
 
   return (
     <div className="csbp-platform-page">
