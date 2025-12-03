@@ -8,6 +8,8 @@ import {
 } from 'react-icons/fa';
 import '../styles/Contact.css';
 import SpectacularImage from '../assets/hero_1.webp';
+import SEO from "../components/SEO";
+
 
 type ContactMethod = {
   icon: React.ReactNode;
@@ -97,6 +99,51 @@ const ContactPage: React.FC = () => {
       details: ['info@seedsaverskenya.org']
     }
   ];
+   
+  <SEO
+  title="Contact Seed Savers Network Kenya | Get in Touch for Seed Conservation & Training"
+  description="Contact Seed Savers Network Kenya for inquiries on indigenous seed conservation, Seed School training, farmer partnerships, volunteering, and community seed banking. Our team is ready to help."
+  url="https://seedsaverskenya.org/contact"
+  image={SpectacularImage}
+  keywords={[
+    "Seed Savers Kenya contact",
+    "Seed Savers Network Kenya contact",
+    "seed conservation Kenya",
+    "community seed banks Kenya",
+    "volunteer agriculture Kenya",
+    "agroecology training Kenya",
+    "seed school Kenya",
+    "farmer seed systems",
+    "seed donation Kenya",
+    "seed sovereignty Kenya"
+  ]}
+  jsonLd={{
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "Seed Savers Network Kenya",
+    url: "https://seedsaverskenya.org",
+    logo: "https://seedsaverskenya.org/logo.png",
+    email: "info@seedsaverskenya.org",
+    telephone: "+254712451777",
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "Diatomite, Off Nakuru – Nairobi Highway",
+      addressLocality: "Gilgil",
+      addressRegion: "Nakuru",
+      postalCode: "20116",
+      addressCountry: "KE"
+    },
+    contactPoint: {
+      "@type": "ContactPoint",
+      telephone: "+254712451777",
+      email: "info@seedsaverskenya.org",
+      contactType: "customer support",
+      areaServed: ["KE", "Africa"],
+      availableLanguage: ["English", "Swahili"]
+    }
+  }}
+/>
+
 
   return (
     <div className="contact-page">
