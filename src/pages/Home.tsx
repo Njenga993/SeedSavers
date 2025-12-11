@@ -4,10 +4,10 @@ import WhoWeAre from '../components/WhoWeAre';
 import SEO from '../components/SEO';   // <-- IMPORTANT
 import '../styles/home.css';
 
+
 const Home = () => {
   return (
     <div className="home-page">
-
       {/* ---------- SEO Metadata ---------- */}
       <SEO
         title="Seed Savers Network Kenya – Indigenous Seed Preservation, Community Seed Banks & Agroecology Training"
@@ -34,7 +34,6 @@ const Home = () => {
       <h1 className="visually-hidden">
         Seed Savers Network Kenya – Indigenous Seed Preservation & Agroecology Programs
       </h1>
-
       {/* Hero Section */}
       <Hero />
 
