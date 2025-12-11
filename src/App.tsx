@@ -14,8 +14,9 @@ import CommunitySeedBankPlatform from './pages/CommunitySeedBankPlatform';
 import IncubationProgramPage from './pages/IncubationProgramPage';
 import NewsletterPage from './pages/NewsletterPage';
 import ScrollToTopButton from './components/ScrollToTopButton';
-{/*import EventPopup from './components/EventPopup';*/}
+// import EventPopup from './components/EventPopup';
 import Loader from './components/Loader';
+import Snowfall from 'react-snowfall';
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -33,7 +34,21 @@ function App() {
           <Loader />
         ) : (
           <>
-            {/*<EventPopup />*/}
+          <Snowfall 
+  snowflakeCount={150} 
+  color="white"
+  style={{
+    position: 'fixed',
+    top: 0,
+    left: 0,
+    width: '100vw',
+    height: '100vh',
+    zIndex: 1, // very high
+    pointerEvents: 'none'
+  }}
+/>
+
+
             <Navbar />
             <main className="main-content">
               <Routes>
