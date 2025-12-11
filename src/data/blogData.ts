@@ -5,7 +5,7 @@ import Image from '../assets/vihiga leafy.webp';
 import Access from '../assets/seedaccess.webp';
 import Journalist from '../assets/journalists.webp';
 import Bio from '../assets/Bio-pesticides.webp';
-import SpectacularImagecourt from '../assets/DSC_3294.webp';
+import SpectacularImagecourt from '../assets/DSC_3236.webp';
 
 export type BlogPost = {
   id: string;
