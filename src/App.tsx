@@ -33,7 +33,9 @@ function App() {
         {loading ? (
           <Loader />
         ) : (
-          <>
+          
+            <div className="App">
+          {/* Main Application Layout */}
           <Snowfall 
   snowflakeCount={150} 
   color="white"
@@ -43,11 +45,11 @@ function App() {
     left: 0,
     width: '100vw',
     height: '100vh',
-    zIndex: 1, // very high
+    zIndex: 9999, // very high
     pointerEvents: 'none'
   }}
 />
-
+        <>
 
             <Navbar />
             <main className="main-content">
@@ -68,6 +70,7 @@ function App() {
             <ScrollToTopButton />
             <Footer />
           </>
+          </div>
         )}
       </div>
     </Router>
