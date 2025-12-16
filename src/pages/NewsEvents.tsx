@@ -11,6 +11,7 @@ import Solar from '../assets/Solar dryer.webp';
 import IPS from '../assets/IPs.webp';
 import DocumentImage from '../assets/DSC_3325.webp'; // New image for document card
 import FreedomImage from '../assets/DSC_3236.webp'; // New image for seed of freedom story
+import FreedomImage001 from '../assets/DSC_3188.webp'; // New image for seed of freedom story
 import { useState } from 'react';
 import SEO from "../components/SEO";
 
@@ -181,8 +182,39 @@ const NewsEvents = () => {
             </div>
           </div>
         </div>
+        </section>
+        {/* Story Card outside the grid for emphasis */}
+        <section className="ne-featured1-story">
+               <div className="ne-resource-card">
+              <div className="ne-resource1-image">
+                <img src={FreedomImage001} alt="Seed of Freedom Story" />
+                <div className="ne-resource-overlay">
+                  <span className="ne-resource-type">Story</span>
+                </div>
+              </div>
+               <div className="ne-resource-content">
+                <h3>A win for Seed Sovereignty in Kenya as Court Quashes Punitive Seed Laws</h3>
+                <p className="ne-resource-description">
+                  Kenya has an estimated 7.5 million smallholder farmers producing more than 70% of the food consumed locally  and exported globally. For years, smallholder farmers across Kenya have been engaged in a legal battle with the government over a law that criminalised the old age practice of saving, sharing and exchanging indigenous seeds.
+In 2022, a group of 15 Kenyan smallholder farmers petitioned the country’s High Court, seeking to compel the government to review sections of a law that bans the sharing and exchange of uncertified and unregistered seeds....
+                </p>
+                <div className="ne-resource-meta">
+                  <span className="ne-meta-item">
+                    <FaCalendarAlt /> Published: DECEMBER 2025
+                  </span>
+                  <span className="ne-meta-item">
+                    Reading time: 15 min
+                  </span>
+                </div>
+                <div className="ne-resource-actions">
+                  <a href="https://docs.google.com/document/d/1F-WAS_i1Lpp9zR8Y2bjFCHaNVoNLfZci/edit?pli=1" target="_blank" rel="noopener noreferrer" className="ne-resource-button ne-external-link-button">
+                    Read Full Story <FaExternalLinkAlt />
+                  </a>
+                </div>
+              </div>
+              </div>
       </section>
-
+     
       {/* Seed School Registration Events */}
       <section className="ne-section">
         <div className="ne-container">
