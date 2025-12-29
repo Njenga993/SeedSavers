@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { HashRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './pages/Home';
@@ -16,7 +16,7 @@ import NewsletterPage from './pages/NewsletterPage';
 import ScrollToTopButton from './components/ScrollToTopButton';
 // import EventPopup from './components/EventPopup';
 import Loader from './components/Loader';
-import Snowfall from 'react-snowfall';
+/*import Snowfall from 'react-snowfall';*/
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -36,19 +36,6 @@ function App() {
           
             <div className="App">
           {/* Main Application Layout */}
-          <Snowfall 
-  snowflakeCount={150} 
-  color="white"
-  style={{
-    position: 'fixed',
-    top: 0,
-    left: 0,
-    width: '100vw',
-    height: '100vh',
-    zIndex: 9999, // very high
-    pointerEvents: 'none'
-  }}
-/>
         <>
 
             <Navbar />
