@@ -163,6 +163,56 @@
   height: 200px;
   overflow: hidden;
 }
+.ne-resource1-image {
+  height: 300px;
+  width: 90%;
+  margin: auto;
+  overflow: hidden;
+  object-fit: scale-down;
+  position: relative;
+}
+.ne-resource1-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: var(--ne-transition);
+}
+.ne-resource1-image:hover img {
+  transform: scale(1.05);
+}
+.ne-resource-image:hover img {
+  transform: scale(1.1);
+}
+.ne-resource-image:hover .ne-resource-overlay {
+  background: linear-gradient(transparent 40%, rgba(0, 0, 0, 0.7));
+}
+.ne-resource1-card {
+  background: var(--ne-white);
+  border-radius: var(--ne-border-radius);
+  overflow: hidden;
+  box-shadow: var(--ne-card-shadow);
+  transition: var(--ne-transition);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.ne-resource1-card:hover {
+  box-shadow: var(--ne-hover-shadow);
+  transform: translateY(-5px);
+}
+.ne-featured1-story{
+  border: 2px solid var(--ne-accent);
+  border-radius: var(--ne-border-radius);
+  box-shadow: var(--ne-hover-shadow);
+  padding: 1rem;
+  margin-bottom: 2rem;
+  width: 90%;
+  justify-content: center;
+  display: flex;
+  margin-left: 3.5rem;
+
+
+}
 
 .ne-resource-image img {
   width: 100%;
