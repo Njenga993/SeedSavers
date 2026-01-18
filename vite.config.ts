@@ -2,14 +2,14 @@ import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
 export default defineConfig({
-  base: '/', // Root-relative paths for clean URLs
+  base: '/SeedSavers/', // must match GitHub repo name
   plugins: [react()],
   build: {
-    outDir: 'dist', // Standard build output
-    emptyOutDir: true, // Clear directory on rebuild
+    outDir: 'dist',
+    emptyOutDir: true,
   },
   server: {
-    port: 5173, // Default Vite port
-    strictPort: true, // Avoid port fallback
-  }
+    port: 5173,
+    strictPort: true,
+  },
 });
