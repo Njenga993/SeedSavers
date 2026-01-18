@@ -133,6 +133,154 @@
   margin: 0 auto;
   border-radius: 2px;
 }
+/* ===============================
+   Dual Featured Section (Scoped)
+================================ */
+
+.ne-dual-feature-section {
+  width: 87%;
+  margin: -3rem auto 3rem;
+  display: flex;
+  gap: 2.5rem;
+  align-items: stretch;
+}
+
+/* Card */
+.ne-dual-feature-card {
+  flex: 1;
+  background: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.08);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.ne-dual-feature-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.12);
+}
+
+/* Image */
+.ne-dual-feature-image {
+  position: relative;
+  height: 240px;
+  overflow: hidden;
+}
+
+.ne-dual-feature-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.ne-dual-feature-card:hover img {
+  transform: scale(1.06);
+}
+
+/* Overlay Tag */
+.ne-dual-feature-overlay {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+}
+
+.ne-dual-feature-tag {
+  background: rgba(0, 0, 0, 0.75);
+  color: #ffffff;
+  padding: 6px 14px;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border-radius: 20px;
+  font-weight: 600;
+}
+
+/* Content */
+.ne-dual-feature-content {
+  padding: 1.8rem 2rem 2.2rem;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.ne-dual-feature-title {
+  font-size: 1.35rem;
+  line-height: 1.35;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  color: #0f2f26;
+}
+
+.ne-dual-feature-text {
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: #3f4f4b;
+  margin-bottom: 0.9rem;
+}
+
+/* Meta */
+.ne-dual-feature-meta {
+  margin-top: auto;
+  margin-bottom: 1.4rem;
+  display: flex;
+  gap: 1.5rem;
+  font-size: 0.8rem;
+  color: #6c7f79;
+}
+
+/* Actions */
+.ne-dual-feature-actions {
+  display: flex;
+}
+
+.ne-dual-feature-btn {
+  background-color: #1f6f54;
+  color: #ffffff;
+  padding: 0.7rem 1.5rem;
+  border-radius: 30px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.ne-dual-feature-btn:hover {
+  background-color: #155441;
+  transform: translateY(-2px);
+}
+
+/* ===============================
+   Responsive
+================================ */
+
+@media (max-width: 1024px) {
+  .ne-dual-feature-section {
+    flex-direction: column;
+    width: 92%;
+  }
+
+  .ne-dual-feature-image {
+    height: 220px;
+  }
+}
+
+@media (max-width: 600px) {
+  .ne-dual-feature-content {
+    padding: 1.4rem 1.4rem 1.8rem;
+  }
+
+  .ne-dual-feature-title {
+    font-size: 1.15rem;
+  }
+
+  .ne-dual-feature-text {
+    font-size: 0.9rem;
+  }
+}
+
 
 /* Resources Grid */
 .ne-resources-grid {
