@@ -1,16 +1,12 @@
 import React, { useEffect, useState } from "react";
 import "../styles/EventPopup.css";
-import { Link } from 'react-router-dom';
-import { 
-  FaArrowRight,
-} from 'react-icons/fa';
-import flyerImage from "../assets/seedschool_sep.webp"; // Replace with your actual image
+import { FaArrowRight } from "react-icons/fa";
+import policyImage from "../assets/DSC_3325.webp";
 
 const EventPopup: React.FC = () => {
   const [show, setShow] = useState(false);
 
   useEffect(() => {
-    // Show popup always on page load (no session storage)
     setShow(true);
   }, []);
 
@@ -18,34 +14,51 @@ const EventPopup: React.FC = () => {
 
   return (
     <div className="event-popup-overlay">
-      <div className="event-popup-box">
-        <button className="event-popup-close" onClick={() => setShow(false)}>
+      <div className="event-popup-card">
+        <button
+          className="event-popup-close"
+          onClick={() => setShow(false)}
+          aria-label="Close popup"
+        >
           ✕
         </button>
-        <div className="event-popup-content">
-          <div className="event-popup-image">
-            <img src={flyerImage} alt="Seed School Flyer" />
-          </div>
-          <div className="event-popup-text">
-                 <h2>3rd Seed Boot Camp – October 26 to November 7, 2025</h2>
-                     <p>
-                    Join our October cohort for the 3rd <strong>Seed Boot Camp</strong> at the 
-                     Seed Savers Network Learning Center, in Gilgil, Kenya.
-                        Learn about <strong>seed security assessment</strong>, <strong>seed banking</strong>, 
-                         <strong>documentation</strong>, <strong>policy & rights</strong>, and more — 
-                             all in a <strong>hands-on, farmer-led</strong> training environment.
-                          Network with practitioners, share traditional knowledge, and build 
-                               community seed movement strategies.
-                                   </p>
-                                <p><strong>Cost:</strong> USD 1000 (includes 2 weeks’ training & accommodation)</p>
-                              <p> <strong>Apply by: 12<sup>th</sup></strong> October 2025</p>
-                              <p> <strong>Contact:</strong> info@seedsaverskenya.org | +254-712-451777</p>
 
-<Link to="https://forms.gle/hLzhrDBbQqsYLgRy7" target="_blank" className="btn-primary">
-            Register Here <FaArrowRight />
-          </Link>
-
+        <div className="event-popup-card-content">
+          
+          {/* Image */}
+          <div className="event-popup-card-image">
+            <img
+              src={policyImage}
+              alt="Endorse the Position Paper on the EAC Seed Bill"
+            />
           </div>
+
+          {/* Text */}
+          <div className="event-popup-card-text">
+            <span className="event-popup-badge">Call to Action</span>
+
+            <h2>
+              Add Your Voice for Farmers’ Seed Rights
+            </h2>
+
+            <p>
+              The Draft <strong>EAC Seed and Plant Varieties Bill, 2025</strong> risks
+              undermining farmers’ rights and farmer-managed seed systems across East Africa.
+            </p>
+
+            <p>
+              Civil society and farmer organisations are calling for urgent action to protect
+              seed sovereignty, biodiversity, and resilient food systems.
+            </p>
+
+            <a
+              href="/news-events"
+              className="event-popup-cta"
+            >
+              Learn More & Take Action <FaArrowRight />
+            </a>
+          </div>
+
         </div>
       </div>
     </div>
