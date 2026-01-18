@@ -14,7 +14,7 @@ import CommunitySeedBankPlatform from './pages/CommunitySeedBankPlatform';
 import IncubationProgramPage from './pages/IncubationProgramPage';
 import NewsletterPage from './pages/NewsletterPage';
 import ScrollToTopButton from './components/ScrollToTopButton';
-// import EventPopup from './components/EventPopup';
+/* import EventPopup from './components/EventPopup';*/
 import Loader from './components/Loader';
 /*import Snowfall from 'react-snowfall';*/
 
@@ -37,6 +37,7 @@ function App() {
             <div className="App">
           {/* Main Application Layout */}
         <>
+          {/*<EventPopup />*/}
 
             <Navbar />
             <main className="main-content">
