@@ -187,54 +187,7 @@ const NewsEvents = () => {
 <section className="ne-dual-feature-section">
   
   {/* Call to Action Card */}
-  <div className="ne-dual-feature-card">
 
-    <div className="ne-dual-feature-image">
-      <img
-        src={FreedomImage}
-        alt="Endorse the Joint Civil Society Position on Seed Laws"
-      />
-      <div className="ne-dual-feature-overlay">
-        <span className="ne-dual-feature-tag">Call to Action</span>
-      </div>
-    </div>
-
-    <div className="ne-dual-feature-content">
-      <h3 className="ne-dual-feature-title">
-        Add Your Voice: Why East Africa’s Seed Law Must Protect Farmers and Seed Diversity
-      </h3>
-
-      <p className="ne-dual-feature-text">
-        The East African Community is developing a regional Seed and Plant Varieties Bill
-        intended to harmonise seed laws across member states. While harmonisation is often
-        framed as progress, the current Draft Bill raises serious concerns for farmers,
-        civil society, and advocates of food sovereignty.
-      </p>
-
-      <p className="ne-dual-feature-text">
-        Smallholder farmers rely on saving, exchanging, and using farm-saved seeds to
-        sustain livelihoods, protect biodiversity, and respond to climate shocks.
-        Yet the Draft Bill prioritises formal seed systems and offers limited protection
-        for customary farmer practices.
-      </p>
-
-      <div className="ne-dual-feature-meta">
-        <span>Published: 2025</span>
-        <span>Action required: Ongoing</span>
-      </div>
-
-      <div className="ne-dual-feature-actions">
-        <a
-          href="./docs/Endorse our Position Paper and Add Your Voice.docx"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="ne-dual-feature-btn"
-        >
-          Read & Endorse the Position Paper
-        </a>
-      </div>
-    </div>
-  </div>
 
   {/* Featured Story Card */}
   <div className="ne-dual-feature-card">
@@ -251,23 +204,40 @@ const NewsEvents = () => {
 
     <div className="ne-dual-feature-content">
       <h3 className="ne-dual-feature-title">
-        Seeds Under Threat: Why East African Farmers Are Resisting a New Regional Seed Law
+        Endorse our Position Paper and Add Your Voice! Why the Draft EAC Seed Bill Needs Change!
       </h3>
 
       <p className="ne-dual-feature-text">
-        Seeds are the foundation of East Africa’s food systems and cultural heritage.
-        Farmer-managed seed systems supply up to 80% of seeds planted across the region,
-        yet remain largely invisible in formal law.
+        The East African Legislative Assembly (EALA) is in the process of developing the East African 
+        Community (EAC) Seed and Plant Varieties Bill, 2025, aimed at harmonizing seed laws across the
+         region. However, in its current form, the Draft Bill contains significant gaps that risk 
+         undermining farmers’ rights and farmer-managed seed systems (FMSS) in East Africa.
       </p>
 
       <p className="ne-dual-feature-text">
-        Civil society organisations and farmer networks warn that the Draft EAC Seed Bill
-        risks criminalising traditional seed practices and consolidating corporate control
-        over seeds — threatening food sovereignty and resilience.
+        The majority of smallholder farmers rely on saving, exchanging, and using farm-saved seeds 
+        for food security, biodiversity, and climate resilience—especially during emergency
+         situations. Yet, the Draft Bill largely prioritizes formal seed systems, offering 
+         limited recognition and protection for farmers’ customary seed practices. If adopted 
+         without safeguards, it could restrict these practices, reduce seed diversity, and 
+         increase farmers’ dependence on commercial and external seed sources.
+      </p>
+       <p className="ne-dual-feature-text">
+        With the Bill expected to move to stakeholder engagement processes as early as February,
+         there is an urgent need for coordinated and collective action. This Joint Civil Society
+          Position Paper highlights the key gaps in the Draft Bill and proposes practical 
+          recommendations to ensure that the final law supports farmers’ rights, FMSS,
+           and resilient seed systems.
+      </p>
+      <p className="ne-dual-feature-text">
+        We invite civil society organisations, farmer organisations, networks, research 
+        institutions, and development partners to endorse and support this position paper
+         here and join a collective regional effort to influence the EAC seed law process
+          at this critical moment.
       </p>
 
       <div className="ne-dual-feature-meta">
-        <span>Published: September 2025</span>
+        <span>Published: 2025</span>
         <span>Reading time: 12–15 min</span>
       </div>
 

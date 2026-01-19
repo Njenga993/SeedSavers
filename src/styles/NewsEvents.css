@@ -165,7 +165,8 @@
 /* Image */
 .ne-dual-feature-image {
   position: relative;
-  height: 240px;
+  height: 500px;
+  min-height: 250px;
   overflow: hidden;
 }
 
