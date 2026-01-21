@@ -118,7 +118,7 @@ const EventPopup: React.FC = () => {
             >
               Apply Now <FaArrowRight />
             </a>
-            <a href="./SeedSchool/SeedSchool" className="event-popup-cta secondary">
+            <a href="/SeedSchool" className="event-popup-cta secondary">
               Learn More <FaArrowRight />
             </a>
           </div>
