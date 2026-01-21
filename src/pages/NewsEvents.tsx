@@ -230,11 +230,19 @@ const NewsEvents = () => {
            and resilient seed systems.
       </p>
       <p className="ne-dual-feature-text">
-        We invite civil society organisations, farmer organisations, networks, research 
-        institutions, and development partners to endorse and support this position paper
-         here and join a collective regional effort to influence the EAC seed law process
-          at this critical moment.
-      </p>
+  We invite civil society organisations, farmer organisations, networks, research 
+  institutions, and development partners to endorse and support this position paper{" "}
+  <a
+    href="https://docs.google.com/forms/d/e/1FAIpQLSekjucQkOaAw0FGinHlq33ZuD8UXsIfawu8a4tgvW_9V7xTuw/viewform"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="ne-inline-link"
+  >
+    here
+  </a>{" "}
+  and join a collective regional effort to influence the EAC seed law process
+  at this critical moment.
+</p>
 
       <div className="ne-dual-feature-meta">
         <span>Published: 2025</span>
@@ -242,15 +250,25 @@ const NewsEvents = () => {
       </div>
 
       <div className="ne-dual-feature-actions">
-        <a
-          href="./docs/Joint Civil Society Position on the Draft EAC Seed and Plant Varieties Bill, 2025-23.pdf"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="ne-dual-feature-btn"
-        >
-          Read Full Document
-        </a>
-      </div>
+  <a
+    href="./docs/Joint Civil Society Position on the Draft EAC Seed and Plant Varieties Bill, 2025-4.pdf"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="ne-dual-feature-btn"
+  >
+    Read Full Document (EN)
+  </a>
+
+  <a
+    href="./docs/FRENCH Joint Civil Society Position on the Draft EAC Seed and Plant Varieties Bill, 2025-4 fr.pdf"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="ne-dual-feature-btn ne-dual-feature-btn-secondary"
+  >
+    Lire le document (FR)
+  </a>
+</div>
+
     </div>
   </div>
 

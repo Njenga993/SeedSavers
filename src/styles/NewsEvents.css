@@ -162,6 +162,31 @@
   box-shadow: 0 20px 45px rgba(0, 0, 0, 0.12);
 }
 
+/* Inline link inside paragraph */
+.ne-inline-link {
+  color: #047857;
+  font-weight: 600;
+  text-decoration: underline;
+  transition: color 0.2s ease;
+}
+
+.ne-inline-link:hover {
+  color: #065f46;
+}
+
+/* Secondary (French) button */
+.ne-dual-feature-btn-secondary {
+  background: transparent;
+  color: #047857;
+  border: 2px solid #047857;
+}
+
+.ne-dual-feature-btn-secondary:hover {
+  background: #047857;
+  color: #ffffff;
+}
+
+
 /* Image */
 .ne-dual-feature-image {
   position: relative;

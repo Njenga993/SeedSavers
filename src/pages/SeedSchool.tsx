@@ -14,7 +14,7 @@ const SeedSchool = () => {
   const seedSchools = [
     {
       year: '2025',
-      title: '2nd African Seed School',
+      title: '3rd African Seed School',
       location: 'Seed Savers Network Training Center, Gilgil, Kenya',
       participants: 92,
       countries: 15,
@@ -42,7 +42,7 @@ const SeedSchool = () => {
     },
     {
       year: '2024',
-      title: '1st African Seed School',
+      title: '2nd African Seed School',
       location: 'Seed Savers Network Training Center, Gilgil, Kenya',
       participants: 88,
       countries: 9,
@@ -125,11 +125,11 @@ const SeedSchool = () => {
             <div className="tab-content">
               <div className="upcoming-school">
                 <div className="school-header">
-                  <h2>3rd Seed School Boot Camp 2025</h2>
+                  <h2> 4th Seed School Boot Camp 2026</h2>
                   <div className="school-details">
                     <div className="detail-item">
                       <FaCalendarAlt className="detail-icon" />
-                      <span>October 26-November 7, 2025</span>
+                      <span>13th - 24th, April 2026</span>
                     </div>
                     <div className="detail-item">
                       <FaMapMarkerAlt className="detail-icon" />
@@ -137,17 +137,18 @@ const SeedSchool = () => {
                     </div>
                     <div className="detail-item">
                       <FaUsers className="detail-icon" />
-                      <span>50+ Participants Expected</span>
+                      <span>70+ Participants Expected</span>
                     </div>
                   </div>
                 </div>
 
                 <div className="school-description">
-                  <h3>Theme: "Seeding Resilience: Climate-Adaptive Crops for Africa's Future"</h3>
+                  <h3>Theme: "Rooted in Seeds, Led by Farmers: Building a Farmer-Led Seed Sovereignty Movement"</h3>
                   <p>
-                    Join us for the 3rd Seed School Boot Camp, a transformative 2 weeks intensive training program 
-                    dedicated to preserving Africa's agricultural biodiversity. This year's focus is on developing 
-                    climate-resilient seed systems and empowering community seed guardians across the continent.
+                    The 2026 Seed Boot Camp program  is an immersive, hands-on learning experience designed for individuals
+                     and institutions seeking to deeply understand farmer-managed seed systems, agroecology, and farmer-led advocacy.
+                      Rooted in real community practice, the Boot Camp brings participants face to face with farmers, seed custodians, 
+                      and grassroots movements that are actively shaping seed and food sovereignty in Kenya.
                   </p>
                   
                   <div className="program-highlights">
@@ -155,23 +156,28 @@ const SeedSchool = () => {
                     <div className="highlight-grid">
                       <div className="highlight-card">
                         <div className="highlight-icon"></div>
-                        <h5>Seed Conservation Techniques</h5>
-                        <p>Hands-on training in traditional and modern seed preservation methods</p>
+                        <h5>Engagements</h5>
+                        <p>Engage in hands-on field learning within farming communities</p>
                       </div>
                       <div className="highlight-card">
                         <div className="highlight-icon"></div>
-                        <h5>Climate Resilience</h5>
-                        <p>Identifying and multiplying climate-adaptive crop varieties</p>
+                        <h5>Seed Banking</h5>
+                        <p>Interact with lead farmers, seed custodians, and community seed banks</p>
                       </div>
                       <div className="highlight-card">
                         <div className="highlight-icon"></div>
-                        <h5>Policy Advocacy</h5>
-                        <p>Strategies for advocating farmer seed rights and sovereignty</p>
+                        <h5>Participation </h5>
+                        <p>Participate in practical sessions on seed saving, selection, storage, and documentation</p>
                       </div>
                       <div className="highlight-card">
                         <div className="highlight-icon"></div>
-                        <h5>Network Building</h5>
-                        <p>Connecting with seed savers from across Africa</p>
+                        <h5>policy Advocacy </h5>
+                        <p>Reflect on the role of policy, courts, and social movements in advancing seed sovereignty</p>
+                      </div>
+                      <div className="highlight-card">
+                        <div className="highlight-icon"></div>
+                        <h5>Farmer led Approach</h5>
+                        <p>Learn how farmers organize, advocate, and defend their rights at local and national levels</p>
                       </div>
                     </div>
                   </div>
@@ -183,23 +189,26 @@ const SeedSchool = () => {
                         <h5>Who Should Apply</h5>
                         <ul>
                           <li>Farmers and seed custodians</li>
+                          <li>Organisations seeking to support farmers' participation or capacity build their team on seed issues.</li>
                           <li>Agricultural extension officers</li>
                           <li>NGO staff working on food sovereignty</li>
                           <li>Researchers and students in agriculture</li>
+                          <li>Youth and community organizers</li>
+                          <li>Development partners and institutions interested in agroecology and seed systems</li>
                         </ul>
                       </div>
                       <div className="reg-detail">
                         <h5>Costs</h5>
                         <ul>
                           <li>Accommodation,Meals & Tuition: $1000 (For the Whole Period) </li>
-                          <li>Send your Application by : <strong>12th October</strong></li>
+                          <li>Send your Application by : <strong>6th April</strong></li>
 
                         </ul>
                       </div>
                       
                     </div>
                     <div className="cta-buttons">
-                      <Link to="https://forms.gle/hLzhrDBbQqsYLgRy7" target="_blank" className="btn-primary">
+                      <Link to="https://docs.google.com/forms/d/e/1FAIpQLSdHr_D9vx44oEomKXtq-69e-Q98xJe9jSv_6XjQVxJoClI1Bw/viewform" target="_blank" className="btn-primary">
                         Apply Now <FaArrowRight />
                       </Link>
                     

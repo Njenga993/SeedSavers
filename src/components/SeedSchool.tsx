@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "../styles/SeedSchool.css";
-import seedSchoolImg1 from "../assets/seedschool_sep.webp";
+import seedSchoolImg1 from "../assets/seedschool26.jpeg";
 
 const SeedSchool: React.FC = () => {
   const [] = useState(false);
 
   const handleRegisterClick = () => {
     // Open registration form in a new tab
-    window.open("https://forms.gle/hLzhrDBbQqsYLgRy7", "_blank");
+    window.open("https://docs.google.com/forms/d/e/1FAIpQLSdHr_D9vx44oEomKXtq-69e-Q98xJe9jSv_6XjQVxJoClI1Bw/viewform", "_blank");
   };
 
   return (
@@ -42,7 +42,7 @@ const SeedSchool: React.FC = () => {
           </div>
 
           <p className="seed-school-date">
-            <strong>Next Boot Camp:</strong> Oct 26 - Nov 7, 2025 • Gilgil, Kenya
+            <strong>Next Boot Camp:</strong> 13th - 24th , April 2026 • Gilgil, Kenya
           </p>
 
           <div className="seed-school-ctas">
