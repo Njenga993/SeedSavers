@@ -48,7 +48,11 @@ const BlogPage: React.FC = () => {
 
           <article className="featured-article">
             <div className="featured-image-container">
-              <img src={featuredPost.image} alt={featuredPost.title} className="featured-image" />
+              <img
+                src={featuredPost.image}
+                alt={featuredPost.title}
+                className="featured-image"
+              />
               <div className="featured-badge">Featured</div>
             </div>
 
@@ -70,11 +74,41 @@ const BlogPage: React.FC = () => {
 
               <div className="article-tags">
                 {featuredPost.tags.map((tag, i) => (
-                  <span key={i} className="article-tag">{tag}</span>
+                  <span key={i} className="article-tag">
+                    {tag}
+                  </span>
                 ))}
               </div>
 
-              <Link to={`/blog/${featuredPost.slug}`} className="article-read-more">
+              {/* ✅ FEATURED POST CTAs (NEW – SAFE & GUARDED) */}
+              {featuredPost.ctas && featuredPost.ctas.length > 0 && (
+                <div className="ne-featured-cta-wrapper">
+                  {featuredPost.ctas.map((cta, index) => (
+                    <a
+                      key={index}
+                      href={cta.href}
+                      target={cta.target ?? '_self'}
+                      rel={
+                        cta.target === '_blank'
+                          ? 'noopener noreferrer'
+                          : undefined
+                      }
+                      className={`ne-featured-cta-btn ${
+                        cta.variant === 'secondary'
+                          ? 'ne-featured-cta-btn--secondary'
+                          : 'ne-featured-cta-btn--primary'
+                      }`}
+                    >
+                      {cta.label}
+                    </a>
+                  ))}
+                </div>
+              )}
+
+              <Link
+                to={`/blog/${featuredPost.slug}`}
+                className="article-read-more"
+              >
                 Read Full Story
                 <FaArrowRight className="arrow-icon" />
               </Link>
@@ -113,11 +147,16 @@ const BlogPage: React.FC = () => {
                   <div className="post-footer">
                     <div className="post-tags">
                       {post.tags.slice(0, 2).map((tag, i) => (
-                        <span key={i} className="post-tag">{tag}</span>
+                        <span key={i} className="post-tag">
+                          {tag}
+                        </span>
                       ))}
                     </div>
 
-                    <Link to={`/blog/${post.slug}`} className="post-read-more">
+                    <Link
+                      to={`/blog/${post.slug}`}
+                      className="post-read-more"
+                    >
                       Read More
                       <FaArrowRight />
                     </Link>
