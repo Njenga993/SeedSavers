@@ -76,14 +76,14 @@ We call on policymakers, civil society organizations, farmers’ groups, and oth
       {
         label: 'Read Full Document (EN)',
         href:
-          './docs/Joint Civil Society Position on the Draft EAC Seed and Plant Varieties Bill, 2025-4.pdf',
+          '/docs/Joint Civil Society Position on the Draft EAC Seed and Plant Varieties Bill, 2025-4.pdf',
         target: '_blank',
         variant: 'primary',
       },
       {
         label: 'Lire le document (FR)',
         href:
-          './docs/FRENCH Joint Civil Society Position on the Draft EAC Seed and Plant Varieties Bill, 2025-4 fr.pdf',
+          '/docs/FRENCH Joint Civil Society Position on the Draft EAC Seed and Plant Varieties Bill, 2025-4 fr.pdf',
         target: '_blank',
         variant: 'secondary',
       },
