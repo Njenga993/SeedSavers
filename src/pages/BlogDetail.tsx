@@ -69,6 +69,27 @@ export default function BlogDetails() {
         )}
       </article>
 
+      {/* ================= CTA BUTTONS ================= */}
+      {post.ctas && post.ctas.length > 0 && (
+        <div className="ne-featured-cta-wrapper blog-detail-cta">
+          {post.ctas.map((cta, index) => (
+            <a
+              key={index}
+              href={cta.href}
+              target={cta.target ?? '_self'}
+              rel={cta.target === '_blank' ? 'noopener noreferrer' : undefined}
+              className={`ne-featured-cta-btn ${
+                cta.variant === 'secondary'
+                  ? 'ne-featured-cta-btn--secondary'
+                  : 'ne-featured-cta-btn--primary'
+              }`}
+            >
+              {cta.label}
+            </a>
+          ))}
+        </div>
+      )}
+
       {/* Tags and Social Sharing */}
       <div className="bd-footer">
         <div className="bd-tags">

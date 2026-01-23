@@ -114,6 +114,78 @@
   color: var(--accent-gold);
 }
 
+/* =========================================================
+   FEATURED POST – CTA BUTTONS
+   Scoped & Non-breaking
+========================================================= */
+
+/* CTA container */
+.ne-featured-cta-wrapper {
+  display: flex;
+  flex-direction: column; /* Mobile-first */
+  gap: 12px;
+  margin-top: 20px;
+}
+
+/* Base CTA button */
+.ne-featured-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 18px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border-radius: 8px;
+  text-decoration: none;
+  text-align: center;
+  line-height: 1.2;
+  transition: all 0.25s ease;
+  border: 2px solid transparent;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+/* Primary CTA */
+.ne-featured-cta-btn--primary {
+  background-color: #1b5e20; /* Jungle green */
+  color: #ffffff;
+  border-color: #1b5e20;
+}
+
+.ne-featured-cta-btn--primary:hover {
+  background-color: #144a19;
+  border-color: #144a19;
+  transform: translateY(-1px);
+}
+
+/* Secondary CTA */
+.ne-featured-cta-btn--secondary {
+  background-color: transparent;
+  color: #1b5e20;
+  border-color: #1b5e20;
+}
+
+.ne-featured-cta-btn--secondary:hover {
+  background-color: rgba(27, 94, 32, 0.08);
+  transform: translateY(-1px);
+}
+
+/* Desktop layout */
+@media (min-width: 768px) {
+  .ne-featured-cta-wrapper {
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .ne-featured-cta-btn {
+    padding: 14px 22px;
+  }
+}
+/* =========================================================
+   END FEATURED POST – CTA BUTTONS
+   Scoped & Non-breaking
+
 /* Content Wrapper */
 .blog-content-wrapper {
   max-width: 1200px;
