@@ -1,6 +1,9 @@
 import { useParams, Link } from 'react-router-dom';
 import { blogPosts } from '../data/blogData';
-import { FaArrowLeft, FaCalendarAlt, FaUser, FaTag, FaShareAlt, FaBookmark, FaFacebookF, FaTwitter, FaLinkedin } from 'react-icons/fa';
+import { 
+  FaArrowLeft, FaCalendarAlt, FaUser, FaTag, 
+  FaShareAlt, FaBookmark, FaFacebookF, FaTwitter, FaLinkedin 
+} from 'react-icons/fa';
 import '../styles/BlogDetails.css';
 
 export default function BlogDetails() {
@@ -26,7 +29,7 @@ export default function BlogDetails() {
       {/* Hero Section */}
       <div className="bd-hero">
         <div className="bd-breadcrumb">
-          <Link to="/blog">Blog</Link> / {post.category}
+          <Link to="/blog">Blog</Link> / {post.category ?? "General"}
         </div>
         <h1 className="bd-title">{post.title}</h1>
         <p className="bd-excerpt">{post.excerpt}</p>
@@ -34,9 +37,9 @@ export default function BlogDetails() {
         <div className="bd-meta">
           <div className="bd-author-info">
             <div className="bd-author-avatar">
-              {post.author.charAt(0).toUpperCase()}
+              {post.author ? post.author.charAt(0).toUpperCase() : "A"}
             </div>
-            <span><FaUser /> {post.author}</span>
+            <span><FaUser /> {post.author || "Anonymous"}</span>
           </div>
           <span><FaCalendarAlt /> {post.date}</span>
           <span>{post.readTime} read</span>
@@ -68,6 +71,28 @@ export default function BlogDetails() {
           </blockquote>
         )}
       </article>
+
+      {/* ================= CTA BUTTONS ================= */}
+      {post.ctas && post.ctas.length > 0 && (
+        <div className="ne-featured-cta-wrapper blog-detail-cta">
+          {post.ctas.map((cta, index) => (
+            <a
+              key={index}
+              href={cta.href}
+              target={cta.target ?? '_blank'}          // open in new tab by default
+              rel="noopener noreferrer"               // safe for external links
+              className={`ne-featured-cta-btn ${
+                cta.variant === 'secondary'
+                  ? 'ne-featured-cta-btn--secondary'
+                  : 'ne-featured-cta-btn--primary'
+              }`}
+              onClick={(e) => e.stopPropagation()}    // prevent React Router interference
+            >
+              {cta.label}
+            </a>
+          ))}
+        </div>
+      )}
 
       {/* Tags and Social Sharing */}
       <div className="bd-footer">

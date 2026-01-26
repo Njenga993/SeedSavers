@@ -1,4 +1,5 @@
 // src/data/blogData.ts
+
 import SpectacularImage from '../assets/Spectacular.webp';
 import Spectacular from '../assets/Makokha.webp';
 import Image from '../assets/vihiga leafy.webp';
@@ -7,6 +8,19 @@ import Journalist from '../assets/journalists.webp';
 import Bio from '../assets/Bio-pesticides.webp';
 import SpectacularImagecourt from '../assets/DSC_3236.webp';
 
+/* =========================
+   CTA TYPE (NEW – SAFE ADD)
+========================= */
+export type BlogCTA = {
+  label: string;
+  href: string;
+  target?: '_blank' | '_self';
+  variant?: 'primary' | 'secondary';
+};
+
+/* =========================
+   BLOG POST TYPE
+========================= */
 export type BlogPost = {
   id: string;
   title: string;
@@ -17,15 +31,74 @@ export type BlogPost = {
   tags: string[];
   image: string;
   slug: string;
-  content: string; // full blog content
-  category?: string; // Added
-  imageCaption?: string; // Added
-  quote?: string; // Added
+  content: string;
+  category?: string;
+  imageCaption?: string;
+  quote?: string;
+
+  // NEW (OPTIONAL – DOES NOT BREAK EXISTING POSTS)
+  ctas?: BlogCTA[];
 };
 
+/* =========================
+   BLOG DATA
+========================= */
 export const blogPosts: BlogPost[] = [
+  {
+    id: '1',
+    title:
+      'Endorse our Position Paper and Add Your Voice! Why the Draft EAC Seed Bill Needs Change!',
+    excerpt:
+      'The East African Legislative Assembly (EALA) is in the process of developing the East African Community (EAC) Seed and Plant Varieties Bill, 2025. This legislation has significant implications for farmers, seed systems, and agricultural biodiversity across the EAC region. We urge stakeholders to review our position paper and endorse our call for critical amendments to ensure the bill supports farmers’ rights, seed diversity, and sustainable agriculture.',
+    author: '',
+    date: '2025',
+    readTime: '≈12 min read',
+    tags: ['Seed Sovereignty', 'Agriculture', 'Food Security', 'Biodiversity'],
+    image: SpectacularImagecourt,
+    slug: 'endorse-our-position-paper-eac-seed-bill',
+    content: `
+The East African Legislative Assembly (EALA) is in the process of developing the East African Community (EAC) Seed and Plant Varieties Bill, 2025. This legislation has significant implications for farmers, seed systems, and agricultural biodiversity across the EAC region. We urge stakeholders to review our position paper and endorse our call for critical amendments to ensure the bill supports farmers’ rights, seed diversity, and sustainable agriculture.
+
+The draft EAC Seed Bill, as it currently stands, contains several provisions that could undermine traditional seed systems, restrict farmers’ access to diverse seed varieties, and favor commercial seed companies over smallholder farmers. Key concerns include stringent registration requirements for seeds, limitations on seed saving and exchange, and inadequate recognition of farmers’ rights to use and conserve indigenous seed varieties.
+
+These provisions threaten to erode the rich agricultural biodiversity that smallholder farmers have cultivated for generations. They also risk marginalizing farmers who rely on traditional seed systems for their livelihoods and food security.
+
+To address these concerns, we have outlined a series of recommended amendments in our position paper. These include:
+1. Recognizing and protecting farmers’ rights to save, use, exchange, and sell farm-saved seeds.
+2. Simplifying seed registration processes to accommodate diverse seed varieties, including indigenous and farmer-developed seeds.
+3. Promoting participatory seed breeding and conservation initiatives that involve farmers in decision-making processes.
+4. Ensuring that seed policies support agroecological practices and biodiversity conservation.
+5. Establishing mechanisms for stakeholder engagement, including farmers, civil society, and indigenous communities, in the development and implementation of seed policies.
+
+We call on policymakers, civil society organizations, farmers’ groups, and other stakeholders to endorse our position paper and advocate for these critical amendments to the EAC Seed Bill.
+    `,
+    ctas: [
+      {
+        label: 'Read Full Document (EN)',
+        href:
+          '/docs/Joint Civil Society Position on the Draft EAC Seed and Plant Varieties Bill, 2025-4.pdf',
+        target: '_blank',
+        variant: 'primary',
+      },
+      {
+        label: 'Lire le document (FR)',
+        href:
+          '/docs/FRENCH Joint Civil Society Position on the Draft EAC Seed and Plant Varieties Bill, 2025-4 fr.pdf',
+        target: '_blank',
+        variant: 'secondary',
+      },
+      {
+        label: 'Endorse the Position Paper',
+        href:
+          'https://docs.google.com/forms/d/e/1FAIpQLSekjucQkOaAw0FGinHlq33ZuD8UXsIfawu8a4tgvW_9V7xTuw/viewform',
+        target: '_blank',
+        variant: 'primary',
+      },
+    ],
+  },
+
    {
-  id: '1',
+  id: '2',
   title: 'The Seeds of Freedom: Kenya s Landmark Win for Agricultural Sovereignty  Africa Farming Journal',
   excerpt:
     'On 27 November 2025, Kenya’s High Court ruled that farmers have the constitutional right to save, share and exchange indigenous seeds — striking down parts of the Seed and Plant Varieties Act that criminalized traditional seed-saving practices. This decision is hailed as a landmark victory for seed sovereignty, agrobiodiversity, and the rights of smallholder farmers to preserve indigenous seed systems and cultural heritage.',
@@ -46,7 +119,7 @@ This outcome also sends a powerful signal against the push by large commercial s
   `,
 },
   {
-    id: '2',
+    id: '3',
     title: 'Empowering Communities through Traditional Vegetables: A Success Story from Vihiga CBO',
     excerpt:
       'At the heart of Vihiga County, a powerful agricultural transformation is unfolding. Thanks to the collaborative efforts of the Seed Savers Network, Bioversity International & CIAT, FAO and ITGPRFA,',
@@ -96,7 +169,7 @@ As the movement grows, so too does the hope that other communities will follow i
     `,
   },
   {
-    id: '3',
+    id: '4',
     title: 'Journalists Have a Critical Role in Safeguarding Kenya’s Food Systems',
     excerpt:
       'Agriculture, environment and climate journalists have been urged to take a keen interest in Kenya’s agriculture policies by factually reporting on its effects on the country’s food system.  Seed Savers Network (Kenya),',
@@ -141,7 +214,7 @@ Atieno, at the same time, underscored the importance of accurate, people-centred
     `,
   },
   {
-    id: '4',
+    id: '5',
     title:
       'Farmers, Experts Hail Ban on Hazardous Pesticides, Call for Stronger Oversight',
     excerpt:
@@ -189,7 +262,7 @@ At the same time, civil society groups and farmers have raised concerns over the
     `,
   },
   {
-    id: '5',
+    id: '6',
     title:
       'Characterization and Documentation of Traditional Leafy Vegetables in Vihiga',
     excerpt:
@@ -225,7 +298,7 @@ For Seed Savers Network Kenya, having the farmers participate in the characteriz
     `,
   },
   {
-    id: '6',
+    id: '7',
     title:
       'Creating Seas of Change: Concepter Makokha’s Rise in Agro-Entrepreneurship.',
     excerpt:
@@ -249,7 +322,7 @@ Concepter’s story highlights the impact of empowering women in agriculture thr
     `,
   },
   {
-    id: '7',
+    id: '8',
     title: 'Advancing Farmers’ Rights: A Commitment to Promoting Seed Access',
     excerpt:
       'Kenya has made a significant leap in advancing farmers’ rights with the introduction of the Seeds and Plant Varieties (Conservation, Access, and Benefit Sharing of Plant Genetic Resources for Food and Agriculture)',
