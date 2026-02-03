@@ -12,6 +12,12 @@ import IPS from '../assets/IPs.webp';
 import DocumentImage from '../assets/DSC_3325.webp'; // New image for document card
 import FreedomImage from '../assets/DSC_3236.webp'; // New image for seed of freedom story
 import FreedomImage001 from '../assets/DSC_3325.webp'; // New image for seed of freedom story
+import FreedomImage002 from '../assets/DSC_3224.webp'; 
+import FreedomImage003 from '../assets/DSC_3232.webp'; 
+
+import FreedomImage005 from '../assets/DSC_3245.webp'; 
+import FreedomImage006 from '../assets/DSC_3265.webp'; 
+import FreedomImage007 from '../assets/DSC_3364.webp'; 
 import { useState } from 'react';
 import SEO from "../components/SEO";
 
@@ -184,97 +190,133 @@ const NewsEvents = () => {
         </div>
         </section>
         {/* Dual Featured Section – Seed Law & Call to Action */}
-<section className="ne-dual-feature-section">
+
   
   {/* Call to Action Card */}
 
 
-  {/* Featured Story Card */}
-  <div className="ne-dual-feature-card">
+{/* Magazine Style Feature Story */}
+<section className="ne-magazine-story">
+  <h2 className="ne-magazine-title">
+    A win for Seed Sovereignty in Kenya as Court Quashes Punitive Seed Laws
+  </h2>
 
-    <div className="ne-dual-feature-image">
-      <img
-        src={FreedomImage001}
-        alt="Seed Sovereignty and Farmers’ Rights in East Africa"
-      />
-      <div className="ne-dual-feature-overlay">
-        <span className="ne-dual-feature-tag">Featured Story</span>
-      </div>
-    </div>
-
-    <div className="ne-dual-feature-content">
-      <h3 className="ne-dual-feature-title">
-        Endorse our Position Paper and Add Your Voice! Why the Draft EAC Seed Bill Needs Change!
-      </h3>
-
-      <p className="ne-dual-feature-text">
-        The East African Legislative Assembly (EALA) is in the process of developing the East African 
-        Community (EAC) Seed and Plant Varieties Bill, 2025, aimed at harmonizing seed laws across the
-         region. However, in its current form, the Draft Bill contains significant gaps that risk 
-         undermining farmers’ rights and farmer-managed seed systems (FMSS) in East Africa.
+  {/* Block 1 - Image on Left */}
+  <div className="ne-magazine-block left-image">
+    <img src={FreedomImage001} alt="Smallholder farmers in Kenya" loading="lazy" />
+    <div className="ne-magazine-text">
+      <p>
+        Kenya has an estimated 7.5 million smallholder farmers producing more than 70% of the food consumed locally and exported globally. For years, smallholder farmers across Kenya have been engaged in a legal battle with the government over a law that criminalised the old age practice of saving, sharing and exchanging indigenous seeds.
       </p>
-
-      <p className="ne-dual-feature-text">
-        The majority of smallholder farmers rely on saving, exchanging, and using farm-saved seeds 
-        for food security, biodiversity, and climate resilience—especially during emergency
-         situations. Yet, the Draft Bill largely prioritizes formal seed systems, offering 
-         limited recognition and protection for farmers’ customary seed practices. If adopted 
-         without safeguards, it could restrict these practices, reduce seed diversity, and 
-         increase farmers’ dependence on commercial and external seed sources.
+      <p>
+        In 2022, a group of 15 Kenyan smallholder farmers petitioned the country's High Court, seeking to compel the government to review sections of a law that bans the sharing and exchange of uncertified and unregistered seeds.
       </p>
-       <p className="ne-dual-feature-text">
-        With the Bill expected to move to stakeholder engagement processes as early as February,
-         there is an urgent need for coordinated and collective action. This Joint Civil Society
-          Position Paper highlights the key gaps in the Draft Bill and proposes practical 
-          recommendations to ensure that the final law supports farmers’ rights, FMSS,
-           and resilient seed systems.
-      </p>
-      <p className="ne-dual-feature-text">
-  We invite civil society organisations, farmer organisations, networks, research 
-  institutions, and development partners to endorse and support this position paper{" "}
-  <a
-    href="https://docs.google.com/forms/d/e/1FAIpQLSekjucQkOaAw0FGinHlq33ZuD8UXsIfawu8a4tgvW_9V7xTuw/viewform"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="ne-inline-link"
-  >
-    here
-  </a>{" "}
-  and join a collective regional effort to influence the EAC seed law process
-  at this critical moment.
-</p>
-
-      <div className="ne-dual-feature-meta">
-        <span>Published: 2025</span>
-        <span>Reading time: 12–15 min</span>
-      </div>
-
-      <div className="ne-dual-feature-actions">
-  <a
-    href="./docs/Joint Civil Society Position on the Draft EAC Seed and Plant Varieties Bill, 2025-4.pdf"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="ne-dual-feature-btn"
-  >
-    Read Full Document (EN)
-  </a>
-
-  <a
-    href="./docs/FRENCH Joint Civil Society Position on the Draft EAC Seed and Plant Varieties Bill, 2025-4 fr.pdf"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="ne-dual-feature-btn ne-dual-feature-btn-secondary"
-  >
-    Lire le document (FR)
-  </a>
-</div>
-
     </div>
   </div>
 
+  {/* Block 2 - Image on Right */}
+  <div className="ne-magazine-block left-image">
+    <img src={FreedomImage002} alt="Farmer managed seed systems" loading="lazy" />
+    <div className="ne-magazine-text">
+      <p>
+        Rural smallholder farmers in Kenya rely on informal farmer-managed systems to acquire seeds through seed saving and sharing, but the Seeds and Plant Varieties Act limits their access.
+      </p>
+      <p>
+        Kenya's government enacted the law in 2012 to develop, promote, and regulate a modern and competitive seed industry, but farmers are calling for its review.
+      </p>
+      <p>
+        The informal farmer-managed seed system allows farmers to store a portion of their seeds after harvesting, which guarantees them seeds for the next planting season.
+      </p>
+    </div>
+  </div>
+
+  {/* Section Header */}
+  <h3 className="ne-magazine-subtitle">Victory for Farmers</h3>
+
+  {/* Block 3 - Image on Left */}
+  <div className="ne-magazine-block left-image">
+    <img src={FreedomImage003} alt="High Court ruling Kenya" loading="lazy" />
+    <div className="ne-magazine-text">
+      <p>
+        In a decisive victory for food sovereignty and climate justice, the High Court on November 27, 2025, ruled in favour of smallholder farmers, declaring punitive sections of the Seed and Plant Varieties Act unconstitutional.
+      </p>
+      <p>
+        The judgment effectively decriminalises the age-old practice of saving, sharing, and exchanging indigenous seeds, affirming that Farmer-Managed Seed Systems (FMSS) are a protected right, not a criminal activity.
+      </p>
+      <p>
+        Under the punitive law, farmers faced jail terms of up to 2 years and a fine of 1 million shillings (about 7,800 USD) for selling or exchanging unregistered seeds.
+      </p>
+    </div>
+  </div>
+
+  {/* Block 4 - Image on Right */}
+  <div className="ne-magazine-block left-image">
+    <img src={FreedomImage} alt="Seed sovereignty advocates" loading="lazy" />
+    <div className="ne-magazine-text">
+      <p>
+        Farmer rights defenders had argued that the law gave control of the country's food system to multinational corporations.
+      </p>
+      <p>
+        In her judgment, Justice Rhoda Rutto declared unconstitutional sections of the Act which gave seed inspectors sweeping powers to raid seed banks and seize seeds meant for the next harvest, made it illegal for farmers to process or sell seeds unless they were registered seed merchants, gave extensive proprietary rights to plant breeders and none to farmers, and made it illegal for farmers to save or share seeds from their harvest without prior knowledge of seed proprietors.
+      </p>
+      <p>
+        Samuel Wathome, a smallholder farmer who was a petitioner in the case, says that "just like his grandmother did, he can now freely save seeds for his grandchildren without fear of police or prison".
+      </p>
+    </div>
+  </div>
+
+  {/* Reduced Production Costs */}
+  <h3 className="ne-magazine-subtitle">Reduced Production Costs</h3>
+
+  {/* Block 5 - Image on Left */}
+  <div className="ne-magazine-block left-image">
+    <img src={FreedomImage005} alt="Community seed banks" loading="lazy" />
+    <div className="ne-magazine-text">
+      <p>
+        Daniel Wanjama says the ruling provides economic relief for smallholder and marginalised farmers who couldn't afford certified seeds and were excluded entirely from formal seed markets.
+      </p>
+      <p>
+        "With the ruling, farmers can again rely on self-saved seeds, community seed banks, and informal exchange networks, reducing costs, improving access, and enhancing resilience, especially for low-income and marginalised farming communities", said Wanjama
+      </p>
+      <p>
+        Wanjama added that with more farmers having unlimited access to affordable seeds of their choice, more food will be produced for the population.
+      </p>
+    </div>
+  </div>
+
+  {/* Block 6 - Image on Right */}
+  <div className="ne-magazine-block left-image">
+    <img src={FreedomImage006} alt="Seed sovereignty advocates" loading="lazy" />
+    <div className="ne-magazine-text">
+      <p>
+        At the same time, Wanjama notes that the ruling gives way for regenerative, decentralised agricultural development through community seed banks, farmer networks, and locally adapted farming systems, which may improve nutrition, biodiversity, and ecological sustainability at local and national levels.
+      </p>
+      <p>
+        The ruling, according to experts, is a legal and policy shift that could influence not just Kenya but other African nations as a model of rejecting overly restrictive seed laws and investing in community-based seed sovereignty.
+        "Going forward, farmers will have greater food sovereignty and community control over what they plant and eat, which underpins local diets, cultural food traditions, and agricultural heritage. This aligns with broader movements toward agroecology, sustainable farming, and climate-adaptation in agriculture," Wanjama concludes.
+      </p>
+    </div>
+  </div>
+  
+  <h3 className="ne-magazine-subtitle">The Journey to the ruling</h3>
+
+  {/* Block 7 - Image on Left */}
+  <div className="ne-magazine-block left-image">
+    <img src={FreedomImage007} alt="Community seed banks" loading="lazy" />
+    <div className="ne-magazine-text">
+      <p>
+        For the past three years, smallholder farmers in the East African nation of Kenya have been battling to overturn seed control regulations contained in a law that prohibits them from selling and sharing of unregistered and uncertified indigenous seeds. The petitioners wanted legal recognition and protection of Farmer Managed Seed Systems (FMSS) and the restoration of farmers' fundamental rights.
+      </p>
+      <p>
+        The Petition filed in 2022 was spearheaded by 15 smallholder farmers from Seed Savers Network challenging the constitutionality of the Seed and Plant Varieties Act (Cap. 326) of 2012 and the Seeds and Plant Varieties (Seeds) Regulations, 2016 with the Kenya Plant Health Inspectorate Service (KEPHIS) and the office of the Attorney General as respondents. Other civil society organisations and the Law Society of Kenya came in as interested parties in the case.
+      </p>
+      <p>
+        The law imposed a fine of up to KES 1,000,000, or imprisonment for up to 2 years, or both, for someone who, while not registered as a seed merchant, imports or packages seed for sale. The same penalty applies to anyone found selling or offering for sale seed that does not match the set certification standards, as well as giving false information to a seed inspector, showing false certificates, or obstructing inspectors
+      </p>
+    </div>
+  </div>
 </section>
-
-
+    
      
       {/* Seed School Registration Events */}
       <section className="ne-section">
@@ -288,17 +330,17 @@ const NewsEvents = () => {
           <div className="ne-events-grid">
             <div className="ne-event-card">
               <div className="ne-event-date">
-                <span className="ne-date-day">26</span>
-                <span className="ne-date-month">Oct</span>
+                <span className="ne-date-day">13th</span>
+                <span className="ne-date-month">April</span>
               </div>
               <div className="ne-event-content">
-                <h3>3rd Seed Boot Camp 2025</h3>
+                <h3>4th Seed Boot Camp 2026</h3>
                 <div className="ne-event-meta">
                   <span className="ne-meta-item">
                     <FaMapMarkerAlt /> Gilgil, Kenya
                   </span>
                   <span className="ne-meta-item">
-                    <FaCalendarAlt /> Deadline: Oct 12
+                    <FaCalendarAlt /> Deadline: April 6, 2026
                   </span>
                 </div>
                 <p className="ne-event-description">
