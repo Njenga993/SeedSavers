@@ -1,5 +1,6 @@
 import React from "react";
 import "../styles/Agrotourism.css";
+import { Link } from "react-router-dom";
 import HeroImage1 from "../assets/hero_1.webp"; // reuse hero style
 import SEO from "../components/SEO";
 import IntroImage1 from "../assets/agro1.webp";
@@ -144,9 +145,9 @@ const AgrotourismPage: React.FC = () => {
             community, ecology, and culture.
           </p>
 
-          <a href="/contact" className="agro-cta-button">
+          <Link to="/contact" className="btn-primary">
             Enquire Now
-          </a>
+            </Link>
         </div>
       </section>
     </div>
