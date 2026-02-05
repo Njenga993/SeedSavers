@@ -13,6 +13,7 @@ import SeedSchool from './pages/SeedSchool';
 import CommunitySeedBankPlatform from './pages/CommunitySeedBankPlatform';
 import IncubationProgramPage from './pages/IncubationProgramPage';
 import NewsletterPage from './pages/NewsletterPage';
+import AgrotourismPage from './pages/AgrotourismPage';
 import ScrollToTopButton from './components/ScrollToTopButton';
 import EventPopup from './components/EventPopup';
 import Loader from './components/Loader';
@@ -47,6 +48,7 @@ function App() {
                 <Route path="/SeedSchool" element={<SeedSchool />} />
                 <Route path="/CommunitySeedBankPlatform" element={<CommunitySeedBankPlatform />} />
                 <Route path="/incubation-program" element={<IncubationProgramPage />} />
+                <Route path="/agrotourism" element={<AgrotourismPage />} />
                 <Route path="/newsletter" element={<NewsletterPage />} />
                 <Route path="/news-events" element={<NewsEvents />} />
                 <Route path="/resources" element={<Resources />} />

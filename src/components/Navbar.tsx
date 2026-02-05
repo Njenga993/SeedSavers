@@ -8,7 +8,6 @@ import {
   FaYoutube,
   FaBars, 
   FaTimes, 
-  FaSearch,
   FaChevronDown,
   FaChevronUp
 } from 'react-icons/fa';
@@ -29,7 +28,7 @@ interface NavItem {
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const [searchOpen, setSearchOpen] = useState(false);
+  
   const [activeDropdown, setActiveDropdown] = useState<number | null>(null);
   const location = useLocation();
   const navbarRef = useRef<HTMLDivElement>(null);
@@ -39,11 +38,11 @@ const Navbar = () => {
     document.body.style.overflow = isOpen ? 'auto' : 'hidden';
   };
 
-  const toggleSearch = () => setSearchOpen(!searchOpen);
+  
   
   const closeAll = () => {
     setIsOpen(false);
-    setSearchOpen(false);
+    
     setActiveDropdown(null);
     document.body.style.overflow = 'auto';
   };
@@ -123,6 +122,7 @@ const Navbar = () => {
         { path: '/blog', label: 'Blogs' }
       ]
     },
+    {path : '/agritourism', label: 'Agritourism' },
     { path: '/contact', label: 'Contact' }
   ];
 
@@ -256,13 +256,6 @@ const Navbar = () => {
 
             <div className="s-nav-actions">
               <button
-                className="s-search-toggle"
-                onClick={toggleSearch}
-                aria-label="Toggle search"
-              >
-                <FaSearch />
-              </button>
-              <button
                 className="s-hamburger"
                 onClick={toggleMenu}
                 aria-label="Toggle menu"
@@ -357,37 +350,6 @@ const Navbar = () => {
                     </a>
                   </li>
                 </ul>
-              </motion.div>
-            )}
-          </AnimatePresence>
-
-          {/* SEARCH BAR */}
-          <AnimatePresence>
-            {searchOpen && (
-              <motion.div 
-                className="s-search-bar"
-                initial={{ opacity: 0, y: -20 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -20 }}
-              >
-                <form className="s-search-form">
-                  <input
-                    type="text"
-                    placeholder="Search for seeds, resources, or news..."
-                    className="s-search-input"
-                  />
-                  <button type="submit" className="s-search-submit">
-                    <FaSearch />
-                  </button>
-                  <button
-                    type="button"
-                    className="s-search-close"
-                    onClick={toggleSearch}
-                    aria-label="Close search"
-                  >
-                    <FaTimes />
-                  </button>
-                </form>
               </motion.div>
             )}
           </AnimatePresence>
