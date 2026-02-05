@@ -122,7 +122,7 @@ const Navbar = () => {
         { path: '/blog', label: 'Blogs' }
       ]
     },
-    {path : '/agritourism', label: 'Agritourism' },
+    {path : '/agrotourism', label: 'Agritourism' },
     { path: '/contact', label: 'Contact' }
   ];
 
