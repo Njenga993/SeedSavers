@@ -144,7 +144,7 @@ const AgrotourismPage: React.FC = () => {
             community, ecology, and culture.
           </p>
 
-          <a href="/SeedSavers/contact" className="agro-cta-button">
+          <a href="/contact" className="agro-cta-button">
             Enquire Now
           </a>
         </div>
