@@ -10,7 +10,6 @@ import '../styles/Contact.css';
 import SpectacularImage from '../assets/hero_1.webp';
 import SEO from "../components/SEO";
 
-
 type ContactMethod = {
   icon: React.ReactNode;
   title: string;
@@ -22,6 +21,10 @@ const ContactPage: React.FC = () => {
   const [donationAmount, setDonationAmount] = useState<number>(10);
   const [isRecurring, setIsRecurring] = useState<boolean>(false);
   const [showDonationDetails, setShowDonationDetails] = useState(false);
+  const [donationPhone, setDonationPhone] = useState('');
+  const [donationLoading, setDonationLoading] = useState(false);
+  const [donationError, setDonationError] = useState<string | null>(null);
+
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -41,43 +44,69 @@ const ContactPage: React.FC = () => {
   const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    // Send email to Seed Savers inbox
     emailjs
       .send(
-        'service_gpw095d', // service ID
-        'template_ck2k9xf', // main template ID
+        'service_gpw095d',
+        'template_ck2k9xf',
         {
           user_name: formData.name,
           user_email: formData.email,
           subject: formData.subject,
           message: formData.message
         },
-        'W7z6fDytLu4t06Ihf' // public key
+        'W7z6fDytLu4t06Ihf'
       )
       .then(() => {
         setStatusMessage('✅ Thank you! Your message was sent successfully.');
         setFormData({ name: '', email: '', subject: '', message: '' });
 
-        // Send auto-reply to user (non-blocking)
-        emailjs
-          .send(
-            'service_gpw095d',
-            'template_hng5blt', // auto-reply template ID
-            {
-              user_name: formData.name,
-              subject: formData.subject,
-              reply_to: formData.email
-            },
-            'W7z6fDytLu4t06Ihf'
-          )
-          .catch((error) => {
-            console.error('Auto-reply failed:', error);
-          });
+        emailjs.send(
+          'service_gpw095d',
+          'template_hng5blt',
+          {
+            user_name: formData.name,
+            subject: formData.subject,
+            reply_to: formData.email
+          },
+          'W7z6fDytLu4t06Ihf'
+        ).catch(() => {});
       })
-      .catch((error) => {
-        console.error('EmailJS Error:', error);
+      .catch(() => {
         setStatusMessage('❌ Failed to send the message. Please try again later.');
       });
+  };
+
+  const handleDonate = async () => {
+    setDonationError(null);
+    setDonationLoading(true);
+
+    try {
+      const response = await fetch('/api/initiate-payment', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          amount: donationAmount,
+          currency: 'USD',
+          name: formData.name || 'Anonymous Donor',
+          email: formData.email || 'donor@anonymous.com',
+          phone: donationPhone,
+          isRecurring,
+          purpose: 'Seed Sovereignty Donation'
+        })
+      });
+
+      const data = await response.json();
+
+      if (data?.link) {
+        window.location.href = data.link;
+      } else {
+        setDonationError('Unable to initiate donation. Please try again.');
+      }
+    } catch (error) {
+      setDonationError('Payment service is currently unavailable.');
+    } finally {
+      setDonationLoading(false);
+    }
   };
 
   const contactMethods: ContactMethod[] = [
@@ -99,55 +128,16 @@ const ContactPage: React.FC = () => {
       details: ['info@seedsaverskenya.org']
     }
   ];
-   
-  <SEO
-  title="Contact Seed Savers Network Kenya | Get in Touch for Seed Conservation & Training"
-  description="Contact Seed Savers Network Kenya for inquiries on indigenous seed conservation, Seed School training, farmer partnerships, volunteering, and community seed banking. Our team is ready to help."
-  url="https://seedsaverskenya.org/contact"
-  image={SpectacularImage}
-  keywords={[
-    "Seed Savers Kenya contact",
-    "Seed Savers Network Kenya contact",
-    "seed conservation Kenya",
-    "community seed banks Kenya",
-    "volunteer agriculture Kenya",
-    "agroecology training Kenya",
-    "seed school Kenya",
-    "farmer seed systems",
-    "seed donation Kenya",
-    "seed sovereignty Kenya"
-  ]}
-  jsonLd={{
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    name: "Seed Savers Network Kenya",
-    url: "https://seedsaverskenya.org",
-    logo: "https://seedsaverskenya.org/logo.png",
-    email: "info@seedsaverskenya.org",
-    telephone: "+254712451777",
-    address: {
-      "@type": "PostalAddress",
-      streetAddress: "Diatomite, Off Nakuru – Nairobi Highway",
-      addressLocality: "Gilgil",
-      addressRegion: "Nakuru",
-      postalCode: "20116",
-      addressCountry: "KE"
-    },
-    contactPoint: {
-      "@type": "ContactPoint",
-      telephone: "+254712451777",
-      email: "info@seedsaverskenya.org",
-      contactType: "customer support",
-      areaServed: ["KE", "Africa"],
-      availableLanguage: ["English", "Swahili"]
-    }
-  }}
-/>
-
 
   return (
     <div className="contact-page">
-      {/* Hero Section */}
+      <SEO
+        title="Contact Seed Savers Network Kenya | Get in Touch for Seed Conservation & Training"
+        description="Contact Seed Savers Network Kenya for inquiries on indigenous seed conservation, Seed School training, farmer partnerships, volunteering, and community seed banking."
+        url="https://seedsaverskenya.org/contact"
+        image={SpectacularImage}
+      />
+
       <section className="contact-hero">
         <div className="contact-hero-overlay">
           <h1>Get in Touch</h1>
@@ -157,10 +147,8 @@ const ContactPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Main Contact Section */}
       <div className="contact-container">
         <div className="contact-grid">
-          {/* Contact Form */}
           <section className="contact-form-section">
             <h2>Send Us a Message</h2>
             <form className="contact-form" onSubmit={sendEmail}>
@@ -188,147 +176,146 @@ const ContactPage: React.FC = () => {
 
               <div className="contact-form-group">
                 <label htmlFor="message">Your Message</label>
-                <textarea id="message" value={formData.message} onChange={handleChange} required></textarea>
+                <textarea id="message" value={formData.message} onChange={handleChange} required />
               </div>
 
-              <button type="submit" className="contact-submit-btn">
-                Send Message
-              </button>
-
-              {/* Success/Error Message */}
-              {statusMessage && (
-                <p className="contact-form-status">{statusMessage}</p>
-              )}
+              <button type="submit" className="contact-submit-btn">Send Message</button>
+              {statusMessage && <p className="contact-form-status">{statusMessage}</p>}
             </form>
           </section>
 
-          {/* Contact Information */}
           <section className="contact-info-section">
             <h2>Contact Information</h2>
             <div className="contact-methods">
               {contactMethods.map((method, index) => (
                 <div key={index} className="contact-method">
-                  <div className="contact-method-icon-container">
-                    {method.icon}
-                  </div>
+                  <div className="contact-method-icon-container">{method.icon}</div>
                   <div className="contact-method-content">
                     <h3>{method.title}</h3>
-                    <div className="contact-method-details">
-                      {method.details.map((detail, i) => (
-                        <p key={i}>{detail}</p>
-                      ))}
-                    </div>
-                    {method.description && (
-                      <p className="contact-method-description">{method.description}</p>
-                    )}
+                    {method.details.map((detail, i) => <p key={i}>{detail}</p>)}
+                    {method.description && <p>{method.description}</p>}
                   </div>
                 </div>
               ))}
             </div>
-
-            <div className="contact-office-image-container">
-              <img
-                src={SpectacularImage}
-                alt="Seed Savers Office"
-                className="contact-office-image"
-              />
-            </div>
           </section>
         </div>
+{/* Donation CTA – UPDATED for Node.js backend */}
+<section className="contact-donation-cta">
+  <div className="contact-donation-content">
+    <div className="contact-donation-icon">
+      <FaHandHoldingHeart />
+    </div>
 
-        {/* Map Section */}
-        <section className="contact-map-section">
-          <h2>Find Us on the Map</h2>
-          <div className="contact-map-container">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.695390960483!2d36.26753727437194!3d-0.44976953528270935!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1829a149b3e5b3e5%3A0xcde1f0a37810fe6e!2sSeed%20Savers%20Network%20Training%20and%20Stay!5e0!3m2!1sen!2ske!4v1754466094580!5m2!1sen!2ske"
-              width="100%"
-              height="450"
-              style={{ border: 0 }}
-              allowFullScreen
-              loading="lazy"
-              title="Our Location on Map"
-            ></iframe>
+    <h2>Support Seed Sovereignty</h2>
+    <p>
+      Your donation helps us empower farmers, conserve indigenous seeds,
+      and promote sustainable agriculture across Kenya and beyond.
+    </p>
+
+    <button onClick={toggleDonationDetails} className="contact-cta-button">
+      {showDonationDetails ? 'Hide Donation Options' : 'Donate Now'}
+    </button>
+
+    {showDonationDetails && (
+      <div className="contact-donation-options">
+        <div className="contact-donation-table">
+          {/* Offline Donations */}
+          <div className="contact-donation-column">
+            <h3>Offline Donation</h3>
+            <p><strong>Bank Name:</strong> Seed Savers Kenya Bank</p>
+            <p><strong>Account Number:</strong> 123456789</p>
+            <p><strong>Branch:</strong> Nairobi CBD</p>
+            <p><strong>Mobile Money (M-Pesa):</strong> Paybill 123456, Acc: SEEDS</p>
           </div>
-        </section>
 
-        {/* Donation CTA */}
-        <section className="contact-donation-cta">
-          <div className="contact-donation-content">
-            <div className="contact-donation-icon">
-              <FaHandHoldingHeart />
-            </div>
-            <h2>Support Seed Sovereignty</h2>
-            <p>
-              Your donation helps us empower farmers, conserve indigenous seeds,
-              and promote sustainable agriculture across Kenya and beyond.
-              Every contribution — big or small — makes a lasting impact.
-            </p>
-            <div className="contact-cta-buttons">
-              <button onClick={toggleDonationDetails} className="contact-cta-button">
-                {showDonationDetails ? 'Hide Donation Options' : 'Donate Now'}
-              </button>
-            </div>
+          {/* Online Donations */}
+          <div className="contact-donation-column">
+            <h3>Online Donation</h3>
 
-            {showDonationDetails && (
-              <div className="contact-donation-options">
-                <div className="contact-donation-table">
-                  {/* Offline Donations */}
-                  <div className="contact-donation-column">
-                    <h3>Offline Donation</h3>
-                    <p><strong>Bank Name:</strong> Seed Savers Kenya Bank</p>
-                    <p><strong>Account Number:</strong> 123456789</p>
-                    <p><strong>Branch:</strong> Nairobi CBD</p>
-                    <p><strong>Mobile Money (M-Pesa):</strong> Paybill 123456, Acc: SEEDS</p>
-                    <p><strong>Email for confirmation:</strong> info@seedsaverskenya.org</p>
-                  </div>
+            <label>Donation Amount (USD)</label>
+            <input
+              type="number"
+              min="1"
+              value={donationAmount}
+              onChange={(e) => setDonationAmount(Number(e.target.value))}
+              required
+            />
 
-                  {/* Online Donations */}
-                  <div className="contact-donation-column">
-                    <h3>Online Donation (PayPal)</h3>
-                    <form
-                      onSubmit={(e) => {
-                        e.preventDefault();
-                        const baseUrl = " ";
-                        const params = new URLSearchParams({
-                          business: " ",
-                          amount: donationAmount.toString(),
-                          currency_code: "USD",
-                          recurring: isRecurring ? "1" : "0"
-                        });
-                        window.open(`${baseUrl}?${params}`, "_blank");
-                      }}
-                    >
-                      <label htmlFor="amount">Donation Amount (USD)</label>
-                      <input
-                        type="number"
-                        id="amount"
-                        value={donationAmount}
-                        onChange={(e) => setDonationAmount(Number(e.target.value))}
-                        min="1"
-                        step="0.01"
-                        required
-                      />
+            <label>Phone Number (M-Pesa)</label>
+            <input
+              type="tel"
+              placeholder="2547XXXXXXXX"
+              value={donationPhone}
+              onChange={(e) => setDonationPhone(e.target.value)}
+              required
+            />
 
-                      <label className="contact-checkbox-label">
-                        <input
-                          type="checkbox"
-                          checked={isRecurring}
-                          onChange={(e) => setIsRecurring(e.target.checked)}
-                        />
-                        Make this a recurring donation
-                      </label>
+            <label className="contact-checkbox-label">
+              <input
+                type="checkbox"
+                checked={isRecurring}
+                onChange={(e) => setIsRecurring(e.target.checked)}
+              />
+              Make this a recurring donation
+            </label>
 
-                      <button type="submit" className="contact-paypal-btn">
-                        Proceed to Donation
-                      </button>
-                    </form>
-                  </div>
-                </div>
-              </div>
+            <button
+              className="contact-paypal-btn"
+              onClick={async () => {
+                if (!donationPhone || donationAmount < 1) {
+                  setDonationError("Please fill in all required fields.");
+                  return;
+                }
+
+                setDonationLoading(true);
+                setDonationError(null);
+
+                try {
+                  const response = await fetch(
+                    "https://your-vercel-backend.vercel.app/api/initiate-payment",
+                    {
+                      method: "POST",
+                      headers: { "Content-Type": "application/json" },
+                      body: JSON.stringify({
+                        amount: donationAmount,
+                        currency: "USD",
+                        name: formData.name || "Anonymous",
+                        email: formData.email || "donor@example.com",
+                        phone: donationPhone,
+                        purpose: "Seed Savers Kenya Donation"
+                      }),
+                    }
+                  );
+
+                  const data = await response.json();
+
+                  if (response.ok && data.link) {
+                    window.location.href = data.link; // redirect to Flutterwave
+                  } else {
+                    setDonationError(data.message || "Failed to initiate donation.");
+                  }
+                } catch (err) {
+                  console.error(err);
+                  setDonationError("Network error. Please try again.");
+                } finally {
+                  setDonationLoading(false);
+                }
+              }}
+              disabled={donationLoading}
+            >
+              {donationLoading ? "Processing..." : "Proceed to Donation"}
+            </button>
+
+            {donationError && (
+              <p className="contact-form-status">{donationError}</p>
             )}
           </div>
-        </section>
+        </div>
+      </div>
+    )}
+  </div>
+</section>
       </div>
     </div>
   );
