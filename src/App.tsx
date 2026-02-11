@@ -17,6 +17,9 @@ import AgrotourismPage from './pages/AgrotourismPage';
 import ScrollToTopButton from './components/ScrollToTopButton';
 import EventPopup from './components/EventPopup';
 import Loader from './components/Loader';
+import DonationSuccess from './pages/DonationSuccess';
+import DonationCancelled from './pages/DonationCancelled';
+
 /*import Snowfall from 'react-snowfall';*/
 
 function App() {
@@ -55,6 +58,8 @@ function App() {
                 <Route path="/blog" element={<BlogPage />} />
                 <Route path="/blog/:slug" element={<BlogDetail />} />
                 <Route path="/contact" element={<Contact />} />
+                <Route path="/donation-success" element={<DonationSuccess />} />
+                <Route path="/donation-cancelled" element={<DonationCancelled />} />
               </Routes>
             </main>
             <ScrollToTopButton />

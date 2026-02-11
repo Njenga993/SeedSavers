@@ -152,10 +152,9 @@ body {
   background-color: var(--white);
   transition: all 0.3s ease;
   font-family: var(--s-font);
-  color: var(--text-dark); /* Ensure text color is dark for readability */
+  color: var(--text-dark);
 }
 
-/* Fix for select dropdown readability */
 .contact-form-group select {
   color: var(--text-dark);
   background-color: var(--white);
@@ -168,10 +167,6 @@ body {
 }
 
 .contact-form-group select:invalid {
-  color: var(--medium-gray);
-}
-
-.contact-form-group select option[value=""] {
   color: var(--medium-gray);
 }
 
@@ -345,29 +340,37 @@ body {
 }
 
 .contact-donation-content {
-  max-width: 800px;
+  max-width: 900px;
   margin: 0 auto;
 }
 
 .contact-donation-icon {
-  font-size: 3rem;
+  font-size: 3.5rem;
   margin-bottom: 1.5rem;
   color: var(--gold-accent);
+  display: inline-block;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
 }
 
 .contact-donation-cta h2 {
   color: var(--white);
   margin-bottom: 1rem;
-  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  font-size: clamp(2rem, 4vw, 2.8rem);
   font-weight: var(--s-font-weight-bold);
 }
 
 .contact-donation-cta p {
-  font-size: clamp(1rem, 1.2vw, 1.2rem);
-  margin-bottom: 2rem;
-  opacity: 0.9;
-  line-height: 1.6;
-  max-width: 600px;
+  font-size: clamp(1.1rem, 1.5vw, 1.3rem);
+  margin-bottom: 2.5rem;
+  opacity: 0.95;
+  line-height: 1.7;
+  max-width: 700px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -382,88 +385,175 @@ body {
 
 .contact-cta-button {
   display: inline-block;
-  padding: 1rem 2rem;
+  padding: 1.2rem 3rem;
   background-color: var(--gold-accent);
   color: var(--jungle-green);
   text-decoration: none;
   border-radius: 50px;
-  font-weight: var(--s-font-weight-semibold);
+  font-weight: var(--s-font-weight-bold);
   transition: all 0.3s ease;
   border: 2px solid var(--gold-accent);
   cursor: pointer;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
 }
 
 .contact-cta-button:hover {
-  background-color: transparent;
-  color: var(--gold-accent);
-  transform: translateY(-2px);
-  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+  background-color: #e5c156;
+  color: var(--jungle-green);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.3);
 }
 
 .contact-donation-options {
-  margin-top: 2rem;
-  animation: fadeIn 0.5s ease-out;
+  margin-top: 3rem;
+  animation: slideDown 0.5s ease-out;
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 .contact-donation-table {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 16px;
-  padding: 2rem;
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2.5rem;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  padding: 2.5rem;
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  text-align: left;
 }
 
 .contact-donation-column {
   padding: 1.5rem;
   background: rgba(0, 0, 0, 0.2);
-  border-radius: 12px;
-  transition: transform 0.3s ease;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
 }
 
-.contact-donation-column:hover {
-  transform: translateY(-5px);
+.contact-donation-offline {
+  justify-content: center;
+  border: 1px dashed rgba(255,255,255,0.3);
 }
 
 .contact-donation-column h3 {
   color: var(--gold-accent);
   margin-bottom: 1.5rem;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: var(--s-font-weight-semibold);
   border-bottom: 2px solid var(--gold-accent);
   padding-bottom: 0.75rem;
+  display: inline-block;
 }
 
-.contact-donation-column p {
+.offline-details p {
   margin: 1rem 0;
-  font-size: 1rem;
-  line-height: 1.6;
+  font-size: 1.05rem;
+  line-height: 1.7;
   opacity: 0.9;
 }
 
-.contact-donation-column strong {
-  color: var(--gold-accent);
-  font-weight: var(--s-font-weight-semibold);
+.offline-details strong {
+  color: var(--white);
+  font-weight: 600;
 }
 
-.contact-donation-column form {
-  display: grid;
-  gap: 1.25rem;
-}
+/* --- IMPROVED ONLINE DONATION STYLES --- */
 
 .contact-donation-column label {
   display: block;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.6rem;
   font-weight: var(--s-font-weight-medium);
-  font-size: 1rem;
+  font-size: 0.95rem;
+  color: rgba(255,255,255,0.9);
 }
 
-.contact-donation-column input[type="number"] {
+.donor-info {
+  display: grid;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.donor-info input {
   width: 100%;
   padding: 1rem;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--white);
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.donor-info input:focus {
+  outline: none;
+  border-color: var(--gold-accent);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.donor-info input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.amount-wrapper {
+  margin-bottom: 1.5rem;
+}
+
+.preset-amounts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.amount-button {
+  padding: 0.8rem 0.5rem;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--white);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-weight: 600;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.amount-button:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.6);
+  transform: translateY(-2px);
+}
+
+.amount-button.active {
+  background: var(--gold-accent);
+  color: var(--jungle-green);
+  border-color: var(--gold-accent);
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.4);
+}
+
+.custom-amount-wrapper {
+  position: relative;
+  margin-top: 0.5rem;
+}
+
+.currency-symbol {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: rgba(255,255,255,0.7);
+  font-weight: 600;
+  z-index: 2;
+}
+
+.custom-amount-input {
+  width: 100%;
+  padding: 1rem 1rem 1rem 2.2rem; /* Space for dollar sign */
   border: 2px solid rgba(255, 255, 255, 0.3);
   border-radius: 8px;
   background: rgba(255, 255, 255, 0.1);
@@ -472,10 +562,14 @@ body {
   transition: all 0.3s ease;
 }
 
-.contact-donation-column input[type="number"]:focus {
+.custom-amount-input:focus {
   outline: none;
   border-color: var(--gold-accent);
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.custom-amount-input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
 }
 
 .contact-checkbox-label {
@@ -484,22 +578,25 @@ body {
   gap: 0.75rem;
   font-size: 0.95rem;
   cursor: pointer;
+  margin-bottom: 1rem;
+  user-select: none;
 }
 
 .contact-checkbox-label input[type="checkbox"] {
-  width: 18px;
-  height: 18px;
+  width: 20px;
+  height: 20px;
   accent-color: var(--gold-accent);
+  cursor: pointer;
 }
 
 .contact-paypal-btn {
   width: 100%;
-  padding: 1rem;
+  padding: 1.1rem;
   background-color: #ffc439;
   color: #111;
   border: none;
   border-radius: 8px;
-  font-weight: var(--s-font-weight-semibold);
+  font-weight: var(--s-font-weight-bold);
   cursor: pointer;
   transition: all 0.3s ease;
   margin-top: 1rem;
@@ -507,13 +604,31 @@ body {
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  font-size: 1rem;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 .contact-paypal-btn:hover {
-  background-color: #f0b92e;
+  background-color: #f4bb33;
   transform: translateY(-2px);
-  box-shadow: 0 4px 15px rgba(255, 196, 57, 0.4);
+  box-shadow: 0 5px 15px rgba(255, 196, 57, 0.4);
+}
+
+.paypal-icon {
+  font-size: 1.4rem;
+}
+
+.donation-error-message {
+  background-color: rgba(255, 71, 87, 0.15);
+  border: 1px solid rgba(255, 71, 87, 0.5);
+  color: #ff6b6b;
+  padding: 0.8rem;
+  border-radius: 8px;
+  margin: 1rem 0;
+  font-size: 0.9rem;
+  text-align: center;
+  font-weight: 500;
 }
 
 /* Animations */
@@ -580,6 +695,10 @@ body {
   
   .contact-map-container iframe {
     height: 350px;
+  }
+
+  .preset-amounts {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
@@ -657,8 +776,12 @@ body {
   }
   
   .contact-paypal-btn {
-    padding: 0.9rem;
-    font-size: 0.95rem;
+    padding: 1rem;
+    font-size: 1rem;
+  }
+
+  .preset-amounts {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -690,9 +813,5 @@ body {
   
   .contact-donation-column {
     padding: 1rem;
-  }
-  
-  .contact-map-container iframe {
-    height: 250px;
   }
 }
