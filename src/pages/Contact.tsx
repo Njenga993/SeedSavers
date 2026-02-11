@@ -6,7 +6,7 @@ import {
   FaEnvelope,
   FaHandHoldingHeart
 } from 'react-icons/fa';
-import '../styles/Contact.css';
+import '../styles/contact.css';
 import SpectacularImage from '../assets/hero_1.webp';
 import SEO from "../components/SEO";
 
