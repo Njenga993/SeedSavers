@@ -76,38 +76,6 @@ const ContactPage: React.FC = () => {
       });
   };
 
-  const handleDonate = async () => {
-    setDonationError(null);
-    setDonationLoading(true);
-
-    try {
-      const response = await fetch('/api/initiate-payment', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          amount: donationAmount,
-          currency: 'USD',
-          name: formData.name || 'Anonymous Donor',
-          email: formData.email || 'donor@anonymous.com',
-          phone: donationPhone,
-          isRecurring,
-          purpose: 'Seed Sovereignty Donation'
-        })
-      });
-
-      const data = await response.json();
-
-      if (data?.link) {
-        window.location.href = data.link;
-      } else {
-        setDonationError('Unable to initiate donation. Please try again.');
-      }
-    } catch (error) {
-      setDonationError('Payment service is currently unavailable.');
-    } finally {
-      setDonationLoading(false);
-    }
-  };
 
   const contactMethods: ContactMethod[] = [
     {
