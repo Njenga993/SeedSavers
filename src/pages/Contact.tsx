@@ -9,6 +9,7 @@ import {
 import '../styles/Contact.css';
 import SpectacularImage from '../assets/hero_1.webp';
 import SEO from "../components/SEO";
+import { PayPalButtons } from "@paypal/react-paypal-js";
 
 type ContactMethod = {
   icon: React.ReactNode;
@@ -456,10 +457,39 @@ const ContactPage: React.FC = () => {
                         </div>
                       )}
 
-                      <button type="submit" className="contact-paypal-btn">
-                        <span className="paypal-icon">🅿️</span>
-                        Donate with PayPal
-                      </button>
+                      <PayPalButtons
+  style={{ layout: "vertical" }}
+  createOrder={async () => {
+    const response = await fetch("https://seed-backend-vercel-3hzr.vercel.app/api/create-order", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        amount: customAmount || donationAmount,
+      }),
+    });
+
+    const data = await response.json();
+    return data.id;
+  }}
+  onApprove={async (data) => {
+    const response = await fetch("http://localhost:5000/capture-order", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        orderID: data.orderID,
+      }),
+    });
+
+    const details = await response.json();
+
+    alert("Donation successful! Thank you.");
+    console.log(details);
+  }}
+  onError={(err) => {
+    console.error(err);
+    alert("Payment failed.");
+  }}
+/>
                     </form>
                   </div>
                 </div>
