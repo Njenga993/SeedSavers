@@ -30,11 +30,17 @@ const ContactPage: React.FC = () => {
 
   // --- Donation State ---
   const [donationAmount, setDonationAmount] = useState<number>(10);
+  const [isRecurring, setIsRecurring] = useState<boolean>(false);
   const [showDonationDetails, setShowDonationDetails] = useState(false);
   const [customAmount, setCustomAmount] = useState<string>('');
   const [donorName, setDonorName] = useState('');
   const [donorEmail, setDonorEmail] = useState('');
   const [donationError, setDonationError] = useState<string | null>(null);
+
+  // --- Configuration ---
+  // Replace with your actual PayPal Business Email (Sandbox for testing)
+  const PAYPAL_BUSINESS_EMAIL = 'sb-c47xht49201417@business.example.com'; 
+  const isDevelopment = process.env.NODE_ENV === 'development';
 
   // --- Handlers ---
   const toggleDonationDetails = () => {
@@ -85,6 +91,75 @@ const ContactPage: React.FC = () => {
         console.error('EmailJS Error:', error);
         setStatusMessage('❌ Failed to send the message. Please try again later.');
       });
+  };
+
+  // --- PayPal Logic ---
+  const handlePayPalDonation = () => {
+    setDonationError(null);
+
+    // Determine amount
+    let amount: number;
+    if (customAmount && customAmount.trim() !== '') {
+      amount = parseFloat(customAmount);
+    } else {
+      amount = donationAmount;
+    }
+
+    // Validation
+    if (!donorName || donorName.trim() === '') {
+      setDonationError("Please enter your full name.");
+      return;
+    }
+    if (!donorEmail || donorEmail.trim() === '') {
+      setDonationError("Please enter your email address.");
+      return;
+    }
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(donorEmail)) {
+      setDonationError("Please enter a valid email address.");
+      return;
+    }
+    if (!amount || isNaN(amount) || amount < 1) {
+      setDonationError("Please enter a valid donation amount (minimum $1).");
+      return;
+    }
+
+    // Store in session storage
+    sessionStorage.setItem('donationInfo', JSON.stringify({
+      amount: amount.toFixed(2),
+      currency: 'USD',
+      name: donorName,
+      email: donorEmail,
+      recurring: isRecurring,
+      purpose: 'Seed Savers Kenya Donation'
+    }));
+
+    // Construct PayPal URL
+    const paypalUrl = isDevelopment 
+      ? 'https://www.sandbox.paypal.com/cgi-bin/webscr'
+      : 'https://www.paypal.com/cgi-bin/webscr';
+
+    const params = new URLSearchParams({
+      cmd: isRecurring ? '_xclick-subscriptions' : '_donations',
+      business: PAYPAL_BUSINESS_EMAIL,
+      item_name: 'Seed Savers Kenya Donation',
+      currency_code: 'USD',
+      amount: amount.toFixed(2),
+      return: `${window.location.origin}/donation-success`,
+      cancel_return: `${window.location.origin}/donation-cancelled`,
+      notify_url: `${window.location.origin}/api/paypal-ipn`,
+      custom: JSON.stringify({ name: donorName, email: donorEmail })
+    });
+
+    if (isRecurring) {
+      params.append('a3', amount.toFixed(2));
+      params.append('p3', '1');
+      params.append('t3', 'M');
+      params.append('src', '1');
+      params.append('sra', '1');
+    }
+
+    window.location.href = `${paypalUrl}?${params.toString()}`;
   };
 
   const handlePresetAmount = (amount: number) => {
@@ -309,8 +384,8 @@ const ContactPage: React.FC = () => {
                   <div className="contact-donation-column contact-donation-online">
                     <h3>Online Donation (PayPal)</h3>
                     
-                    {/* The form is now just for collecting donor info, not for submission */}
-                    <div className="donation-form-container">
+                    <form onSubmit={(e) => { e.preventDefault(); handlePayPalDonation(); }}>
+                      
                       {/* Donor Info */}
                       <div className="donor-info">
                         <label>Full Name *</label>
@@ -366,82 +441,56 @@ const ContactPage: React.FC = () => {
                         </div>
                       </div>
 
-                      {/* Display any donation-related errors here */}
+                      {/* Recurring Checkbox */}
+                      <label className="contact-checkbox-label">
+                        <input
+                          type="checkbox"
+                          checked={isRecurring}
+                          onChange={(e) => setIsRecurring(e.target.checked)}
+                        />
+                        Make this a recurring monthly donation
+                      </label>
+
                       {donationError && (
                         <div className="donation-error-message">
                           {donationError}
                         </div>
                       )}
 
-                      {/* --- IMPROVED PAYPAL BUTTONS --- */}
                       <PayPalButtons
-                        style={{ layout: "vertical" }}
-                        disabled={!donorName || !donorEmail || (!customAmount && donationAmount === 0)}
-                        createOrder={async (_, __) => {
-                          setDonationError(null);
-                          try {
-                            const finalAmount = customAmount || donationAmount;
-                            if (finalAmount ) {
-                              throw new Error("Donation amount must be at least $1.");
-                            }
+  style={{ layout: "vertical" }}
+  createOrder={async () => {
+    const response = await fetch(`${import.meta.env.VITE_API_URL}/create-order`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        amount: customAmount || donationAmount,
+      }),
+    });
 
-                            const response = await fetch("https://seed-backend-vercel-3hzr.vercel.app/api/create-order", {
-                              method: "POST",
-                              headers: { "Content-Type": "application/json" },
-                              body: JSON.stringify({ amount: finalAmount }),
-                            });
+    const data = await response.json();
+    return data.id;
+  }}
+  onApprove={async (data) => {
+    const response = await fetch(`${import.meta.env.VITE_API_URL}/capture-order`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        orderID: data.orderID,
+      }),
+    });
 
-                            if (!response.ok) {
-                                const errorText = await response.text();
-                                console.error("Backend Error Response:", errorText);
-                                throw new Error(`Server error: ${response.status}`);
-                            }
+    const details = await response.json();
 
-                            const orderData = await response.json();
-                            return orderData.id;
-                          } catch (error: any) {
-                            console.error("Error creating PayPal order:", error);
-                            setDonationError(error.message || "Could not initiate the donation. Please try again.");
-                            // Returning a rejected promise prevents the PayPal popup from opening
-                            return Promise.reject(error);
-                          }
-                        }}
-                        onApprove={async (data, _) => {
-                          try {
-                            const response = await fetch("https://seed-backend-vercel-3hzr.vercel.app/api/capture-order", {
-                              method: "POST",
-                              headers: { "Content-Type": "application/json" },
-                              body: JSON.stringify({ orderID: data.orderID }),
-                            });
-
-                            if (!response.ok) {
-                                const errorText = await response.text();
-                                console.error("Backend Capture Error:", errorText);
-                                throw new Error(`Payment processing failed: ${response.status}`);
-                            }
-
-                            const details = await response.json();
-                            console.log("Payment successful:", details);
-                            
-                            // --- SUCCESS: Reset form and show success message ---
-                            alert("Thank you! Your donation was successful.");
-                            setDonorName('');
-                            setDonorEmail('');
-                            setCustomAmount('');
-                            setDonationAmount(10);
-                            setDonationError(null);
-
-                          } catch (error: any) {
-                            console.error("Error capturing PayPal order:", error);
-                            setDonationError(error.message || "There was an issue processing your donation. Please contact support if the problem persists.");
-                          }
-                        }}
-                        onError={(err) => {
-                          console.error("PayPal button onError:", err);
-                          setDonationError("An unexpected error occurred with the payment provider. Please try again.");
-                        }}
-                      />
-                    </div>
+    alert("Donation successful! Thank you.");
+    console.log(details);
+  }}
+  onError={(err) => {
+    console.error(err);
+    alert("Payment failed.");
+  }}
+/>
+                    </form>
                   </div>
                 </div>
               </div>
