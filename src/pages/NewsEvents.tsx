@@ -8,6 +8,7 @@ import Img from '../assets/seedaccess.webp';
 import ngiri from '../assets/ngiri.webp';
 import Ambs from '../assets/seed-ambasadors.webp';
 import Solar from '../assets/Solar dryer.webp';
+import SeedFairCarousel from "../components/SeedFairCarousel";
 import IPS from '../assets/IPs.webp';
 import DocumentImage from '../assets/DSC_3325.webp'; // New image for document card
 import FreedomImage from '../assets/DSC_3236.webp'; // New image for seed of freedom story
@@ -108,6 +109,8 @@ const NewsEvents = () => {
         </div>
         </div>
       </section>
+
+      <SeedFairCarousel />
 
       {/* Featured Resources Section */}
       <section className="ne-section">
