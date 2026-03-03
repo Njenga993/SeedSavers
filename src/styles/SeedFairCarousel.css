@@ -1,0 +1,298 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  --sf-primary: #235835;
+  --sf-accent: #d4af37;
+  --sf-light: #f8f6f0;
+  --sf-white: #ffffff;
+  --sf-gray: #666666;
+  --sf-dark: #2a2a2a;
+  --sf-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  --sf-hover-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  --sf-transition: all 0.3s ease;
+}
+
+.sf-section {
+  padding: 3rem 1rem;
+  background-color: var(--sf-light);
+  font-family: 'Inter', sans-serif;
+}
+
+.sf-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.sf-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.sf-header h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--sf-primary);
+  margin-bottom: 1rem;
+}
+
+.sf-divider {
+  width: 60px;
+  height: 3px;
+  background-color: var(--sf-accent);
+  margin: 0 auto;
+}
+
+/* Carousel Layout */
+.sf-carousel-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0 2.5rem;
+}
+
+.sf-carousel-container {
+  flex: 1;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.sf-carousel-track {
+  display: flex;
+  transition: transform 0.4s ease-in-out;
+  gap: 1.5rem;
+}
+
+/* Card Styles - Poster Size (3:4 ratio) */
+.sf-card {
+  padding: 0 0.25rem;
+  box-sizing: border-box;
+}
+
+.sf-card-inner {
+  background: var(--sf-white);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--sf-shadow);
+  transition: var(--sf-transition);
+  aspect-ratio: 3/4; /* Poster ratio */
+  display: flex;
+  flex-direction: column;
+}
+
+.sf-card-inner:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--sf-hover-shadow);
+}
+
+.sf-card-inner img {
+  width: 100%;
+  height: 70%; /* Image takes 70% of card */
+  object-fit: cover;
+  transition: var(--sf-transition);
+}
+
+.sf-card-inner:hover img {
+  transform: scale(1.03);
+}
+
+.sf-card-info {
+  height: 30%; /* Info takes 30% of card */
+  padding: 1rem;
+  background: var(--sf-white);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.sf-card-info h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--sf-primary);
+  margin-bottom: 0.5rem;
+  line-height: 1.3;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.sf-card-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.sf-detail-item {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.8rem;
+  color: var(--sf-gray);
+}
+
+.sf-detail-item svg {
+  color: var(--sf-accent);
+  font-size: 0.75rem;
+  flex-shrink: 0;
+}
+
+/* Navigation Buttons */
+.sf-nav-button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--sf-white);
+  border: 2px solid var(--sf-primary);
+  color: var(--sf-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: var(--sf-transition);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  box-shadow: var(--sf-shadow);
+  padding: 0;
+}
+
+.sf-nav-button:hover {
+  background: var(--sf-primary);
+  color: var(--sf-white);
+  border-color: var(--sf-primary);
+}
+
+.sf-nav-prev {
+  left: 0;
+}
+
+.sf-nav-next {
+  right: 0;
+}
+
+/* Dots Navigation */
+.sf-dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 2rem;
+}
+
+.sf-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: none;
+  background: #ccc;
+  cursor: pointer;
+  transition: var(--sf-transition);
+  padding: 0;
+}
+
+.sf-dot:hover {
+  background: var(--sf-accent);
+}
+
+.sf-dot-active {
+  background: var(--sf-primary);
+  transform: scale(1.2);
+}
+
+/* Responsive Breakpoints */
+
+/* Desktop: 3 cards */
+@media (min-width: 1025px) {
+  .sf-carousel-track {
+    gap: 1.5rem;
+  }
+  
+  .sf-card-info h3 {
+    font-size: 1.1rem;
+  }
+  
+  .sf-detail-item {
+    font-size: 0.85rem;
+  }
+}
+
+/* Tablet: 2 cards */
+@media (min-width: 641px) and (max-width: 1024px) {
+  .sf-carousel-track {
+    gap: 1rem;
+  }
+  
+  .sf-card-info h3 {
+    font-size: 0.95rem;
+  }
+  
+  .sf-detail-item {
+    font-size: 0.75rem;
+  }
+  
+  .sf-card-info {
+    padding: 0.75rem;
+  }
+}
+
+/* Mobile: 1 card */
+@media (max-width: 640px) {
+  .sf-section {
+    padding: 2rem 0.5rem;
+  }
+  
+  .sf-header h2 {
+    font-size: 1.5rem;
+  }
+  
+  .sf-carousel-wrapper {
+    padding: 0 2rem;
+  }
+  
+  .sf-nav-button {
+    width: 32px;
+    height: 32px;
+  }
+  
+  .sf-card-info h3 {
+    font-size: 0.9rem;
+  }
+  
+  .sf-detail-item {
+    font-size: 0.7rem;
+  }
+  
+  .sf-card-info {
+    padding: 0.6rem;
+  }
+  
+  .sf-carousel-track {
+    gap: 0;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .sf-carousel-wrapper {
+    padding: 0 1.75rem;
+  }
+  
+  .sf-nav-button {
+    width: 28px;
+    height: 28px;
+  }
+  
+  .sf-card-info {
+    padding: 0.5rem;
+  }
+  
+  .sf-card-info h3 {
+    font-size: 0.85rem;
+    margin-bottom: 0.25rem;
+  }
+  
+  .sf-detail-item {
+    font-size: 0.65rem;
+  }
+}
