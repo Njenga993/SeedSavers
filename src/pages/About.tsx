@@ -387,7 +387,7 @@ const About = () => {
             <div className="about-intro-content">
               <div className="about-text">
                 <p>
-                  Seed Savers Network is a pioneering organization dedicated to preserving agricultural biodiversity 
+                  Seed Savers Network is a Civil Society Organisation dedicated to preserving agricultural biodiversity 
                   and empowering farming communities across Kenya. Founded on the principle that seed sovereignty is 
                   fundamental to food sovereignty, we work directly with smallholder farmers to conserve, regenerate, 
                   and exchange indigenous seed varieties that are resilient to climate change and vital for sustainable 
