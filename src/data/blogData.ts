@@ -1,12 +1,13 @@
 // src/data/blogData.ts
 
-import SpectacularImage from '../assets/Spectacular.webp';
-import Spectacular from '../assets/Makokha.webp';
-import Image from '../assets/vihiga leafy.webp';
-import Access from '../assets/seedaccess.webp';
-import Journalist from '../assets/journalists.webp';
-import Bio from '../assets/Bio-pesticides.webp';
-import SpectacularImagecourt from '../assets/DSC_3236.webp';
+import SpectacularImage from "../assets/Spectacular.webp";
+import GlobalPartnerships from "../assets/Wanjam5.jpeg";
+import Spectacular from "../assets/Makokha.webp";
+import Image from "../assets/vihiga leafy.webp";
+import Access from "../assets/seedaccess.webp";
+import Journalist from "../assets/journalists.webp";
+import Bio from "../assets/Bio-pesticides.webp";
+import SpectacularImagecourt from "../assets/DSC_3236.webp";
 
 /* =========================
    CTA TYPE (NEW – SAFE ADD)
@@ -14,8 +15,8 @@ import SpectacularImagecourt from '../assets/DSC_3236.webp';
 export type BlogCTA = {
   label: string;
   href: string;
-  target?: '_blank' | '_self';
-  variant?: 'primary' | 'secondary';
+  target?: "_blank" | "_self";
+  variant?: "primary" | "secondary";
 };
 
 /* =========================
@@ -45,98 +46,179 @@ export type BlogPost = {
 ========================= */
 export const blogPosts: BlogPost[] = [
   {
-    id: '1',
+    id: "1",
     title:
-      'Endorse our Position Paper and Add Your Voice! Why the Draft EAC Seed Bill Needs Change!',
+      "Endorse our Position Paper and Add Your Voice! Why the Draft EAC Seed Bill Needs Change!",
     excerpt:
-      'The East African Legislative Assembly (EALA) is in the process of developing the East African Community (EAC) Seed and Plant Varieties Bill, 2025. This legislation has significant implications for farmers, seed systems, and agricultural biodiversity across the EAC region. We urge stakeholders to review our position paper and endorse our call for critical amendments to ensure the bill supports farmers’ rights, seed diversity, and sustainable agriculture.',
-    author: '',
-    date: '2025',
-    readTime: '≈12 min read',
-    tags: ['Seed Sovereignty', 'Agriculture', 'Food Security', 'Biodiversity'],
+      "The East African Legislative Assembly (EALA) is in the process of developing the East African Community (EAC) Seed and Plant Varieties Bill, 2025. This legislation has significant implications for farmers, seed systems, and agricultural biodiversity across the EAC region. We urge stakeholders to review our position paper and endorse our call for critical amendments to ensure the bill supports farmers’ rights, seed diversity, and sustainable agriculture.",
+    author: "Seed Savers Network",
+    date: "2025",
+    readTime: "≈12 min read",
+    tags: ["Seed Sovereignty", "Agriculture", "Food Security", "Biodiversity"],
     image: SpectacularImagecourt,
-    slug: 'endorse-our-position-paper-eac-seed-bill',
+    slug: "endorse-our-position-paper-eac-seed-bill",
     content: `
-The East African Legislative Assembly (EALA) is in the process of developing the East African Community (EAC) Seed and Plant Varieties Bill, 2025. This legislation has significant implications for farmers, seed systems, and agricultural biodiversity across the EAC region. We urge stakeholders to review our position paper and endorse our call for critical amendments to ensure the bill supports farmers’ rights, seed diversity, and sustainable agriculture.
+The East African Legislative Assembly (EALA) is in the process of developing the East African Community (EAC) Seed and Plant Varieties Bill, 2025. This legislation has significant implications for farmers, seed systems, and agricultural biodiversity across the EAC region. We urge stakeholders to review our position paper and endorse our call for critical amendments to ensure the bill supports farmers' rights, seed diversity, and sustainable agriculture.
 
-The draft EAC Seed Bill, as it currently stands, contains several provisions that could undermine traditional seed systems, restrict farmers’ access to diverse seed varieties, and favor commercial seed companies over smallholder farmers. Key concerns include stringent registration requirements for seeds, limitations on seed saving and exchange, and inadequate recognition of farmers’ rights to use and conserve indigenous seed varieties.
+The draft EAC Seed Bill, as it currently stands, contains several provisions that could undermine traditional seed systems, restrict farmers' access to diverse seed varieties, and favor commercial seed companies over smallholder farmers. Key concerns include stringent registration requirements for seeds, limitations on seed saving and exchange, and inadequate recognition of farmers' rights to use and conserve indigenous seed varieties.
 
 These provisions threaten to erode the rich agricultural biodiversity that smallholder farmers have cultivated for generations. They also risk marginalizing farmers who rely on traditional seed systems for their livelihoods and food security.
 
 To address these concerns, we have outlined a series of recommended amendments in our position paper. These include:
-1. Recognizing and protecting farmers’ rights to save, use, exchange, and sell farm-saved seeds.
+1. Recognizing and protecting farmers' rights to save, use, exchange, and sell farm-saved seeds.
 2. Simplifying seed registration processes to accommodate diverse seed varieties, including indigenous and farmer-developed seeds.
 3. Promoting participatory seed breeding and conservation initiatives that involve farmers in decision-making processes.
 4. Ensuring that seed policies support agroecological practices and biodiversity conservation.
 5. Establishing mechanisms for stakeholder engagement, including farmers, civil society, and indigenous communities, in the development and implementation of seed policies.
 
-We call on policymakers, civil society organizations, farmers’ groups, and other stakeholders to endorse our position paper and advocate for these critical amendments to the EAC Seed Bill.
+We call on policymakers, civil society organizations, farmers' groups, and other stakeholders to endorse our position paper and advocate for these critical amendments to the EAC Seed Bill.
     `,
     ctas: [
       {
-        label: 'Read Full Document (EN)',
-        href:
-          '/docs/Joint Civil Society Position on the Draft EAC Seed and Plant Varieties Bill, 2025-4.pdf',
-        target: '_blank',
-        variant: 'primary',
+        label: "Read Full Document (EN)",
+        href: "/docs/Joint Civil Society Position on the Draft EAC Seed and Plant Varieties Bill, 2025-4.pdf",
+        target: "_blank",
+        variant: "primary",
       },
       {
-        label: 'Lire le document (FR)',
-        href:
-          '/docs/FRENCH Joint Civil Society Position on the Draft EAC Seed and Plant Varieties Bill, 2025-4 fr.pdf',
-        target: '_blank',
-        variant: 'secondary',
+        label: "Lire le document (FR)",
+        href: "/docs/FRENCH Joint Civil Society Position on the Draft EAC Seed and Plant Varieties Bill, 2025-4 fr.pdf",
+        target: "_blank",
+        variant: "secondary",
       },
       {
-        label: 'Endorse the Position Paper',
-        href:
-          'https://docs.google.com/forms/d/e/1FAIpQLSekjucQkOaAw0FGinHlq33ZuD8UXsIfawu8a4tgvW_9V7xTuw/viewform',
-        target: '_blank',
-        variant: 'primary',
+        label: "Endorse the Position Paper",
+        href: "https://docs.google.com/forms/d/e/1FAIpQLSekjucQkOaAw0FGinHlq33ZuD8UXsIfawu8a4tgvW_9V7xTuw/viewform",
+        target: "_blank",
+        variant: "primary",
       },
     ],
   },
 
-   {
-  id: '2',
-  title: 'The Seeds of Freedom: Kenya s Landmark Win for Agricultural Sovereignty  Africa Farming Journal',
-  excerpt:
-    'On 27 November 2025, Kenya’s High Court ruled that farmers have the constitutional right to save, share and exchange indigenous seeds — striking down parts of the Seed and Plant Varieties Act that criminalized traditional seed-saving practices. This decision is hailed as a landmark victory for seed sovereignty, agrobiodiversity, and the rights of smallholder farmers to preserve indigenous seed systems and cultural heritage.',
-  author: 'Africa Farming Journal',
-  date: '27 November 2025',
-  readTime: '≈5 min read',
-  tags: ['Seed Sovereignty', 'Agriculture', 'Food Security', 'Biodiversity'],
-  image: SpectacularImagecourt,
-  slug: 'seeds-of-freedom-kenya-agricultural-sovereignty',
-  content: `
-On 27 November 2025, the High Court of Kenya delivered a historic ruling affirming that farmers have the right to save and share their indigenous seeds. The court struck down punitive provisions of the Seed and Plant Varieties Act (CAP 326) that criminalized seed-saving, sharing, and exchange — offences previously punishable by up to two years in prison or a fine of KSh 1,000,000. :contentReference[oaicite:3]{index=3}
-
-This legislation threatened to undermine traditional seed systems, erode cultural heritage, and marginalize smallholder farmers who depend on farmer-managed seed systems for food security and biodiversity. :contentReference[oaicite:4]{index=4} The ruling, therefore, is not just a legal win — it represents a reaffirmation of Kenya’s agricultural sovereignty and a triumph for communities preserving indigenous seed varieties. :contentReference[oaicite:5]{index=5}
-
-With this decision, farmers are now free to conserve, exchange, and share indigenous seeds without fear of prosecution. The verdict reinforces the value of indigenous seed systems in climate-resilient agriculture, food security, and long-term sustainability by safeguarding agrobiodiversity and cultural heritage. :contentReference[oaicite:6]{index=6}
-
-This outcome also sends a powerful signal against the push by large commercial seed companies to monopolize the seed supply, and restores agency to farmers to decide what they plant and preserve on their lands. :contentReference[oaicite:7]{index=7}
-  `,
-},
+  // ✅ NEW BLOG POST - Strengthening Global Partnerships (will appear as first card in Latest Articles)
   {
-    id: '3',
-    title: 'Empowering Communities through Traditional Vegetables: A Success Story from Vihiga CBO',
+    id: "2",
+    title:
+      "Strengthening Global Partnerships for Agroecology and Seed Sovereignty",
     excerpt:
-      'At the heart of Vihiga County, a powerful agricultural transformation is unfolding. Thanks to the collaborative efforts of the Seed Savers Network, Bioversity International & CIAT, FAO and ITGPRFA,',
-    author: 'Seed Savers Team',
-    date: '15 June 2023',
-    readTime: '8 min read',
-    tags: ['Conservation', 'Research', 'Indigenous Knowledge'],
+      "Seed Savers Network participated in an international exchange hosted by the Weltacker / 2000m² Global Field Initiative in Germany, bringing together global partners working on agroecology, biodiversity, and sustainable food systems.",
+    author: "Seed Savers Team",
+    date: "March 2026",
+    readTime: "6 min read",
+    tags: [
+      "Agroecology",
+      "Seed Sovereignty",
+      "Global Partnerships",
+      "Biodiversity",
+    ],
+    image: GlobalPartnerships, // Using existing image - replace with GlobalPartnerships if you have it
+    slug: "strengthening-global-partnerships-agroecology-seed-sovereignty",
+    category: "Global Partnerships",
+    imageCaption:
+      "Seed Savers Network team with international partners at the Weltacker / 2000m² Global Field Initiative in Germany",
+    quote:
+      "This exchange reinforces our commitment to advancing agroecology, empowering farmers, and promoting seed sovereignty across Kenya and beyond.",
+    content: `
+Seed Savers Network participated in an international exchange hosted by the Weltacker / 2000m² Global Field Initiative in Germany. The event took place from 25th February to 2nd March 2026. This visit brought together global partners working on agroecology, biodiversity, and sustainable food systems, offering a valuable platform for learning and collaboration.
+
+During the exchange, we showcased our work on community seed banks, indigenous seed conservation, and farmer-managed seed systems in Kenya. We also highlighted how the 2000m² Global Field concept is being adapted locally to educate communities on food systems and land use.
+
+Key highlights included:
+
+Knowledge Exchange: Engagements with students, farmers, and researchers on climate resilience, renewable energy, and biodiversity provided rich opportunities for cross-cultural learning. The exchange of ideas between different farming contexts—from smallholder farms in Kenya to mechanized systems in Europe—revealed both unique challenges and shared solutions.
+
+Particularly valuable were the discussions around climate adaptation strategies. German partners shared innovations in water management and soil monitoring, while Seed Savers Network presented traditional knowledge systems that have sustained Kenyan agriculture for generations.
+
+Workshops and Presentations: Facilitation of sessions on seed saving and seed sovereignty emphasized farmer-led conservation. These interactive workshops brought together practitioners from diverse backgrounds to share practical techniques for seed preservation, documentation, and community engagement.
+
+The workshops highlighted how farmer-managed seed systems are not just about preserving seeds but about maintaining the knowledge, cultural practices, and community relationships that surround them. Participants explored the legal frameworks affecting seed sovereignty in different countries and developed strategies for advocacy.
+
+Global Collaboration: Discussions with partners from India, Europe, and international organizations focused on natural farming and policy frameworks. These conversations revealed common struggles against industrial agriculture models that prioritize uniformity over diversity and profit over sustainability.
+
+The exchange opened doors for ongoing collaboration, including potential knowledge-sharing trips, joint research initiatives, and coordinated advocacy efforts at international policy forums.
+
+Innovation and Learning: Exposure to practical models such as organic farming systems, water management tools, and soil monitoring techniques demonstrated how innovation and tradition can work hand in hand. German partners showcased precision agriculture tools adapted for small-scale use, while Seed Savers Network demonstrated low-cost, low-tech solutions that are accessible to resource-limited farmers.
+
+The 2000m² Global Field itself was a powerful teaching tool—a physical representation of global land use patterns that helps visitors understand the relationship between what we grow and how we use the planet's resources.
+
+Key Outcomes:
+
+The exchange yielded several concrete outcomes that will shape future collaboration:
+
+Strengthened international partnerships – Formal agreements for ongoing collaboration between Seed Savers Network and European partners, including plans for joint grant applications and research projects.
+
+A Weltacker side event at the 2026 Indigenous Seed Conference in Nairobi – The 2000m² Global Field concept will be showcased at Kenya's premier seed sovereignty gathering, bringing global perspectives to local discussions.
+
+Exploration of exchange programs on natural farming to India – Plans are underway for Kenyan farmers to visit Indian counterparts practicing natural farming at scale, learning from their experience in transitioning away from chemical inputs.
+
+Potential collaboration on water and soil monitoring innovations – German water management technologies will be adapted for Kenyan contexts, with pilot projects planned in communities already working with Seed Savers Network.
+
+Looking Forward:
+
+This exchange reinforces our commitment to advancing agroecology, empowering farmers, and promoting seed sovereignty across Kenya and beyond. The connections made in Germany are already bearing fruit, with new partnerships opening doors for funding, technical support, and political advocacy.
+
+As climate change intensifies and industrial agriculture continues to threaten biodiversity, international solidarity becomes ever more critical. The challenges facing Kenyan farmers are not isolated—they are part of global patterns that demand global responses. By building bridges between movements across continents, we strengthen everyone's capacity to resist harmful policies and build alternatives.
+
+Seed Savers Network extends deep gratitude to the Weltacker / 2000m² Global Field Initiative for hosting this transformative exchange and to all partners who shared their time, knowledge, and passion for a more just and sustainable food system.
+    `,
+    ctas: [
+      {
+        label: "Learn About Our Work",
+        href: "/about",
+        target: "_self",
+        variant: "primary",
+      },
+      {
+        label: "Contact Us for Partnerships",
+        href: "/contact",
+        target: "_self",
+        variant: "secondary",
+      },
+    ],
+  },
+
+  {
+    id: "3",
+    title:
+      "The Seeds of Freedom: Kenya's Landmark Win for Agricultural Sovereignty",
+    excerpt:
+      "On 27 November 2025, Kenya's High Court ruled that farmers have the constitutional right to save, share and exchange indigenous seeds — striking down parts of the Seed and Plant Varieties Act that criminalized traditional seed-saving practices.",
+    author: "Africa Farming Journal",
+    date: "27 November 2025",
+    readTime: "≈5 min read",
+    tags: ["Seed Sovereignty", "Agriculture", "Food Security", "Biodiversity"],
+    image: SpectacularImagecourt,
+    slug: "seeds-of-freedom-kenya-agricultural-sovereignty",
+    content: `
+On 27 November 2025, the High Court of Kenya delivered a historic ruling affirming that farmers have the right to save and share their indigenous seeds. The court struck down punitive provisions of the Seed and Plant Varieties Act (CAP 326) that criminalized seed-saving, sharing, and exchange — offences previously punishable by up to two years in prison or a fine of KSh 1,000,000.
+
+This legislation threatened to undermine traditional seed systems, erode cultural heritage, and marginalize smallholder farmers who depend on farmer-managed seed systems for food security and biodiversity. The ruling, therefore, is not just a legal win — it represents a reaffirmation of Kenya's agricultural sovereignty and a triumph for communities preserving indigenous seed varieties.
+
+With this decision, farmers are now free to conserve, exchange, and share indigenous seeds without fear of prosecution. The verdict reinforces the value of indigenous seed systems in climate-resilient agriculture, food security, and long-term sustainability by safeguarding agrobiodiversity and cultural heritage.
+
+This outcome also sends a powerful signal against the push by large commercial seed companies to monopolize the seed supply, and restores agency to farmers to decide what they plant and preserve on their lands.
+    `,
+  },
+  {
+    id: "4",
+    title:
+      "Empowering Communities through Traditional Vegetables: A Success Story from Vihiga CBO",
+    excerpt:
+      "At the heart of Vihiga County, a powerful agricultural transformation is unfolding. Thanks to the collaborative efforts of the Seed Savers Network, Bioversity International & CIAT, FAO and ITGPRFA, local farmers are now reaping the benefits of capacity-building initiatives focused on sustainable production of traditional leafy vegetables.",
+    author: "Seed Savers Team",
+    date: "15 June 2023",
+    readTime: "8 min read",
+    tags: ["Conservation", "Research", "Indigenous Knowledge"],
     image: SpectacularImage,
-    slug: 'future-of-indigenous-seeds',
+    slug: "empowering-communities-traditional-vegetables-vihiga",
     content: `
 In the heart of Vihiga County, a powerful agricultural transformation is unfolding. Thanks to the collaborative efforts of the Seed Savers Network, Bioversity International & CIAT, FAO and ITGPRFA, local farmers are now reaping the benefits of capacity-building initiatives focused on sustainable production of traditional leafy vegetables. These efforts, carried out through the Vihiga Community-Based Organization (CBO), are now bearing impressive fruit—both literally and figuratively.
 
-The project centered on reviving and promoting the sustainable cultivation of Neglected and Underutilised Species(NUS), such as  millet, sorghum cowpeas, crotalaria (commonly known as mitoo), African black nightshade (managu), Amaranth and Ethiopian kale (Kanzira). Through hands-on training and community empowerment, these vegetables, once overlooked, are now at the core of local food security and economic empowerment.
+The project centered on reviving and promoting the sustainable cultivation of Neglected and Underutilised Species (NUS), such as millet, sorghum cowpeas, crotalaria (commonly known as mitoo), African black nightshade (managu), Amaranth and Ethiopian kale (Kanzira). Through hands-on training and community empowerment, these vegetables, once overlooked, are now at the core of local food security and economic empowerment.
 
 Seed Sovereignty and Food Security
 
-One of the most notable achievements is the establishment and strengthening of the Vihiga CBO Community Seed Bank. Farmers who once struggled to access quality seeds now have reliable, well-stored seed reserves of these traditional vegetables. This has enabled consistent production cycles, ensuring both food availability at the household level and the opportunity for commercialization. 
+One of the most notable achievements is the establishment and strengthening of the Vihiga CBO Community Seed Bank. Farmers who once struggled to access quality seeds now have reliable, well-stored seed reserves of these traditional vegetables. This has enabled consistent production cycles, ensuring both food availability at the household level and the opportunity for commercialization.
 
 From Harvest to Income: Adding Value to Local Crops
 
@@ -154,12 +236,7 @@ The CBO is also now linked to a SACCO to promote savings and financial resilienc
 
 A Hub for Learning and Research
 
-The initiative has also become a center for learning and academic exchange. Currently, the CBO is hosting:
-
-Students from Kisii University and Maseno University
-A student from Bukura Agricultural College
-Two passionate volunteers
-These learners are engaging directly with the farmers, gaining real-world knowledge on sustainable agriculture, seed banking and community-based development.
+The initiative has also become a center for learning and academic exchange. Currently, the CBO is hosting students from Kisii University and Maseno University, a student from Bukura Agricultural College, and two passionate volunteers. These learners are engaging directly with the farmers, gaining real-world knowledge on sustainable agriculture, seed banking and community-based development.
 
 Conclusion
 
@@ -169,32 +246,31 @@ As the movement grows, so too does the hope that other communities will follow i
     `,
   },
   {
-    id: '4',
-    title: 'Journalists Have a Critical Role in Safeguarding Kenya’s Food Systems',
+    id: "5",
+    title:
+      "Journalists Have a Critical Role in Safeguarding Kenya's Food Systems",
     excerpt:
-      'Agriculture, environment and climate journalists have been urged to take a keen interest in Kenya’s agriculture policies by factually reporting on its effects on the country’s food system.  Seed Savers Network (Kenya),',
-    author: 'Seed Savers Team',
-    date: '28 May 2025',
-    readTime: '5 min read',
-    tags: ['Community', 'Empowerment'],
+      "Agriculture, environment and climate journalists have been urged to take a keen interest in Kenya's agriculture policies by factually reporting on its effects on the country's food system.",
+    author: "Seed Savers Team",
+    date: "28 May 2025",
+    readTime: "5 min read",
+    tags: ["Community", "Empowerment", "Media"],
     image: Journalist,
-    slug: 'community-seed-banks',
+    slug: "journalists-critical-role-safeguarding-food-systems",
     content: `
-Agriculture, environment and climate journalists have been urged to take a keen interest in Kenya’s agriculture policies by factually reporting on its effects on the country’s food system. 
+Agriculture, environment and climate journalists have been urged to take a keen interest in Kenya's agriculture policies by factually reporting on its effects on the country's food system.
 
-Seed Savers Network (Kenya), Chief Executive Officer Daniel Wanjama says the media has a critical role in amplifying the country’s hits and misses towards the realization of a food secure status.
+Seed Savers Network (Kenya), Chief Executive Officer Daniel Wanjama says the media has a critical role in amplifying the country's hits and misses towards the realization of a food secure status.
 
-“As journalists, you need to understand that whatever happens on the farm directly affects you, whether you are a farmer or not. When bad agricultural policies are passed, the entire nation suffers,” Wanjama said.
+"As journalists, you need to understand that whatever happens on the farm directly affects you, whether you are a farmer or not. When bad agricultural policies are passed, the entire nation suffers," Wanjama said.
 
 Wanjama observed that journalists are powerful vessels for amplifying work being done by stakeholders within the food system sector, including farmers.
 
-“The largest food producers in Kenya are the millions of smallholder farmers, and when they are being oppressed, the media has a duty to offer them a voice,” he said.
+"The largest food producers in Kenya are the millions of smallholder farmers, and when they are being oppressed, the media has a duty to offer them a voice," he said.
 
-Seed ambassadors explain to journalists the concept of seed banking and seed bank operations at the SSN seed bank in Gilgil.
+He spoke during a one-day training workshop for journalists on Kenya's Farmer Managed Seed System. The journalists drawn from Nakuru, Nairobi, and Eastern Kenya counties were also updated on the progress of the seed case filed by smallholder farmers.
 
-He spoke during a one-day training workshop for journalists on Kenya’s Farmer Managed Seed System. The journalists drawn from Nakuru, Nairobi, and Eastern Kenya counties were also updated on the progress of the seed case filed by smallholder farmers.
-
-The case, whose judgment is set for November 27, 2025, was filed at the Machakos High Court challenging the legality of sections of the Seed and Plant Varieties Act (Cap. 326) of 2012 and the Seeds and Plant Varieties (Seeds) Regulations, 2016, which prohibit the sale and exchange of unregistered seed varieties.
+The case, whose judgment was set for November 27, 2025, was filed at the Machakos High Court challenging the legality of sections of the Seed and Plant Varieties Act (Cap. 326) of 2012 and the Seeds and Plant Varieties (Seeds) Regulations, 2016, which prohibit the sale and exchange of unregistered seed varieties.
 
 During the sessions, the journalists were taken through the legal, social, and economic implications of the case.
 
@@ -202,35 +278,33 @@ Wanjama argued that many smallholder farmers in Kenya depend on the tradition of
 
 Elizabeth Atieno, a food campaigner from Greenpeace Africa, called for informed media coverage to help the public stay updated on the progress of the case.
 
-“It is only through the work of journalists that Kenyans will understand the broader implications of such laws that threaten the country’s food security,” said Atieno.
+"It is only through the work of journalists that Kenyans will understand the broader implications of such laws that threaten the country's food security," said Atieno.
 
-She added, “The media plays a powerful role in shaping policy debates. By equipping journalists with accurate information, we hope to foster more balanced and inclusive reporting on seed sovereignty issues.”
+She added, "The media plays a powerful role in shaping policy debates. By equipping journalists with accurate information, we hope to foster more balanced and inclusive reporting on seed sovereignty issues."
 
 A tour around the Seed Savers farm in Gilgil provided the journalists with a firsthand account of the Farmer-Managed Food System and how it supports and enhances community resilience, biodiversity conservation, and food security.
 
 The journalists were challenged to keep track of the seed litigation progress and continue amplifying the voices of farmers who may otherwise be left out of policy decisions.
-
-Atieno, at the same time, underscored the importance of accurate, people-centred reporting in the agriculture and food systems sector.
     `,
   },
   {
-    id: '5',
+    id: "6",
     title:
-      'Farmers, Experts Hail Ban on Hazardous Pesticides, Call for Stronger Oversight',
+      "Farmers, Experts Hail Ban on Hazardous Pesticides, Call for Stronger Oversight",
     excerpt:
-      'Biodiversity experts and sustainable agriculture proponents have commended the government’s prohibition on the import and use of over 50 pesticide brands, citing its potential to safeguard public health and ecological integrity.',
-    author: 'Seed Savers Team',
-    date: '22 May 2023',
-    readTime: '6 min read',
-    tags: ['Youth', 'Education'],
+      "Biodiversity experts and sustainable agriculture proponents have commended the government's prohibition on the import and use of over 50 pesticide brands, citing its potential to safeguard public health and ecological integrity.",
+    author: "Seed Savers Team",
+    date: "22 May 2023",
+    readTime: "6 min read",
+    tags: ["Pesticides", "Health", "Policy"],
     image: Bio,
-    slug: 'youth-agroecology',
+    slug: "farmers-hail-ban-hazardous-pesticides",
     content: `
-Biodiversity experts and sustainable agriculture proponents have commended the government’s prohibition on the import and use of over 50 pesticide brands, citing its potential to safeguard public health and ecological integrity.
+Biodiversity experts and sustainable agriculture proponents have commended the government's prohibition on the import and use of over 50 pesticide brands, citing its potential to safeguard public health and ecological integrity.
 
-During a recent inspection of pyrethrum farms in Molo, Nakuru County, Agriculture Cabinet Secretary Mutahi Kagwe emphasized that the policy shift is part of a strategic initiative to boost local agrochemical production and revitalize Kenya’s pyrethrum sector as a sustainable pest management solution.
+During a recent inspection of pyrethrum farms in Molo, Nakuru County, Agriculture Cabinet Secretary Mutahi Kagwe emphasized that the policy shift is part of a strategic initiative to boost local agrochemical production and revitalize Kenya's pyrethrum sector as a sustainable pest management solution.
 
-“We are going to stop importing these over 50 products, as they will now be produced here in Kenya. So, your market will not necessarily be abroad. Your market will be right here in Kenya. The government is prioritizing safer, locally-produced alternatives and is reviving the pyrethrum industry as a sustainable solution,” Kagwe stated.
+"We are going to stop importing these over 50 products, as they will now be produced here in Kenya. So, your market will not necessarily be abroad. Your market will be right here in Kenya. The government is prioritizing safer, locally-produced alternatives and is reviving the pyrethrum industry as a sustainable solution," Kagwe stated.
 
 While the ban is framed as an economic measure to enhance domestic production, environmental organizations highlight its critical public health and ecological benefits. Many of the prohibited pesticides contain active ingredients already banned in the European Union (EU) and other jurisdictions due to their association with carcinogenicity, reproductive toxicity, and severe ecosystem disruption.
 
@@ -238,114 +312,88 @@ The Seeds Savers Network (SSN) Director, Daniel Wanjama welcomed the decision bu
 
 The excessive application of herbicides and synthetic pesticides has been linked to the alarming decline in pollinator populations, particularly bees, which are important for crop pollination. Their depletion poses a direct threat to ecosystem stability, agricultural productivity, and long-term food security.
 
-“African countries, especially Kenya, are losing access to European markets because of chemical residues in their produce, chemicals ironically manufactured in Europe but banned for use there. As a result, what we grow often can’t be exported and ends up being consumed only locally, raising serious health concerns such as cancer,” Wanjama observed.
+"African countries, especially Kenya, are losing access to European markets because of chemical residues in their produce, chemicals ironically manufactured in Europe but banned for use there. As a result, what we grow often can't be exported and ends up being consumed only locally, raising serious health concerns such as cancer," Wanjama observed.
 
-A 2020 report by the Heinrich Böll Foundation revealed concerning levels of pesticide residues in Kenyan agricultural produce, with up to 60 per cent of sampled crops, including tomatoes and kale, exceeding recommended safety thresholds. This raises significant food safety and public health concerns.
+A 2020 report by the Heinrich Böll Foundation revealed concerning levels of pesticide residues in Kenyan agricultural produce, with up to 60 per cent of sampled crops, including tomatoes and kale, exceeding recommended safety thresholds.
 
-In late March, Kagwe reported that the EU had rejected 95 Kenyan cut rose flower consignments and intercepted an additional 48 shipments, totaling 2.1 million stems, due to False Codling Moth (FCM) infestations, resulting in an estimated loss of Ksh 147.1 million.
-
-Recent interceptions of Kenyan beans, chilies, and herbs revealed traces of hazardous chemicals such as Chlorpyrifos and Triazophos, substances prohibited in Europe due to health risks. The EU’s Rapid Alert System for Food and Feed (RASFF) has issued multiple warnings, prompting fears of stricter tradeb restrictions if compliance fails.
-
-The EU’s stringent pesticide regulations lead to substantial post-export losses for Kenyan producers. Non-compliant crops face rejection due to chemical residues, while pest infestations compromise quality and yield. This necessitates costly adaptations, including integrated pest management (IPM) and organic alternatives, to maintain market access.
-
-Wanjama attributed the persistent use of hazardous pesticides to weak regulatory frameworks and insufficient farmer education. He emphasized the viability of agroecological practices, including organic herbicide and fertilizer production, as cost-effective and environmentally sound alternatives.
-
-“At Seed Savers Network, we train farmers to make their own organic herbicides and fertilizers. We also advise them to move away from monoculture, as it increases the risk of pest, weed, and disease outbreaks,” he stated, advocating for diversified farming systems.
-
-John Wainaina, an organic farmer from Kikopey, Gilgil, highlighted the benefits of organic seeds, which exhibit greater resistance to pests and diseases, reducing reliance on synthetic inputs. He stressed that organic manure enhances soil health and plant resilience, yielding robust crops without the adverse effects of chemical fertilizers.
-
-Keziah Kuria, a farmer in Kia Molo, Gilgil, recounted the devastating loss of her four-acre maize crop after applying a herbicide purchased from a Nakuru agrovet. The chemical caused total crop failure, resulting in significant financial and temporal losses.
-
-“It’s time the government cracked down on the chemicals being sold in Kenya. Some offer little to no benefit, while others are so harsh they destroy everything on the farm. We need stricter oversight to protect farmers, consumers, and the environment,” she urged.
-
-At the same time, civil society groups and farmers have raised concerns over the lack of clarity on the recent government ban of over 50 harmful pesticides, saying it leaves them in the dark, exposes them to health and legal risks, and could lead to farmers unknowingly continuing to use banned chemicals.
+At Seed Savers Network, we train farmers to make their own organic herbicides and fertilizers. We also advise them to move away from monoculture, as it increases the risk of pest, weed, and disease outbreaks.
     `,
   },
   {
-    id: '6',
+    id: "7",
     title:
-      'Characterization and Documentation of Traditional Leafy Vegetables in Vihiga',
+      "Characterization and Documentation of Traditional Leafy Vegetables in Vihiga",
     excerpt:
-      'Leafy green vegetables dot the display tables as small holder farmers mill around the Traditional Vegetable Fair in Emaloba, Vihiga County. Scientifically, the vegetables on display are known as..',
-    author: 'Seed Savers Team',
-    date: '10 May 2023',
-    readTime: '7 min read',
-    tags: ['Nutrition', 'Research'],
+      "Leafy green vegetables dot the display tables as small holder farmers mill around the Traditional Vegetable Fair in Emaloba, Vihiga County, learning to understand how different varieties behave in various climatic zones.",
+    author: "Seed Savers Team",
+    date: "10 May 2023",
+    readTime: "7 min read",
+    tags: ["Nutrition", "Research", "Traditional Vegetables"],
     image: Image,
-    slug: 'traditional-crops-nutrition',
+    slug: "characterization-traditional-leafy-vegetables-vihiga",
     content: `
-Leafy green vegetables dot the display tables as small holder farmers mill around the Traditional Vegetable Fair in Emaloba, Vihiga County. Scientifically, the vegetables on display are known as African Nightshade, Jute Mallow, Amaranth, Cowpea, Spider Plant, Crotolaria and Ethiopian Kale but locally to farmers here, these vegetables are easily identified as Kunde, Managu, Sageti, Terere, Nderema, Kanzira and Mrenda. They are part and parcel of their daily meals, praised for their flavour and nutritional content but this Traditional Vegetables Fair is intent on making sure that these farmers don’t just grow the vegetables but to understand how they behave in different climatic zones.
+Leafy green vegetables dot the display tables as small holder farmers mill around the Traditional Vegetable Fair in Emaloba, Vihiga County. Scientifically, the vegetables on display are known as African Nightshade, Jute Mallow, Amaranth, Cowpea, Spider Plant, Crotolaria and Ethiopian Kale but locally to farmers here, these vegetables are easily identified as Kunde, Managu, Sageti, Terere, Nderema, Kanzira and Mrenda.
 
-Joseph Mukuna is one of the more than 60 farmers in this trade fair who was part of the participatory traditional vegetables’ variety selection program by Bioversity and Seed Savers Network Kenya. Mukuna and his fellow farmers drawn from different parts of Vihiga County have undergone training on how to organically grow these leafy green vegetables whose demand has also risen owing to changing vegetable consumption patterns and recommendations by nutritionists that these traditional vegetables are rich in body building nutrients. ” It all starts from the planting and we record every change in the plant, when it starts fruiting, pods and how long it takes to harvest,” explained Mukuna
+Joseph Mukuna is one of the more than 60 farmers in this trade fair who was part of the participatory traditional vegetables' variety selection program by Bioversity and Seed Savers Network Kenya. "It all starts from the planting and we record every change in the plant, when it starts fruiting, pods and how long it takes to harvest," explained Mukuna.
 
-If your knowledge of farming just stops with tilling of land, well, there’s more to it. Nothing is left to chance, this is an intense learning process for farmers where they observe the shape, size, and colour of leaves; the breadth and height of the plant, the number of pods a single plant has produced and the number of seeds in the pods. They also look at the colour of the flowers on the plants. All these are done using rulers and strings to help the farmers with data collection. ” I did not have this knowledge and there was no economic benefit to growing these traditional vegetables. Now I have a deeper understanding of the plant and how it behaves in different climatic conditions,” added Mukuna.
+The farmers observe the shape, size, and colour of leaves; the breadth and height of the plant, the number of pods a single plant has produced and the number of seeds in the pods. They also look at the colour of the flowers on the plants. All these are done using rulers and strings to help the farmers with data collection.
 
-Joseph is a Community Health Promoter who is the first point of contact between the community and the nearest health facility in Esunza. He looks after 102 households, and this knowledge on the different varieties of traditional vegetables will help him as he advises his constituents on proper nutrition.
+"I did not have this knowledge and there was no economic benefit to growing these traditional vegetables. Now I have a deeper understanding of the plant and how it behaves in different climatic conditions," added Mukuna.
 
-“I am very passionate about the health of pregnant mothers and children under the age of five. These vegetables are nutritious and they are important in meeting the nutritional health needs of the children and expectant mothers,” said Mukuna
+Joseph is a Community Health Promoter who looks after 102 households. "I am very passionate about the health of pregnant mothers and children under the age of five. These vegetables are nutritious and they are important in meeting the nutritional health needs of the children and expectant mothers," said Mukuna.
 
-Among the farmers is Loise Isaac, she too has learnt to differentiate the types of Jute Mallow (Mrenda) and African Nightshade (Managu), and their behavior under different climatic conditions. ” I have learnt how to extract the seeds from these traditional vegetables and this is beneficial to me because I cannot afford to buy the seeds,” she explained. According to Terryanne Wamucii the Assistant Programs Coordinator at Seed Savers Network Kenya, they began engaging farmers in Vihiga county in June last year and so far, they have been able to harmonize the different varieties of vegetable seeds with the farmers as well as identify those that have a higher market value.
+According to Terryanne Wamucii, Assistant Programs Coordinator at Seed Savers Network Kenya, "The aim of this characterization is for farmers to be able to identify which crop varieties do well in the area and which pests and diseases attack different crop varieties."
 
-“The aim of this characterization is for farmers to be able to identify which crop varieties do well in the area and at that end, farmers are able to learn which pests and diseases attack different crop varieties,” she explained. Another aspect of the Traditional Vegetables Fair was to have the farmers cook and taste the different types of vegetables.
-
-” There was a general perception amongst the farmers that Tsimboga is sweet. But when they tasted the different varieties of Tsimboga, they were able to identify that this variety is not sweet. It has to be mixed maybe with another variety, maybe Managu or Cowpea, so that the flavor can be palatable according to their preference,” added Terryanne
-
-For Seed Savers Network Kenya, having the farmers participate in the characterization of the different varieties of traditional vegetables, is one way of building their resilience in the age of climate change.
-
-” The advantage of also conducting this characterization, during this dry period, farmers are able to identify which varieties are tolerant to their area and to the soil, and which ones in the face of maybe drought or rain cannot do well,” said Terryanne. And for the likes of Joseph Mukuna, they are now optimistic that their venture into organic framing of traditional vegetables will truly yield the desired results. He has already set up a demo plot where he teaches other people in his community and he is also supplying the traditional vegetables to the teaching and non-teaching staff of schools in his village.
-
-“I am a much better farmer since taking part in this program and I am looking at making this a profitable venture.” He said.
+For Seed Savers Network Kenya, having the farmers participate in the characterization of different varieties of traditional vegetables is one way of building their resilience in the age of climate change.
     `,
   },
   {
-    id: '7',
+    id: "8",
     title:
-      'Creating Seas of Change: Concepter Makokha’s Rise in Agro-Entrepreneurship.',
+      "Creating Seas of Change: Concepter Makokha's Rise in Agro-Entrepreneurship",
     excerpt:
-      'In Musoli village, Luanda Sub-county, Vihiga County, Kenya, Concepter Makokha is a happy and determined woman. As a single mother of 3 children, she faced immense financial struggles after..',
-    author: 'Seed Savers Team',
-    date: '28 April 2023',
-    readTime: '4 min read',
-    tags: ['Techniques', 'Climate Adaptation'],
+      "In Musoli village, Vihiga County, Kenya, Concepter Makokha, a single mother of 3 children, transformed her life through training in product diversification and value addition.",
+    author: "Seed Savers Team",
+    date: "28 April 2023",
+    readTime: "4 min read",
+    tags: ["Women Empowerment", "Entrepreneurship", "Value Addition"],
     image: Spectacular,
-    slug: 'seed-saving-dry-regions',
+    slug: "concepter-makokha-rise-agro-entrepreneurship",
     content: `
-In Musoli village, Luanda Sub-county, Vihiga County, Kenya, Concepter Makokha is a happy and determined woman. As a single mother of 3 children, she faced immense financial struggles after the passing of her husband. Providing for her children educational needs and daily needs was was a constant challenge. However, in October, 2024, her life took a significant turning point when she participated in a one-week intensive training organized by Seed Savers Network in partnership with the Alliance of Bioversity International & CIAT at the KIRDI Kisumu Branch.
-The training equipped her with both knowledge and practical skills, focusing on product diversification, value addition of priority crops that is TLVs, red sorghum, finger millet, yellow maize, cassava, groundnuts and soya beans, food labeling and barcoding, legal compliance with KEBS and marketing strategies. The training aimed to equip Nyando, Kabudi and Vihiga community seed banks with skills and knowledge to produce nutritious composite flours and dried vegetables.
+In Musoli village, Luanda Sub-county, Vihiga County, Kenya, Concepter Makokha is a happy and determined woman. As a single mother of 3 children, she faced immense financial struggles after the passing of her husband. However, in October 2024, her life took a significant turning point when she participated in a one-week intensive training organized by Seed Savers Network in partnership with the Alliance of Bioversity International & CIAT at the KIRDI Kisumu Branch.
 
-“After the training, I saw an opportunity to expand my ‘Uji Power ‘business,” Concepter shares with a smile. “Previously, I made porridge using only sorghum, millet and cassava. But through the training, I learned that I could enhance my recipe by adding groundnuts, soya, simsim, arrowroots, sweet potatoes and pumpkin seeds-ingredient known for their immunity boosting properties. Now I attract more customers than before.”
-By carefully considering consumer preferences in terms of flavor and nutritional content, Concepter has developed customer-centric products tailored to boost nutrition. Her ability to cater to specific consumer needs has significantly increased her sales. For every jerrican of porridge she sells, she earns approximately Ksh1,000. Through her growing business, she has been able to support her daughter’s university education—an achievement she takes great pride in.
+The training equipped her with knowledge and practical skills, focusing on product diversification, value addition of priority crops including TLVs, red sorghum, finger millet, yellow maize, cassava, groundnuts and soya beans, food labeling and barcoding, legal compliance with KEBS and marketing strategies.
 
-Concepter’s business has grown beyond daily sales, she now offers catering services at community events, providing porridge in various flavors. Her reputation as a skilled agro-entrepreneur was noticeable during the National Seed Fair held in October. Attendees were highly impressed with her porridge, and she achieved remarkable sales that day.
-Despite her success, Concepter still faces challenges that limit her ability to scale up production. Currently, she relies on sun-drying crops and manually grinding them into flour—a labor-intensive process that consumes both time and energy. She dreams of acquiring a blender to streamline production and meet the growing demand for her nutritious porridge more efficiently.
-Concepter’s story highlights the impact of empowering women in agriculture through training and support. She has turned adversity into opportunity, providing not only for her family but also nourishing her community with healthy, locally produced food.
+"After the training, I saw an opportunity to expand my 'Uji Power' business," Concepter shares. "Previously, I made porridge using only sorghum, millet and cassava. But through the training, I learned that I could enhance my recipe by adding groundnuts, soya, simsim, arrowroots, sweet potatoes and pumpkin seeds—ingredients known for their immunity boosting properties. Now I attract more customers than before."
+
+For every jerrican of porridge she sells, she earns approximately Ksh1,000. Through her growing business, she has been able to support her daughter's university education—an achievement she takes great pride in.
+
+Concepter's business has grown beyond daily sales; she now offers catering services at community events, providing porridge in various flavors. Her reputation as a skilled agro-entrepreneur was noticeable during the National Seed Fair held in October.
+
+Concepter's story highlights the impact of empowering women in agriculture through training and support. She has turned adversity into opportunity, providing not only for her family but also nourishing her community with healthy, locally produced food.
     `,
   },
   {
-    id: '8',
-    title: 'Advancing Farmers’ Rights: A Commitment to Promoting Seed Access',
+    id: "9",
+    title: "Advancing Farmers' Rights: A Commitment to Promoting Seed Access",
     excerpt:
-      'Kenya has made a significant leap in advancing farmers’ rights with the introduction of the Seeds and Plant Varieties (Conservation, Access, and Benefit Sharing of Plant Genetic Resources for Food and Agriculture)',
-    author: 'Seed Savers Team',
-    date: '15 April 2023',
-    readTime: '5 min read',
-    tags: ['Women', 'Community'],
+      "Kenya has made a significant leap in advancing farmers' rights with the introduction of the Seeds and Plant Varieties (Conservation, Access, and Benefit Sharing of Plant Genetic Resources for Food and Agriculture) Regulations, 2024.",
+    author: "Seed Savers Team",
+    date: "15 April 2023",
+    readTime: "5 min read",
+    tags: ["Farmers Rights", "Policy", "Seed Access"],
     image: Access,
-    slug: 'women-seed-conservation',
+    slug: "advancing-farmers-rights-seed-access",
     content: `
-Kenya has made a significant leap in advancing farmers’ rights with the introduction of the Seeds and Plant Varieties (Conservation, Access, and Benefit Sharing of Plant Genetic Resources for Food and Agriculture) Regulations, 2024. These regulations, which align with the International Treaty on Plant Genetic Resources for Food and Agriculture (ITPGRFA), provide a strong framework for conserving agrobiodiversity and promoting equitable seed access. Seed Savers Network (SSN), as a key participant in the development of these regulations, has further demonstrated its dedication to strengthening farmers’ seed systems and ensuring their voices are heard.
+Kenya has made a significant leap in advancing farmers' rights with the introduction of the Seeds and Plant Varieties (Conservation, Access, and Benefit Sharing of Plant Genetic Resources for Food and Agriculture) Regulations, 2024. These regulations, which align with the International Treaty on Plant Genetic Resources for Food and Agriculture (ITPGRFA), provide a strong framework for conserving agrobiodiversity and promoting equitable seed access.
 
-The ABS Regulations offer critical provisions that address key challenges faced by farmers. Section 8 explicitly recognizes farmers’ rights to save, exchange, and use seeds, reinforcing traditional practices vital for food security and cultural heritage. This recognition is a cornerstone of SSN’s advocacy, as it guarantees that farmers retain control over their resources while fostering sustainable agricultural practices. Additionally, Section 9 introduces a streamlined process for communities to register ownership of plant genetic resources, ensuring that smallholder farmers and indigenous groups can secure their contributions to agrobiodiversity.
+The ABS Regulations offer critical provisions that address key challenges faced by farmers. Section 8 explicitly recognizes farmers' rights to save, exchange, and use seeds, reinforcing traditional practices vital for food security and cultural heritage. Section 9 introduces a streamlined process for communities to register ownership of plant genetic resources.
 
-Another transformative aspect of the regulations lies in their approach to Access and Benefit Sharing (ABS). Sections 18 to 20 provide a clear protocol for accessing plant genetic resources, requiring prior informed consent (PIC) and mutually agreed terms (MAT) between communities and users. These measures ensure that benefits from the utilization of genetic resources are equitably shared, supporting community development and conservation efforts. Furthermore, the integration of indigenous knowledge into conservation strategies, as outlined in Section 12, highlights the critical role of traditional practices in sustainable agriculture.
+Sections 18 to 20 provide a clear protocol for accessing plant genetic resources, requiring prior informed consent (PIC) and mutually agreed terms (MAT) between communities and users. These measures ensure that benefits from the utilization of genetic resources are equitably shared.
 
-To affirm its commitment to advancing these principles, SSN collaborated with the government to host a public participation forum in Machakos County. This event served as a platform for farmers, community leaders, and stakeholders to share their perspectives on implementing the regulations. Among the suggestions made were calls to simplify the registration processes for community-owned genetic resources, enhance government support for community seed banks, and strengthen protections for indigenous knowledge. These insights underscore the importance of participatory governance in shaping policies that address the realities of those most affected.
+Seed Savers Network collaborated with the government to host a public participation forum in Machakos County. This event served as a platform for farmers, community leaders, and stakeholders to share their perspectives on implementing the regulations. Among the suggestions made were calls to simplify registration processes, enhance government support for community seed banks, and strengthen protections for indigenous knowledge.
 
-Farmers' Rights Public Participation WorkshopFarmers’ Rights Public Participation Workshop
-
-The introduction of the ABS Regulations also aligns with SSN’s broader advocacy efforts. SSN aims to raise awareness and encourage global adoption of similar frameworks. These efforts not only highlight the practical benefits of the regulations but also foster knowledge-sharing and collaboration among communities and stakeholders worldwide.
-
-As Kenya charts a path toward food sovereignty, the Seeds and Plant Varieties (CABS) Regulations, 2024, represent a pivotal moment in protecting farmers’ rights and promoting seed access. Through initiatives like public participation, advocacy, and education, SSN continues to empower farming communities to preserve their seeds, protect their knowledge, and secure their livelihoods. Together, these actions plant the seeds for a sustainable and resilient agricultural future.
+As Kenya charts a path toward food sovereignty, the Seeds and Plant Varieties (CABS) Regulations, 2024, represent a pivotal moment in protecting farmers' rights and promoting seed access. Through initiatives like public participation, advocacy, and education, SSN continues to empower farming communities to preserve their seeds, protect their knowledge, and secure their livelihoods.
     `,
   },
 ];
