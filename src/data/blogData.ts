@@ -1,13 +1,12 @@
 // src/data/blogData.ts
 
-import SpectacularImage from "../assets/Spectacular.webp";
-import GlobalPartnerships from "../assets/Wanjam5.jpeg";
-import Spectacular from "../assets/Makokha.webp";
-import Image from "../assets/vihiga leafy.webp";
-import Access from "../assets/seedaccess.webp";
-import Journalist from "../assets/journalists.webp";
-import Bio from "../assets/Bio-pesticides.webp";
-import SpectacularImagecourt from "../assets/DSC_3236.webp";
+import SpectacularImage from '../assets/Spectacular.webp';
+import Spectacular from '../assets/Makokha.webp';
+import Image from '../assets/vihiga leafy.webp';
+import Access from '../assets/seedaccess.webp';
+import Journalist from '../assets/journalists.webp';
+import Bio from '../assets/Bio-pesticides.webp';
+import SpectacularImagecourt from '../assets/DSC_3236.webp';
 
 /* =========================
    CTA TYPE (NEW – SAFE ADD)
@@ -15,8 +14,8 @@ import SpectacularImagecourt from "../assets/DSC_3236.webp";
 export type BlogCTA = {
   label: string;
   href: string;
-  target?: "_blank" | "_self";
-  variant?: "primary" | "secondary";
+  target?: '_blank' | '_self';
+  variant?: 'primary' | 'secondary';
 };
 
 /* =========================
@@ -46,163 +45,82 @@ export type BlogPost = {
 ========================= */
 export const blogPosts: BlogPost[] = [
   {
-    id: "1",
+    id: '1',
     title:
-      "Endorse our Position Paper and Add Your Voice! Why the Draft EAC Seed Bill Needs Change!",
+      'Endorse our Position Paper and Add Your Voice! Why the Draft EAC Seed Bill Needs Change!',
     excerpt:
-      "The East African Legislative Assembly (EALA) is in the process of developing the East African Community (EAC) Seed and Plant Varieties Bill, 2025. This legislation has significant implications for farmers, seed systems, and agricultural biodiversity across the EAC region. We urge stakeholders to review our position paper and endorse our call for critical amendments to ensure the bill supports farmers’ rights, seed diversity, and sustainable agriculture.",
-    author: "Seed Savers Network",
-    date: "2025",
-    readTime: "≈12 min read",
-    tags: ["Seed Sovereignty", "Agriculture", "Food Security", "Biodiversity"],
+      'The East African Legislative Assembly (EALA) is in the process of developing the East African Community (EAC) Seed and Plant Varieties Bill, 2025. This legislation has significant implications for farmers, seed systems, and agricultural biodiversity across the EAC region. We urge stakeholders to review our position paper and endorse our call for critical amendments to ensure the bill supports farmers’ rights, seed diversity, and sustainable agriculture.',
+    author: '',
+    date: '2025',
+    readTime: '≈12 min read',
+    tags: ['Seed Sovereignty', 'Agriculture', 'Food Security', 'Biodiversity'],
     image: SpectacularImagecourt,
-    slug: "endorse-our-position-paper-eac-seed-bill",
+    slug: 'endorse-our-position-paper-eac-seed-bill',
     content: `
-The East African Legislative Assembly (EALA) is in the process of developing the East African Community (EAC) Seed and Plant Varieties Bill, 2025. This legislation has significant implications for farmers, seed systems, and agricultural biodiversity across the EAC region. We urge stakeholders to review our position paper and endorse our call for critical amendments to ensure the bill supports farmers' rights, seed diversity, and sustainable agriculture.
+The East African Legislative Assembly (EALA) is in the process of developing the East African Community (EAC) Seed and Plant Varieties Bill, 2025. This legislation has significant implications for farmers, seed systems, and agricultural biodiversity across the EAC region. We urge stakeholders to review our position paper and endorse our call for critical amendments to ensure the bill supports farmers’ rights, seed diversity, and sustainable agriculture.
 
-The draft EAC Seed Bill, as it currently stands, contains several provisions that could undermine traditional seed systems, restrict farmers' access to diverse seed varieties, and favor commercial seed companies over smallholder farmers. Key concerns include stringent registration requirements for seeds, limitations on seed saving and exchange, and inadequate recognition of farmers' rights to use and conserve indigenous seed varieties.
+The draft EAC Seed Bill, as it currently stands, contains several provisions that could undermine traditional seed systems, restrict farmers’ access to diverse seed varieties, and favor commercial seed companies over smallholder farmers. Key concerns include stringent registration requirements for seeds, limitations on seed saving and exchange, and inadequate recognition of farmers’ rights to use and conserve indigenous seed varieties.
 
 These provisions threaten to erode the rich agricultural biodiversity that smallholder farmers have cultivated for generations. They also risk marginalizing farmers who rely on traditional seed systems for their livelihoods and food security.
 
 To address these concerns, we have outlined a series of recommended amendments in our position paper. These include:
-1. Recognizing and protecting farmers' rights to save, use, exchange, and sell farm-saved seeds.
+1. Recognizing and protecting farmers’ rights to save, use, exchange, and sell farm-saved seeds.
 2. Simplifying seed registration processes to accommodate diverse seed varieties, including indigenous and farmer-developed seeds.
 3. Promoting participatory seed breeding and conservation initiatives that involve farmers in decision-making processes.
 4. Ensuring that seed policies support agroecological practices and biodiversity conservation.
 5. Establishing mechanisms for stakeholder engagement, including farmers, civil society, and indigenous communities, in the development and implementation of seed policies.
 
-We call on policymakers, civil society organizations, farmers' groups, and other stakeholders to endorse our position paper and advocate for these critical amendments to the EAC Seed Bill.
+We call on policymakers, civil society organizations, farmers’ groups, and other stakeholders to endorse our position paper and advocate for these critical amendments to the EAC Seed Bill.
     `,
     ctas: [
       {
-        label: "Read Full Document (EN)",
-        href: "/docs/Joint Civil Society Position on the Draft EAC Seed and Plant Varieties Bill, 2025-4.pdf",
-        target: "_blank",
-        variant: "primary",
+        label: 'Read Full Document (EN)',
+        href:
+          '/docs/Joint Civil Society Position on the Draft EAC Seed and Plant Varieties Bill, 2025-4.pdf',
+        target: '_blank',
+        variant: 'primary',
       },
       {
-        label: "Lire le document (FR)",
-        href: "/docs/FRENCH Joint Civil Society Position on the Draft EAC Seed and Plant Varieties Bill, 2025-4 fr.pdf",
-        target: "_blank",
-        variant: "secondary",
+        label: 'Lire le document (FR)',
+        href:
+          '/docs/FRENCH Joint Civil Society Position on the Draft EAC Seed and Plant Varieties Bill, 2025-4 fr.pdf',
+        target: '_blank',
+        variant: 'secondary',
       },
       {
-        label: "Endorse the Position Paper",
-        href: "https://docs.google.com/forms/d/e/1FAIpQLSekjucQkOaAw0FGinHlq33ZuD8UXsIfawu8a4tgvW_9V7xTuw/viewform",
-        target: "_blank",
-        variant: "primary",
+        label: 'Endorse the Position Paper',
+        href:
+          'https://docs.google.com/forms/d/e/1FAIpQLSekjucQkOaAw0FGinHlq33ZuD8UXsIfawu8a4tgvW_9V7xTuw/viewform',
+        target: '_blank',
+        variant: 'primary',
       },
     ],
   },
 
-  // ✅ NEW BLOG POST - Strengthening Global Partnerships (will appear as first card in Latest Articles)
+   {
+  id: '2',
+  title: 'The Seeds of Freedom: Kenya s Landmark Win for Agricultural Sovereignty  Africa Farming Journal',
+  excerpt:
+    'On 27 November 2025, Kenya’s High Court ruled that farmers have the constitutional right to save, share and exchange indigenous seeds — striking down parts of the Seed and Plant Varieties Act that criminalized traditional seed-saving practices. This decision is hailed as a landmark victory for seed sovereignty, agrobiodiversity, and the rights of smallholder farmers to preserve indigenous seed systems and cultural heritage.',
+  author: 'Africa Farming Journal',
+  date: '27 November 2025',
+  readTime: '≈5 min read',
+  tags: ['Seed Sovereignty', 'Agriculture', 'Food Security', 'Biodiversity'],
+  image: SpectacularImagecourt,
+  slug: 'seeds-of-freedom-kenya-agricultural-sovereignty',
+  content: `
+On 27 November 2025, the High Court of Kenya delivered a historic ruling affirming that farmers have the right to save and share their indigenous seeds. The court struck down punitive provisions of the Seed and Plant Varieties Act (CAP 326) that criminalized seed-saving, sharing, and exchange — offences previously punishable by up to two years in prison or a fine of KSh 1,000,000. :contentReference[oaicite:3]{index=3}
+
+This legislation threatened to undermine traditional seed systems, erode cultural heritage, and marginalize smallholder farmers who depend on farmer-managed seed systems for food security and biodiversity. :contentReference[oaicite:4]{index=4} The ruling, therefore, is not just a legal win — it represents a reaffirmation of Kenya’s agricultural sovereignty and a triumph for communities preserving indigenous seed varieties. :contentReference[oaicite:5]{index=5}
+
+With this decision, farmers are now free to conserve, exchange, and share indigenous seeds without fear of prosecution. The verdict reinforces the value of indigenous seed systems in climate-resilient agriculture, food security, and long-term sustainability by safeguarding agrobiodiversity and cultural heritage. :contentReference[oaicite:6]{index=6}
+
+This outcome also sends a powerful signal against the push by large commercial seed companies to monopolize the seed supply, and restores agency to farmers to decide what they plant and preserve on their lands. :contentReference[oaicite:7]{index=7}
+  `,
+},
   {
-    id: "2",
-    title:
-      "Strengthening Global Partnerships for Agroecology and Seed Sovereignty",
-    excerpt:
-      "Seed Savers Network participated in an international exchange hosted by the Weltacker / 2000m² Global Field Initiative in Germany, bringing together global partners working on agroecology, biodiversity, and sustainable food systems.",
-    author: "Seed Savers Team",
-    date: "March 2026",
-    readTime: "6 min read",
-    tags: [
-      "Agroecology",
-      "Seed Sovereignty",
-      "Global Partnerships",
-      "Biodiversity",
-    ],
-    image: GlobalPartnerships, // Using existing image - replace with GlobalPartnerships if you have it
-    slug: "strengthening-global-partnerships-agroecology-seed-sovereignty",
-    category: "Global Partnerships",
-    imageCaption:
-      "Seed Savers Network team with international partners at the Weltacker / 2000m² Global Field Initiative in Germany",
-    quote:
-      "This exchange reinforces our commitment to advancing agroecology, empowering farmers, and promoting seed sovereignty across Kenya and beyond.",
-    content: `
-Seed Savers Network participated in an international exchange hosted by the Weltacker / 2000m² Global Field Initiative in Germany. The event took place from 25th February to 2nd March 2026. This visit brought together global partners working on agroecology, biodiversity, and sustainable food systems, offering a valuable platform for learning and collaboration.
-
-During the exchange, we showcased our work on community seed banks, indigenous seed conservation, and farmer-managed seed systems in Kenya. We also highlighted how the 2000m² Global Field concept is being adapted locally to educate communities on food systems and land use.
-
-Key highlights included:
-
-Knowledge Exchange: Engagements with students, farmers, and researchers on climate resilience, renewable energy, and biodiversity provided rich opportunities for cross-cultural learning. The exchange of ideas between different farming contexts—from smallholder farms in Kenya to mechanized systems in Europe—revealed both unique challenges and shared solutions.
-
-Particularly valuable were the discussions around climate adaptation strategies. German partners shared innovations in water management and soil monitoring, while Seed Savers Network presented traditional knowledge systems that have sustained Kenyan agriculture for generations.
-
-Workshops and Presentations: Facilitation of sessions on seed saving and seed sovereignty emphasized farmer-led conservation. These interactive workshops brought together practitioners from diverse backgrounds to share practical techniques for seed preservation, documentation, and community engagement.
-
-The workshops highlighted how farmer-managed seed systems are not just about preserving seeds but about maintaining the knowledge, cultural practices, and community relationships that surround them. Participants explored the legal frameworks affecting seed sovereignty in different countries and developed strategies for advocacy.
-
-Global Collaboration: Discussions with partners from India, Europe, and international organizations focused on natural farming and policy frameworks. These conversations revealed common struggles against industrial agriculture models that prioritize uniformity over diversity and profit over sustainability.
-
-The exchange opened doors for ongoing collaboration, including potential knowledge-sharing trips, joint research initiatives, and coordinated advocacy efforts at international policy forums.
-
-Innovation and Learning: Exposure to practical models such as organic farming systems, water management tools, and soil monitoring techniques demonstrated how innovation and tradition can work hand in hand. German partners showcased precision agriculture tools adapted for small-scale use, while Seed Savers Network demonstrated low-cost, low-tech solutions that are accessible to resource-limited farmers.
-
-The 2000m² Global Field itself was a powerful teaching tool—a physical representation of global land use patterns that helps visitors understand the relationship between what we grow and how we use the planet's resources.
-
-Key Outcomes:
-
-The exchange yielded several concrete outcomes that will shape future collaboration:
-
-Strengthened international partnerships – Formal agreements for ongoing collaboration between Seed Savers Network and European partners, including plans for joint grant applications and research projects.
-
-A Weltacker side event at the 2026 Indigenous Seed Conference in Nairobi – The 2000m² Global Field concept will be showcased at Kenya's premier seed sovereignty gathering, bringing global perspectives to local discussions.
-
-Exploration of exchange programs on natural farming to India – Plans are underway for Kenyan farmers to visit Indian counterparts practicing natural farming at scale, learning from their experience in transitioning away from chemical inputs.
-
-Potential collaboration on water and soil monitoring innovations – German water management technologies will be adapted for Kenyan contexts, with pilot projects planned in communities already working with Seed Savers Network.
-
-Looking Forward:
-
-This exchange reinforces our commitment to advancing agroecology, empowering farmers, and promoting seed sovereignty across Kenya and beyond. The connections made in Germany are already bearing fruit, with new partnerships opening doors for funding, technical support, and political advocacy.
-
-As climate change intensifies and industrial agriculture continues to threaten biodiversity, international solidarity becomes ever more critical. The challenges facing Kenyan farmers are not isolated—they are part of global patterns that demand global responses. By building bridges between movements across continents, we strengthen everyone's capacity to resist harmful policies and build alternatives.
-
-Seed Savers Network extends deep gratitude to the Weltacker / 2000m² Global Field Initiative for hosting this transformative exchange and to all partners who shared their time, knowledge, and passion for a more just and sustainable food system.
-    `,
-    ctas: [
-      {
-        label: "Learn About Our Work",
-        href: "/about",
-        target: "_self",
-        variant: "primary",
-      },
-      {
-        label: "Contact Us for Partnerships",
-        href: "/contact",
-        target: "_self",
-        variant: "secondary",
-      },
-    ],
-  },
-
-  {
-    id: "3",
-    title:
-      "The Seeds of Freedom: Kenya's Landmark Win for Agricultural Sovereignty",
-    excerpt:
-      "On 27 November 2025, Kenya's High Court ruled that farmers have the constitutional right to save, share and exchange indigenous seeds — striking down parts of the Seed and Plant Varieties Act that criminalized traditional seed-saving practices.",
-    author: "Africa Farming Journal",
-    date: "27 November 2025",
-    readTime: "≈5 min read",
-    tags: ["Seed Sovereignty", "Agriculture", "Food Security", "Biodiversity"],
-    image: SpectacularImagecourt,
-    slug: "seeds-of-freedom-kenya-agricultural-sovereignty",
-    content: `
-On 27 November 2025, the High Court of Kenya delivered a historic ruling affirming that farmers have the right to save and share their indigenous seeds. The court struck down punitive provisions of the Seed and Plant Varieties Act (CAP 326) that criminalized seed-saving, sharing, and exchange — offences previously punishable by up to two years in prison or a fine of KSh 1,000,000.
-
-This legislation threatened to undermine traditional seed systems, erode cultural heritage, and marginalize smallholder farmers who depend on farmer-managed seed systems for food security and biodiversity. The ruling, therefore, is not just a legal win — it represents a reaffirmation of Kenya's agricultural sovereignty and a triumph for communities preserving indigenous seed varieties.
-
-With this decision, farmers are now free to conserve, exchange, and share indigenous seeds without fear of prosecution. The verdict reinforces the value of indigenous seed systems in climate-resilient agriculture, food security, and long-term sustainability by safeguarding agrobiodiversity and cultural heritage.
-
-This outcome also sends a powerful signal against the push by large commercial seed companies to monopolize the seed supply, and restores agency to farmers to decide what they plant and preserve on their lands.
-    `,
-  },
-  {
-    id: "4",
-    title:
-      "Empowering Communities through Traditional Vegetables: A Success Story from Vihiga CBO",
+    id: '3',
+    title: 'Empowering Communities through Traditional Vegetables: A Success Story from Vihiga CBO',
     excerpt:
       "At the heart of Vihiga County, a powerful agricultural transformation is unfolding. Thanks to the collaborative efforts of the Seed Savers Network, Bioversity International & CIAT, FAO and ITGPRFA, local farmers are now reaping the benefits of capacity-building initiatives focused on sustainable production of traditional leafy vegetables.",
     author: "Seed Savers Team",
@@ -246,9 +164,8 @@ As the movement grows, so too does the hope that other communities will follow i
     `,
   },
   {
-    id: "5",
-    title:
-      "Journalists Have a Critical Role in Safeguarding Kenya's Food Systems",
+    id: '4',
+    title: 'Journalists Have a Critical Role in Safeguarding Kenya’s Food Systems',
     excerpt:
       "Agriculture, environment and climate journalists have been urged to take a keen interest in Kenya's agriculture policies by factually reporting on its effects on the country's food system.",
     author: "Seed Savers Team",
@@ -288,7 +205,7 @@ The journalists were challenged to keep track of the seed litigation progress an
     `,
   },
   {
-    id: "6",
+    id: '5',
     title:
       "Farmers, Experts Hail Ban on Hazardous Pesticides, Call for Stronger Oversight",
     excerpt:
@@ -320,7 +237,7 @@ At Seed Savers Network, we train farmers to make their own organic herbicides an
     `,
   },
   {
-    id: "7",
+    id: '6',
     title:
       "Characterization and Documentation of Traditional Leafy Vegetables in Vihiga",
     excerpt:
@@ -348,7 +265,7 @@ For Seed Savers Network Kenya, having the farmers participate in the characteriz
     `,
   },
   {
-    id: "8",
+    id: '7',
     title:
       "Creating Seas of Change: Concepter Makokha's Rise in Agro-Entrepreneurship",
     excerpt:
@@ -374,8 +291,8 @@ Concepter's story highlights the impact of empowering women in agriculture throu
     `,
   },
   {
-    id: "9",
-    title: "Advancing Farmers' Rights: A Commitment to Promoting Seed Access",
+    id: '8',
+    title: 'Advancing Farmers’ Rights: A Commitment to Promoting Seed Access',
     excerpt:
       "Kenya has made a significant leap in advancing farmers' rights with the introduction of the Seeds and Plant Varieties (Conservation, Access, and Benefit Sharing of Plant Genetic Resources for Food and Agriculture) Regulations, 2024.",
     author: "Seed Savers Team",
