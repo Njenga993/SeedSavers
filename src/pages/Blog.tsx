@@ -8,16 +8,12 @@ import "../styles/Blog.css";
 // ✔ Import SEO Component
 import SEO from "../components/SEO";
 
-// ✔ Import SEO Component
-import SEO from '../components/SEO';
-
 const BlogPage: React.FC = () => {
   const featuredPost = blogPosts[0];
   const otherPosts = blogPosts.slice(1);
 
   return (
     <div className="ssk-blog-container">
-
       {/* ✅ SEO For Blog Page */}
       <SEO
         title="Seed Knowledge Hub | Stories, Insights & Research | Seed Savers Network"
@@ -33,7 +29,8 @@ const BlogPage: React.FC = () => {
             <div className="blog-hero-text">
               <h1 className="blog-main-title">Seed Knowledge Hub</h1>
               <p className="blog-subtitle">
-                Insights, stories, and research on seed conservation and sustainable agriculture
+                Insights, stories, and research on seed conservation and
+                sustainable agriculture
               </p>
             </div>
           </div>
@@ -41,7 +38,6 @@ const BlogPage: React.FC = () => {
       </section>
 
       <div className="blog-content-wrapper">
-
         {/* Featured Post */}
         <section className="blog-featured-section">
           <div className="section-header">
@@ -90,16 +86,16 @@ const BlogPage: React.FC = () => {
                     <a
                       key={index}
                       href={cta.href}
-                      target={cta.target ?? '_self'}
+                      target={cta.target ?? "_self"}
                       rel={
-                        cta.target === '_blank'
-                          ? 'noopener noreferrer'
+                        cta.target === "_blank"
+                          ? "noopener noreferrer"
                           : undefined
                       }
                       className={`ne-featured-cta-btn ${
-                        cta.variant === 'secondary'
-                          ? 'ne-featured-cta-btn--secondary'
-                          : 'ne-featured-cta-btn--primary'
+                        cta.variant === "secondary"
+                          ? "ne-featured-cta-btn--secondary"
+                          : "ne-featured-cta-btn--primary"
                       }`}
                     >
                       {cta.label}
@@ -156,10 +152,7 @@ const BlogPage: React.FC = () => {
                       ))}
                     </div>
 
-                    <Link
-                      to={`/blog/${post.slug}`}
-                      className="post-read-more"
-                    >
+                    <Link to={`/blog/${post.slug}`} className="post-read-more">
                       Read More
                       <FaArrowRight />
                     </Link>
