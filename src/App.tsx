@@ -1,24 +1,24 @@
-import { useEffect, useState } from "react";
-import { HashRouter as Router, Routes, Route } from "react-router-dom";
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
-import Home from "./pages/Home";
-import About from "./pages/About";
-import Contact from "./pages/Contact";
-import NewsEvents from "./pages/NewsEvents";
-import BlogPage from "./pages/Blog";
-import Resources from "./pages/Resources";
-import BlogDetail from "./pages/BlogDetail";
-import SeedSchool from "./pages/SeedSchool";
-import CommunitySeedBankPlatform from "./pages/CommunitySeedBankPlatform";
-import IncubationProgramPage from "./pages/IncubationProgramPage";
-import NewsletterPage from "./pages/NewsletterPage";
+import { useEffect, useState } from 'react';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
+import Home from './pages/Home';
+import About from './pages/About';
+import Contact from './pages/Contact';
+import NewsEvents from './pages/NewsEvents';
+import BlogPage from './pages/Blog';
+import Resources from './pages/Resources';
+import BlogDetail from './pages/BlogDetail';
+import SeedSchool from './pages/SeedSchool';
+import CommunitySeedBankPlatform from './pages/CommunitySeedBankPlatform';
+import IncubationProgramPage from './pages/IncubationProgramPage';
+import NewsletterPage from './pages/NewsletterPage';
 /*import AgrotourismPage from './pages/AgrotourismPage';*/
-import ScrollToTopButton from "./components/ScrollToTopButton";
-import EventPopup from "./components/EventPopup";
-import Loader from "./components/Loader";
-import DonationSuccess from "./pages/DonationSuccess";
-import DonationCancelled from "./pages/DonationCancelled";
+import ScrollToTopButton from './components/ScrollToTopButton';
+import EventPopup from './components/EventPopup';
+import Loader from './components/Loader';
+import DonationSuccess from './pages/DonationSuccess';
+import DonationCancelled from './pages/DonationCancelled';
 
 /*import Snowfall from 'react-snowfall';*/
 
@@ -37,45 +37,34 @@ function App() {
         {loading ? (
           <Loader />
         ) : (
-          <div className="App">
-            {/* Main Application Layout */}
-            <>
-              <EventPopup />
+          
+            <div className="App">
+          {/* Main Application Layout */}
+        <>
+          <EventPopup />
 
-              <Navbar />
-              <main className="main-content">
-                <Routes>
-                  <Route path="/" element={<Home />} />
-                  <Route path="/about" element={<About />} />
-                  <Route path="/SeedSchool" element={<SeedSchool />} />
-                  <Route
-                    path="/CommunitySeedBankPlatform"
-                    element={<CommunitySeedBankPlatform />}
-                  />
-                  <Route
-                    path="/incubation-program"
-                    element={<IncubationProgramPage />}
-                  />
-
-                  <Route path="/newsletter" element={<NewsletterPage />} />
-                  <Route path="/news-events" element={<NewsEvents />} />
-                  <Route path="/resources" element={<Resources />} />
-                  <Route path="/blog" element={<BlogPage />} />
-                  <Route path="/blog/:slug" element={<BlogDetail />} />
-                  <Route path="/contact" element={<Contact />} />
-                  <Route
-                    path="/donation-success"
-                    element={<DonationSuccess />}
-                  />
-                  <Route
-                    path="/donation-cancelled"
-                    element={<DonationCancelled />}
-                  />
-                </Routes>
-              </main>
-              <ScrollToTopButton />
-              <Footer />
-            </>
+            <Navbar />
+            <main className="main-content">
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/SeedSchool" element={<SeedSchool />} />
+                <Route path="/CommunitySeedBankPlatform" element={<CommunitySeedBankPlatform />} />
+                <Route path="/incubation-program" element={<IncubationProgramPage />} />
+                
+                <Route path="/newsletter" element={<NewsletterPage />} />
+                <Route path="/news-events" element={<NewsEvents />} />
+                <Route path="/resources" element={<Resources />} />
+                <Route path="/blog" element={<BlogPage />} />
+                <Route path="/blog/:slug" element={<BlogDetail />} />
+                <Route path="/contact" element={<Contact />} />
+                <Route path="/donation-success" element={<DonationSuccess />} />
+                <Route path="/donation-cancelled" element={<DonationCancelled />} />
+              </Routes>
+            </main>
+            <ScrollToTopButton />
+            <Footer />
+          </>
           </div>
         )}
       </div>

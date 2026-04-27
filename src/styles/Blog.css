@@ -1,7 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
 :root {
-  --s-font: "Inter", "Segoe UI", "Helvetica Neue", sans-serif;
+  --s-font: 'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif;
   --primary-green: #235835;
   --secondary-green: #4a7c59;
   --accent-gold: #d4af37;
@@ -26,9 +26,7 @@
 
 /* Hero Section */
 .blog-hero {
-  background:
-    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url("../assets/hero_1.webp") center/cover no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../assets/hero_1.webp') center/cover no-repeat;
   color: var(--white);
   padding: 4rem 2rem;
   position: relative;
@@ -46,17 +44,13 @@
 }
 
 .blog-hero::before {
-  content: "";
+  content: '';
   position: absolute;
   top: 0;
   right: 0;
   width: 300px;
   height: 300px;
-  background: radial-gradient(
-    circle,
-    rgba(212, 175, 55, 0.2) 0%,
-    transparent 70%
-  );
+  background: radial-gradient(circle, rgba(212, 175, 55, 0.2) 0%, transparent 70%);
 }
 
 .blog-hero-content {
@@ -463,23 +457,23 @@
     text-align: center;
     gap: 2rem;
   }
-
+  
   .hero-icon {
     font-size: 5rem;
   }
-
+  
   .featured-content {
     padding: 1.5rem;
   }
-
+  
   .article-title {
     font-size: 1.5rem;
   }
-
+  
   .posts-grid {
     grid-template-columns: 1fr;
   }
-
+  
   .post-footer {
     flex-direction: column;
     align-items: flex-start;
@@ -491,15 +485,15 @@
   .blog-hero {
     padding: 3rem 1.5rem;
   }
-
+  
   .blog-content-wrapper {
     padding: 2rem 1.5rem;
   }
-
+  
   .featured-content {
     padding: 1.25rem;
   }
-
+  
   .article-meta {
     flex-direction: column;
     gap: 0.5rem;

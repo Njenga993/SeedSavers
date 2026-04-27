@@ -1,5 +1,5 @@
 /* Contact Page Styles - Fully Responsive with Unique Classes */
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
 :root {
   --s-font: "Inter", "Segoe UI", "Helvetica Neue", sans-serif;
@@ -62,9 +62,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background:
-    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("../assets/seeds.webp") no-repeat center center/cover;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url('../assets/seeds.webp') no-repeat center center/cover;
   color: var(--white);
   text-align: center;
   padding: 2rem 1rem;
@@ -354,15 +353,9 @@ body {
 }
 
 @keyframes float {
-  0% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
 }
 
 .contact-donation-cta h2 {
@@ -402,14 +395,14 @@ body {
   border: 2px solid var(--gold-accent);
   cursor: pointer;
   font-size: 1.2rem;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
 }
 
 .contact-cta-button:hover {
   background-color: #e5c156;
   color: var(--jungle-green);
   transform: translateY(-3px);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.3);
 }
 
 .contact-donation-options {
@@ -418,14 +411,8 @@ body {
 }
 
 @keyframes slideDown {
-  from {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 .contact-donation-table {
@@ -450,7 +437,7 @@ body {
 
 .contact-donation-offline {
   justify-content: center;
-  border: 1px dashed rgba(255, 255, 255, 0.3);
+  border: 1px dashed rgba(255,255,255,0.3);
 }
 
 .contact-donation-column h3 {
@@ -482,7 +469,7 @@ body {
   margin-bottom: 0.6rem;
   font-weight: var(--s-font-weight-medium);
   font-size: 0.95rem;
-  color: rgba(255, 255, 255, 0.9);
+  color: rgba(255,255,255,0.9);
 }
 
 .donor-info {
@@ -559,7 +546,7 @@ body {
   left: 1rem;
   top: 50%;
   transform: translateY(-50%);
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(255,255,255,0.7);
   font-weight: 600;
   z-index: 2;
 }
@@ -646,14 +633,8 @@ body {
 
 /* Animations */
 @keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 /* Responsive Adjustments */
@@ -665,17 +646,17 @@ body {
   .contact-hero {
     min-height: 60vh;
   }
-
+  
   .contact-grid {
     grid-template-columns: 1fr;
     gap: 2.5rem;
   }
-
+  
   .contact-form-section,
   .contact-info-section {
     padding: 2rem;
   }
-
+  
   .contact-donation-table {
     grid-template-columns: 1fr;
   }
@@ -690,28 +671,28 @@ body {
     min-height: 50vh;
     padding: 4rem 1rem;
   }
-
+  
   .contact-form-section,
   .contact-info-section {
     padding: 1.5rem;
   }
-
+  
   .contact-method {
     flex-direction: column;
     text-align: center;
     gap: 1rem;
   }
-
+  
   .contact-cta-buttons {
     flex-direction: column;
     align-items: center;
   }
-
+  
   .contact-cta-button {
     width: 100%;
     max-width: 280px;
   }
-
+  
   .contact-map-container iframe {
     height: 350px;
   }
@@ -730,38 +711,38 @@ body {
     min-height: 45vh;
     padding: 3rem 1rem;
   }
-
+  
   .contact-container {
     padding: 2rem 1rem;
   }
-
+  
   .contact-form-section,
   .contact-info-section {
     padding: 1.25rem;
   }
-
+  
   .contact-form-group input,
   .contact-form-group select,
   .contact-form-group textarea {
     padding: 0.9rem;
   }
-
+  
   .contact-submit-btn {
     padding: 1.1rem;
   }
-
+  
   .contact-donation-cta {
     padding: 2rem 1rem;
   }
-
+  
   .contact-donation-table {
     padding: 1.5rem;
   }
-
+  
   .contact-donation-column {
     padding: 1.25rem;
   }
-
+  
   .contact-map-container iframe {
     height: 300px;
   }
@@ -771,29 +752,29 @@ body {
   .contact-hero h1 {
     font-size: 2rem;
   }
-
+  
   .contact-hero-subtitle {
     font-size: 1.1rem;
   }
-
+  
   .contact-form-section h2,
   .contact-info-section h2 {
     font-size: 1.5rem;
   }
-
+  
   .contact-donation-cta h2 {
     font-size: 1.6rem;
   }
-
+  
   .contact-donation-cta p {
     font-size: 1rem;
   }
-
+  
   .contact-cta-button {
     padding: 0.9rem 1.5rem;
     font-size: 1rem;
   }
-
+  
   .contact-paypal-btn {
     padding: 1rem;
     font-size: 1rem;
@@ -809,145 +790,28 @@ body {
     min-height: 40vh;
     padding: 2rem 1rem;
   }
-
+  
   .contact-form-section,
   .contact-info-section {
     padding: 1rem;
   }
-
+  
   .contact-form-group input,
   .contact-form-group select,
   .contact-form-group textarea {
     padding: 0.8rem;
   }
-
+  
   .contact-submit-btn {
     padding: 1rem;
     font-size: 1rem;
   }
-
+  
   .contact-donation-table {
     padding: 1rem;
   }
-
+  
   .contact-donation-column {
     padding: 1rem;
-  }
-}
-/* Donation CTA - Simplified */
-.contact-donation-cta {
-  background: linear-gradient(135deg, var(--jungle-green) 0%, #1a5c2f 100%);
-  color: var(--white);
-  padding: var(--section-padding) 1.5rem;
-  text-align: center;
-  margin-top: 4rem;
-  border-radius: 16px;
-}
-
-.contact-donation-content {
-  max-width: 700px;
-  margin: 0 auto;
-}
-
-.contact-donation-icon {
-  font-size: 3.5rem;
-  margin-bottom: 1.5rem;
-  color: var(--gold-accent);
-  display: inline-block;
-  animation: float 3s ease-in-out infinite;
-}
-
-@keyframes float {
-  0% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
-}
-
-.contact-donation-cta h2 {
-  color: var(--white);
-  margin-bottom: 1rem;
-  font-size: clamp(2rem, 4vw, 2.8rem);
-  font-weight: var(--s-font-weight-bold);
-}
-
-.contact-donation-cta p {
-  font-size: clamp(1.1rem, 1.5vw, 1.3rem);
-  margin-bottom: 2.5rem;
-  opacity: 0.95;
-  line-height: 1.7;
-}
-
-.contact-cta-buttons {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  flex-wrap: wrap;
-}
-
-.contact-cta-button {
-  display: inline-block;
-  padding: 1.2rem 3rem;
-  background-color: var(--gold-accent);
-  color: var(--jungle-green);
-  text-decoration: none;
-  border-radius: 50px;
-  font-weight: var(--s-font-weight-bold);
-  transition: all 0.3s ease;
-  border: 2px solid var(--gold-accent);
-  cursor: pointer;
-  font-size: 1.2rem;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-}
-
-/* Inactive Donate Button */
-.contact-cta-button-inactive {
-  opacity: 0.5;
-  cursor: not-allowed;
-}
-
-.contact-cta-button-inactive:hover {
-  background-color: var(--gold-accent);
-  color: var(--jungle-green);
-  transform: none;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-}
-
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-  .contact-cta-buttons {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .contact-cta-button {
-    width: 100%;
-    max-width: 280px;
-  }
-}
-
-@media (max-width: 576px) {
-  .contact-donation-cta {
-    padding: 2rem 1rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .contact-donation-cta h2 {
-    font-size: 1.6rem;
-  }
-
-  .contact-donation-cta p {
-    font-size: 1rem;
-  }
-
-  .contact-cta-button {
-    padding: 0.9rem 1.5rem;
-    font-size: 1rem;
   }
 }
