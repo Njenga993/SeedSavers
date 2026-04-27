@@ -1,7 +1,12 @@
 import React, { useEffect, useState, useRef } from "react";
 import "../styles/EventPopup.css";
-import { FaArrowRight } from "react-icons/fa";
-import bootcampImage from "../assets/seedschool26.jpeg";
+import {
+  FaArrowRight,
+  FaCalendar,
+  FaMapMarkerAlt,
+  FaSeedling,
+} from "react-icons/fa";
+import conferencePoster from "../assets/conferenceposter.jpeg";
 
 const EventPopup: React.FC = () => {
   const [show, setShow] = useState(false);
@@ -12,17 +17,15 @@ const EventPopup: React.FC = () => {
 
   useEffect(() => {
     setShow(true);
-    
-    // Add escape key listener to close popup
+
     const handleEscape = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') setShow(false);
+      if (e.key === "Escape") setShow(false);
     };
-    
-    document.addEventListener('keydown', handleEscape);
-    return () => document.removeEventListener('keydown', handleEscape);
+
+    document.addEventListener("keydown", handleEscape);
+    return () => document.removeEventListener("keydown", handleEscape);
   }, []);
 
-  // Handle swipe down to close on mobile
   const handleTouchStart = (e: React.TouchEvent) => {
     startY.current = e.touches[0].clientY;
     isDragging.current = true;
@@ -31,7 +34,7 @@ const EventPopup: React.FC = () => {
   const handleTouchMove = (e: React.TouchEvent) => {
     if (!isDragging.current) return;
     currentY.current = e.touches[0].clientY;
-    
+
     if (popupRef.current) {
       const deltaY = currentY.current - startY.current;
       if (deltaY > 0) {
@@ -43,16 +46,14 @@ const EventPopup: React.FC = () => {
   const handleTouchEnd = () => {
     if (!isDragging.current) return;
     isDragging.current = false;
-    
+
     const deltaY = currentY.current - startY.current;
-    
+
     if (deltaY > 100) {
-      // Swipe down far enough to close
       setShow(false);
     } else {
-      // Reset position
       if (popupRef.current) {
-        popupRef.current.style.transform = '';
+        popupRef.current.style.transform = "";
       }
     }
   };
@@ -60,14 +61,14 @@ const EventPopup: React.FC = () => {
   if (!show) return null;
 
   return (
-    <div 
+    <div
       className="event-popup-overlay"
       onClick={() => setShow(false)}
       role="dialog"
       aria-modal="true"
       aria-labelledby="popup-title"
     >
-      <div 
+      <div
         className="event-popup-card"
         ref={popupRef}
         onClick={(e) => e.stopPropagation()}
@@ -75,7 +76,6 @@ const EventPopup: React.FC = () => {
         onTouchMove={handleTouchMove}
         onTouchEnd={handleTouchEnd}
       >
-        {/* Close */}
         <button
           className="event-popup-close"
           onClick={() => setShow(false)}
@@ -84,44 +84,61 @@ const EventPopup: React.FC = () => {
           ✕
         </button>
 
-        {/* Image */}
-        <div className="event-popup-image">
-          <img src={bootcampImage} alt="April 2026 Seed Boot Camp" />
-        </div>
-
-        {/* Content */}
         <div className="event-popup-content">
-          <span className="event-popup-badge">April 2026 · Seed Boot Camp</span>
+          <span className="event-popup-badge">
+            <FaSeedling /> Eastern Africa's First
+          </span>
 
-          <h2 id="popup-title">Rooted in Seeds, Led by Farmers: Building a Farmer-Led Seed Sovereignty Movement</h2>
+          <h2 id="popup-title">
+            1st Eastern Africa Indigenous Seeds Conference 2026
+          </h2>
 
-          <p className="event-popup-lead">
-            A hands-on learning experience with farmers, seed custodians, and
-            community seed banks advancing seed sovereignty in Kenya.
+          <p className="event-popup-subtitle">
+            Building farmer managed seed system community of practice (COP) For
+            a Resilient EASTERN AFRICA Region.
+          </p>
+          <p className="event-popup-subtitle">
+            Theme: Realizing the Right to Food through Seed Sovereignty
           </p>
 
-          <ul className="event-popup-points">
-            <li>📅 13–24 April 2026</li>
-            <li> Field-based & participatory</li>
-            <li> Farmers' rights & advocacy</li>
-            <li> Seed saving & community seed banks</li>
-            <li> Seed diversity & climate resilience</li>
-            <li> Networking & collaboration</li>
-          </ul>
+          <div className="event-popup-highlights">
+            <div className="highlight-item">
+              <FaCalendar className="highlight-icon" />
+              <span>📅 17th – 20th November 2026</span>
+            </div>
+            <div className="highlight-item">
+              <FaMapMarkerAlt className="highlight-icon" />
+              <span>
+                📍 Catholic university of Eastern Africa, Nairobi, Kenya
+              </span>
+            </div>
+          </div>
 
           <div className="event-popup-actions">
             <a
-              href="https://docs.google.com/forms/d/e/1FAIpQLSdHr_D9vx44oEomKXtq-69e-Q98xJe9jSv_6XjQVxJoClI1Bw/viewform"
+              href="https://eaindigenousseedconference.org/register"
               target="_blank"
               rel="noopener noreferrer"
               className="event-popup-cta primary"
             >
-              Apply Now <FaArrowRight />
+              Register Now <FaArrowRight />
             </a>
-            <a href="/SeedSchool" className="event-popup-cta secondary">
+            <a
+              href="https://eaindigenousseedconference.org/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="event-popup-cta secondary"
+            >
               Learn More <FaArrowRight />
             </a>
           </div>
+        </div>
+
+        <div className="event-popup-poster">
+          <img
+            src={conferencePoster}
+            alt="1st Eastern Africa Indigenous Seeds Conference"
+          />
         </div>
       </div>
     </div>
