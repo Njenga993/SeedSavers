@@ -53,7 +53,117 @@ body {
   margin: 0 auto;
   overflow-x: hidden;
 }
+/* Donation CTA - Simplified */
+.contact-donation-cta {
+  background: linear-gradient(135deg, var(--jungle-green) 0%, #1a5c2f 100%);
+  color: var(--white);
+  padding: var(--section-padding) 1.5rem;
+  text-align: center;
+  margin-top: 4rem;
+  border-radius: 16px;
+}
 
+.contact-donation-content {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.contact-donation-icon {
+  font-size: 3.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--gold-accent);
+  display: inline-block;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+.contact-donation-cta h2 {
+  color: var(--white);
+  margin-bottom: 1rem;
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: var(--s-font-weight-bold);
+}
+
+.contact-donation-cta p {
+  font-size: clamp(1.1rem, 1.5vw, 1.3rem);
+  margin-bottom: 2.5rem;
+  opacity: 0.95;
+  line-height: 1.7;
+}
+
+.contact-cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.contact-cta-button {
+  display: inline-block;
+  padding: 1.2rem 3rem;
+  background-color: var(--gold-accent);
+  color: var(--jungle-green);
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: var(--s-font-weight-bold);
+  transition: all 0.3s ease;
+  border: 2px solid var(--gold-accent);
+  cursor: pointer;
+  font-size: 1.2rem;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+}
+
+/* Inactive Donate Button */
+.contact-cta-button-inactive {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.contact-cta-button-inactive:hover {
+  background-color: var(--gold-accent);
+  color: var(--jungle-green);
+  transform: none;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .contact-cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .contact-cta-button {
+    width: 100%;
+    max-width: 280px;
+  }
+}
+
+@media (max-width: 576px) {
+  .contact-donation-cta {
+    padding: 2rem 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-donation-cta h2 {
+    font-size: 1.6rem;
+  }
+  
+  .contact-donation-cta p {
+    font-size: 1rem;
+  }
+  
+  .contact-cta-button {
+    padding: 0.9rem 1.5rem;
+    font-size: 1rem;
+  }
+}
 /* Hero Section */
 .contact-hero {
   position: relative;
