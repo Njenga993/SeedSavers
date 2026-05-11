@@ -17,8 +17,7 @@ import NewsletterPage from './pages/NewsletterPage';
 import ScrollToTopButton from './components/ScrollToTopButton';
 import EventPopup from './components/EventPopup';
 import Loader from './components/Loader';
-import DonationSuccess from './pages/DonationSuccess';
-import DonationCancelled from './pages/DonationCancelled';
+import VolunteerPage from './pages/VolunteerPage';
 
 /*import Snowfall from 'react-snowfall';*/
 
@@ -51,15 +50,13 @@ function App() {
                 <Route path="/SeedSchool" element={<SeedSchool />} />
                 <Route path="/CommunitySeedBankPlatform" element={<CommunitySeedBankPlatform />} />
                 <Route path="/incubation-program" element={<IncubationProgramPage />} />
-                
+                <Route path="/volunteer" element={<VolunteerPage />} />
                 <Route path="/newsletter" element={<NewsletterPage />} />
                 <Route path="/news-events" element={<NewsEvents />} />
                 <Route path="/resources" element={<Resources />} />
                 <Route path="/blog" element={<BlogPage />} />
                 <Route path="/blog/:slug" element={<BlogDetail />} />
                 <Route path="/contact" element={<Contact />} />
-                <Route path="/donation-success" element={<DonationSuccess />} />
-                <Route path="/donation-cancelled" element={<DonationCancelled />} />
               </Routes>
             </main>
             <ScrollToTopButton />

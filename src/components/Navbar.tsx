@@ -1,4 +1,3 @@
-// src/components/Navbar.tsx
 import { useState, useEffect, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { 
@@ -28,7 +27,6 @@ interface NavItem {
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  
   const [activeDropdown, setActiveDropdown] = useState<number | null>(null);
   const location = useLocation();
   const navbarRef = useRef<HTMLDivElement>(null);
@@ -38,11 +36,8 @@ const Navbar = () => {
     document.body.style.overflow = isOpen ? 'auto' : 'hidden';
   };
 
-  
-  
   const closeAll = () => {
     setIsOpen(false);
-    
     setActiveDropdown(null);
     document.body.style.overflow = 'auto';
   };
@@ -110,25 +105,25 @@ const Navbar = () => {
         { path: '/about#mission', label: 'Our work' }
       ]
     },
-
-    { path: '/CommunitySeedBankPlatform', label: 'CSB Platform' },
-    { path: '/incubation-program', label: 'Incubation Program' },
+    { path: '/volunteer', label: 'Volunteership' },
+    { path: '/CommunitySeedBankPlatform', label: 'Seed Bank Platform' },
+    { path: '/incubation-program', label: 'Incubation' },
     { path: '/SeedSchool', label: 'Seed School' },
-    {path: '/resources', label: 'News & Resources',
+    {
+      path: '/resources', 
+      label: 'News & Resources',
       dropdown: [
         { path: '/news-events', label: 'News & Events' },
-        {path: '/newsletter', label: 'Newsletter' },
+        { path: '/newsletter', label: 'Newsletter' },
         { path: '/resources', label: 'Resources' },
         { path: '/blog', label: 'Blogs' }
       ]
     },
-    /*{path : '/agrotourism', label: 'Agritourism' },*/
     { path: '/contact', label: 'Contact' }
   ];
 
   return (
     <>
-      {/* Blur overlay when sidebar is open */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
@@ -155,7 +150,7 @@ const Navbar = () => {
           }}
           transition={{ duration: 0.3 }}
         >
-          <div className="s-container">
+          <div className="s-container-top">
             <div className="s-social-icons">
               <a href="https://www.facebook.com/profile.php?id=100064035750734" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
                 <FaFacebookF />
@@ -166,23 +161,22 @@ const Navbar = () => {
               <a href="https://www.instagram.com/seedsavers_network?igsh=MXdsZjNwYzh0NDdvbg==" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                 <FaInstagram />
               </a>
-               <a href="https://x.com/Seedsavers_KE" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+              <a href="https://x.com/Seedsavers_KE" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
                 <FaXTwitter />
               </a>
               <a href="https://www.linkedin.com/in/seed-savers-kenya-930346284?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                 <FaLinkedinIn />
               </a>
             </div>
-            
             <div className="s-top-links">
-              <Link to="/contact" >Support Us</Link>
+              <Link to="/contact">Support Us</Link>
             </div>
           </div>
         </motion.div>
 
         {/* MAIN NAVIGATION */}
         <nav className="s-main-nav">
-          <div className="s-container">
+          <div className="s-container-nav">
             <div className="s-logo-box">
               <Link to="/" onClick={scrollToTop}>
                 <motion.img 
@@ -217,7 +211,9 @@ const Navbar = () => {
                   >
                     {item.label}
                     {item.dropdown && (
-                      activeDropdown === index ? <FaChevronUp /> : <FaChevronDown />
+                      <span className="s-dropdown-icon">
+                        {activeDropdown === index ? <FaChevronUp /> : <FaChevronDown />}
+                      </span>
                     )}
                   </Link>
 
@@ -280,16 +276,15 @@ const Navbar = () => {
                     <li key={index}>
                       {item.dropdown ? (
                         <div className="s-mobile-dropdown">
-                          <Link
-                            to={item.path}
+                          <div
                             className={`s-mobile-dropdown-btn ${activeDropdown === index ? 's-open' : ''}`}
-                            onClick={(e) => handleMobileNavClick(item, index, e)}
+                            onClick={(e) => handleMobileNavClick(item, index, e as any)}
                           >
                             {item.label}
-                            {item.dropdown && (
-                              activeDropdown === index ? <FaChevronUp /> : <FaChevronDown />
-                            )}
-                          </Link>
+                            <span className="s-dropdown-icon">
+                              {activeDropdown === index ? <FaChevronUp /> : <FaChevronDown />}
+                            </span>
+                          </div>
                           
                           <AnimatePresence>
                             {activeDropdown === index && (
@@ -336,16 +331,16 @@ const Navbar = () => {
                   ))}
                   
                   <li className="s-sidebar-social">
-                    <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                    <a href="https://www.facebook.com/profile.php?id=100064035750734" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
                       <FaFacebookF />
                     </a>
-                    <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Youtube">
+                    <a href="https://www.youtube.com/@seedsaversnetworkkenya8211" target="_blank" rel="noopener noreferrer" aria-label="Youtube">
                       <FaYoutube />
                     </a>
-                    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                    <a href="https://www.instagram.com/seedsavers_network?igsh=MXdsZjNwYzh0NDdvbg==" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                       <FaInstagram />
                     </a>
-                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                    <a href="https://www.linkedin.com/in/seed-savers-kenya-930346284" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                       <FaLinkedinIn />
                     </a>
                   </li>

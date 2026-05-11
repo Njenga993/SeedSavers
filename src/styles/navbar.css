@@ -1,4 +1,4 @@
-/* Improved Navbar CSS with Sticky Behavior */
+/* Improved Navbar CSS with Proper Large Screen Spacing */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
 :root {
@@ -17,9 +17,9 @@
   /* Typography */
   --s-font: 'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif;
   --s-font-size-base: 16px;
-  --s-font-size-small: 0.9rem;
-  --s-font-size-medium: 1rem;
-  --s-font-size-large: 1.1rem;
+  --s-font-size-small: 0.85rem;
+  --s-font-size-medium: 0.95rem;
+  --s-font-size-large: 1rem;
   --s-font-weight-normal: 400;
   --s-font-weight-medium: 500;
   --s-font-weight-semibold: 600;
@@ -34,7 +34,6 @@
   width: 100%;
   z-index: 1000;
   transition: var(--s-transition);
-  
 }
 
 .s-header.s-scrolled {
@@ -51,27 +50,27 @@
   font-size: var(--s-font-size-small);
   font-weight: var(--s-font-weight-medium);
   transition: var(--s-transition);
+  border-bottom: 1px solid #eaeaea;
 }
 
-.s-container {
-  max-width: 1200px;
+.s-container-top {
+  max-width: 1400px;
   margin: 0 auto;
   padding: 0 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 0.5rem;
 }
 
 .s-social-icons {
   display: flex;
-  gap: 1rem;
+  gap: 1.25rem;
 }
 
 .s-social-icons a {
   color: var(--s-dark);
   transition: var(--s-transition);
-  font-size: var(--s-font-size-small);
+  font-size: 0.8rem;
 }
 
 .s-social-icons a:hover {
@@ -83,6 +82,7 @@
   text-decoration: none;
   transition: var(--s-transition);
   font-weight: var(--s-font-weight-medium);
+  font-size: 0.85rem;
 }
 
 .s-top-links a:hover {
@@ -92,7 +92,7 @@
 /* Main Navigation */
 .s-main-nav {
   background-color: #2F4B26;
-  padding: 0.8rem 0;
+  padding: 0.5rem 0;
   transition: var(--s-transition);
 }
 
@@ -100,32 +100,53 @@
   background: transparent;
 }
 
-.s-logo-box img {
-  height: 140px;
-  transition: var(--s-transition);
+.s-container-nav {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
 }
 
+.s-logo-box {
+  flex-shrink: 0;
+}
+
+.s-logo-box img {
+  height: 60px;
+  transition: var(--s-transition);
+  display: block;
+}
+
+/* Navigation Links - FIXED FOR LARGE SCREENS */
 .s-nav-links {
   list-style: none;
   display: flex;
-  gap: 1.5rem;
+  gap: 1.25rem;
   margin: 0;
   padding: 0;
   align-items: center;
+  flex-wrap: nowrap;
 }
 
 .s-nav-links li {
   position: relative;
+  flex-shrink: 0;
 }
 
 .s-nav-links li a {
   color: var(--s-text-light);
   text-decoration: none;
   font-weight: var(--s-font-weight-medium);
-  font-size: var(--s-font-size-medium);
+  font-size: 0.9rem;
   transition: var(--s-transition);
-  padding: 1rem 0;
-  display: block;
+  padding: 0.6rem 0;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  white-space: nowrap;
 }
 
 .s-header.s-scrolled .s-nav-links li a {
@@ -141,31 +162,40 @@
   color: var(--s-secondary);
 }
 
+/* Dropdown Icon */
+.s-dropdown-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7rem;
+}
+
+.s-nav-links li a .s-dropdown-icon svg {
+  width: 10px;
+  height: 10px;
+}
+
 /* Dropdown Menu */
 .s-dropdown-menu {
   position: absolute;
   top: 100%;
-  left: -2rem;
+  left: -1rem;
   background: var(--s-light);
-  min-width: 200px;
-  border-radius: 10px;
+  min-width: 220px;
+  border-radius: 12px;
   box-shadow: var(--s-shadow-lg);
-  padding: 1.5rem 0;
+  padding: 0.75rem 0;
   z-index: 1001;
   list-style: none;
-  display: none;
-}
-
-.s-nav-links li:hover .s-dropdown-menu {
-  display: block;
 }
 
 .s-dropdown-menu li a {
   color: var(--s-text-dark) !important;
-  padding: 0.7rem 1.5rem;
+  padding: 0.6rem 1.25rem;
   display: block;
-  font-size: var(--s-font-size-medium);
+  font-size: 0.85rem;
   font-weight: var(--s-font-weight-normal);
+  white-space: nowrap;
 }
 
 .s-dropdown-menu li a:hover {
@@ -173,91 +203,31 @@
   color: var(--s-primary) !important;
 }
 
-/* Dropdown icon spacing */
-.s-nav-links li a svg {
-  margin-left: 0.5rem; /* Added space between text and icon */
-  margin-top: 0.4rem;
-  align-items: center;
-}
-
 /* Nav Actions */
 .s-nav-actions {
   display: flex;
   align-items: center;
-  gap: 1.5rem;
+  gap: 1rem;
+  flex-shrink: 0;
 }
 
-.s-search-toggle, 
 .s-hamburger {
   background: none;
   border: none;
   color: var(--s-text-light);
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   cursor: pointer;
   transition: var(--s-transition);
+  display: none;
+  padding: 0.5rem;
 }
 
-.s-header.s-scrolled .s-search-toggle,
 .s-header.s-scrolled .s-hamburger {
   color: var(--s-text-dark);
 }
 
-.s-search-toggle:hover, 
 .s-hamburger:hover {
   color: var(--s-secondary);
-}
-
-/* Hide hamburger on large screens */
-.s-hamburger {
-  display: none;
-}
-
-/* Search Bar */
-.s-search-bar {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 100%;
-  background: var(--s-light);
-  padding: 1rem 0;
-  box-shadow: var(--s-shadow-md);
-  z-index: 1002;
-}
-
-.s-search-form {
-  display: flex;
-  align-items: center;
-  max-width: 800px;
-  margin: 0 auto;
-  position: relative;
-  padding: 0 2rem;
-}
-
-.s-search-input {
-  flex: 1;
-  padding: 0.8rem 1.5rem;
-  border: 2px solid var(--s-secondary);
-  border-radius: 50px;
-  font-size: var(--s-font-size-medium);
-  font-family: var(--s-font);
-}
-
-.s-search-submit {
-  position: absolute;
-  right: 3rem;
-  background: none;
-  border: none;
-  color: var(--s-primary);
-  cursor: pointer;
-}
-
-.s-search-close {
-  position: absolute;
-  right: 2rem;
-  background: none;
-  border: none;
-  color: var(--s-dark);
-  cursor: pointer;
 }
 
 /* Mobile Sidebar */
@@ -269,8 +239,8 @@
   height: 100%;
   background: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(5px);
-  z-index: 1000; /* Lower than sidebar */
-  display: none; /* Hide by default */
+  z-index: 1000;
+  display: none;
 }
 
 .s-sidebar {
@@ -280,9 +250,10 @@
   width: 320px;
   height: 100vh;
   background: var(--s-light);
-  z-index: 1001; /* Higher than blur */
+  z-index: 1001;
   overflow-y: auto;
-  display: none; /* Hide by default */
+  display: none;
+  box-shadow: var(--s-shadow-lg);
 }
 
 .s-sidebar-links {
@@ -296,7 +267,7 @@
   text-decoration: none;
   padding: 0.8rem 0;
   display: block;
-  font-size: var(--s-font-size-medium);
+  font-size: 1rem;
   font-weight: var(--s-font-weight-medium);
 }
 
@@ -311,7 +282,7 @@
   text-decoration: none;
   padding: 0.8rem 0;
   cursor: pointer;
-  font-size: var(--s-font-size-medium);
+  font-size: 1rem;
   font-weight: var(--s-font-weight-medium);
 }
 
@@ -335,40 +306,80 @@
 
 .s-sidebar-social a {
   color: var(--s-primary);
-  font-size: var(--s-font-size-medium);
+  font-size: 1.1rem;
 }
 
-/* Mobile dropdown icon spacing */
-.s-mobile-dropdown-btn svg {
-  margin-left: 0.5rem; /* Added space between text and icon */
-}
-
-/* Body Padding to Prevent Content Hiding */
+/* Body Padding */
 body {
-  padding-top: 150px; /* Adjust based on your navbar height */
+  padding-top: 110px;
 }
 
-/* Responsive Adjustments */
-@media (max-width: 992px) {
-  .s-container {
-    padding: 0 1.5rem;
+/* ============================================
+   LARGE SCREEN FIXES - 1200px and above
+   ============================================ */
+@media (min-width: 1200px) {
+  .s-container-top {
+    max-width: 1400px;
+    padding: 0 3rem;
+  }
+  
+  .s-container-nav {
+    max-width: 1400px;
+    padding: 0 3rem;
+    gap: 3rem;
+  }
+  
+  .s-nav-links {
+    gap: 1.75rem;
+  }
+  
+  .s-nav-links li a {
+    font-size: 0.95rem;
+  }
+  
+  .s-logo-box img {
+    height: 65px;
   }
 }
 
-@media (max-width: 768px) {
+/* ============================================
+   DESKTOP - 992px to 1199px
+   ============================================ */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .s-container-top {
+    padding: 0 1.75rem;
+  }
+  
+  .s-container-nav {
+    padding: 0 1.75rem;
+    gap: 1.5rem;
+  }
+  
+  .s-nav-links {
+    gap: 1rem;
+  }
+  
+  .s-nav-links li a {
+    font-size: 0.85rem;
+  }
+  
+  .s-logo-box img {
+    height: 55px;
+  }
+}
+
+/* ============================================
+   TABLET - 768px to 991px - Show hamburger
+   ============================================ */
+@media (min-width: 768px) and (max-width: 991px) {
   .s-nav-links {
     display: none;
   }
   
-  .s-logo-box img {
-    height: 60px;
+  .s-hamburger {
+    display: block;
   }
   
-  body {
-    padding-top: 120px;
-  }
-  
-  /* Show sidebar on mobile */
   .s-blur-overlay {
     display: block;
   }
@@ -377,26 +388,136 @@ body {
     display: block;
   }
   
-  /* Show hamburger on mobile */
-  .s-hamburger {
-    display: block;
-  }
-}
-
-@media (max-width: 576px) {
-  .s-sidebar {
-    width: 85%;
+  .s-logo-box img {
+    height: 55px;
   }
   
   body {
-    padding-top: 100px;
+    padding-top: 105px;
+  }
+  
+  .s-container-top {
+    padding: 0 1.5rem;
+  }
+  
+  .s-container-nav {
+    padding: 0 1.5rem;
+  }
+}
+
+/* ============================================
+   MOBILE - 767px and below
+   ============================================ */
+@media (max-width: 767px) {
+  .s-nav-links {
+    display: none;
+  }
+  
+  .s-hamburger {
+    display: block;
+  }
+  
+  .s-blur-overlay {
+    display: block;
+  }
+  
+  .s-sidebar {
+    display: block;
+    width: 280px;
   }
   
   .s-logo-box img {
     height: 50px;
   }
   
-  .s-container {
+  body {
+    padding-top: 95px;
+  }
+  
+  .s-container-top {
     padding: 0 1rem;
+  }
+  
+  .s-container-nav {
+    padding: 0 1rem;
+  }
+  
+  .s-social-icons {
+    gap: 0.8rem;
+  }
+  
+  .s-top-links a {
+    font-size: 0.75rem;
+  }
+  
+  .s-sidebar-links {
+    padding: 1.5rem;
+  }
+}
+
+/* ============================================
+   SMALL MOBILE - 480px and below
+   ============================================ */
+@media (max-width: 480px) {
+  body {
+    padding-top: 85px;
+  }
+  
+  .s-logo-box img {
+    height: 45px;
+  }
+  
+  .s-sidebar {
+    width: 85%;
+  }
+  
+  .s-container-top,
+  .s-container-nav {
+    padding: 0 0.75rem;
+  }
+  
+  .s-top-bar {
+    padding: 0.35rem 0;
+  }
+  
+  .s-social-icons {
+    gap: 0.6rem;
+  }
+  
+  .s-social-icons a {
+    font-size: 0.7rem;
+  }
+}
+
+/* ============================================
+   LANDSCAPE MODE FIXES
+   ============================================ */
+@media (max-height: 500px) and (orientation: landscape) {
+  body {
+    padding-top: 90px;
+  }
+  
+  .s-sidebar {
+    overflow-y: auto;
+  }
+  
+  .s-sidebar-links {
+    padding: 1rem;
+  }
+  
+  .s-sidebar-links li a,
+  .s-mobile-dropdown-btn {
+    padding: 0.5rem 0;
+  }
+}
+
+/* Touch device optimizations */
+@media (hover: none) and (pointer: coarse) {
+  .s-dropdown-menu {
+    display: none;
+  }
+  
+  .s-nav-links li:hover .s-dropdown-menu {
+    display: none;
   }
 }
